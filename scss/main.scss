@@ -1,6 +1,9 @@
 @charset "utf-8";
 
 @import "vendor/reset";
+@import "utilities/all";
 @import "partials/all";
-@import "foundation/all";
+@import "layout/all";
+// @import "partials/all";
+// @import "foundation/all";
 @import "components/all";

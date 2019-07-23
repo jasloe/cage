@@ -1,0 +1,11 @@
+/* layout
+   global margin, padding
+*/
+header,
+footer,
+#block-cage-breadcrumbs,
+.page-node-type-article .page-section,
+.page-node-type-article #block-primary-author {
+  @include auto-margin;
+  @include auto-padding;
+}
