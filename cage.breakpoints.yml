@@ -1,0 +1,39 @@
+cage.viewport_sizing:
+  label: Viewport Sizing
+  mediaQuery: ''
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+
+#  tema.desktop-menu:
+#   label: desktop-menu
+#   mediaQuery: 'all and (min-width: 740px)'
+#   weight: 0
+#   multipliers:
+#     - 1x
+#     - 2x
+
+# tema.mobile:
+#   label: mobile
+#   mediaQuery: 'all and (max-width: 320px)'
+#   weight: 1
+#   multipliers:
+#     - 1x
+#     - 2x
+
+# tema.tablet:
+#   label: tablet
+#   mediaQuery: 'all and (min-width: 321px) and (max-width: 739px)'
+#   weight: 1
+#   multipliers:
+#     - 1x
+#     - 2x
+
+# tema.desktop:
+#   label: desktop
+#   mediaQuery: 'all and (min-width: 980px) and (max-width: 1299px)'
+#   weight: 2
+#   multipliers:
+#     - 1x
+#     - 2x

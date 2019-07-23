@@ -1,0 +1,90 @@
+.page-node-type-article {
+  .node__content {
+    border: 1px dotted red;
+    padding: 1rem;
+  }
+}
+
+.node--type-article article {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.node--type-article article {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .group-header {
+    flex-wrap: wrap;
+  }
+  .group-left {
+    flex: 1 1 20%;
+    padding: 1rem;
+  }
+  .group-right {
+    padding: 1rem;
+    flex: 1 0 60%;
+  }
+}
+
+.page-node-type-article {
+  .group-header {
+  }
+  .group-right {
+  }
+  .group-left {
+  }
+}
+
+.page-node-type-article {
+  .field-article-formatted-title,
+  .field-article-primary-author {
+    text-align: center;
+  }
+  .field-article-pre-title {
+    text-align: left;
+    font-family: $serif-font;
+    font-size: 2rem;
+    line-height: 1.2;
+    border-bottom: 1px solid $black;
+    padding: 0 1rem;
+  }
+  .field-article-formatted-title {
+    font-family: $serif-font;
+    font-size: 4rem;
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+  .field-article-primary-author {
+    font-family: $sans-font;
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .field-section-title {
+    font-family: $sans-font;
+    text-transform: uppercase;
+    padding-left: 3rem;
+  }
+  em,
+  .drop-quote {
+    margin-bottom: 1rem;
+  }
+  .drop-quote .field-body {
+    font-family: $body-font-italic;
+  }
+  .drop-quote .field-body,
+  .drop-quote .field-credit {
+    padding-left: 3rem;
+  }
+
+  .page-section {
+    text-align: justify;
+    font-family: $serif-font;
+  }
+  .page-section .field-body p {
+    text-indent: 3rem;
+    text-justify: distribute;
+    text-align-last: left;
+    word-spacing: 0.1ch;
+  }
+}

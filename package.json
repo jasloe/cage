@@ -1,0 +1,28 @@
+{
+  "name": "Cage",
+  "version": "8.1.2",
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-sass": "^4.0.0",
+    "gulp-shell": "^0.7.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "3.0.7",
+    "gulp-watch": "5.0.1",
+    "modularscale-sass": "^3.0.8",
+    "npm-run": "^5.0.1",
+    "run-sequence": "^2.2.1"
+  },
+  "scripts": {
+    "postinstall": "rm -rf node_modules/**/*.info && gulp sass && gulp compress"
+  },
+  "dependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "normalize-scss": "^7.0.1",
+    "normalize.css": "^8.0.1",
+    "sass-breakpoint": "^0.1.0",
+    "sass-mq": "^5.0.0"
+  }
+}

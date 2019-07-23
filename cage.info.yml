@@ -1,0 +1,18 @@
+name: Cage
+type: theme
+description: "Sound American theme, based on Stable."
+package: Sound American
+core: 8.x
+libraries:
+  - cage/global-styling
+
+base theme: stable
+
+regions:
+  header_pre: Pre-header
+  header: Header
+  breadcrumbs: Breadcrumbs
+  page_title: Page title
+  content: Content
+  footer_first: First footer
+  footer_second: Second footer

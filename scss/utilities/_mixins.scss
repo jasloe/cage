@@ -1,0 +1,46 @@
+@mixin auto-margin {
+  margin: 0 auto;
+  max-width: $max-vw;
+}
+
+/* @include grid(true); */
+@mixin grid($flex: true) {
+  @if $flex {
+    @include flex;
+  } @else {
+    display: block;
+  }
+}
+
+/* a { @include padding(2px 4px 6px); } */
+@mixin padding($values...) {
+  @each $var in $values {
+    padding: #{$var};
+  }
+}
+
+/* a { @include margin(2px 4px 6px); } */
+@mixin margin($values...) {
+  @each $var in $values {
+    margin: #{$var};
+  }
+}
+
+@mixin links($link, $visited, $hover, $active, $box-shadow) {
+  & {
+    color: $link;
+    text-decoration: none;
+    box-shadow: $box-shadow;
+    padding: 0;
+    &:visited {
+      color: $visited;
+    }
+    &:hover {
+      color: $hover;
+    }
+    &:active,
+    &:focus {
+      color: $active;
+    }
+  }
+}

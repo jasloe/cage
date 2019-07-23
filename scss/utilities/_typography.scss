@@ -1,0 +1,30 @@
+$system-font: -apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+"Roboto",
+"Oxygen",
+"Ubuntu",
+"Cantarell",
+"Fira Sans",
+"Droid Sans",
+"Helvetica Neue",
+sans-serif;
+
+$life: "Life LT Std Roman";
+$life-bold: "Life LT Std Bold";
+$life-italic: "Life LT Std Italic";
+
+$univers: "Univers LT Std";
+$univers-light: "Univers LT Std Light";
+$univers-bold: "Univers LT Std Bold";
+$univers-italic: "Univers LT Std Oblique";
+
+$sans-font: $univers;
+$serif-font: $life;
+$admin: $sans-font;
+
+$default-font: $sans-font;
+$display-font: $serif-font;
+$body-font: $serif-font;
+$body-font-bold: $life-bold;
+$body-font-italic: $life-italic;

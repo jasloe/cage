@@ -1,0 +1,19 @@
+// .region-header nav,
+// .region-footer nav {
+//   ul li a {
+//   }
+// }
+
+a {
+  text-decoration: none;
+}
+
+.page-node-type-article {
+  .field-article-primary-author a {
+    @include links($link, $visited, $hover, $active, none);
+  }
+
+  .page-section a {
+    @include links($link, $visited, $hover, $active, 0 2px 0);
+  }
+}

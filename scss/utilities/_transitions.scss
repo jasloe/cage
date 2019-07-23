@@ -1,0 +1,34 @@
+// // Breadcrumb transitions
+// #block-tenney-breadcrumbs.stuck {
+//   position:fixed;
+//   top:0;
+//   z-index: 1;
+//   animation: change-breadcrumb-background .5s both;
+// }
+
+// #block-tenney-breadcrumbs.stuck .breadcrumb ol li {
+//   animation: change-breadcrumb-text .5s forwards;
+//   > a {
+//     animation: change-breadcrumb-text .5s forwards;
+//   }
+// }
+
+// @keyframes change-breadcrumb-background {
+//   0% {
+//     background-color: $white;
+//   }
+
+//   100% {
+//     background-color: $issue-21-color;
+//   }
+// }
+
+// @keyframes change-breadcrumb-text {
+//   0% {
+//     color: $issue-21-color;
+//   }
+
+//   100% {
+//     color: $white;
+//   }
+// }

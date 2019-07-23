@@ -1,0 +1,19 @@
+// Base
+$white: hsl(0, 0%, 97%);
+$black: black;
+
+// Issue 21: The Change Issue
+$pantone-288: hsl(215, 100%, 22%);
+$pantone-666: #50bf28;
+
+$sa21: $pantone-288;
+$sa22: $pantone-666;
+
+$issue-21-color: $sa21;
+$issue-22-color: $sa22;
+
+// Link states
+$link: $issue-21-color;
+$visited: $issue-21-color;
+$hover: $black;
+$active: $black;

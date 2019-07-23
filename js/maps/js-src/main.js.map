@@ -1,0 +1,1 @@
+{"version":3,"sources":["js-src/main.js"],"names":["console","log"],"mappings":"AAAAA,QAAQC,IAAI","file":"../../js-src/main.js","sourcesContent":["console.log(\"console test\");\n//# sourceMappingURL=../maps/js-src/main.js.map\n"]}
