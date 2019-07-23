@@ -1,0 +1,33 @@
+.path-frontpage .region-content{
+height: 100vh;
+  background-color: $current-color;
+}
+
+.path-frontpage .views-element-container {
+      height: 100vh;
+   @include auto-margin;
+   color: $white;
+  .short-title {
+    text-transform: uppercase;
+    font-family: $univers;
+  }
+  h1 {
+    font-family: $life;
+    text-transform: uppercase;
+    font-size: 4rem;
+  }
+  a {
+    color: $white;
+  }
+}
+
+.path-frontpage .views-element-container div {
+
+  div {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+}

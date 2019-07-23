@@ -96,10 +96,11 @@
   {% endif %}
   {{ title_suffix }}
 
-  <div{{ content_attributes.addClass('node__content') }}>
-    <article>
-      {{ content }}
+  <article class="article__wrapper">
+    <section>{{ content }}</section>
+    <aside>
+      <h1>{{ content.field_article_page_numbers.0 }}</h1>
+    </aside>
     </article>
-  </div>
 
 </article>

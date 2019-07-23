@@ -1,0 +1,22 @@
+.field-article-subjects-topical {
+  font-family: $univers;
+  font-size: ms(-1);
+
+  @include auto-margin;
+  @include auto-padding;
+
+  display: flex;
+
+  .field__item {
+    margin: .5rem .33rem 0 0;
+  }
+  .field__item:hover {
+    background-color: red;
+  }
+
+  .field__item a {
+    padding: .33rem;
+    color: $white;
+    background: $current-color;
+}
+}

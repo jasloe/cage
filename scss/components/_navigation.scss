@@ -21,11 +21,6 @@
   }
 }
 
-header {
-  border-bottom: 1px solid $black;
-}
-
-
 // Breadcrumbs
 // Layout
 #block-tenney-breadcrumbs {
@@ -52,3 +47,23 @@ header {
     }
   }
 }
+
+
+header {
+  border-bottom: 1px solid $black;
+}
+
+footer {
+  border-top: 1px solid $black;
+}
+
+.region-footer-first {
+  background: $current-color;
+}
+
+.region-footer-second {
+  background: $black;
+  color: $white;
+  font-family: $univers;
+}
+

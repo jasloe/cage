@@ -20,26 +20,24 @@
  * - footer: content of footer region
  */
 #}
-<{{outer_wrapper}}{{attributes.addClass('ds-2col-stacked','clearfix')}}>
+<article{{attributes.addClass('layout')}}>
 
   {{ title_suffix.contextual_links }}
 
-  <{{header_wrapper}}{{header_attributes.addClass('group-header')}}>
+  <{{header_wrapper}}{{header_attributes.addClass('header')}}>
     {{ header }}
   </{{header_wrapper}}>
 
-  <article>
-    <{{left_wrapper}}{{left_attributes.addClass('group-left')}}>
-      {{ left }}
-    </{{left_wrapper}}>
+  <{{left_wrapper}}{{left_attributes.addClass('left')}}>
+    {{ left }}
+  </{{left_wrapper}}>
 
-    <{{right_wrapper}}{{right_attributes.addClass('group-right')}}>
-      {{ right }}
-    </{{right_wrapper}}>
-  </article>
+  <{{right_wrapper}}{{right_attributes.addClass('right')}}>
+    {{ right }}
+  </{{right_wrapper}}>
 
-  <{{footer_wrapper}}{{footer_attributes.addClass('group-footer')}}>
+  <{{footer_wrapper}}{{footer_attributes.addClass('footer')}}>
     {{ footer }}
   </{{footer_wrapper}}>
 
-</{{outer_wrapper}}>
+</article>
