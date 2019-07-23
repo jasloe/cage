@@ -1,14 +1,9 @@
 // Navigation.scss
-// Main
-.region-header {
-  width: 100%;
-}
-
-.region-header ul,
-.region-footer {
+// Layout
+.region-header ul {
   display: flex;
   align-items: center;
-  padding: 1rem;
+
   li {
     padding-right: 1rem;
 
@@ -20,28 +15,38 @@
       padding-right: 0rem;
     }
 
-    > a {
+    >a {
       text-decoration: none;
     }
   }
 }
 
+header {
+  border-bottom: 1px solid $black;
+}
+
+
 // Breadcrumbs
+// Layout
 #block-tenney-breadcrumbs {
   width: 100%;
 }
 
 .breadcrumb ol {
   display: flex;
+
   li {
     padding-right: 0.3rem;
+
     &:last-child {
       padding-right: 0;
     }
-    > a {
+
+    >a {
       text-decoration: none;
     }
-    > a:after {
+
+    >a:after {
       content: "\2F";
       padding-left: 5px;
     }

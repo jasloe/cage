@@ -79,18 +79,14 @@
 
 {%
   set classes = [
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
+    'article',
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
-{{ attach_library('classy/node') }}
-
-  <div{{ content_attributes.addClass('node__content') }}>
-  </div>
+{{ attach_library('stable/node') }}
 
   {{ title_prefix }}
   {% if not page %}
@@ -101,7 +97,9 @@
   {{ title_suffix }}
 
   <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
+    <article>
+      {{ content }}
+    </article>
   </div>
 
 </article>

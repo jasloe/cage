@@ -1,11 +1,30 @@
-/* layout
-   global margin, padding
-*/
+// layout: global margin, padding
+
+// header,
+// #block-cage-breadcrumbs,
+// .page-node-type-article .page-section,
+// .page-node-type-article #block-primary-author,
+// .path-node .body,
+// .path-imprint {
+//   @include auto-margin;
+//   @include auto-padding;
+// }
 header,
-footer,
-#block-cage-breadcrumbs,
-.page-node-type-article .page-section,
-.page-node-type-article #block-primary-author {
+footer {
   @include auto-margin;
   @include auto-padding;
 }
+
+.page-node-type-article .node__content {
+  @include auto-margin;
+  @include auto-padding;
+}
+
+// .region-footer-first,
+// .region-footer-second {
+//   padding: 1rem 0;
+// }
+
+// .page-node-type-article #block-primary-author {
+//   padding: 1rem;
+// }

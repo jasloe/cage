@@ -1,0 +1,29 @@
+html {
+  font-size: 16px;
+}
+
+$modularscale: (base: 1rem,
+  ratio: 1.1);
+
+body {
+  color: $black;
+  font-size: ms(0);
+}
+
+.path-imprint {
+
+  h2,
+  p {
+    font-family: $sans-font;
+    font-size: ms(0);
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  a {
+    @include links(orange, blue, yellow, teal, purple);
+  }
+
+}

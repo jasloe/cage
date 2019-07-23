@@ -54,11 +54,11 @@ gulp.task('sass', function () {
  * This task minifies javascript in the js/js-src folder and places them in the js directory.
  */
 gulp.task('compress', function() {
-  return gulp.src('./js/js-src/*.js')
+  return gulp.src('./src/js/*.js')
     .pipe(sourcemaps.init())
     .pipe(uglify())
     .pipe(sourcemaps.write('./maps'))
-    .pipe(gulp.dest('./js'))
+    .pipe(gulp.dest('./dist/js'))
     .pipe(notify({
       title: "JS Minified",
       message: "All JS files in the theme have been minified.",
@@ -141,7 +141,7 @@ gulp.task('watch', function() {
   gulp.watch(['scss/**/*.scss'], ['sass', 'drush:cc']);
 
   // watch js for changes and clear drupal theme cache on change
-  gulp.watch(['js/js-src/**/*.js'], ['compress', 'drush:cc']);
+  gulp.watch(['src/js/**/*.js'], ['compress', 'drush:cc']);
 
   // If user has specified an override, rebuild Drupal cache
   if (!config.twig.useCache) {

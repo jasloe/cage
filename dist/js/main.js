@@ -1,0 +1,2 @@
+!function(e){var o=document.getElementById("block-cage-breadcrumbs");function n(){var e=$header.outerHeight(!0)+$footer.outerHeight(!0),o=$window.height()-$main.outerHeight()-e;$main.css("top",0<o?o/2:0)}e(function(){$footer=e("footer"),$header=e("header"),$main=e("main"),$window=e(window),n(),new Waypoint.Sticky({element:e(o)[0]})}),e(window).on("resize load",function(){n()}).on("load",function(){})}(jQuery);
+//# sourceMappingURL=maps/main.js.map

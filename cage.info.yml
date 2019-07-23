@@ -5,6 +5,7 @@ package: Sound American
 core: 8.x
 libraries:
   - cage/global-styling
+  - cage/global-scripts
 
 base theme: stable
 
