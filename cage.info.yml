@@ -14,6 +14,10 @@ regions:
   header: Header
   breadcrumbs: Breadcrumbs
   page_title: Page title
+  content_pre: Pre-content
   content: Content
+  content_aside: Content aside
+  content_related: Related content
+  content_post: Post-content
   footer_first: First footer
   footer_second: Second footer

@@ -1,59 +1,99 @@
-// layout: global margin, padding
-
-.region-header,
-.region-footer-first > div,
-.region-footer-second > nav,
-#block-primary-author,
-#block-cage-copyright {
-  @include auto-margin;
-  @include auto-padding;
-}
-
-footer {
-  .region-footer-first,
-  .region-footer-second {
-    padding: 3rem 0rem;
-  }
-}
-
-#block-cage-breadcrumbs {
-    @include auto-margin;
-      @include auto-padding;
-}
-
-.layout-content {
-  margin-top: 3rem;
-}
-
 .page-node-type-article {
-
-
-  .field__item,
-  .field__label {
-    @include auto-margin;
-  }
-  .field__item .media {
-    margin-left: -1rem;
+  .region {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: gray;
   }
 
-  .field-media-image-caption {
-    padding: .75rem 1rem 0 2rem;
-    font-family: $univers;
-    font-size: ms(-1);
+  .content-center {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .region-content-related {
+
+
+    .primary-author {
+      margin: 1rem;
+      padding: 1rem;
+      background-color: lightgray;
+    }
+
+    .dram-content {
+      background-color: beige;
+      margin: 1rem;
+      padding: 1rem;
+    }
+
+    .related-dram {
+      display: flex;
+
+    }
+
   }
 }
 
-.field-media-image .field__item {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
+// // layout: global margin, padding
 
-.region-footer-first,
-.region-footer-second {
-  padding: 1rem 0;
-}
+// // .region-header,
+// // .region-footer-first > div,
+// // .region-footer-second > nav,
+// // #block-primary-author,
+// // #block-cage-copyright {
+// //   @include auto-margin;
+// //   @include auto-padding;
+// // }
 
-.page-node-type-article #block-primary-author {
-  padding: 1rem;
-}
+// footer {
+
+//   .region-footer-first,
+//   .region-footer-second {
+//     padding: 3rem 0rem;
+//   }
+// }
+
+// #block-cage-breadcrumbs {
+//   @include auto-margin;
+//   @include auto-padding;
+// }
+
+// .layout-content {
+//   margin-top: 3rem;
+// }
+
+// .page-node-type-article {
+
+
+//   .field__item,
+//   .field__label {
+//     @include auto-margin;
+//   }
+
+//   .field__item .media {
+//     margin-left: -1rem;
+//   }
+
+//   .field-media-image-caption {
+//     padding: .75rem 1rem 0 2rem;
+//     font-family: $univers;
+//     font-size: ms(-1);
+//   }
+// }
+
+// .field-media-image .field__item {
+//   display: flex;
+//   justify-content: center;
+//   text-align: center;
+// }
+
+// .region-footer-first,
+// .region-footer-second {
+//   padding: 1rem 0;
+// }
+
+// .page-node-type-article #block-primary-author {
+//   padding: 1rem;
+// }

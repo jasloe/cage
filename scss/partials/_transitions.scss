@@ -1,14 +1,15 @@
 // Breadcrumb transitions
 #block-tenney-breadcrumbs.stuck {
-  position:fixed;
-  top:0;
+  position: fixed;
+  top: 0;
   z-index: 1;
   animation: change-breadcrumb-background .5s both;
 }
 
 #block-tenney-breadcrumbs.stuck .breadcrumb ol li {
   animation: change-breadcrumb-text .5s forwards;
-  > a {
+
+  >a {
     animation: change-breadcrumb-text .5s forwards;
   }
 }
@@ -20,13 +21,13 @@
   }
 
   100% {
-    background-color: $issue-21-color;
+    background-color: $current-color;
   }
 }
 
 @keyframes change-breadcrumb-text {
   0% {
-    color: $issue-21-color;
+    color: $current-color;
   }
 
   100% {

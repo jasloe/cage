@@ -70,19 +70,25 @@
  *   in different view modes.
  */
 #}
+
+{# <ol>
+  {% for key, value in _context  %}
+    <li>{{ key }}</li>
+  {% endfor %}
+</ol> #}
+
 {%
   set classes = [
-    'node',
-    'node--type-' ~ node.bundle|clean_class,
+    'article',
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
-{{ attach_library('classy/node') }}
+{{ attach_library('stable/node') }}
 
-  <div{{ content_attributes.addClass('node__content') }}>
+  <div class="meta-wrapper">
     {{ content }}
   </div>
 

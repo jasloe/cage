@@ -70,16 +70,31 @@
  *   in different view modes.
  */
 #}
-<article{{attributes}}>
 
-  {% if not page %}
-  {# <h2><a href="{{ url }}">{{ label }}</a></h2>
-   #}
-  <h2>{{ label }}</h2>
-  {% endif %}
+{# <ol>
+  {% for key, value in _context  %}
+    <li>{{ key }}</li>
+  {% endfor %}
+</ol> #}
 
-  <div{{ content_attributes }}>
+{%
+  set classes = [
+    'article',
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+  ]
+%}
+{{ attach_library('stable/node') }}
+
+  <section class="dram-album">
     {{ content }}
+    {# <div class="article-header">
+      {{ content.field_article_pre_title }}
+      {{ content.field_article_formatted_title }}
     </div>
+      {{ content.field_article_page_section }} #}
+  </section>
 
-    </article>
+</article>

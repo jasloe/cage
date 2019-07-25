@@ -96,11 +96,13 @@
   {% endif %}
   {{ title_suffix }}
 
-  <article class="article__wrapper">
-    <section>{{ content }}</section>
-    <aside>
-      <h1>{{ content.field_article_page_numbers.0 }}</h1>
-    </aside>
-    </article>
+  <article class="article-wrapper">
+{{ content }}
+    {# <div class="article-header">
+      {{ content.field_article_pre_title }}
+      {{ content.field_article_formatted_title }}
+    </div>
+      {{ content.field_article_page_section }} #}
+  </article>
 
 </article>
