@@ -29,14 +29,14 @@
 @mixin links($link, $visited, $hover, $active, $box-shadow) {
   & {
     color: $link;
-    text-decoration: none;
-    box-shadow: $box-shadow;
+
     padding: 0;
     &:visited {
       color: $visited;
     }
     &:hover {
       color: $hover;
+      display: none;
     }
     &:active,
     &:focus {

@@ -1,12 +1,10 @@
 .path-frontpage .region-content{
 height: 100vh;
-  background-color: $current-color;
 }
 
 .path-frontpage .views-element-container {
       height: 100vh;
    @include auto-margin;
-   color: $white;
   .short-title {
     text-transform: uppercase;
     font-family: $univers;
@@ -17,7 +15,6 @@ height: 100vh;
     font-size: 4rem;
   }
   a {
-    color: $white;
   }
 }
 

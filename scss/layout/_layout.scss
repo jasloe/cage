@@ -1,99 +1,95 @@
-.page-node-type-article {
-  .region {
-    margin: 1rem;
-    padding: 1rem;
-    background-color: gray;
+// Footer layouts
+@mixin global-margin {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: $max-vw;
+}
+
+.region-header {
+  margin: 1rem;
+}
+
+main {
+  margin-top: 3rem;
+}
+
+#block-copyright {
+  @include global-margin;
+}
+
+// footer-first, footer-second global positioning
+.region-footer-first .newsletter-social-wrapper,
+.region-footer-second .footer-wrapper {
+  @include global-margin;
+  padding: 4rem 1rem;
+  display: flex;
+}
+
+// footer-first inset
+.region-footer-first {
+
+  .newsletter-social,
+  .about-sap {
+    flex: 1;
+    height: 100%;
   }
 
-  .content-center {
-    max-width: 1280px;
-    margin: 0 auto;
+  .newsletter-social {
+    .body {
+      width: 75%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .newsletter-social .mailchimp-signup-subscribe-form {
+    margin-bottom: 1rem;
+    width: 75%;
+
+      form {
+        display: flex;
+      }
+  }
+
+  .about-sap {
+    .body,
+    .body > p:first-child {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.newsletter-social ul {
+  display: flex;
+}
+
+// footer-second inset
+.region-footer-second .footer-wrapper {
+
+  .footer ul {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
-  .region-content-related {
+    flex-wrap: wrap;
+    width: 100%;
 
 
-    .primary-author {
-      margin: 1rem;
-      padding: 1rem;
-      background-color: lightgray;
+
+
+    li {
+
+      width: calc(33.3333% - 4rem);
+      padding: 0rem 1rem 1rem 0;
+      height: 100%;
     }
 
-    .dram-content {
-      background-color: beige;
-      margin: 1rem;
-      padding: 1rem;
-    }
-
-    .related-dram {
-      display: flex;
-
-    }
+    li:nth-child(1) { order: 1; }
+    li:nth-child(2) { order: 4; }
+    li:nth-child(3) { order: 7; }
+    li:nth-child(4) { order: 2; }
+    li:nth-child(5) { order: 5; }
+    li:nth-child(6) { order: 8; }
+    li:nth-child(7) { order: 3; }
+    li:nth-child(8) { order: 5; }
+    li:nth-child(9) { order: 9; }
 
   }
 }
 
-// // layout: global margin, padding
-
-// // .region-header,
-// // .region-footer-first > div,
-// // .region-footer-second > nav,
-// // #block-primary-author,
-// // #block-cage-copyright {
-// //   @include auto-margin;
-// //   @include auto-padding;
-// // }
-
-// footer {
-
-//   .region-footer-first,
-//   .region-footer-second {
-//     padding: 3rem 0rem;
-//   }
-// }
-
-// #block-cage-breadcrumbs {
-//   @include auto-margin;
-//   @include auto-padding;
-// }
-
-// .layout-content {
-//   margin-top: 3rem;
-// }
-
-// .page-node-type-article {
-
-
-//   .field__item,
-//   .field__label {
-//     @include auto-margin;
-//   }
-
-//   .field__item .media {
-//     margin-left: -1rem;
-//   }
-
-//   .field-media-image-caption {
-//     padding: .75rem 1rem 0 2rem;
-//     font-family: $univers;
-//     font-size: ms(-1);
-//   }
-// }
-
-// .field-media-image .field__item {
-//   display: flex;
-//   justify-content: center;
-//   text-align: center;
-// }
-
-// .region-footer-first,
-// .region-footer-second {
-//   padding: 1rem 0;
-// }
-
-// .page-node-type-article #block-primary-author {
-//   padding: 1rem;
-// }

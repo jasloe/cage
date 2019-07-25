@@ -4,12 +4,18 @@ $black: #000;
 
 // Issue 21: The Change Issue
 $pantone-288: hsl(215, 100%, 22%);
-$pantone-666: #50bf28;
-
 $sa21-color: $pantone-288;
+
+// Issue 22: The Lee Hyla Issue
+$pantone-666: #50bf28;
 $sa22-color: $pantone-666;
 
+// Current color scheme
 $current-color: $sa21-color;
+$current-color-black: hsla(60%, 3%, 17%, 1);
+$current-color-gray: hsla(72%, 11%, 35%, 1);
+$current-color-offwhite: hsla(0%, 0%, 87%, 1);
+$current-color-accent: hsla(13%, 90%, 58%, 1);
 
 // Link states
 $link: $current-color;
