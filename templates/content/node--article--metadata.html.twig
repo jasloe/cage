@@ -89,7 +89,22 @@
 {{ attach_library('stable/node') }}
 
   <div class="meta-wrapper">
-    {{ content }}
-  </div>
+    <h3 class="article-title">{{ content.field_article_formatted_title.0 }}</h3>
+    <div class="meta primary-author">
+      <a href="{{ content.field_article_primary_author[0]['#url'] }}">
+        {{ content.field_article_primary_author[0]['#title'] }}
+      </a>
+    </div>
+    <div class="meta related-issue">Originally published in<br  />
+      <a href="{{ content.field_article_rel_issues[0]['#url'] }}">
+        {{ content.field_article_rel_issues[0]['#title'] }}
+      </a>
+      <p class="publication-date">{{ content.field_article_publication_date[0] }}</p>
+      <p>{{ content.field_article_page_numbers.0 }}</p>
+
+</div>
+    </div>
+
+
 
 </article>

@@ -26,18 +26,51 @@
   }
 }
 
-@mixin links($link, $visited, $hover, $active, $box-shadow) {
-  & {
-    color: $link;
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
 
+@mixin menu-links($link, $visited, $hover, $active) {
+  a {
+    color: $link;
+    text-decoration: none;
+    @include transition(color 0.5s ease);
     padding: 0;
+
     &:visited {
       color: $visited;
     }
+
     &:hover {
       color: $hover;
-      display: none;
     }
+
+    &:active,
+    &:focus {
+      color: $active;
+    }
+  }
+}
+
+@mixin body-links($link, $visited, $hover, $active) {
+  a {
+    color: $link;
+    text-decoration: none;
+    @include transition(color 0.5s ease);
+    padding: 0;
+
+    &:visited {
+      color: $visited;
+    }
+
+    &:hover {
+      color: $hover;
+    }
+
     &:active,
     &:focus {
       color: $active;

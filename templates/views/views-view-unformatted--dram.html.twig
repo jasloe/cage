@@ -24,6 +24,7 @@
       default_row_class ? 'views-row',
     ]
   %}
-  {{row.attributes.addClass(row_classes)}}
-  {{- row.content -}}
+  <div class="dram-release">
+    {{- row.content -}}
+  </div>
 {% endfor %}

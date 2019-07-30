@@ -1,32 +1,44 @@
-// Footer layouts
+// header, footer, breadcrumb layouts
 @mixin global-margin {
-  padding: 1rem;
   margin: 0 auto;
   max-width: $max-vw;
 }
 
 .region-header {
+  padding-top: 3px; // "fixes" Univers baseline
   margin: 1rem;
 }
 
-main {
-  margin-top: 3rem;
+body main {
+  margin-top: 4rem;
 }
 
-#block-copyright {
+.region-breadcrumbs,
+.region-page-title,
+.article-wrapper {
+  // cont'd with article styling below
+  padding: 0 1rem;
   @include global-margin;
 }
 
-// footer-first, footer-second global positioning
-.region-footer-first .newsletter-social-wrapper,
-.region-footer-second .footer-wrapper {
+.region-content-related .primary-author,
+.region-content-related .dram-content {
   @include global-margin;
-  padding: 4rem 1rem;
+  h2 {
+    margin: 0 1rem;
+  }
+}
+
+// footer-first
+.region-footer-first .newsletter-social-wrapper {
+  @include global-margin;
+  padding: 4rem 0rem;
   display: flex;
 }
 
 // footer-first inset
 .region-footer-first {
+  background-color: $current-color;
 
   .newsletter-social,
   .about-sap {
@@ -45,9 +57,9 @@ main {
     margin-bottom: 1rem;
     width: 75%;
 
-      form {
-        display: flex;
-      }
+    form {
+      display: flex;
+    }
   }
 
   .about-sap {
@@ -62,34 +74,131 @@ main {
   display: flex;
 }
 
+// footer-second
+.region-footer-second .footer-wrapper {
+  @include global-margin;
+}
+
 // footer-second inset
 .region-footer-second .footer-wrapper {
-
   .footer ul {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-
-
-
-
-    li {
-
-      width: calc(33.3333% - 4rem);
-      padding: 0rem 1rem 1rem 0;
-      height: 100%;
+    max-width: 100%;
+    background-color: green;
+    @include mq($from: tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
     }
 
-    li:nth-child(1) { order: 1; }
-    li:nth-child(2) { order: 4; }
-    li:nth-child(3) { order: 7; }
-    li:nth-child(4) { order: 2; }
-    li:nth-child(5) { order: 5; }
-    li:nth-child(6) { order: 8; }
-    li:nth-child(7) { order: 3; }
-    li:nth-child(8) { order: 5; }
-    li:nth-child(9) { order: 9; }
+    li {
+      flex-shrink: 1;
+      flex-basis: 33%;
+      height: 100%;
+      padding-bottom: 1rem;
+      // border: 1px solid white;
+    }
 
+    li:nth-child(1) {
+      order: 1;
+    }
+
+    li:nth-child(2) {
+      order: 4;
+    }
+
+    li:nth-child(3) {
+      order: 7;
+    }
+
+    li:nth-child(4) {
+      order: 2;
+    }
+
+    li:nth-child(5) {
+      order: 5;
+    }
+
+    li:nth-child(6) {
+      order: 8;
+    }
+
+    li:nth-child(7) {
+      order: 3;
+    }
+
+    li:nth-child(8) {
+      order: 5;
+    }
+
+    li:nth-child(9) {
+      order: 9;
+    }
   }
 }
 
+// copyright
+#block-copyright {
+  @include global-margin;
+}
+
+.page-node-type-article main {
+  .article-wrapper {
+    @include mq($from: tablet) {
+      display: flex;
+    }
+  }
+
+  .article-wrapper .region {
+    @include mq($from: tablet) {
+      flex: 1;
+    }
+  }
+  .section-title {
+    padding: 0rem 0 1rem 4rem;
+  }
+  .body {
+    padding: 0rem 0rem 2rem;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.page-node-type-article {
+  .region-content-related .primary-author {
+    margin: 0 auto;
+    max-width: 480px;
+  }
+  .region-content-related .primary-author img {
+    height: 100%;
+    width: 100%;
+  }
+  .region-content-related .primary-author .view {
+    margin: 1rem 0;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+  }
+  .region-content-related .primary-author .view {
+    .biographical-note {
+      padding: 1rem;
+    }
+    a {
+      padding: 0rem 1rem 1rem;
+    }
+  }
+}
+
+// .region-content-related .dram-content .view {
+//   @include mq($from: tablet) {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
+// }
+// .region-content-related .dram-content .view {
+//   margin: 0 auto;
+// }

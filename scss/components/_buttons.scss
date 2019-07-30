@@ -1,22 +1,39 @@
-.field-article-subjects-topical {
-  font-family: $univers;
-  font-size: ms(-1);
+// .about-sap button {
+//   font-family: $univers;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   border: 1px solid $current-color;
+//   background-color: $current-color;
+//   color: $white;
+//   font-size: ms(-1);
+//   padding: 1rem;
+//   line-height: 1.1rem;
+//   letter-spacing: .03rem;
 
-  @include auto-margin;
-  @include auto-padding;
+//   a {
+//     color: $white;
+//   }
+// }
 
-  display: flex;
+// .field-article-subjects-topical {
+//   font-family: $univers;
+//   font-size: ms(-1);
 
-  .field__item {
-    margin: .5rem .33rem 0 0;
-  }
-  .field__item:hover {
-    background-color: red;
-  }
+//   @include auto-margin;
+//   @include auto-padding;
 
-  .field__item a {
-    padding: .33rem;
-    color: $white;
-    background: $current-color;
-}
-}
+//   display: flex;
+
+//   .field__item {
+//     margin: .5rem .33rem 0 0;
+//   }
+//   .field__item:hover {
+//     background-color: red;
+//   }
+
+//   .field__item a {
+//     padding: .33rem;
+//     color: $white;
+//     background: $current-color;
+// }
+// }

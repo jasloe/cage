@@ -1,14 +1,118 @@
-html {
-  font-size: 18px;
+@import "../node_modules/rfs/scss";
+
+// $rfs-base-font-size: 18px;
+
+body,
+p {
+  font-family: $sans-font;
+  text-rendering: optimizeLegibility;
 }
 
-// $modularscale: (base: 1rem,
-//   ratio: 1.1);
+.path-frontpage {
+  .short-title {
+    font-family: $univers;
+    text-transform: uppercase;
+    @include font-size(1rem);
+  }
 
-body {
-  font-family: $serif-font;
-  font-size: ms(0);
-  text-rendering: optimizeLegibility;
+  h1 a {
+    font-family: $life;
+    @include font-size(4rem);
+    text-transform: uppercase;
+  }
+}
+
+header {
+  @include font-size(1.2rem);
+}
+
+.region-footer-first {
+  @include font-size(1rem);
+}
+
+.region-footer-second {
+  @include font-size(0.9rem);
+}
+
+.region-footer-second .body p {
+  @include font-size(0.9rem);
+  color: $white;
+}
+
+.page-node-type-article {
+  color: $current-color;
+  .article-title h1 {
+    font-family: $life;
+    @include font-size(4rem);
+    text-transform: uppercase;
+  }
+  .article-wrapper {
+    .section-title {
+      text-transform: uppercase;
+      padding-left: 4rem;
+    }
+
+    .section-title p {
+      box-shadow: 0px 1px 0px 0px $current-color;
+      display: inline;
+      padding-bottom: 0.2rem;
+      letter-spacing: 0.01rem;
+    }
+
+    .body p {
+      font-family: $life;
+      @include font-size(1rem);
+      text-align: left;
+      text-indent: 0rem;
+      line-height: 1.2;
+
+      @include mq($from: mobile) {
+        text-indent: 4rem;
+        text-align: justify;
+        text-justify: inter-character;
+        @include font-size(1.2rem);
+      }
+    }
+
+    .body em {
+      font-family: $life-italic;
+    }
+  }
+  .meta-wrapper {
+    line-height: 1.2;
+    .meta {
+      padding-bottom: 1rem;
+    }
+    .meta:first-child {
+      padding-top: 1rem;
+    }
+    h3 {
+      font-family: $univers;
+      text-transform: uppercase;
+      // box-shadow: 0px 1px 0px 0px $current-color;
+      // display: inline;
+      // padding-bottom: 0.2rem;
+      letter-spacing: 0.01rem;
+    }
+  }
+
+  .region-content-related .primary-author,
+  .region-content-related .dram-content {
+    > h2 {
+      font-family: $univers;
+      text-transform: uppercase;
+      box-shadow: 0px 1px 0px 0px $current-color;
+      display: inline;
+      padding-bottom: 0.2rem;
+      letter-spacing: 0.01rem;
+    }
+  }
+
+  .region-content-related .primary-author {
+    .biographical-note {
+      padding-bottom: 1rem;
+    }
+  }
 }
 
 // .page-node-type-article {
@@ -39,7 +143,6 @@ body {
 //     line-height: 1;
 //   }
 
-
 //   .page-section { // Page section
 //     line-height: 1.2;
 //     margin: 1rem 0;
@@ -51,9 +154,7 @@ body {
 //     margin: 1rem 0;
 
 //     p {
-//       box-shadow: 0px 2px 0px 0px $current-color;
-//       display: inline;
-//       padding-bottom: .2rem;
+
 //     }
 //   }
 //   .page-node-type-article {

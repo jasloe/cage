@@ -1,30 +1,55 @@
-.path-frontpage .region-content{
-height: 100vh;
-}
-
-.path-frontpage .views-element-container {
-      height: 100vh;
-   @include auto-margin;
-  .short-title {
-    text-transform: uppercase;
-    font-family: $univers;
-  }
-  h1 {
-    font-family: $life;
-    text-transform: uppercase;
-    font-size: 4rem;
-  }
-  a {
-  }
-}
-
-.path-frontpage .views-element-container div {
-
-  div {
-
+.issue-front {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  }
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: 50%;
 }
+
+.issue-front picture {
+  // display: flex;
+  // flex-direction: column;
+  // // justify-content: center;
+  // text-align: center;
+  // height: 100vh;
+  // background-image: url("https://s3.amazonaws.com/criterion-production/spotlight_images/2253-d6fda8b6d4c92b46dd7c9ced47aa965f/ZgxwuvewqUzGAOETBzXp9Xuzh4eqBp_original.jpg");
+  // // : url("https://mdn.mozillademos.org/files/6457/mdn_logo_only_color.png");
+  // // background-image: url("../images/lee-hyla.jpg");
+  // background-size: cover;
+  // background-position: 50%;
+  // background-repeat: no-repeat;
+}
+
+// .path-frontpage .region-content{
+// height: 100vh;
+// }
+
+// .path-frontpage .views-element-container {
+//       height: 100vh;
+//    @include auto-margin;
+//   .short-title {
+//     text-transform: uppercase;
+//     font-family: $univers;
+//   }
+//   h1 {
+//     font-family: $life;
+//     text-transform: uppercase;
+//     font-size: 4rem;
+//   }
+//   a {
+//   }
+// }
+
+// .path-frontpage .views-element-container div {
+
+//   div {
+
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   }
+// }

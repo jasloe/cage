@@ -14,10 +14,6 @@
     &:last-child {
       padding-right: 0rem;
     }
-
-    >a {
-      text-decoration: none;
-    }
   }
 }
 
@@ -37,37 +33,29 @@
       padding-right: 0;
     }
 
-    >a {
+    > a {
       text-decoration: none;
     }
 
-    >a:after {
+    > a:after {
       content: "\2F";
       padding-left: 5px;
     }
   }
 }
 
-
 header {
-  border-bottom: 1px solid $black;
+  border-bottom: 1px solid $current-color;
 }
 
 footer {
-  border-top: 1px solid $black;
 }
 
 .region-footer-first {
-    border-top: 1px solid $black;
 }
 
 .region-footer-second {
-    border-top: 1px solid $black;
 }
 
 .region-footer-second {
-  font-family: $univers;
-  ul li a {
-    @include links($current-color, $current-color, $current-color-accent, $current-color-accent, $current-color-accent);
-}
 }

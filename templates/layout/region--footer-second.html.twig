@@ -19,12 +19,12 @@
   ]
 %}
 {% if content %}
-<div{{attributes.addClass(classes)}}>
-  <div class="footer-wrapper">
-    <div class="footer">
-      {{ drupal_menu('footer') }}
+  <div{{attributes.addClass(classes)}}>
+    <div class="footer-wrapper">
+      <div class="footer">
+        {{ drupal_menu('footer') }}
+      </div>
     </div>
   </div>
-  </div>
   {{ content }}
-  {% endif %}
+{% endif %}

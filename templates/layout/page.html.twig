@@ -57,24 +57,25 @@
       {{ page.breadcrumbs }}
     {% endif %}
 
-    <div class="layout-inner">
-      {{ page.content_pre }}
-      <div class="content-center">
-        {{ page.content }}
-        {{ page.content_aside }}
-      </div>
-      {{ page.content_related }}
-      {{ page.content_post }}
+    {{ page.page_title }}
+
+
+    <div class="article-wrapper">
+      {{ page.content }}
+      {{ page.content_aside }}
     </div>
+    {{ page.content_related }}
+    {{ page.content_post }}
+
     {# /.layout-content #}
 
   </main>
 
-  {% if page.footer_first %}
-    <footer role="contentinfo">
-      {{ page.footer_first }}
-      {{ page.footer_second }}
-    </footer>
-  {% endif %}
+  <footer>
+    {{ page.footer_first }}
+    {{ page.footer_second }}
+  </footer>
+
+
 </div>
 {# /.layout-container #}

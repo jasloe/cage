@@ -18,12 +18,15 @@
 {% if title %}
   <h3>{{ title }}</h3>
 {% endif %}
+
 {% for row in rows %}
   {%
     set row_classes = [
       default_row_class ? 'views-row',
     ]
   %}
-  {{row.attributes.addClass(row_classes)}}
-  {{- row.content -}}
+
+  <section class="issue-front">
+    {{- row.content -}}
+  </section>
 {% endfor %}

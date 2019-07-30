@@ -1,19 +1,39 @@
-// .region-header nav,
-// .region-footer nav {
-//   ul li a {
-//   }
-// }
-
-a {
-  text-decoration: none;
+header {
+  @include menu-links(
+    $current-color,
+    $current-color,
+    $current-color-accent,
+    $current-color-accent
+  );
 }
 
-.page-node-type-article {
-  .field-article-primary-author a {
-    @include links($link, $visited, $hover, $active, none);
-  }
+.region-content,
+.region-content-aside,
+.region-content-related {
+  @include body-links(
+    $current-color,
+    $current-color,
+    $current-color-accent,
+    $current-color-accent
+  );
+}
 
-  .page-section a {
-    @include links($link, $visited, $hover, $active, 0 2px 0);
+.region-header nav ul li:first-child {
+  text-transform: uppercase;
+  letter-spacing: 0.01rem;
+}
+
+footer {
+  @include menu-links(
+    $white,
+    $white,
+    $current-color-accent,
+    $current-color-accent
+  );
+}
+
+footer {
+  ul li a.is-active {
+    color: $current-color-accent;
   }
 }
