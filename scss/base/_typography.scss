@@ -25,6 +25,11 @@ p {
 header {
   @include font-size(1.2rem);
 }
+.region-footer-first,
+.region-footer-second {
+  line-height: 1.4;
+  color: $current-color-offwhite;
+}
 
 .region-footer-first {
   @include font-size(1rem);
@@ -34,9 +39,32 @@ header {
   @include font-size(0.9rem);
 }
 
-.region-footer-second .body p {
+.legal-wrapper {
   @include font-size(0.9rem);
-  color: $white;
+  color: $current-color-gray;
+}
+
+.legal-wrapper ul li:first-child {
+  padding-right: 1rem;
+}
+
+// basic page
+.page-node-type-page h1 {
+  font-family: $life;
+  @include font-size(1.4rem);
+}
+
+.page-node-type-page p {
+  font-family: $life;
+  line-height: 1.2;
+}
+
+.page-node-type-page strong {
+  font-family: $life-bold;
+}
+
+.page-node-type-page em {
+  font-family: $life-italic;
 }
 
 .page-node-type-article {
@@ -105,6 +133,7 @@ header {
       display: inline;
       padding-bottom: 0.2rem;
       letter-spacing: 0.01rem;
+      // margin-left: 0;
     }
   }
 

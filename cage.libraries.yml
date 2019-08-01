@@ -2,7 +2,6 @@ global-styling:
   version: VERSION
   css:
     base:
-      css/vendor/reset.css: {}
       css/main.css: {}
 global-scripts:
   version: VERSION
@@ -10,13 +9,12 @@ global-scripts:
     dist/js/headroom.js: {}
     dist/js/header.js: {}
     dist/js/main.js: {}
-#custom:
-#    header: true
-#    js:
-#      js/header.js: {}
+custom:
+  js:
+    dist/js/waypoints.js: {}
 waypoints:
   js:
-    dist/js/waypoints/lib/jquery.waypoints.min.js: { weight: -2 }
-    dist/js/waypoints/lib/shortcuts/sticky.min.js: { weight: -1 }
+    dist/js/jquery.waypoints.min.js: { weight: -2 }
+    dist/js/sticky.min.js: { weight: -1 }
   dependencies:
     - core/jquery

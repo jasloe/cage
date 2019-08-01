@@ -32,6 +32,15 @@ footer {
   );
 }
 
+.legal-wrapper {
+  @include menu-links(
+    $current-color-gray,
+    $white,
+    $current-color-accent,
+    $current-color-accent
+  );
+}
+
 footer {
   ul li a.is-active {
     color: $current-color-accent;

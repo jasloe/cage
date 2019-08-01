@@ -6,6 +6,7 @@ core: 8.x
 libraries:
   - cage/global-styling
   - cage/global-scripts
+  - cage/waypoints
 
 base theme: stable
 
@@ -21,3 +22,4 @@ regions:
   content_post: Post-content
   footer_first: First footer
   footer_second: Second footer
+  legal: Legal

@@ -110,7 +110,7 @@ gulp.task('drush:cr', function () {
  */
 gulp.task('browser-sync', function() {
   browserSync.init({
-    files: ['css/**/*.css', 'js/*.js'],
+    files: ['css/**/*.css', 'dist/js/*.js'],
     port: config.browserSync.port,
     proxy: config.browserSync.hostname,
     open: config.browserSync.openAutomatically,
@@ -141,7 +141,7 @@ gulp.task('watch', function() {
   gulp.watch(['scss/**/*.scss'], ['sass', 'drush:cc']);
 
   // watch js for changes and clear drupal theme cache on change
-  gulp.watch(['src/js/**/*.js'], ['compress', 'drush:cc']);
+  gulp.watch(['src/js/*.js'], ['compress', 'drush:cc']);
 
   // If user has specified an override, rebuild Drupal cache
   if (!config.twig.useCache) {

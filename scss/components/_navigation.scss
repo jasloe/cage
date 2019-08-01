@@ -19,8 +19,12 @@
 
 // Breadcrumbs
 // Layout
-#block-tenney-breadcrumbs {
+#block-cage-breadcrumbs {
   width: 100%;
+}
+
+.waypoint {
+  position: fixed;
 }
 
 .breadcrumb ol {
@@ -42,6 +46,10 @@
       padding-left: 5px;
     }
   }
+}
+
+.active {
+  background-color: red;
 }
 
 header {
