@@ -58,25 +58,26 @@
     {% endif %}
 
     {{ page.page_title }}
+    {{ page.content_aside }}
 
-
-    <div class="article-wrapper">
+    {% if page.content_aside %}
+      <div class="article-wrapper">
+        {{ page.content }}
+        {{ page.content_aside }}
+      </div>
+    {% else %}
       {{ page.content }}
-      {{ page.content_aside }}
-    </div>
-    {{ page.content_related }}
-    {{ page.content_post }}
+    {% endif %}
+  </div>
+  {{ page.content_related }}
+  {{ page.content_post }}
 
-    {# /.layout-content #}
+  {# /.layout-content #}
 
-  </main>
+</main>
 
-  <footer>
-    {{ page.footer_first }}
-    {{ page.footer_second }}
-    {{ page.legal }}
-  </footer>
-
-
-</div>
-{# /.layout-container #}
+<footer>
+  {{ page.footer_first }}
+  {{ page.footer_second }}
+  {{ page.legal }}
+</footer></div>{# /.layout-container #}
