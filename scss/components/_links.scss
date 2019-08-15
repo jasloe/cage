@@ -7,7 +7,8 @@ header {
   );
 }
 
-header.is-active {
+header.is-active,
+.overlay {
   @include menu-links(
     $white,
     $white,
@@ -18,7 +19,6 @@ header.is-active {
   .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
     background-color: $white;
   }
-
 }
 
 

@@ -8,6 +8,10 @@ header.is-active {
   background-color: $current-color;
 }
 
+.dialog-off-canvas-main-canvas .overlay {
+  display: none;
+}
+
 .dialog-off-canvas-main-canvas .overlay.open {
     position: fixed;
     background-color: $current-color;
@@ -18,10 +22,12 @@ header.is-active {
     right: 0;
     height: calc(100vh - 3rem - 5px);
     width: 100%;
+    display: flex;
   }
 
 .dialog-off-canvas-main-canvas .overlay.open {
-  display: flex;
+  .overlay-wrapper-first {
+    display: flex;
+  }
 }
-
 
