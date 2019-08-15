@@ -23,45 +23,66 @@ var headroom = new Headroom(header, {
 });
 headroom.init();
 
+// mobile overlay logic
 (function ($) {
+  // add markup to region-header
   var $window = $(window)
-  var $elemHeader = $('header')
-  var $elemRegionHeader = $('.region-header')
-  var $elemNav = $('.region-header nav')
-  var $elemModal = $('.hamburger')
+  var $regionHeader = $('.region-header')
+  var $nav = $('.region-header nav')
 
-  // attach html to .region-header element
-  $elemRegionHeader.append("<ul class='search'><li><a>Search</a></li></ul>")
-  $elemRegionHeader.append("<button class='hamburger hamburger--minus' type='button'><span class='hamburger-box'><span class='hamburger-inner'></span></span></button>")
+  var $hamburger = $(".hamburger");
+  var $body = $("body");
+  var $headerOverlay = $("header");
+  var $overlay = $(".dialog-off-canvas-main-canvas .overlay");
+
+  $regionHeader.prepend("<button class='hamburger hamburger--minus' type='button'><span class='hamburger-box'><span class='hamburger-inner'></span></span></button>")
+  $regionHeader.append("<ul class='search'><li><a>Search</a></li></ul>")
+
+  var $hamburger = $('.hamburger')
 
   function resize() {
+
     if ($window.width() < 740) {
 
-      $elemModal.show();
-      $elemNav.hide();
-      return $elemRegionHeader.addClass('mobile')
+      $hamburger.show()
+      $nav.hide()
+        return $regionHeader.addClass('mobile')
 
+      } else {
+
+      $hamburger.hide()
+      $nav.show()
+        return $regionHeader.removeClass('mobile')
+
+    }
   }
-    $elemModal.hide();
-    $elemNav.show();
 
+  $hamburger.on('click', function () {
+    // disable scrolling
+    $body.toggleClass('no-scroll');
+
+    // change hamburger state
+    $hamburger.toggleClass('is-active');
+
+    // toggle overlay
+    $headerOverlay.toggleClass('is-active');
+    $overlay.toggleClass('open');
+  });
+
+
+  function checkMobile() {
+    var $isOpen = $('.overlay.open')
+    if ($isOpen.length) {
+      $nav.hide();
+      $hamburger.show()
+    }
   }
 
   $window
     .resize(resize)
     .trigger('resize');
 
+$window.resize(checkMobile);
+
+
 })(jQuery);
-
-var hamburger = document.querySelector(".hamburger");
-var body = document.querySelector("body");
-var headerOverlay = document.querySelector("header");
-var modalWrapper = document.querySelector(".dialog-off-canvas-main-canvas .overlay");
-
-
-hamburger.addEventListener("click", function () {
-  hamburger.classList.toggle("is-active");
-  body.classList.toggle("no-scroll");
-  headerOverlay.classList.toggle("is-active");
-  modalWrapper.classList.toggle("open");
-});
