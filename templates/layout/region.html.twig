@@ -16,10 +16,11 @@
   set classes = [
     'region',
     'region-' ~ region|clean_class,
+    'desktop'
   ]
 %}
 {% if content %}
-  <div{{attributes.addClass(classes)}}>
-    {{ content }}
+<div{{attributes.addClass(classes)}}>
+  {{ content }}
   </div>
-{% endif %}
+  {% endif %}

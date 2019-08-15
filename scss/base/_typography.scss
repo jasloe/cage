@@ -23,8 +23,9 @@ p {
 }
 
 header {
-  @include font-size(1.2rem);
+  @include font-size(1rem);
 }
+
 .region-footer-first,
 .region-footer-second {
   line-height: 1.4;

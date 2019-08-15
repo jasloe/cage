@@ -1,0 +1,27 @@
+body.no-scroll {
+  position:fixed;
+  overflow:hidden;
+}
+
+header.is-active {
+  color: $white;
+  background-color: $current-color;
+}
+
+.dialog-off-canvas-main-canvas .overlay.open {
+    position: fixed;
+    background-color: $current-color;
+    color: $white;
+    z-index: 9999;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: calc(100vh - 3rem - 5px);
+    width: 100%;
+  }
+
+.dialog-off-canvas-main-canvas .overlay.open {
+  display: flex;
+}
+
+

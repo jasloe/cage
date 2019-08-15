@@ -19,7 +19,22 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
   align-items: center;
   justify-content: space-between;
 
-  @include mq($until: tablet) {
+  > div {
+    margin-right: auto;
+  }
+  > nav ul {
+    display: flex;
+  }
+  > nav ul li {
+    padding-right: 1rem;
+    &:last-child {
+      padding-right: 1rem;
+    }
+  }
+}
+
+.region-header.mobile {
+    @include mq($until: tablet) {
     > div {
       margin-right: 0 !important;
     }
@@ -32,19 +47,6 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
     }
     :nth-child(3) {
       order: 3;
-    }
-  }
-
-  > div {
-    margin-right: auto;
-  }
-  > nav ul {
-    display: flex;
-  }
-  > nav ul li {
-    padding-right: 1rem;
-    &:last-child {
-      padding-right: 1rem;
     }
   }
 }
