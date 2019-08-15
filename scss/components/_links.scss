@@ -18,7 +18,8 @@ header {
   );
 }
 
-.region-header nav ul li:first-child {
+// site name
+.region-header > div a {
   text-transform: uppercase;
   letter-spacing: 0.01rem;
 }

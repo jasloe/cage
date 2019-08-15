@@ -6,7 +6,7 @@ var shell = require('gulp-shell');
 var notify = require('gulp-notify');
 var browserSync = require('browser-sync').create();
 var sourcemaps = require('gulp-sourcemaps');
-var uglify = require('gulp-uglify');
+// var uglify = require('gulp-uglify');
 var fs = require("fs");
 var runSequence = require('run-sequence');
 var config = require("./example.config");
@@ -56,7 +56,7 @@ gulp.task('sass', function () {
 gulp.task('compress', function() {
   return gulp.src('./src/js/*.js')
     .pipe(sourcemaps.init())
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./dist/js'))
     .pipe(notify({
@@ -141,7 +141,7 @@ gulp.task('watch', function() {
   gulp.watch(['scss/**/*.scss'], ['sass', 'drush:cc']);
 
   // watch js for changes and clear drupal theme cache on change
-  gulp.watch(['src/js/*.js'], ['compress', 'drush:cc']);
+  gulp.watch(['src/js/*.js', 'src/js/**/*.js'], ['compress', 'drush:cc']);
 
   // If user has specified an override, rebuild Drupal cache
   if (!config.twig.useCache) {

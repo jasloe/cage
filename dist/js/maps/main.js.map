@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.js"],"names":["jQuery","console","log"],"mappings":"AAIGA,OAFDC,QAAQC,IAAI","file":"../main.js","sourcesContent":["(function ($) {\n\n  console.log('test');\n\n})(jQuery);\n"]}
+{"version":3,"names":[],"mappings":"","sources":["main.js"],"sourcesContent":["// (function ($) {\n\n// })(jQuery);\n\nvar $box = $('h1.title');\n\nvar tween = TweenLite.to($box, .1, {\n  y: -50,\n  ease: Power1.easeInOut,\n  delay: 0,\n  // onComplete: myFunction,\n  // onCompleteParams: [element, 'param2']\n});\n"],"file":"../main.js"}

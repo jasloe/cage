@@ -11,6 +11,7 @@ $mq-responsive: true;
 
 $mq-breakpoints: (
   mobile: 480px,
+  modal: 640px,
   tablet: 740px,
   desktop: 980px,
   wide: 1300px,
@@ -20,6 +21,6 @@ $mq-breakpoints: (
 );
 
 $mq-static-breakpoint: desktop;
-$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
+$mq-show-breakpoints: (mobile, modal, mobileLandscape, tablet, desktop, wide);
 
 @import "../vendor/mq";
