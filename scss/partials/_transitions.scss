@@ -1,36 +1,36 @@
-// Breadcrumb transitions
-#block-tenney-breadcrumbs.stuck {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  animation: change-breadcrumb-background .5s both;
-}
+// // Breadcrumb transitions
+// #block-tenney-breadcrumbs.stuck {
+//   position: fixed;
+//   top: 0;
+//   z-index: 1;
+//   animation: change-breadcrumb-background .5s both;
+// }
 
-#block-tenney-breadcrumbs.stuck .breadcrumb ol li {
-  animation: change-breadcrumb-text .5s forwards;
+// #block-tenney-breadcrumbs.stuck .breadcrumb ol li {
+//   animation: change-breadcrumb-text .5s forwards;
 
-  >a {
-    animation: change-breadcrumb-text .5s forwards;
-  }
-}
+//   >a {
+//     animation: change-breadcrumb-text .5s forwards;
+//   }
+// }
 
 
-@keyframes change-breadcrumb-background {
-  0% {
-    background-color: $white;
-  }
+// @keyframes change-breadcrumb-background {
+//   0% {
+//     background-color: $white;
+//   }
 
-  100% {
-    background-color: $current-color;
-  }
-}
+//   100% {
+//     background-color: $current-color;
+//   }
+// }
 
-@keyframes change-breadcrumb-text {
-  0% {
-    color: $current-color;
-  }
+// @keyframes change-breadcrumb-text {
+//   0% {
+//     color: $current-color;
+//   }
 
-  100% {
-    color: $white;
-  }
-}
+//   100% {
+//     color: $white;
+//   }
+// }

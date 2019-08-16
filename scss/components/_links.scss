@@ -1,64 +1,68 @@
-header {
-  @include menu-links(
-    $current-color,
-    $current-color,
-    $current-color-accent,
-    $current-color-accent
-  );
+a {
+  text-decoration: none;
 }
 
-header.is-active,
-.overlay {
-  @include menu-links(
-    $white,
-    $white,
-    $white,
-    $white
-  )
+// header {
+//   @include menu-links(
+//     $current-color,
+//     $current-color,
+//     $current-color-accent,
+//     $current-color-accent
+//   );
+// }
 
-  .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
-    background-color: $white;
-  }
-}
+// header.is-active,
+// .overlay {
+//   @include menu-links(
+//     $white,
+//     $white,
+//     $white,
+//     $white
+//   )
+
+//   .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
+//     background-color: $white;
+//   }
+// }
 
 
-.region-content,
-.region-content-aside,
-.region-content-related {
-  @include body-links(
-    $current-color,
-    $current-color,
-    $current-color-accent,
-    $current-color-accent
-  );
-}
+// .region-content,
+// .region-content-aside,
+// .region-content-related {
+//   @include body-links(
+//     $current-color,
+//     $current-color,
+//     $current-color-accent,
+//     $current-color-accent
+//   );
+// }
 
-// site name
+// // site name
 .region-header > div a {
   text-transform: uppercase;
   letter-spacing: 0.01rem;
 }
 
-footer {
-  @include menu-links(
-    $white,
-    $white,
-    $current-color-accent,
-    $current-color-accent
-  );
-}
+// footer {
+//   @include menu-links(
+//     $white,
+//     $white,
+//     $current-color-accent,
+//     $current-color-accent
+//   );
+// }
 
-.legal-wrapper {
-  @include menu-links(
-    $current-color-gray,
-    $white,
-    $current-color-accent,
-    $current-color-accent
-  );
-}
+// .legal-wrapper {
+//   @include menu-links(
+//     $current-color-gray,
+//     $white,
+//     $current-color-accent,
+//     $current-color-accent
+//   );
+// }
 
-footer {
-  ul li a.is-active {
-    color: $current-color-accent;
-  }
-}
+// footer {
+//   ul li a.is-active {
+//     color: $current-color-accent;
+//   }
+// }

@@ -9,7 +9,7 @@ var sourcemaps = require('gulp-sourcemaps');
 // var uglify = require('gulp-uglify');
 var fs = require("fs");
 var runSequence = require('run-sequence');
-var config = require("./example.config");
+var config = require("./example.config.js");
 
 /**
  * If config.js exists, load that config for overriding certain values below.
