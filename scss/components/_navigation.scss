@@ -24,7 +24,7 @@ header.is-active .region-header > div {
   justify-content: space-between;
 
   > div {
-    margin-right: auto;
+    // margin-right: auto;
   }
   > nav ul {
     display: flex;
@@ -37,11 +37,11 @@ header.is-active .region-header > div {
   }
 }
 
-.region-header.mobile {
-    > div {
-      margin-right: 0 !important;
-    }
-}
+// .region-header.mobile {
+//   > div {
+//     margin-right: 0 !important;
+//   }
+// }
 
 // Breadcrumbs
 // Layout

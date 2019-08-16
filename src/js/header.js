@@ -33,10 +33,7 @@ headroom.init();
   var $hamburger = $(".hamburger");
   var $body = $("body");
   var $headerOverlay = $("header");
-  var $overlay = $(".dialog-off-canvas-main-canvas .overlay");
-
-  $regionHeader.prepend("<button class='hamburger hamburger--minus' type='button'><span class='hamburger-box'><span class='hamburger-inner'></span></span></button>")
-  $regionHeader.append("<ul class='search'><li><a>Search</a></li></ul>")
+  var $overlay = $("#overlay");
 
   var $hamburger = $('.hamburger')
 
@@ -62,7 +59,7 @@ headroom.init();
     $body.toggleClass('no-scroll');
 
     // change hamburger state
-    $hamburger.toggleClass('is-active');
+    $hamburger.toggleClass('is-open');
 
     // toggle overlay
     $headerOverlay.toggleClass('is-active');

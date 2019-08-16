@@ -15,21 +15,25 @@
 {%
   set classes = [
     'region',
-    'region-' ~ region|clean_class,
+    'region-' ~ region|clean_class
   ]
 %}
 {% if content %}
   <div{{attributes.addClass(classes)}}>
-    <div class="newsletter-social-wrapper">
-      <div class="newsletter-social">
-        {{ drupal_entity('block_content', '19') }}
-        {{ content }}
-        {{ drupal_menu('main') }}
-      </div>
-      <div class="about-sap">
-        {{ drupal_entity('block_content', '10') }}
-        {{ drupal_menu('labels') }}
-      </div>
-    </div>
+
+    <button class='hamburger hamburger--minus' type='button'>
+      <span class='hamburger-box'>
+        <span class='hamburger-inner'></span>
+      </span>
+    </button>
+    {{ content }}
+    <nav>
+      {{ drupal_menu('main') }}
+    </nav>
+    <ul class='search'>
+      <li>
+        <a>Search</a>
+      </li>
+    </ul>
   </div>
 {% endif %}
