@@ -1,11 +1,11 @@
+body.no-scroll {
+  position: fixed;
+  overflow: hidden;
+}
+
 #overlay {
   display: none;
 }
-
-// body.no-scroll {
-//   position:fixed;
-//   overflow:hidden;
-// }
 
 // header.is-active {
 //   color: $white;
