@@ -1,30 +1,52 @@
 // Navigation.scss
 // Layout
-.region-header ul {
+
+$hamburger-padding-x: 0px;
+$hamburger-padding-y: 0px;
+$hamburger-layer-width: 1rem;
+$hamburger-layer-height: 2px;
+$hamburger-layer-spacing: 4px;
+$hamburger-layer-color: $current-color;
+$hamburger-layer-border-radius: 0px;
+$hamburger-hover-opacity: 0.7;
+$hamburger-active-layer-color: $hamburger-layer-color;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity;
+
+@import "../vendor/hamburgers/hamburgers";
+
+header.is-active .region-header > div {
+  margin-right: 0rem;
+}
+
+.region-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  li {
+  > div {
+    // margin-right: auto;
+  }
+  > nav ul {
+    display: flex;
+  }
+  > nav ul li {
     padding-right: 1rem;
-
-    &:first-child {
-      margin-right: auto;
-    }
-
     &:last-child {
-      padding-right: 0rem;
+      padding-right: 1rem;
     }
   }
 }
+
+// .region-header.mobile {
+//   > div {
+//     margin-right: 0 !important;
+//   }
+// }
 
 // Breadcrumbs
 // Layout
 #block-cage-breadcrumbs {
   width: 100%;
-}
-
-.waypoint {
-  position: fixed;
 }
 
 .breadcrumb ol {
@@ -46,10 +68,6 @@
       padding-left: 5px;
     }
   }
-}
-
-.active {
-  background-color: red;
 }
 
 header {

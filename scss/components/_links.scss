@@ -7,6 +7,21 @@ header {
   );
 }
 
+header.is-active,
+.overlay {
+  @include menu-links(
+    $white,
+    $white,
+    $white,
+    $white
+  )
+
+  .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
+    background-color: $white;
+  }
+}
+
+
 .region-content,
 .region-content-aside,
 .region-content-related {
@@ -18,7 +33,8 @@ header {
   );
 }
 
-.region-header nav ul li:first-child {
+// site name
+.region-header > div a {
   text-transform: uppercase;
   letter-spacing: 0.01rem;
 }

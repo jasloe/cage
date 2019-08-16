@@ -8,13 +8,14 @@ global-scripts:
   js:
     dist/js/headroom.js: {}
     dist/js/header.js: {}
+    dist/js/micromodal.js: {}
     dist/js/main.js: {}
-custom:
+scrollmagic:
+  version: VERSION
   js:
-    dist/js/waypoints.js: {}
-waypoints:
-  js:
-    dist/js/jquery.waypoints.min.js: { weight: -2 }
-    dist/js/sticky.min.js: { weight: -1 }
+    dist/js/gsap/TweenMax.min.js: { weight: -4 }
+    dist/js/ScrollMagic.js: { weight: -3 }
+    dist/js/plugins/animation.gsap.js: { weight: -2 }
+    dist/js/plugins/debug.addIndicators.js: { weight: -1 }
   dependencies:
     - core/jquery

@@ -1,6 +1,6 @@
 @import "../node_modules/rfs/scss";
 
-// $rfs-base-font-size: 18px;
+$rfs-base-font-size: 32px;
 
 body,
 p {
@@ -23,8 +23,9 @@ p {
 }
 
 header {
-  @include font-size(1.2rem);
+  @include font-size(1rem);
 }
+
 .region-footer-first,
 .region-footer-second {
   line-height: 1.4;
@@ -143,77 +144,3 @@ header {
     }
   }
 }
-
-// .page-node-type-article {
-
-//   .field-article-pre-title {
-//     text-align: left;
-//     border-bottom: 1px solid $black;
-//     font-family: $serif-font;
-//     font-size: 2rem;
-//     line-height: 1.2;
-//   }
-
-//   .field-article-formatted-title,
-//   .field-article-primary-author {
-//     text-align: center;
-//   }
-
-// .field-article-formatted-title {
-//     text-transform: uppercase;
-//     font-family: $serif-font;
-//     font-size: 3rem;
-//     line-height: 0.9;
-// }
-
-//  .field-article-primary-author {
-//     font-family: $sans-font;
-//     font-size: 2rem;
-//     line-height: 1;
-//   }
-
-//   .page-section { // Page section
-//     line-height: 1.2;
-//     margin: 1rem 0;
-//   }
-//   .field-section-title {
-//     font-family: $univers;
-//     text-transform: uppercase;
-//     font-size: ms(-2);
-//     margin: 1rem 0;
-
-//     p {
-
-//     }
-//   }
-//   .page-node-type-article {
-
-//   .field-media-image-caption {
-//     font-family: $univers;
-//     font-size: ms(-1);
-//   }
-
-// }
-// }
-
-// a {
-//   color: #070;
-//   text-decoration: none;
-// }
-
-// .path-imprint {
-
-//   h2,
-//   p {
-//     font-family: $sans-font;
-//     font-size: ms(0);
-//   }
-
-//   h2 {
-//     text-transform: uppercase;
-//   }
-
-//   a {
-//     @include links(orange, blue, yellow, teal, purple);
-//   }
-// }
