@@ -59,7 +59,7 @@ headroom.init();
     $body.toggleClass('no-scroll');
 
     // change hamburger state
-    $hamburger.toggleClass('is-open');
+    $hamburger.toggleClass('is-active');
 
     // toggle overlay
     $headerOverlay.toggleClass('is-active');

@@ -5,17 +5,17 @@ $black: #000;
 // Issue keys
 $hyla: #755ea3;
 $change: hsl(215, 100%, 22%);
-$mumei: #221E22;
+$mumei: #221e22;
 
 // Current color scheme
-// $current-color: $hyla;
+$current-color: $hyla;
 $current-color-black: hsla(60%, 3%, 17%, 1);
 $current-color-gray: hsla(72%, 11%, 35%, 1);
 $current-color-offwhite: hsla(77%, 100%, 97%, 1);
 $current-color-accent: hsla(13%, 90%, 58%, 1);
 
 // Link states
-// $link: $current-color;
-// $visited: $current-color;
+$link: $current-color;
+$visited: $current-color;
 $hover: $black;
 $active: $black;

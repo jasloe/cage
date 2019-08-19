@@ -3,31 +3,27 @@ body.no-scroll {
   overflow: hidden;
 }
 
-#overlay {
+header.is-active {
+  color: $white;
+  background-color: $current-color;
+}
+
+.overlay {
   display: none;
 }
 
-// header.is-active {
-//   color: $white;
-//   background-color: $current-color;
-// }
-
-// .dialog-off-canvas-main-canvas .overlay {
-//   display: none;
-// }
-
-// .dialog-off-canvas-main-canvas .overlay.open {
-//     position: fixed;
-//     background-color: $current-color;
-//     color: $white;
-//     z-index: 9999;
-//     left: 0;
-//     bottom: 0;
-//     right: 0;
-//     height: calc(100vh - 3rem - 5px);
-//     width: 100%;
-//     display: flex;
-//   }
+.overlay.open {
+  position: fixed;
+  background-color: $current-color;
+  color: $white;
+  z-index: 9999;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: calc(100vh - 3rem - 5px);
+  width: 100%;
+  display: flex;
+}
 
 // .dialog-off-canvas-main-canvas .overlay.open {
 //   .overlay-wrapper-first {
