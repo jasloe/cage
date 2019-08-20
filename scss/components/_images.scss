@@ -1,35 +1,37 @@
-// @import "../vendor/colofilters";
-.media-image .field__item {
-  background-color:    $hyla;
-  display:             flex;
-  flex:                1 1 100%;
-  height:              100%;
-  overflow:            hidden;
-  position:            relative;
-}
+// // @import "../vendor/colofilters";
+// .media-issue-marquee {
+//   background-color: $hyla;
+//   height: 100%;
+//   overflow: hidden;
+//   position: relative;
+// }
 
-.media-image .field__item img {
-  filter:              grayscale(100%) contrast(1) blur(0);
-  flex:                1 0 100%;
-  height:              100%;
-  max-width:           100%;
-  mix-blend-mode:      multiply;
-  object-fit:          cover;
-  opacity:             1;
-  position:            relative;
-  width:               100%;
-}
+// .media-issue-marquee .field img {
+//   filter: grayscale(100%) contrast(1) blur(0);
+//   height: 100%;
+//   max-width: 100%;
+//   mix-blend-mode: multiply;
+//   object-fit: cover;
+//   opacity: 1;
+//   position: relative;
+//   width: 100%;
+// }
 
-.media-image .field__item::before {
-  background-color:    $black;
-  bottom:              0;
-  content:             '';
-  height:              100%;
-  left:                0;
-  mix-blend-mode:      lighten;
-  position:            absolute;
-  right:               0;
-  top:                 0;
-  width:               100%;
-  z-index:             1;
+// .media-issue-marquee .field::before {
+//   background-color: $black;
+//   bottom: 0;
+//   content: "";
+//   height: 100%;
+//   left: 0;
+//   mix-blend-mode: lighten;
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+//   width: 100%;
+//   z-index: 1;
+// }
+
+.marquee-image-wrapper img {
+  height: 100vh;
+  width: 100%;
 }

@@ -22,11 +22,24 @@
 {% for row in rows %}
   {%
     set row_classes = [
-      default_row_class ? 'views-row',
+      'marquee-wrapper'
     ]
   %}
 
-  <section class="issue-front">
-    {{- row.content -}}
+  <section{{row.attributes.addClass(row_classes)}}>
+    <div class="marquee-image-wrapper">
+      {{- row.content -}}
+    </div>
+
+    <div class="marquee-title-wrapper">
+
+      <div class="volume">
+        <span>SA
+          {{row.content['#row']._entity.field_issue_volume_number[0].value}}</span>
+      </div>
+      <h1 class="title">
+        <a href="$">{{row.content['#row']._entity.title[0].value}}</a>
+      </title>
+    </div>
   </section>
 {% endfor %}
