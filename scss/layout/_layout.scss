@@ -213,6 +213,11 @@ footer {
   @include global-margin;
 }
 
+.page-node-type-page .node__content {
+  @include global-margin;
+  padding: 0 1rem;
+}
+
 .page-node-type-page p {
   padding-bottom: 1rem;
 }
