@@ -43,41 +43,43 @@
  */
 #}
 
-<div class="layout">
+<div class="layout-container">
+  <div class="layout">
 
-  <header id="header" role="banner">
-    {{ page.header }}
-  </header>
+    <header id="header" role="banner">
+      {{ page.header }}
+    </header>
 
-  <main role="main">
-    <a id="main" tabindex="-1"></a>
-    {# link is in html.html.twig #}
+    <main role="main">
+      <a id="main" tabindex="-1"></a>
+      {# link is in html.html.twig #}
 
-    {% if page.breadcrumbs %}
-      {{ page.breadcrumbs }}
-    {% endif %}
+      {% if page.breadcrumbs %}
+        {{ page.breadcrumbs }}
+      {% endif %}
 
-    {{ page.page_title }}
-    {{ page.content_aside }}
+      {{ page.page_title }}
+      {{ page.content_aside }}
 
-    {% if page.content_aside %}
-      <div class="article-wrapper">
+      {% if page.content_aside %}
+        <div class="article-wrapper">
+          {{ page.content }}
+          {{ page.content_aside }}
+        </div>
+      {% else %}
         {{ page.content }}
-        {{ page.content_aside }}
-      </div>
-    {% else %}
-      {{ page.content }}
-    {% endif %}
-  </div>
-  {{ page.content_related }}
-  {{ page.content_post }}
+      {% endif %}
+    </div>
+    {{ page.content_related }}
+    {{ page.content_post }}
 
-  {# /.layout-content #}
+    {# /.layout-content #}
 
-</main>
+  </main>
 
-<footer>
-  {{ page.footer_first }}
-  {{ page.footer_second }}
-  {{ page.legal }}
-</footer></div>{# /.layout-container #}
+  <footer>
+    {{ page.footer_first }}
+    {{ page.footer_second }}
+    {{ page.legal }}
+  </footer>
+</div></div>{# /.layout-container #}

@@ -1,4 +1,19 @@
 // header, footer, breadcrumb layouts
+body main {
+  margin-top: 3rem;
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout {
+  flex: 1;
+  min-height: 100%;
+}
+
 @mixin global-margin {
   margin: 0 auto;
   max-width: $max-vw;
@@ -7,10 +22,6 @@
 .region-header {
   padding-top: 3px; // "fixes" Univers baseline
   margin: 1rem;
-}
-
-body main {
-  margin-top: 3rem;
 }
 
 .region-breadcrumbs,
@@ -52,11 +63,12 @@ footer {
 .region-footer-first .about-sap {
   padding: 3rem 3rem 0 3rem;
   @include mq($from: tablet) {
-    padding: 0 3rem 0 3rem;
+    padding: 0 1rem 0 3rem;
   }
   .body {
     padding-top: 3rem;
-    // border-top: 1px solid $current-color-offwhite;
+    border-top: 1px solid black;
+
     @include mq($from: tablet) {
       padding: 0 3rem 0 0;
       border-top: none;
@@ -73,7 +85,7 @@ footer {
 
 // footer-first inset
 .region-footer-first {
-  // background-color: $current-color;
+  background-color: lightgray;
 
   .newsletter-social,
   .about-sap {
@@ -112,7 +124,7 @@ footer {
 // footer-second
 .region-footer-second {
   padding: 0rem 0rem 3rem 0;
-  // background: $current-color;
+  background: darkgray;
 }
 
 .region-footer-second .footer-wrapper {
@@ -188,20 +200,31 @@ footer {
   }
 }
 
-// copyright
+// legal
 .region-legal {
+  padding: 1rem;
+
   background-color: $black;
-}
+  color: $white;
+  @include mq($from: tablet) {
+  }
 
-.region-legal .legal-wrapper {
-  @include global-margin;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-}
+  .legal-wrapper {
+    @include global-margin;
+    display: block;
 
-#block-legal ul {
-  display: flex;
+    justify-content: space-between;
+    @include mq($from: tablet) {
+      display: flex;
+    }
+  }
+
+  nav ul {
+    display: block;
+    @include mq($from: tablet) {
+      display: flex;
+    }
+  }
 }
 
 // basic page
@@ -219,12 +242,8 @@ footer {
   padding: 0 1rem;
 }
 
-.page-node-type-page p {
+.page-node-type-page main p {
   padding-bottom: 1rem;
-}
-
-.page-node-type-page .body {
-  margin-bottom: 2rem;
 }
 
 // article

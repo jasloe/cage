@@ -38,9 +38,12 @@ header {
   @include font-size(0.9rem);
 }
 
-.legal-wrapper {
+.region-legal .body p,
+.region-legal a {
   @include font-size(0.9rem);
-  // color: $current-color-gray;
+  line-height: 1.4;
+  color: $white;
+  font: $univers;
 }
 
 .legal-wrapper ul li:first-child {
@@ -48,21 +51,21 @@ header {
 }
 
 // basic page
-.page-node-type-page h1 {
+.page-node-type-page main h1 {
   font-family: $life;
   @include font-size(1.4rem);
 }
 
-.page-node-type-page p {
+.page-node-type-page main p {
   font-family: $life;
   line-height: 1.2;
 }
 
-.page-node-type-page strong {
+.page-node-type-page main strong {
   font-family: $life-bold;
 }
 
-.page-node-type-page em {
+.page-node-type-page main em {
   font-family: $life-italic;
 }
 

@@ -21,7 +21,9 @@
   <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
     {{ children }}
     <div class="overlay" id="overlay">
+
       <div class="overlay-wrapper-first">
+
         <div class="overlay-issues">
           <h2>Issues</h2>
           {{ drupal_view('modal_menu', 'issues_list') }}
@@ -29,13 +31,15 @@
         <div class="overlay-main-menu">
           {{ drupal_menu('main') }}
         </div>
+
       </div>
 
       <div class="overlay-footer-menu-wrapper">
         <div class="overlay-footer-menu">
           {{ drupal_menu('footer')}}
         </div>
-
       </div>
+
     </div>
-  {% endif %}
+  </div>
+{% endif %}
