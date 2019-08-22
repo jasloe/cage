@@ -37,56 +37,52 @@ body main {
   @include global-margin;
 }
 
-// footer-first
-footer {
-  // border-left: 1px solid $white;
-  // border-right: 1px solid $white;
+// footer
+.region-footer-first,
+.region-footer-second {
+  background-color: $light-gray;
 }
 
-.region-footer-first .newsletter-social-wrapper {
+.region-footer-first {
+  padding: 3rem 3rem 0rem 3rem;
+}
+
+.region-footer-second {
+  padding: 3rem;
+}
+
+.region-footer-first .newsletter-social-container,
+.region-footer-second .footer-wrapper {
+  display: block;
   @include global-margin;
   max-width: $max-vw;
-  padding: 3rem 0;
-}
-
-.region-footer-first .newsletter-social {
-  padding: 0 0 0 3rem;
-  @include mq($from: tablet) {
-    padding: 0 0 0 1rem;
-  }
-
-  @include mq($from: wide) {
-    padding: 0 0 0 0;
-  }
-}
-
-.region-footer-first .about-sap {
-  padding: 3rem 3rem 0 3rem;
-  @include mq($from: tablet) {
-    padding: 0 1rem 0 3rem;
-  }
-  .body {
-    padding-top: 3rem;
-    border-top: 1px solid black;
-
-    @include mq($from: tablet) {
-      padding: 0 3rem 0 0;
-      border-top: none;
-    }
-  }
-}
-
-.region-footer-first .newsletter-social-wrapper {
-  display: block;
   @include mq($from: tablet) {
     display: flex;
   }
 }
 
+.region-footer-second .footer-wrapper {
+  padding-top: 3rem;
+  border-top: 1px dotted $black;
+}
+
+.region-footer-first .about-sap {
+  border-top: 1px dotted $black;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  @include mq($from: tablet) {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .body {
+    @include mq($from: tablet) {
+    }
+  }
+}
+
 // footer-first inset
 .region-footer-first {
-  background-color: lightgray;
-
   .newsletter-social,
   .about-sap {
     flex: 1;
@@ -122,32 +118,19 @@ footer {
 }
 
 // footer-second
-.region-footer-second {
-  padding: 0rem 0rem 3rem 0;
-  background: darkgray;
-}
 
 .region-footer-second .footer-wrapper {
-  @include global-margin;
-  max-width: $max-vw;
-  // border-top: 1px solid $current-color-offwhite;
-
   .footer ul {
-    max-width: 100%;
-    padding-top: 3rem;
     display: block;
-    padding-left: 3rem;
 
     @include mq($from: tablet) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: flex-start;
-      padding-left: 1rem;
     }
 
     @include mq($from: wide) {
-      padding-left: 0rem;
     }
 
     li {
@@ -202,7 +185,7 @@ footer {
 
 // legal
 .region-legal {
-  padding: 1rem;
+  padding: 1rem 3rem;
 
   background-color: $black;
   color: $white;
@@ -283,7 +266,6 @@ footer {
   }
   .region-content-related .primary-author .view {
     margin: 1rem 0;
-    background-color: lightgray;
     display: flex;
     flex-direction: column;
   }

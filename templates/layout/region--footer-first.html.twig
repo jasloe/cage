@@ -20,11 +20,11 @@
 %}
 {% if content %}
   <div{{attributes.addClass(classes)}}>
-    <div class="newsletter-social-wrapper">
+    <div class="newsletter-social-container">
       <div class="newsletter-social">
         {{ drupal_entity('block_content', '19') }}
         {{ content }}
-        {{ drupal_menu('main') }}
+        {{ drupal_menu('social') }}
       </div>
       <div class="about-sap">
         {{ drupal_entity('block_content', '10') }}
