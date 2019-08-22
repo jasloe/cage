@@ -2,15 +2,22 @@
 
 body,
 p {
-  font-family: $sans-font;
   text-rendering: optimizeLegibility;
+}
+
+header {
+  @include font-size(1rem);
+}
+
+header,
+footer {
+  font-family: $univers;
 }
 
 .path-frontpage {
   .short-title {
     font-family: $univers;
     text-transform: uppercase;
-    @include font-size(1rem);
   }
 
   h1 a {
@@ -20,18 +27,9 @@ p {
   }
 }
 
-header {
-  @include font-size(1rem);
-}
-
 .region-footer-first,
 .region-footer-second {
   line-height: 1.4;
-  // color: $current-color-offwhite;
-}
-
-.region-footer-first {
-  @include font-size(1rem);
 }
 
 .region-footer-second {
@@ -40,7 +38,6 @@ header {
 
 .region-legal .body p,
 .region-legal a {
-  @include font-size(0.9rem);
   line-height: 1.4;
   color: $white;
   font: $univers;
@@ -53,7 +50,7 @@ header {
 // basic page
 .page-node-type-page main h1 {
   font-family: $life;
-  @include font-size(1.4rem);
+  @include font-size(1.2rem);
 }
 
 .page-node-type-page main p {
@@ -70,24 +67,24 @@ header {
 }
 
 .page-node-type-article {
-  // color: $current-color;
   .article-title h1 {
     font-family: $life;
     @include font-size(4rem);
     text-transform: uppercase;
   }
-  .article-wrapper {
+
+  .article-title h2 {
+    @include font-size(2rem);
+  }
+
+  .article-container {
     .section-title {
       text-transform: uppercase;
-      padding-left: 4rem;
+      font-family: $univers;
+
     }
 
-    .section-title p {
-      // box-shadow: 0px 1px 0px 0px $current-color;
-      display: inline;
-      padding-bottom: 0.2rem;
-      letter-spacing: 0.01rem;
-    }
+
 
     .body p {
       font-family: $life;
@@ -119,29 +116,48 @@ header {
     h3 {
       font-family: $univers;
       text-transform: uppercase;
-      // box-shadow: 0px 1px 0px 0px $current-color;
-      // display: inline;
-      // padding-bottom: 0.2rem;
       letter-spacing: 0.01rem;
     }
   }
 
   .region-content-related .primary-author,
   .region-content-related .dram-content {
-    > h2 {
+
+    > h3, a, .dram-label, .dram-catalog-number {
       font-family: $univers;
       text-transform: uppercase;
-      // box-shadow: 0px 1px 0px 0px $current-color;
-      display: inline;
-      padding-bottom: 0.2rem;
-      letter-spacing: 0.01rem;
-      // margin-left: 0;
+      @include font-size(.7rem);
+      font-weight: 900;
+      letter-spacing: .1rem;
     }
-  }
 
-  .region-content-related .primary-author {
-    .biographical-note {
-      padding-bottom: 1rem;
+    a {
+      @include font-size(.6rem);
+      font-weight: 700;
+      letter-spacing: .1rem;
     }
+
+    .primary-author-fieldset,
+    .dram-fieldset {
+      font-family: $life;
+      @include font-size(1rem);
+      line-height: 1.3;
+    }
+
+    .primary-author-name,
+    .dram-title {
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: .05rem;
+    }
+
   }
+}
+
+.breadcrumb li {
+      font-family: $univers;
+      text-transform: uppercase;
+      @include font-size(.7rem);
+      font-weight: 900;
+      letter-spacing: .1rem;
 }
