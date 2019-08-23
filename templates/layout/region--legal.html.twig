@@ -16,12 +16,15 @@
   set classes = [
     'region',
     'region-' ~ region|clean_class,
+    'wrapper'
   ]
 %}
 {% if content %}
   <div{{attributes.addClass(classes)}}>
-    <div class="legal-wrapper">
-      {{ content }}
+    <div class="col- container">
+      <div class="legal">
+        {{ content }}
+      </div>
     </div>
   </div>
 {% endif %}

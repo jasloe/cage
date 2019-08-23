@@ -16,11 +16,12 @@
   set classes = [
     'region',
     'region-' ~ region|clean_class,
+    'wrapper'
   ]
 %}
 {% if content %}
   <div{{attributes.addClass(classes)}}>
-    <div class="footer-wrapper">
+    <div class="col-1 container">
       <div class="footer">
         {{ drupal_menu('footer') }}
       </div>
