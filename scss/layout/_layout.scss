@@ -8,209 +8,113 @@ header {
 }
 
 .layout-container {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .layout {
-	flex: 1;
-	min-height: 100%;
+  flex: 1;
+  min-height: 100%;
 }
 
 @mixin global-margin {
-	margin: 0 auto;
-	max-width: $max-vw;
+  margin: 0 auto;
+  max-width: $max-vw;
 }
 
 .region-header {
-	// padding-top: 3px; // "fixes" Univers baseline
-	margin: 1rem;
+  // padding-top: 3px; // "fixes" Univers baseline
+  margin: 1rem;
 }
 
 .region-breadcrumbs,
 .region-page-title,
 .article-container {
-	// cont'd with article styling below
-	padding: 0 1rem;
-	@include global-margin;
+  // cont'd with article styling below
+  padding: 0 1rem;
+  @include global-margin;
 }
 
 .region-content-related .primary-author,
 .region-content-related .dram-content {
-	@include global-margin;
+  @include global-margin;
 }
 
-// footer
-.region-footer-first,
-.region-footer-second {
-	background-color: $light-gray;
-}
-
-.region-footer-first {
-	padding: 3rem 3rem 0rem 3rem;
-}
-
-.region-footer-second {
-	padding: 3rem;
-}
-
-.region-footer-first .newsletter-social-container,
-.region-footer-second .footer-wrapper {
-	display: block;
-	@include global-margin;
-	max-width: $max-vw;
-	@include mq($from: tablet) {
-		display: flex;
-	}
-}
-
-.region-footer-second .footer-wrapper {
-	padding-top: 3rem;
-	border-top: 1px dotted $black;
-}
-
-.region-footer-first .about-sap {
-	border-top: 1px dotted $black;
-	margin-top: 3rem;
-	padding-top: 3rem;
-	@include mq($from: tablet) {
-		border-top: none;
-		margin-top: 0;
-		padding-top: 0;
-	}
-	.body {
-		@include mq($from: tablet) {}
-	}
-}
-
-// footer-first inset
-.region-footer-first {
-	.newsletter-social,
-	.about-sap {
-		flex: 1;
-		height: 100%;
-	}
-	.newsletter-social {
-		.body {
-			width: 75%;
-			margin-bottom: 1rem;
-		}
-	}
-	.newsletter-social .mailchimp-signup-subscribe-form {
-		margin-bottom: 1rem;
-		width: 75%;
-		form {
-			display: flex;
-		}
-	}
-	.about-sap {
-		.body,
-		.body>p:first-child {
-			margin-bottom: 1rem;
-		}
-	}
-}
-
-.newsletter-social ul {
-	display: flex;
-}
-
-// footer-second
-.region-footer-second .footer-wrapper {
-	.footer ul {
-		display: block;
-		@include mq($from: tablet) {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: flex-start;
-		}
-		@include mq($from: wide) {}
-		li {
-			padding-bottom: 0.5rem;
-			&:last-child {
-				padding-bottom: 0;
-			}
-			@include mq($from: tablet) {
-				flex-shrink: 1;
-				flex-basis: 33%;
-				height: 100%;
-			}
-		}
-		li:nth-child(1) {
-			order: 1;
-		}
-		li:nth-child(2) {
-			order: 4;
-		}
-		li:nth-child(3) {
-			order: 7;
-		}
-		li:nth-child(4) {
-			order: 2;
-		}
-		li:nth-child(5) {
-			order: 5;
-		}
-		li:nth-child(6) {
-			order: 8;
-		}
-		li:nth-child(7) {
-			order: 3;
-		}
-		li:nth-child(8) {
-			order: 5;
-		}
-		li:nth-child(9) {
-			order: 9;
-		}
-	}
-}
-
-// legal
-.region-legal {
-	padding: 1rem 3rem;
-	background-color: $black;
-	color: $white;
-	@include mq($from: tablet) {}
-	.legal-wrapper {
-		@include global-margin;
-		display: block;
-		justify-content: space-between;
-		@include mq($from: tablet) {
-			display: flex;
-		}
-	}
-	nav ul {
-		display: block;
-		@include mq($from: tablet) {
-			display: flex;
-		}
-	}
-}
+// // footer-second
+// .region-footer-second .footer-wrapper {
+//   .footer ul {
+//     display: block;
+//     @include mq($from: tablet) {
+//       display: flex;
+//       flex-wrap: wrap;
+//       justify-content: space-between;
+//       align-items: flex-start;
+//     }
+//     @include mq($from: wide) {
+//     }
+//     li {
+//       padding-bottom: 0.5rem;
+//       &:last-child {
+//         padding-bottom: 0;
+//       }
+//       @include mq($from: tablet) {
+//         flex-shrink: 1;
+//         flex-basis: 33%;
+//         height: 100%;
+//       }
+//     }
+//     li:nth-child(1) {
+//       order: 1;
+//     }
+//     li:nth-child(2) {
+//       order: 4;
+//     }
+//     li:nth-child(3) {
+//       order: 7;
+//     }
+//     li:nth-child(4) {
+//       order: 2;
+//     }
+//     li:nth-child(5) {
+//       order: 5;
+//     }
+//     li:nth-child(6) {
+//       order: 8;
+//     }
+//     li:nth-child(7) {
+//       order: 3;
+//     }
+//     li:nth-child(8) {
+//       order: 5;
+//     }
+//     li:nth-child(9) {
+//       order: 9;
+//     }
+//   }
+// }
 
 // basic page
 .page-node-type-page h1 {
-	padding: 1rem 0;
+  padding: 1rem 0;
 }
 
 .page-node-type-page .region-page-title {
-	@include global-margin;
+  @include global-margin;
 }
 
 .page-node-type-page .node__content,
 .path-user .region-content {
-	@include global-margin;
-	padding: 0 1rem;
+  @include global-margin;
+  padding: 0 1rem;
 }
 
 .page-node-type-page main p {
-	padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 // article
-.page-node-type-article .article-title  {
+.page-node-type-article .article-title {
   margin-top: 3rem;
   h2 {
     padding-bottom: 1rem;
@@ -223,93 +127,85 @@ header {
 }
 
 .page-node-type-article main {
-	.article-container {
-		@include mq($from: tablet) {
-			display: flex;
-		}
-	}
-	.article-container .region {
-		@include mq($from: tablet) {
-			flex: 1;
-		}
-	}
-	.section-title {
+  .article-container {
+    @include mq($from: tablet) {
+      display: flex;
+    }
+  }
+  .article-container .region {
+    @include mq($from: tablet) {
+      flex: 1;
+    }
+  }
+  .section-title {
     padding-left: 4rem;
-    margin-bottom: .7rem;
-		padding: 0rem 0 1rem 4rem;
+    margin-bottom: 0.7rem;
+    padding: 0rem 0 1rem 4rem;
   }
 
   .section-title p {
     display: inline;
-    padding-bottom: .9rem;
+    padding-bottom: 0.9rem;
     letter-spacing: 0.01rem;
     border-bottom: 1px solid $black;
   }
 
-
-	.body {
-		padding: 0rem 0rem 2rem;
-	}
-	img {
-
-	}
-}
-
-// article primary author
-img {
-
+  .body {
+    padding: 0rem 0rem 2rem;
+  }
 }
 
 .page-node-type-article .region-content-related {
-	background-color: darkgray;
-	padding: 3rem;
-	.related-primary-author {
-		margin: 0 auto;
-		max-width: $tablet;
-		display: flex;
-	}
-	@include mq($from: tablet) {
-		flex-direction: row;
-	}
+  background-color: darkgray;
+  padding: 3rem;
+  .related-primary-author {
+    margin: 0 auto;
+    max-width: $tablet;
+    display: flex;
+  }
+  @include mq($from: tablet) {
+    flex-direction: row;
+  }
 }
 
 .page-node-type-article .region-content-related {
-	h3 {
-		padding-bottom: 3rem;
-	}
+  h3 {
+    padding-bottom: 3rem;
+  }
 }
 
 .primary-author-container {
-	background-color: $white;
-	.primary-author-fieldset {
-		padding: 1rem;
-	}
-	.primary-author-name,
-	.primary-author-bio {
-		padding-bottom: 1rem;
-	}
+  background-color: $white;
+  .primary-author-fieldset {
+    padding: 1rem;
+  }
+  .primary-author-name,
+  .primary-author-bio {
+    padding-bottom: 1rem;
+  }
 }
 
 // article dram content
 .page-node-type-article .region-content-related {
-	.dram-content {
-		padding-top: 3rem;
-	}
-	.dram-content .related-dram {
-		display: flex;
-		flex-direction: column;
-		@include mq($from: tablet) {}
-	}
+  .dram-content {
+    padding-top: 3rem;
+  }
+  .dram-content .related-dram {
+    display: flex;
+    flex-direction: column;
+    @include mq($from: tablet) {
+    }
+  }
 }
 
 .dram-release {
-	background: $white;
-	margin-bottom: 3rem;
-	.dram-fieldset {
-		padding: 1rem;
-	}
-	.dram-title,
-	.dram-description {
-		padding-bottom: 1rem;
-	}
+  background: $white;
+  margin-bottom: 3rem;
+  .dram-fieldset {
+    padding: 1rem;
+  }
+  .dram-title,
+  .dram-description {
+    padding-bottom: 1rem;
+  }
 }

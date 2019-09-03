@@ -16,24 +16,26 @@
   set classes = [
     'region',
     'region-' ~ region|clean_class,
+    'region-footer',
     'wrapper'
   ]
 %}
 {% if content %}
   <div{{attributes.addClass(classes)}}>
-
-    <div class="col-1 container">
-      <div class="newsletter-social">
-        {{ drupal_entity('block_content', '19') }}
-        {{ content }}
-        {{ drupal_menu('social') }}
+    <div class="container">
+      <div class="col-1">
+        <div class="newsletter-social">
+          {{ drupal_entity('block_content', '19') }}
+          {{ content }}
+          {{ drupal_menu('social') }}
+        </div>
       </div>
-    </div>
 
-    <div class="col-2 container">
-      <div class="about-sa">
-        {{ drupal_entity('block_content', '10') }}
-        {{ drupal_menu('labels') }}
+      <div class="col-2">
+        <div class="about-sa">
+          {{ drupal_entity('block_content', '10') }}
+          {{ drupal_menu('labels') }}
+        </div>
       </div>
     </div>
   </div>

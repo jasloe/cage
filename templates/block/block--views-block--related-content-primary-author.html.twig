@@ -25,16 +25,15 @@
  * @see template_preprocess_block()
  */
 #}
-{% if content %}
-
-  <div{{attributes}}>
-    {{ title_prefix }}
+<div{{attributes}}>
+  {{ title_prefix }}
+  <div class="article-related-container">
     {% if label %}
       <h3{{title_attributes}}>{{ label }}</h3>
     {% endif %}
     {{ title_suffix }}
-
-    {{ content }}
+    {% block content %}
+      {{ content }}
+    {% endblock %}
   </div>
-
-{% endif %}
+</div>

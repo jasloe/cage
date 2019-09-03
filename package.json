@@ -2,13 +2,16 @@
   "name": "Cage",
   "version": "8.1.2",
   "devDependencies": {
+    "autoprefixer": "^9.6.1",
     "browser-sync": "^2.10.0",
+    "browserslist": "^4.6.6",
     "gulp": "^3.0",
     "gulp-notify": "^3.2.0",
     "gulp-sass": "^4.0.0",
     "gulp-shell": "^0.7.1",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2",
+    "gulp-uncss": "^1.0.6",
     "gulp-util": "3.0.7",
     "gulp-watch": "5.0.1",
     "modularscale-sass": "^3.0.8",
@@ -25,5 +28,18 @@
     "rfs": "^8.0.4",
     "sass-breakpoint": "^0.1.0",
     "sass-mq": "^5.0.0"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "ie >= 8",
+    "edge >= 15",
+    "ie_mob >= 10",
+    "ff >= 45",
+    "chrome >= 45",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4",
+    "bb >= 10"
+  ]
 }

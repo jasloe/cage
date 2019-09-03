@@ -1,0 +1,23 @@
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+input.form-email {
+  width: calc(100% - 0.8rem);
+  height: 2rem;
+  text-transform: none;
+  color: $black;
+  background-color: $white;
+  font-stretch: normal;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  border-radius: 0px;
+  padding: 0.3rem 0.3rem 0.3rem 0.5rem;
+}

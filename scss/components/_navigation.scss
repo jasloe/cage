@@ -37,12 +37,6 @@ header.is-active .region-header > div {
   }
 }
 
-// .region-header.mobile {
-//   > div {
-//     margin-right: 0 !important;
-//   }
-// }
-
 // Breadcrumbs
 // Layout
 #block-cage-breadcrumbs {
@@ -74,14 +68,92 @@ header {
   border-bottom: 1px dotted $black;
 }
 
-footer {
+// Footer
+img {
+  display: none;
 }
 
-.region-footer-first {
+.region-footer {
+  background-color: gray;
+  padding: 3rem;
+  display: block;
 }
 
-.region-footer-second {
+.region-footer-first .container,
+.region-footer-second .container,
+.region-legal .container {
+  @include global-margin;
+  max-width: $max-vw;
 }
 
-.region-footer-second {
+.region-footer-first .container {
+  display: flex;
+  flex-direction: column-reverse;
+
+  .col-1 {
+    margin-top: 3rem;
+  }
+
+  @include mq($from: tablet) {
+    flex-direction: row;
+    .col-1 {
+      margin-top: 0rem;
+      padding-right: 1rem;
+      flex: 1;
+    }
+    .col-2 {
+      padding-left: 1rem;
+      flex: 1;
+    }
+  }
+}
+
+.region-footer-first ul.social {
+  display: flex;
+  li {
+    padding-right: 1rem;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.region-footer-second .container {
+  ul li {
+    padding-bottom: 0.5rem;
+  }
+  ul:last-child li:last-child {
+    padding-bottom: 0rem;
+  }
+  @include mq($from: tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    ul li:last-child {
+      padding-bottom: 0rem;
+    }
+  }
+}
+
+// legal
+.region-legal {
+  padding: 1rem 3rem;
+  background-color: $black;
+  color: $white;
+  .container {
+    @include mq($from: tablet) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  nav ul {
+    display: block;
+    @include mq($from: tablet) {
+      display: flex;
+      li:first-child {
+        padding-right: 1rem;
+      }
+    }
+  }
 }

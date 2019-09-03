@@ -1,12 +1,13 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var sass = require('gulp-sass');
-var watch = require('gulp-watch');
 var shell = require('gulp-shell');
 var notify = require('gulp-notify');
 var browserSync = require('browser-sync').create();
 var sourcemaps = require('gulp-sourcemaps');
-// var uglify = require('gulp-uglify');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+
 var fs = require("fs");
 var runSequence = require('run-sequence');
 var config = require("./example.config.js");
@@ -33,14 +34,16 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.init())
     .pipe(sass({
       noCache: true,
-      outputStyle: "compressed",
-      lineNumbers: false,
+      outputStyle: 'expanded',
+      lineNumbers: true,
       loadPath: './css/*',
       sourceMap: true
     })).on('error', function(error) {
       gutil.log(error);
       this.emit('end');
     })
+    .pipe(postcss([autoprefixer()]))
+    .pipe()
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./css'))
     .pipe(notify({
@@ -56,7 +59,6 @@ gulp.task('sass', function () {
 gulp.task('compress', function() {
   return gulp.src('./src/js/*.js')
     .pipe(sourcemaps.init())
-    // .pipe(uglify())
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./dist/js'))
     .pipe(notify({
@@ -104,10 +106,7 @@ gulp.task('drush:cr', function () {
     }));
 });
 
-/**
- * Define a task to spawn Browser Sync.
- * Options are defaulted, but can be overridden within your config.js file.
- */
+
 gulp.task('browser-sync', function() {
   browserSync.init({
     files: ['css/**/*.css', 'dist/js/*.js'],
@@ -119,31 +118,18 @@ gulp.task('browser-sync', function() {
   });
 });
 
-/**
- * Define a task to be called to instruct browser sync to reload.
- */
 gulp.task('reload', function() {
   browserSync.reload();
 });
 
-/**
- * Combined tasks that are run synchronously specifically for twig template changes.
- */
 gulp.task('flush', function() {
   runSequence('drush:cr', 'reload');
 });
 
-/**
- * Defines the watcher task.
- */
 gulp.task('watch', function() {
-  // watch scss for changes and clear drupal theme cache on change
   gulp.watch(['scss/**/*.scss'], ['sass', 'drush:cc']);
-
-  // watch js for changes and clear drupal theme cache on change
   gulp.watch(['src/js/*.js', 'src/js/**/*.js'], ['compress', 'drush:cc']);
 
-  // If user has specified an override, rebuild Drupal cache
   if (!config.twig.useCache) {
     gulp.watch(['templates/**/*.html.twig'], ['flush']);
   }

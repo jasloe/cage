@@ -87,31 +87,26 @@
   ]
 %}
 {{ attach_library('stable/node') }}
-
-<aside>
-
-  <div class="meta-container">
-    <h3 class="article-title">{{ content.field_article_formatted_title.0 }}</h3>
-
-    <div class="meta primary-author">
+<div class="article-metadata-container">
+    <h3 class="article-metadata-title">{{ content.field_article_formatted_title.0 }}</h3>
+<div>
+    <div class="article-metadata-author">
       <a href="{{ content.field_article_primary_author[0]['#url'] }}">
         {{ content.field_article_primary_author[0]['#title'] }}
       </a>
     </div>
-    <div class="meta related-issue">Originally published in<br  />
+    <div class="article-metadata-related-issue">Originally published in<br  />
       <a href="{{ content.field_article_rel_issues[0]['#url'] }}">
         {{ content.field_article_rel_issues[0]['#title'] }}
       </a>
 
         {% if not (node.field_article_publication_date.isEmpty == true) and content.field_article_publication_date is defined %}
-          <p class="publication-date">{{ content.field_article_publication_date[0] }}</p>
+          <p class="article-metadata-publication-date">{{ content.field_article_publication_date[0] }}</p>
         {% endif %}
 
         {% if not (node.field_article_page_numbers.isEmpty == true) and content.field_article_page_numbers is defined %}
           <p>{{ content.field_article_page_numbers.0 }}</p>
         {% endif %}
-
+        </div>
     </div>
-  </div>
-
-</aside>
+</div>
