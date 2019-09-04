@@ -899,10 +899,6 @@ header {
   border-bottom: 1px dotted #170312;
 }
 
-img {
-  display: none;
-}
-
 .region-footer {
   background-color: gray;
   padding: 3rem;

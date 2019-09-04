@@ -38,12 +38,11 @@ gulp.task('sass', function () {
       lineNumbers: true,
       loadPath: './css/*',
       sourceMap: true
-    })).on('error', function(error) {
+    })).on('error', function (error) {
       gutil.log(error);
       this.emit('end');
     })
     .pipe(postcss([autoprefixer()]))
-    .pipe()
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('./css'))
     .pipe(notify({
@@ -56,7 +55,7 @@ gulp.task('sass', function () {
 /**
  * This task minifies javascript in the js/js-src folder and places them in the js directory.
  */
-gulp.task('compress', function() {
+gulp.task('compress', function () {
   return gulp.src('./src/js/*.js')
     .pipe(sourcemaps.init())
     .pipe(sourcemaps.write('./maps'))
@@ -76,7 +75,7 @@ gulp.task('drush:cc', function () {
     return;
   }
 
-  return gulp.src('', {read: false})
+  return gulp.src('', { read: false })
     .pipe(shell([
       config.drush.alias.css_js
     ]))
@@ -95,7 +94,7 @@ gulp.task('drush:cr', function () {
     return;
   }
 
-  return gulp.src('', {read: false})
+  return gulp.src('', { read: false })
     .pipe(shell([
       config.drush.alias.cr
     ]))
@@ -107,7 +106,7 @@ gulp.task('drush:cr', function () {
 });
 
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
   browserSync.init({
     files: ['css/**/*.css', 'dist/js/*.js'],
     port: config.browserSync.port,
@@ -118,15 +117,15 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('reload', function() {
+gulp.task('reload', function () {
   browserSync.reload();
 });
 
-gulp.task('flush', function() {
+gulp.task('flush', function () {
   runSequence('drush:cr', 'reload');
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   gulp.watch(['scss/**/*.scss'], ['sass', 'drush:cc']);
   gulp.watch(['src/js/*.js', 'src/js/**/*.js'], ['compress', 'drush:cc']);
 
