@@ -13,6 +13,15 @@ $max-vw: $wide;
   max-width: $max-vw;
 }
 
+@mixin life-sc {
+  font-family: $default-font;
+  font-weight: 700;
+  @include font-size(.8rem);
+  text-transform: uppercase;
+  letter-spacing: .05rem;
+}
+
+
 /* @include grid(true); */
 @mixin grid($flex: true) {
   @if $flex {

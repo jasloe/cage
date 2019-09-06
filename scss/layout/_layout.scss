@@ -36,10 +36,7 @@ header {
   @include global-margin;
 }
 
-.region-content-related .primary-author,
-.region-content-related .dram-content {
-  @include global-margin;
-}
+
 
 // // footer-second
 // .region-footer-second .footer-wrapper {
@@ -94,7 +91,7 @@ header {
 //   }
 // }
 
-// basic page
+// Basic page
 .page-node-type-page h1 {
   padding: 1rem 0;
 }
@@ -113,7 +110,7 @@ header {
   padding-bottom: 1rem;
 }
 
-// article
+// Article
 .page-node-type-article .article-title {
   margin-top: 3rem;
   h2 {
@@ -155,57 +152,55 @@ header {
   }
 }
 
-.page-node-type-article .region-content-related {
-  background-color: darkgray;
-  padding: 3rem;
-  .related-primary-author {
-    margin: 0 auto;
-    max-width: $tablet;
-    display: flex;
-  }
-  @include mq($from: tablet) {
-    flex-direction: row;
-  }
+
+// Author container
+.region-content-related .article-author {
+  padding: 3rem 0 0;
+  background: darkgray;
 }
 
-.page-node-type-article .region-content-related {
+.region-content-related {
+.article-author .article-related-container {
+  margin: 0 auto;
+  max-width: $tablet;
+
+  }
   h3 {
-    padding-bottom: 3rem;
-  }
-}
-
-.primary-author-container {
-  background-color: $white;
-  .primary-author-fieldset {
-    padding: 1rem;
-  }
-  .primary-author-name,
-  .primary-author-bio {
-    padding-bottom: 1rem;
-  }
-}
-
-// article dram content
-.page-node-type-article .region-content-related {
-  .dram-content {
-    padding-top: 3rem;
-  }
-  .dram-content .related-dram {
-    display: flex;
-    flex-direction: column;
-    @include mq($from: tablet) {
+    padding-bottom: 2rem;
+    @include mq($until: tablet) {
+      padding-left: 1rem;
     }
   }
+  .article-author-portrait,
+  .fields {
+      background: lightgray;
+  }
+
+  .fields {
+    padding: 3rem;
+  }
+  .article-author-name,
+  .article-author-bio {
+    padding-bottom: 2rem;
+  }
 }
 
-.dram-release {
-  background: $white;
-  margin-bottom: 3rem;
-  .dram-fieldset {
-    padding: 1rem;
+
+// Author content
+.region-content-related .article-author {
+  h3,
+  .article-author-link {
+    @include life-sc;
   }
-  .dram-title,
-  .dram-description {
-    padding-bottom: 1rem;
+
+  .article-author-name {
+    font-family: $body-font-bold;
+    @include font-size(1.2rem);
+    text-transform: uppercase;
+  }
+
+  .article-author-bio {
+    line-height: 1.6;
+    @include font-size(1.1rem);
   }
 }

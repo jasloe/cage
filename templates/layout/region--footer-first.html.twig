@@ -21,22 +21,29 @@
   ]
 %}
 {% if content %}
-  <div{{attributes.addClass(classes)}}>
-    <div class="container">
-      <div class="col-1">
-        <div class="newsletter-social">
-          {{ drupal_entity('block_content', '19') }}
-          {{ content }}
-          {{ drupal_menu('social') }}
-        </div>
+<div{{attributes.addClass(classes)}}>
+  <div class="container">
+    <div class="col-1">
+      <div class="newsletter-social">
+        {{ drupal_entity('block_content', '19') }}
+        {{ content }}
+        {{ drupal_menu('social') }}
       </div>
+    </div>
 
-      <div class="col-2">
-        <div class="about-sa">
-          {{ drupal_entity('block_content', '10') }}
-          {{ drupal_menu('labels') }}
+    <div class="col-2">
+      <div class="about-sa">
+        {{ drupal_entity('block_content', '10') }}
+        <div class="labels">
+          <div class="labels-dram">
+            <a href="https://dramonline.org">DRAM</a>
+          </div>
+          <div class="labels-nwr">
+            <a href="https://newworldrecords.org">New World Records</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
-{% endif %}
+  </div>
+  {% endif %}

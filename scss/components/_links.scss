@@ -3,6 +3,11 @@ a {
   color: $black;
 }
 
+.site-name a {
+  font-family: $univers-bold;
+}
+
+
 // header {
 //   @include menu-links(
 //     $current-color,

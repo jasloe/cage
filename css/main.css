@@ -335,6 +335,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 body,
 p {
   text-rendering: optimizeLegibility;
@@ -470,11 +475,7 @@ footer {
   letter-spacing: 0.01rem;
 }
 
-.page-node-type-article .region-content-related .primary-author > h3, .page-node-type-article .region-content-related .primary-author a, .page-node-type-article .region-content-related .primary-author .dram-label, .page-node-type-article .region-content-related .primary-author .dram-catalog-number,
-.page-node-type-article .region-content-related .dram-content > h3,
-.page-node-type-article .region-content-related .dram-content a,
-.page-node-type-article .region-content-related .dram-content .dram-label,
-.page-node-type-article .region-content-related .dram-content .dram-catalog-number {
+.page-node-type-article .region-content-related .dram-content > h3, .page-node-type-article .region-content-related .dram-content a, .page-node-type-article .region-content-related .dram-content .dram-label, .page-node-type-article .region-content-related .dram-content .dram-catalog-number {
   font-family: "Univers LT Std";
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -482,15 +483,12 @@ footer {
   letter-spacing: .1rem;
 }
 
-.page-node-type-article .region-content-related .primary-author a,
 .page-node-type-article .region-content-related .dram-content a {
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: .1rem;
 }
 
-.page-node-type-article .region-content-related .primary-author .primary-author-fieldset,
-.page-node-type-article .region-content-related .primary-author .dram-fieldset,
 .page-node-type-article .region-content-related .dram-content .primary-author-fieldset,
 .page-node-type-article .region-content-related .dram-content .dram-fieldset {
   font-family: "Life LT Std Roman";
@@ -498,8 +496,6 @@ footer {
   line-height: 1.3;
 }
 
-.page-node-type-article .region-content-related .primary-author .primary-author-name,
-.page-node-type-article .region-content-related .primary-author .dram-title,
 .page-node-type-article .region-content-related .dram-content .primary-author-name,
 .page-node-type-article .region-content-related .dram-content .dram-title {
   text-transform: uppercase;
@@ -549,12 +545,6 @@ header {
 .region-page-title,
 .article-container {
   padding: 0 1rem;
-  margin: 0 auto;
-  max-width: 1300px;
-}
-
-.region-content-related .primary-author,
-.region-content-related .dram-content {
   margin: 0 auto;
   max-width: 1300px;
 }
@@ -626,71 +616,58 @@ header {
   padding: 0rem 0rem 2rem;
 }
 
-.page-node-type-article .region-content-related {
-  background-color: darkgray;
-  padding: 3rem;
+.region-content-related .article-author {
+  padding: 3rem 0 0;
+  background: darkgray;
 }
 
-.page-node-type-article .region-content-related .related-primary-author {
+.region-content-related .article-author .article-related-container {
   margin: 0 auto;
   max-width: 740px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
-@media (min-width: 46.25em) {
-  .page-node-type-article .region-content-related {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+.region-content-related h3 {
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 46.24em) {
+  .region-content-related h3 {
+    padding-left: 1rem;
   }
 }
 
-.page-node-type-article .region-content-related h3 {
-  padding-bottom: 3rem;
+.region-content-related .article-author-portrait,
+.region-content-related .fields {
+  background: lightgray;
 }
 
-.primary-author-container {
-  background-color: rgba(247, 247, 247, 0.9);
+.region-content-related .fields {
+  padding: 3rem;
 }
 
-.primary-author-container .primary-author-fieldset {
-  padding: 1rem;
+.region-content-related .article-author-name,
+.region-content-related .article-author-bio {
+  padding-bottom: 2rem;
 }
 
-.primary-author-container .primary-author-name,
-.primary-author-container .primary-author-bio {
-  padding-bottom: 1rem;
+.region-content-related .article-author h3,
+.region-content-related .article-author .article-author-link {
+  font-family: "Univers LT Std";
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
 }
 
-.page-node-type-article .region-content-related .dram-content {
-  padding-top: 3rem;
+.region-content-related .article-author .article-author-name {
+  font-family: "Life LT Std Bold";
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
-.page-node-type-article .region-content-related .dram-content .related-dram {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.dram-release {
-  background: rgba(247, 247, 247, 0.9);
-  margin-bottom: 3rem;
-}
-
-.dram-release .dram-fieldset {
-  padding: 1rem;
-}
-
-.dram-release .dram-title,
-.dram-release .dram-description {
-  padding-bottom: 1rem;
+.region-content-related .article-author .article-author-bio {
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
 
 body.no-scroll {
@@ -725,6 +702,10 @@ header.is-active {
 a {
   text-decoration: none;
   color: #170312;
+}
+
+.site-name a {
+  font-family: "Univers LT Std Bold";
 }
 
 .region-header > div a {
@@ -961,6 +942,38 @@ header {
 
 .region-footer-first ul.social li:last-child {
   padding-right: 0;
+}
+
+.labels {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.labels .labels-dram {
+  padding-right: 2rem;
+}
+
+.labels .labels-dram a {
+  width: 100px;
+  height: 57px;
+  background: url("../images/logo-sm-dram.png") 0 0 no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: block;
+}
+
+.labels .labels-nwr a {
+  width: 100px;
+  height: 93px;
+  background: url("../images/logo-sm-nwr-ware.png") 0 0 no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: block;
 }
 
 .region-footer-second .container ul li {
