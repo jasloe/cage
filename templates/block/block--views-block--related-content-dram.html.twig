@@ -28,12 +28,8 @@
 
 
 <div{{attributes}}>
-  {{ title_prefix }}
   <div class="article-related-container">
-    {% if label %}
-      <h3{{title_attributes}}>{{ label }}</h3>
-    {% endif %}
-    {{ title_suffix }}
+    <h3>Related DRAM content</h3>
     {% block content %}
       {{ content }}
     {% endblock %}

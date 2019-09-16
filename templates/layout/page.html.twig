@@ -58,7 +58,9 @@
         {{ page.breadcrumbs }}
       {% endif %}
 
-      {{ page.page_title }}
+      {% if page.page_title %}
+        {{ page.page_title }}
+      {% endif %}
 
       {% if page.content_aside %}
         <div class="article-container">

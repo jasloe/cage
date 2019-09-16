@@ -380,17 +380,6 @@ footer {
   font-size: 0.9rem;
 }
 
-.region-legal .body p,
-.region-legal a {
-  line-height: 1.4;
-  color: rgba(247, 247, 247, 0.9);
-  font: "Univers LT Std";
-}
-
-.legal-wrapper ul li:first-child {
-  padding-right: 1rem;
-}
-
 .page-node-type-page main h1 {
   font-family: "Life LT Std Roman";
   font-size: 1.2rem;
@@ -407,28 +396,6 @@ footer {
 
 .page-node-type-page main em {
   font-family: "Life LT Std Italic";
-}
-
-.page-node-type-article .article-title h1 {
-  font-family: "Life LT Std Roman";
-  font-size: 4rem;
-  text-transform: uppercase;
-}
-
-@media (max-width: 1200px) {
-  .page-node-type-article .article-title h1 {
-    font-size: calc(1.525rem + 3.3vw) ;
-  }
-}
-
-.page-node-type-article .article-title h2 {
-  font-size: 2rem;
-}
-
-@media (max-width: 1200px) {
-  .page-node-type-article .article-title h2 {
-    font-size: calc(1.325rem + 0.9vw) ;
-  }
 }
 
 .page-node-type-article .article-container .section-title {
@@ -475,18 +442,21 @@ footer {
   letter-spacing: 0.01rem;
 }
 
-.page-node-type-article .region-content-related .dram-content > h3, .page-node-type-article .region-content-related .dram-content a, .page-node-type-article .region-content-related .dram-content .dram-label, .page-node-type-article .region-content-related .dram-content .dram-catalog-number {
+.page-node-type-article .region-content-related .dram-content > h3,
+.page-node-type-article .region-content-related .dram-content a,
+.page-node-type-article .region-content-related .dram-content .dram-label,
+.page-node-type-article .region-content-related .dram-content .dram-catalog-number {
   font-family: "Univers LT Std";
   text-transform: uppercase;
   font-size: 0.7rem;
   font-weight: 900;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 
 .page-node-type-article .region-content-related .dram-content a {
   font-size: 0.6rem;
   font-weight: 700;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 
 .page-node-type-article .region-content-related .dram-content .primary-author-fieldset,
@@ -500,15 +470,7 @@ footer {
 .page-node-type-article .region-content-related .dram-content .dram-title {
   text-transform: uppercase;
   font-weight: 900;
-  letter-spacing: .05rem;
-}
-
-.breadcrumb li {
-  font-family: "Univers LT Std";
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  font-weight: 900;
-  letter-spacing: .1rem;
+  letter-spacing: 0.05rem;
 }
 
 body main {
@@ -549,6 +511,26 @@ header {
   max-width: 1300px;
 }
 
+.region-content,
+.region-content-aside {
+  margin-top: 3rem;
+}
+
+.region-legal {
+  font-size: 0.9rem;
+}
+
+.region-legal .body p,
+.region-legal a {
+  line-height: 1.4;
+  color: rgba(247, 247, 247, 0.9);
+  font: "Univers LT Std";
+}
+
+.legal-wrapper ul li:first-child {
+  padding-right: 1rem;
+}
+
 .page-node-type-page h1 {
   padding: 1rem 0;
 }
@@ -569,18 +551,122 @@ header {
   padding-bottom: 1rem;
 }
 
-.page-node-type-article .article-title {
+@media (min-width: 46.25em) {
+  .path-issues .view-issues div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.issue-title-fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.issue-articles ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.article-pre-title {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.article-title-author {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.article-title-author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.path-issues .view-issues {
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 0 1rem;
+  line-height: 1.2;
+  font-family: "Univers LT Std";
+}
+
+.path-issues .view-issues > div {
+  border-top: 1px dotted #170312;
+  padding-top: 1rem;
+}
+
+.path-issues .view-issues .article-title-author {
+  padding-bottom: 2rem;
+}
+
+.path-issues .view-issues .article-title {
+  text-transform: uppercase;
+}
+
+.article-formatted-title {
+  text-transform: uppercase;
+}
+
+.article-formatted-title em {
+  font-family: "Univers LT Std Oblique";
+}
+
+.page-node-type-article .region-page-title {
   margin-top: 3rem;
 }
 
-.page-node-type-article .article-title h2 {
+.page-node-type-article .region-page-title .article-title h2.article-title-pre-title {
   padding-bottom: 1rem;
   border-bottom: 1px solid black;
+  font-size: 2rem;
 }
 
-.page-node-type-article .article-title h1 {
-  padding: 6rem 0;
+@media (max-width: 1200px) {
+  .page-node-type-article .region-page-title .article-title h2.article-title-pre-title {
+    font-size: calc(1.325rem + 0.9vw) ;
+  }
+}
+
+.page-node-type-article .region-page-title .article-title h1.article-title-title {
+  padding: 1rem 0;
   text-align: center;
+  font-family: "Life LT Std Roman";
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1200px) {
+  .page-node-type-article .region-page-title .article-title h1.article-title-title {
+    font-size: calc(1.525rem + 3.3vw) ;
+  }
+}
+
+.page-node-type-article .region-page-title .article-title .article-title-author {
+  text-align: center;
+  color: red;
+  font-family: "Univers LT Std";
+  font-size: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .page-node-type-article .region-page-title .article-title .article-title-author {
+    font-size: calc(1.325rem + 0.9vw) ;
+  }
 }
 
 @media (min-width: 46.25em) {
@@ -617,7 +703,7 @@ header {
 }
 
 .region-content-related .article-author {
-  padding: 3rem 0 0;
+  padding: 3rem 0 3rem;
   background: darkgray;
 }
 
@@ -645,13 +731,8 @@ header {
   padding: 3rem;
 }
 
-.region-content-related .article-author-name,
-.region-content-related .article-author-bio {
-  padding-bottom: 2rem;
-}
-
 .region-content-related .article-author h3,
-.region-content-related .article-author .article-author-link {
+.region-content-related .article-author .article-author-name {
   font-family: "Univers LT Std";
   font-weight: 700;
   font-size: 0.8rem;
@@ -659,15 +740,11 @@ header {
   letter-spacing: .05rem;
 }
 
-.region-content-related .article-author .article-author-name {
-  font-family: "Life LT Std Bold";
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-
-.region-content-related .article-author .article-author-bio {
-  line-height: 1.6;
-  font-size: 1.1rem;
+.region-content-related .article-author .article-author-bio,
+.region-content-related .article-author .article-author-link {
+  line-height: 1.4;
+  font-size: 1rem;
+  font-family: "Univers LT Std";
 }
 
 body.no-scroll {
@@ -705,7 +782,14 @@ a {
 }
 
 .site-name a {
-  font-family: "Univers LT Std Bold";
+  font-family: "Univers LT Std";
+}
+
+.region-content a:hover {
+  background-size: 1px 1em;
+  -webkit-box-shadow: inset 0 -0.175em white, inset 0 -0.2em #000;
+          box-shadow: inset 0 -0.175em white, inset 0 -0.2em #000;
+  word-wrap: break-word;
 }
 
 .region-header > div a {
@@ -874,6 +958,27 @@ header.is-active .region-header > div {
 .breadcrumb ol li > a:after {
   content: "\2F";
   padding-left: 5px;
+}
+
+nav.breadcrumb,
+.breadcrumb-title {
+  font-family: "Univers LT Std";
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+}
+
+@media (max-width: 46.24em) {
+  .breadcrumb {
+    display: none;
+  }
+}
+
+@media (min-width: 46.25em) {
+  .breadcrumb-title {
+    display: none;
+  }
 }
 
 header {

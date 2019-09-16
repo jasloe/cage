@@ -36,7 +36,10 @@ header {
   @include global-margin;
 }
 
-
+.region-content,
+.region-content-aside {
+  margin-top: 3rem;
+}
 
 // // footer-second
 // .region-footer-second .footer-wrapper {
@@ -91,6 +94,22 @@ header {
 //   }
 // }
 
+// Legal footer
+.region-legal {
+  @include font-size(0.9rem);
+}
+
+.region-legal .body p,
+.region-legal a {
+  line-height: 1.4;
+  color: $white;
+  font: $univers;
+}
+
+.legal-wrapper ul li:first-child {
+  padding-right: 1rem;
+}
+
 // Basic page
 .page-node-type-page h1 {
   padding: 1rem 0;
@@ -110,16 +129,85 @@ header {
   padding-bottom: 1rem;
 }
 
-// Article
-.page-node-type-article .article-title {
-  margin-top: 3rem;
-  h2 {
-    padding-bottom: 1rem;
-    border-bottom: 1px solid black;
+// Issues
+.path-issues .view-issues {
+  div {
+    @include mq($from: tablet) {
+      display: flex;
+    }
   }
-  h1 {
-    padding: 6rem 0;
-    text-align: center;
+}
+
+.issue-title-fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.issue-articles ul li {
+  display: flex;
+}
+
+.article-pre-title {
+  flex: 1;
+}
+.article-title-author {
+  flex: 1;
+}
+
+.article-title-author {
+  display: flex;
+  flex-direction: column;
+}
+
+.path-issues .view-issues {
+  @include global-margin;
+  padding: 0 1rem;
+  line-height: 1.2;
+
+  > div {
+    border-top: 1px dotted $black;
+    padding-top: 1rem;
+  }
+
+  font-family: $default-font;
+
+  .article-title-author {
+    padding-bottom: 2rem;
+  }
+  .article-title {
+    text-transform: uppercase;
+  }
+}
+
+.article-formatted-title {
+  text-transform: uppercase;
+  em {
+    font-family: $univers-italic;
+  }
+}
+
+// Article
+.page-node-type-article .region-page-title {
+  margin-top: 3rem;
+  .article-title {
+    h2.article-title-pre-title {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid black;
+      @include font-size(2rem);
+    }
+    h1.article-title-title {
+      padding: 1rem 0;
+      text-align: center;
+      font-family: $display-font;
+      @include font-size(4rem);
+      text-transform: uppercase;
+    }
+    .article-title-author {
+      text-align: center;
+      color: red;
+      font-family: $default-font;
+      @include font-size(2rem);
+    }
   }
 }
 
@@ -152,18 +240,16 @@ header {
   }
 }
 
-
 // Author container
 .region-content-related .article-author {
-  padding: 3rem 0 0;
+  padding: 3rem 0 3rem;
   background: darkgray;
 }
 
 .region-content-related {
-.article-author .article-related-container {
-  margin: 0 auto;
-  max-width: $tablet;
-
+  .article-author .article-related-container {
+    margin: 0 auto;
+    max-width: $tablet;
   }
   h3 {
     padding-bottom: 2rem;
@@ -173,7 +259,7 @@ header {
   }
   .article-author-portrait,
   .fields {
-      background: lightgray;
+    background: lightgray;
   }
 
   .fields {
@@ -181,26 +267,20 @@ header {
   }
   .article-author-name,
   .article-author-bio {
-    padding-bottom: 2rem;
   }
 }
-
 
 // Author content
 .region-content-related .article-author {
   h3,
-  .article-author-link {
+  .article-author-name {
     @include life-sc;
   }
 
-  .article-author-name {
-    font-family: $body-font-bold;
-    @include font-size(1.2rem);
-    text-transform: uppercase;
-  }
-
-  .article-author-bio {
-    line-height: 1.6;
-    @include font-size(1.1rem);
+  .article-author-bio,
+  .article-author-link {
+    line-height: 1.4;
+    @include font-size(1rem);
+    font-family: $default-font;
   }
 }

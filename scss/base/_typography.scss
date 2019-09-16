@@ -36,17 +36,6 @@ footer {
   @include font-size(0.9rem);
 }
 
-.region-legal .body p,
-.region-legal a {
-  line-height: 1.4;
-  color: $white;
-  font: $univers;
-}
-
-.legal-wrapper ul li:first-child {
-  padding-right: 1rem;
-}
-
 // basic page
 .page-node-type-page main h1 {
   font-family: $life;
@@ -67,24 +56,11 @@ footer {
 }
 
 .page-node-type-article {
-  .article-title h1 {
-    font-family: $life;
-    @include font-size(4rem);
-    text-transform: uppercase;
-  }
-
-  .article-title h2 {
-    @include font-size(2rem);
-  }
-
   .article-container {
     .section-title {
       text-transform: uppercase;
       font-family: $univers;
-
     }
-
-
 
     .body p {
       font-family: $life;
@@ -121,19 +97,21 @@ footer {
   }
 
   .region-content-related .dram-content {
-
-    > h3, a, .dram-label, .dram-catalog-number {
+    > h3,
+    a,
+    .dram-label,
+    .dram-catalog-number {
       font-family: $univers;
       text-transform: uppercase;
-      @include font-size(.7rem);
+      @include font-size(0.7rem);
       font-weight: 900;
-      letter-spacing: .1rem;
+      letter-spacing: 0.1rem;
     }
 
     a {
-      @include font-size(.6rem);
+      @include font-size(0.6rem);
       font-weight: 700;
-      letter-spacing: .1rem;
+      letter-spacing: 0.1rem;
     }
 
     .primary-author-fieldset,
@@ -147,16 +125,10 @@ footer {
     .dram-title {
       text-transform: uppercase;
       font-weight: 900;
-      letter-spacing: .05rem;
+      letter-spacing: 0.05rem;
     }
-
   }
 }
 
 .breadcrumb li {
-      font-family: $univers;
-      text-transform: uppercase;
-      @include font-size(.7rem);
-      font-weight: 900;
-      letter-spacing: .1rem;
 }

@@ -64,6 +64,29 @@ header.is-active .region-header > div {
   }
 }
 
+// Breadcrumbs
+
+nav.breadcrumb,
+.breadcrumb-title {
+  font-family: $univers;
+  text-transform: uppercase;
+  @include font-size(0.7rem);
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+}
+
+.breadcrumb {
+  @include mq($until: tablet) {
+    display: none;
+  }
+}
+
+.breadcrumb-title {
+  @include mq($from: tablet) {
+    display: none;
+  }
+}
+
 header {
   border-bottom: 1px dotted $black;
 }
@@ -139,7 +162,7 @@ header {
     height: 93px;
     background: url("../images/logo-sm-nwr-ware.png") 0 0 no-repeat;
     text-indent: -9999px;
-        overflow: hidden;
+    overflow: hidden;
     display: block;
   }
 }
