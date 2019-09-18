@@ -325,7 +325,7 @@ body:before {
 /* a { @include padding(2px 4px 6px); } */
 /* a { @include margin(2px 4px 6px); } */
 html {
-  background: rgba(247, 247, 247, 0.9);
+  background: #f7f7f7;
 }
 
 body {
@@ -336,7 +336,6 @@ body {
 }
 
 img {
-  width: 100%;
   height: auto;
 }
 
@@ -403,43 +402,44 @@ footer {
   font-family: "Univers LT Std";
 }
 
-.page-node-type-article .article-container .body p {
-  font-family: "Life LT Std Roman";
+.page-node-type-article .article-container .body p,
+.page-node-type-article .article-container .drop-quote p {
   font-size: 1rem;
-  text-align: left;
-  text-indent: 0rem;
   line-height: 1.2;
 }
 
 @media (min-width: 30em) {
-  .page-node-type-article .article-container .body p {
-    text-indent: 4rem;
-    text-align: justify;
-    text-justify: inter-character;
+  .page-node-type-article .article-container .body p,
+  .page-node-type-article .article-container .drop-quote p {
     font-size: 1.2rem;
   }
 }
 
-.page-node-type-article .article-container .body em {
-  font-family: "Life LT Std Italic";
-}
-
-.page-node-type-article .meta-wrapper {
+.page-node-type-article .article-container .article-metadata {
+  font-size: 1.2rem;
   line-height: 1.2;
 }
 
-.page-node-type-article .meta-wrapper .meta {
-  padding-bottom: 1rem;
+.page-node-type-article .article-container .body p {
+  font-family: "Life LT Std Roman";
+  text-indent: 3rem;
+  text-align: justify;
+  text-justify: inter-character;
 }
 
-.page-node-type-article .meta-wrapper .meta:first-child {
-  padding-top: 1rem;
+.page-node-type-article .article-container .body em,
+.page-node-type-article .article-container .drop-quote p {
+  font-family: "Life LT Std Italic";
 }
 
-.page-node-type-article .meta-wrapper h3 {
+.page-node-type-article .article-container .drop-quote p {
+  padding-left: 3rem;
+  text-align: justify;
+  text-justify: inter-character;
+}
+
+.page-node-type-article .article-metadata {
   font-family: "Univers LT Std";
-  text-transform: uppercase;
-  letter-spacing: 0.01rem;
 }
 
 .page-node-type-article .region-content-related .dram-content > h3,
@@ -478,7 +478,8 @@ body main {
 }
 
 header {
-  background: rgba(247, 247, 247, 0.9);
+  background: #f7f7f7;
+  opacity: 1;
 }
 
 .layout-container {
@@ -500,19 +501,19 @@ header {
 }
 
 .region-header {
+  padding-top: 3px;
   margin: 1rem;
 }
 
 .region-breadcrumbs,
 .region-page-title,
 .article-container {
-  padding: 0 1rem;
+  padding: 0 1rem 3rem 1rem;
   margin: 0 auto;
   max-width: 1300px;
 }
 
-.region-content,
-.region-content-aside {
+.region-content {
   margin-top: 3rem;
 }
 
@@ -523,7 +524,7 @@ header {
 .region-legal .body p,
 .region-legal a {
   line-height: 1.4;
-  color: rgba(247, 247, 247, 0.9);
+  color: #f7f7f7;
   font: "Univers LT Std";
 }
 
@@ -606,7 +607,7 @@ header {
 }
 
 .path-issues .view-issues > div {
-  border-top: 1px dotted #170312;
+  border-top: 1px dotted #000;
   padding-top: 1rem;
 }
 
@@ -626,6 +627,19 @@ header {
   font-family: "Univers LT Std Oblique";
 }
 
+.page-node-type-article .article-paragraph-container .page-section,
+.page-node-type-article .article-paragraph-container .drop-quote {
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 0 1rem;
+}
+
+.page-node-type-article .article-paragraph-container .media-section {
+  margin: 2rem auto 1rem auto;
+  max-width: 960px;
+  text-align: center;
+}
+
 .page-node-type-article .region-page-title {
   margin-top: 3rem;
 }
@@ -633,73 +647,127 @@ header {
 .page-node-type-article .region-page-title .article-title h2.article-title-pre-title {
   padding-bottom: 1rem;
   border-bottom: 1px solid black;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 1200px) {
   .page-node-type-article .region-page-title .article-title h2.article-title-pre-title {
-    font-size: calc(1.325rem + 0.9vw) ;
+    font-size: calc(1.275rem + 0.3vw) ;
   }
 }
 
 .page-node-type-article .region-page-title .article-title h1.article-title-title {
-  padding: 1rem 0;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
   text-align: center;
   font-family: "Life LT Std Roman";
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
 }
 
 @media (max-width: 1200px) {
   .page-node-type-article .region-page-title .article-title h1.article-title-title {
-    font-size: calc(1.525rem + 3.3vw) ;
+    font-size: calc(1.425rem + 2.1vw) ;
   }
 }
 
 .page-node-type-article .region-page-title .article-title .article-title-author {
   text-align: center;
-  color: red;
   font-family: "Univers LT Std";
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 1200px) {
   .page-node-type-article .region-page-title .article-title .article-title-author {
-    font-size: calc(1.325rem + 0.9vw) ;
+    font-size: calc(1.275rem + 0.3vw) ;
   }
 }
 
-@media (min-width: 46.25em) {
-  .page-node-type-article main .article-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-@media (min-width: 46.25em) {
-  .page-node-type-article main .article-container .region {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-}
-
-.page-node-type-article main .section-title {
+.page-node-type-article .page-section-title {
   padding-left: 4rem;
   margin-bottom: 0.7rem;
-  padding: 0rem 0 1rem 4rem;
+  padding: 1rem 0 1rem 3rem;
+  text-transform: uppercase;
+  font-family: "Univers LT Std";
+  font-size: 1rem;
 }
 
-.page-node-type-article main .section-title p {
+.page-node-type-article .page-section-title p {
   display: inline;
   padding-bottom: 0.9rem;
   letter-spacing: 0.01rem;
-  border-bottom: 1px solid #170312;
+  border-bottom: 1px solid #000;
 }
 
-.page-node-type-article main .body {
-  padding: 0rem 0rem 2rem;
+.page-node-type-article .page-section {
+  font-family: "Life LT Std Roman";
+}
+
+.page-node-type-article .drop-quote {
+  font-family: "Life LT Std Italic";
+}
+
+.page-node-type-article .drop-quote em {
+  font-family: "Life LT Std Roman";
+}
+
+.page-node-type-article .drop-quote p:first-child {
+  padding-top: 1rem;
+}
+
+.page-node-type-article .drop-quote p:last-child {
+  padding-bottom: 1rem;
+}
+
+.page-node-type-article .drop-quote p:not(:first-child) {
+  padding: 1rem 0;
+}
+
+.page-node-type-article .page-section,
+.page-node-type-article .drop-quote {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 30em) {
+  .page-node-type-article .page-section,
+  .page-node-type-article .drop-quote {
+    font-size: 1.2rem;
+  }
+}
+
+.page-node-type-article .page-section em,
+.page-node-type-article .drop-quote em {
+  font-family: "Life LT Std Italic";
+}
+
+.page-node-type-article .page-section > p {
+  text-indent: 3rem;
+}
+
+.page-node-type-article .page-section > p,
+.page-node-type-article .drop-quote > p {
+  text-align: justify;
+  text-justify: inter-character;
+}
+
+.page-node-type-article .article-paragraph-container .media-section img {
+  width: 100%;
+}
+
+.page-node-type-article .article-paragraph-container .media-section .blazy__caption {
+  padding: calc(1rem + 3px) 1rem 1rem 1rem;
+  font-family: "Univers LT Std";
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: justify;
+  text-justify: inter-character;
+  line-height: 1.2;
+}
+
+.page-node-type-article .article-paragraph-container .media-section .blazy__caption em {
+  font-family: "Univers LT Std Oblique";
 }
 
 .region-content-related .article-author {
@@ -737,7 +805,7 @@ header {
   font-weight: 700;
   font-size: 0.8rem;
   text-transform: uppercase;
-  letter-spacing: .05rem;
+  letter-spacing: 0.05rem;
 }
 
 .region-content-related .article-author .article-author-bio,
@@ -753,7 +821,7 @@ body.no-scroll {
 }
 
 header.is-active {
-  color: rgba(247, 247, 247, 0.9);
+  color: #f7f7f7;
   background-color: #755ea3;
 }
 
@@ -764,7 +832,7 @@ header.is-active {
 .overlay.open {
   position: fixed;
   background-color: #755ea3;
-  color: rgba(247, 247, 247, 0.9);
+  color: #f7f7f7;
   z-index: 9999;
   left: 0;
   bottom: 0;
@@ -776,20 +844,35 @@ header.is-active {
   display: flex;
 }
 
-a {
-  text-decoration: none;
-  color: #170312;
-}
-
 .site-name a {
   font-family: "Univers LT Std";
 }
 
-.region-content a:hover {
-  background-size: 1px 1em;
-  -webkit-box-shadow: inset 0 -0.175em white, inset 0 -0.2em #000;
-          box-shadow: inset 0 -0.175em white, inset 0 -0.2em #000;
-  word-wrap: break-word;
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.region-content article a {
+  color: #755ea3;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.region-content article a:visited {
+  color: #755ea3;
+}
+
+.region-content article a:hover {
+  color: #000;
+  -webkit-box-shadow: 0 1px 0 #000;
+          box-shadow: 0 1px 0 #000;
+}
+
+.region-content article a:active, .region-content article a:focus {
+  color: #000;
 }
 
 .region-header > div a {
@@ -963,10 +1046,7 @@ header.is-active .region-header > div {
 nav.breadcrumb,
 .breadcrumb-title {
   font-family: "Univers LT Std";
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  font-weight: 900;
-  letter-spacing: 0.1rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 46.24em) {
@@ -982,7 +1062,7 @@ nav.breadcrumb,
 }
 
 header {
-  border-bottom: 1px dotted #170312;
+  border-bottom: 1px solid #000;
 }
 
 .region-footer {
@@ -1109,8 +1189,8 @@ header {
 
 .region-legal {
   padding: 1rem 3rem;
-  background-color: #170312;
-  color: rgba(247, 247, 247, 0.9);
+  background-color: #000;
+  color: #f7f7f7;
 }
 
 @media (min-width: 46.25em) {
@@ -1152,14 +1232,14 @@ header {
 .button {
   display: inline-block;
   cursor: pointer;
-  background: rgba(247, 247, 247, 0.9);
-  color: #170312;
+  background: #f7f7f7;
+  color: #000;
   border: none;
   padding: 1.3rem 3rem 1rem 3rem;
 }
 
 .button:hover {
-  color: #170312;
+  color: #000;
   background: red;
 }
 
@@ -1176,8 +1256,8 @@ input.form-email {
   width: calc(100% - 0.8rem);
   height: 2rem;
   text-transform: none;
-  color: #170312;
-  background-color: rgba(247, 247, 247, 0.9);
+  color: #000;
+  background-color: #f7f7f7;
   font-stretch: normal;
   border-width: initial;
   border-style: none;
@@ -1269,7 +1349,7 @@ input.form-email {
 }
 
 .headroom {
-  background-color: rgba(247, 247, 247, 0.9);
+  background-color: #f7f7f7;
   position: fixed;
   z-index: 9999;
   right: 0;

@@ -69,10 +69,7 @@ header.is-active .region-header > div {
 nav.breadcrumb,
 .breadcrumb-title {
   font-family: $univers;
-  text-transform: uppercase;
-  @include font-size(0.7rem);
-  font-weight: 900;
-  letter-spacing: 0.1rem;
+  @include font-size(1rem);
 }
 
 .breadcrumb {
@@ -88,7 +85,7 @@ nav.breadcrumb,
 }
 
 header {
-  border-bottom: 1px dotted $black;
+  border-bottom: 1px solid $black;
 }
 
 // Footers

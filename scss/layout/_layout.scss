@@ -5,6 +5,7 @@ body main {
 
 header {
   background: $white;
+  opacity: 1;
 }
 
 .layout-container {
@@ -18,13 +19,8 @@ header {
   min-height: 100%;
 }
 
-@mixin global-margin {
-  margin: 0 auto;
-  max-width: $max-vw;
-}
-
 .region-header {
-  // padding-top: 3px; // "fixes" Univers baseline
+  padding-top: 3px; // "fixes" Univers baseline
   margin: 1rem;
 }
 
@@ -32,67 +28,13 @@ header {
 .region-page-title,
 .article-container {
   // cont'd with article styling below
-  padding: 0 1rem;
+  padding: 0 1rem 3rem 1rem;
   @include global-margin;
 }
 
-.region-content,
-.region-content-aside {
+.region-content {
   margin-top: 3rem;
 }
-
-// // footer-second
-// .region-footer-second .footer-wrapper {
-//   .footer ul {
-//     display: block;
-//     @include mq($from: tablet) {
-//       display: flex;
-//       flex-wrap: wrap;
-//       justify-content: space-between;
-//       align-items: flex-start;
-//     }
-//     @include mq($from: wide) {
-//     }
-//     li {
-//       padding-bottom: 0.5rem;
-//       &:last-child {
-//         padding-bottom: 0;
-//       }
-//       @include mq($from: tablet) {
-//         flex-shrink: 1;
-//         flex-basis: 33%;
-//         height: 100%;
-//       }
-//     }
-//     li:nth-child(1) {
-//       order: 1;
-//     }
-//     li:nth-child(2) {
-//       order: 4;
-//     }
-//     li:nth-child(3) {
-//       order: 7;
-//     }
-//     li:nth-child(4) {
-//       order: 2;
-//     }
-//     li:nth-child(5) {
-//       order: 5;
-//     }
-//     li:nth-child(6) {
-//       order: 8;
-//     }
-//     li:nth-child(7) {
-//       order: 3;
-//     }
-//     li:nth-child(8) {
-//       order: 5;
-//     }
-//     li:nth-child(9) {
-//       order: 9;
-//     }
-//   }
-// }
 
 // Legal footer
 .region-legal {
@@ -186,57 +128,127 @@ header {
   }
 }
 
-// Article
+// Article container margins
+.page-node-type-article .article-paragraph-container {
+  .page-section,
+  .drop-quote {
+    margin: 0 auto;
+    max-width: 720px;
+    padding: 0 1rem;
+  }
+}
+
+.page-node-type-article .article-paragraph-container .media-section {
+  margin: 2rem auto 1rem auto;
+  max-width: 960px;
+  text-align: center;
+}
+
+// Article title
 .page-node-type-article .region-page-title {
   margin-top: 3rem;
   .article-title {
     h2.article-title-pre-title {
       padding-bottom: 1rem;
       border-bottom: 1px solid black;
-      @include font-size(2rem);
+      @include font-size(1.5rem);
     }
     h1.article-title-title {
-      padding: 1rem 0;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1rem;
       text-align: center;
       font-family: $display-font;
-      @include font-size(4rem);
+      @include font-size(3rem);
       text-transform: uppercase;
     }
     .article-title-author {
       text-align: center;
-      color: red;
       font-family: $default-font;
-      @include font-size(2rem);
+      @include font-size(1.5rem);
     }
   }
 }
 
-.page-node-type-article main {
-  .article-container {
-    @include mq($from: tablet) {
-      display: flex;
-    }
-  }
-  .article-container .region {
-    @include mq($from: tablet) {
-      flex: 1;
-    }
-  }
-  .section-title {
+// Article copy
+.page-node-type-article {
+  .page-section-title {
     padding-left: 4rem;
     margin-bottom: 0.7rem;
-    padding: 0rem 0 1rem 4rem;
+    padding: 1rem 0 1rem 3rem;
+    text-transform: uppercase;
+    font-family: $univers;
+    @include font-size(1rem);
   }
 
-  .section-title p {
+  .page-section-title p {
     display: inline;
     padding-bottom: 0.9rem;
     letter-spacing: 0.01rem;
     border-bottom: 1px solid $black;
   }
 
-  .body {
-    padding: 0rem 0rem 2rem;
+  .page-section {
+    font-family: $life;
+  }
+
+  .drop-quote {
+    font-family: $life-italic;
+    em {
+      font-family: $life;
+    }
+    p:first-child {
+      padding-top: 1rem;
+    }
+
+    p:last-child {
+      padding-bottom: 1rem;
+    }
+
+    p:not(:first-child) {
+      padding: 1rem 0;
+    }
+  }
+
+  .page-section,
+  .drop-quote {
+    @include font-size(1rem);
+    line-height: 1.2;
+    @include mq($from: mobile) {
+      @include font-size(1.2rem);
+    }
+    em {
+      font-family: $life-italic;
+    }
+  }
+
+  .page-section > p {
+    text-indent: 3rem;
+  }
+
+  .page-section > p,
+  .drop-quote > p {
+    text-align: justify;
+    text-justify: inter-character;
+  }
+}
+
+// Article media section
+.page-node-type-article .article-paragraph-container .media-section {
+  img {
+    width: 100%;
+  }
+  .blazy__caption {
+    padding: calc(1rem + 3px) 1rem 1rem 1rem;
+    font-family: $univers;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: justify;
+    text-justify: inter-character;
+    line-height: 1.2;
+    em {
+      font-family: $univers-italic;
+    }
   }
 }
 

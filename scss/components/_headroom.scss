@@ -9,7 +9,6 @@
   right: 0;
   left: 0;
   top: 0;
-  // opacity: .5;
 }
 
 .headroom {
@@ -44,7 +43,6 @@
     -moz-transform: translateY(0);
   }
 }
-
 
 @keyframes slideDown {
   0% {
@@ -97,7 +95,6 @@
   -moz-animation-name: slideUp;
   animation-name: slideUp;
 }
-
 
 //
 .headroom {

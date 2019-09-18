@@ -38,6 +38,16 @@
  * @ingroup themeable
  */
 #}
+{%
+  set classes = [
+    paragraph.bundle|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
 {% block paragraph %}
-  {{ content }}
+  <div class="media-section">
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
 {% endblock paragraph %}

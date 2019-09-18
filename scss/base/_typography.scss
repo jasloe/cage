@@ -62,38 +62,40 @@ footer {
       font-family: $univers;
     }
 
-    .body p {
-      font-family: $life;
+    .body p,
+    .drop-quote p {
       @include font-size(1rem);
-      text-align: left;
-      text-indent: 0rem;
       line-height: 1.2;
-
       @include mq($from: mobile) {
-        text-indent: 4rem;
-        text-align: justify;
-        text-justify: inter-character;
         @include font-size(1.2rem);
       }
     }
 
-    .body em {
+    .article-metadata {
+      @include font-size(1.2rem);
+      line-height: 1.2;
+    }
+
+    .body p {
+      font-family: $life;
+      text-indent: 3rem;
+      text-align: justify;
+      text-justify: inter-character;
+    }
+
+    .body em,
+    .drop-quote p {
       font-family: $life-italic;
     }
+
+    .drop-quote p {
+      padding-left: 3rem;
+      text-align: justify;
+      text-justify: inter-character;
+    }
   }
-  .meta-wrapper {
-    line-height: 1.2;
-    .meta {
-      padding-bottom: 1rem;
-    }
-    .meta:first-child {
-      padding-top: 1rem;
-    }
-    h3 {
-      font-family: $univers;
-      text-transform: uppercase;
-      letter-spacing: 0.01rem;
-    }
+  .article-metadata {
+    font-family: $univers;
   }
 
   .region-content-related .dram-content {
@@ -128,7 +130,4 @@ footer {
       letter-spacing: 0.05rem;
     }
   }
-}
-
-.breadcrumb li {
 }

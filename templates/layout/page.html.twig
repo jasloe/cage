@@ -58,20 +58,9 @@
         {{ page.breadcrumbs }}
       {% endif %}
 
-      {% if page.page_title %}
-        {{ page.page_title }}
-      {% endif %}
-
-      {% if page.content_aside %}
-        <div class="article-container">
-          {{ page.content }}
-          {{ page.content_aside }}
-        </div>
-      {% else %}
-        {{ page.content }}
-      {% endif %}
+      {{ page.page_title }}
+      {{ page.content }}
       {{ page.content_related }}
-      {{ page.content_post }}
     </div>
     {# /.layout-content #}
   </main>
