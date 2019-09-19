@@ -181,7 +181,7 @@ body:before {
 
 @media (min-width: 40em) {
   body:before {
-    content: "modal ≥ 640px (40em)";
+    content: "mobile-plus ≥ 640px (40em)";
   }
 }
 
@@ -473,6 +473,19 @@ footer {
   letter-spacing: 0.05rem;
 }
 
+body main .region-content,
+body main .region-page-title {
+  color: #755ea3;
+}
+
+h2.article-pre-title {
+  border-bottom: 1px solid #755ea3;
+}
+
+.page-node-type-article .page-section-title p {
+  border-bottom: 1px solid #755ea3;
+}
+
 body main {
   margin-top: 4rem;
 }
@@ -568,6 +581,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background: red;
 }
 
 .issue-articles ul li {
@@ -606,11 +620,6 @@ header {
   font-family: "Univers LT Std";
 }
 
-.path-issues .view-issues > div {
-  border-top: 1px dotted #000;
-  padding-top: 1rem;
-}
-
 .path-issues .view-issues .article-title-author {
   padding-bottom: 2rem;
 }
@@ -644,19 +653,18 @@ header {
   margin-top: 3rem;
 }
 
-.page-node-type-article .region-page-title .article-title h2.article-title-pre-title {
+.page-node-type-article .region-page-title .article h2.article-pre-title {
   padding-bottom: 1rem;
-  border-bottom: 1px solid black;
   font-size: 1.5rem;
 }
 
 @media (max-width: 1200px) {
-  .page-node-type-article .region-page-title .article-title h2.article-title-pre-title {
+  .page-node-type-article .region-page-title .article h2.article-pre-title {
     font-size: calc(1.275rem + 0.3vw) ;
   }
 }
 
-.page-node-type-article .region-page-title .article-title h1.article-title-title {
+.page-node-type-article .region-page-title .article h1.article-title {
   max-width: 720px;
   margin: 0 auto;
   padding: 1rem;
@@ -667,19 +675,19 @@ header {
 }
 
 @media (max-width: 1200px) {
-  .page-node-type-article .region-page-title .article-title h1.article-title-title {
+  .page-node-type-article .region-page-title .article h1.article-title {
     font-size: calc(1.425rem + 2.1vw) ;
   }
 }
 
-.page-node-type-article .region-page-title .article-title .article-title-author {
+.page-node-type-article .region-page-title .article .article-author {
   text-align: center;
   font-family: "Univers LT Std";
   font-size: 1.5rem;
 }
 
 @media (max-width: 1200px) {
-  .page-node-type-article .region-page-title .article-title .article-title-author {
+  .page-node-type-article .region-page-title .article .article-author {
     font-size: calc(1.275rem + 0.3vw) ;
   }
 }
@@ -697,7 +705,6 @@ header {
   display: inline;
   padding-bottom: 0.9rem;
   letter-spacing: 0.01rem;
-  border-bottom: 1px solid #000;
 }
 
 .page-node-type-article .page-section {
@@ -771,48 +778,64 @@ header {
 }
 
 .region-content-related .article-author {
-  padding: 3rem 0 3rem;
-  background: darkgray;
+  background: #755ea3;
+  color: #f7f7f7;
 }
 
-.region-content-related .article-author .article-related-container {
+.region-content-related .article-author .article-author-container {
+  max-width: 640px;
   margin: 0 auto;
-  max-width: 740px;
 }
 
-.region-content-related h3 {
-  padding-bottom: 2rem;
+.region-content-related .article-author .article-author-container img {
+  width: 100%;
 }
 
-@media (max-width: 46.24em) {
-  .region-content-related h3 {
-    padding-left: 1rem;
+.region-content-related .article-author {
+  font-family: "Univers LT Std";
+  line-height: 1.2;
+}
+
+.region-content-related .article-author em {
+  font-family: "Univers LT Std Oblique";
+}
+
+.region-content-related .article-author h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.03rem;
+  padding: 0 3rem 3rem 0;
+  padding-top: calc(3rem + 3px);
+}
+
+@media (max-width: 39.99em) {
+  .region-content-related .article-author h3 {
+    padding: 0 2rem 2rem 2rem;
+    padding-top: calc(2rem + 3px);
   }
 }
 
-.region-content-related .article-author-portrait,
-.region-content-related .fields {
-  background: lightgray;
+.region-content-related .article-author .person-bio,
+.region-content-related .article-author .person-link {
+  padding-top: 2rem;
 }
 
-.region-content-related .fields {
-  padding: 3rem;
+@media (max-width: 39.99em) {
+  .region-content-related .article-author .person-bio,
+  .region-content-related .article-author .person-link {
+    padding-top: 2rem;
+  }
 }
 
-.region-content-related .article-author h3,
-.region-content-related .article-author .article-author-name {
-  font-family: "Univers LT Std";
-  font-weight: 700;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
+.region-content-related .article-author .field-fieldset {
+  padding: 2rem 3rem 3rem 3rem;
+  text-align: justify;
+  text-justify: inter-character;
 }
 
-.region-content-related .article-author .article-author-bio,
-.region-content-related .article-author .article-author-link {
-  line-height: 1.4;
-  font-size: 1rem;
-  font-family: "Univers LT Std";
+@media (max-width: 39.99em) {
+  .region-content-related .article-author .field-fieldset {
+    padding: 1rem 2rem 2rem rem;
+  }
 }
 
 body.no-scroll {
@@ -1093,6 +1116,10 @@ header {
   margin-top: 3rem;
 }
 
+.region-footer-first .container .col-1 .newsletter-social .body p {
+  padding: 0rem 1rem 1rem 0;
+}
+
 @media (min-width: 46.25em) {
   .region-footer-first .container {
     -webkit-box-orient: horizontal;
@@ -1217,6 +1244,24 @@ header {
   .region-legal nav ul li:first-child {
     padding-right: 1rem;
   }
+}
+
+ul.social-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+ul.social-buttons li {
+  height: 20px;
+  width: 30px;
+}
+
+ul.social-buttons li a:hover {
+  color: red;
 }
 
 .about-sa .button,
@@ -1423,6 +1468,19 @@ input.form-email {
 .animated.slideUp {
   -webkit-animation-name: slideUp;
   animation-name: slideUp;
+}
+
+.article-author-container .media--image img {
+  -webkit-filter: grayscale(100%) contrast(1) blur(0);
+          filter: grayscale(100%) contrast(1) blur(0);
+  height: 100%;
+  max-width: 100%;
+  mix-blend-mode: multiply;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+  position: relative;
+  width: 100%;
 }
 
 .issue-front {

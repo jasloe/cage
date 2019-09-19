@@ -109,6 +109,9 @@ header {
 
   .col-1 {
     margin-top: 3rem;
+    .newsletter-social .body p {
+      padding: 0rem 1rem 1rem 0;
+    }
   }
 
   @include mq($from: tablet) {
@@ -163,6 +166,21 @@ header {
     display: block;
   }
 }
+
+// .social {
+//   a.facebook {
+//     width: 100px;
+//     height: 93px;
+//     background: url("../images/logo-sm-nwr-ware.png") 0 0 no-repeat;
+//     text-indent: -9999px;
+//     overflow: hidden;
+//     display: block;
+//   }
+//   a.twitter {
+
+//   }
+//   a.instagram {}
+// }
 
 // Footer second
 .region-footer-second .container {

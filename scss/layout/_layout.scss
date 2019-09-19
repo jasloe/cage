@@ -1,3 +1,21 @@
+// palette
+body main {
+  .region-content,
+  .region-page-title {
+    color: $hyla;
+  }
+}
+
+h2.article-pre-title {
+  border-bottom: 1px solid $hyla;
+}
+
+.page-node-type-article {
+  .page-section-title p {
+    border-bottom: 1px solid $hyla;
+  }
+}
+
 // header, footer, breadcrumb layouts
 body main {
   margin-top: 4rem;
@@ -71,7 +89,7 @@ header {
   padding-bottom: 1rem;
 }
 
-// Issues
+// sa/issues
 .path-issues .view-issues {
   div {
     @include mq($from: tablet) {
@@ -83,6 +101,7 @@ header {
 .issue-title-fieldset {
   display: flex;
   flex-direction: column;
+  background: red;
 }
 
 .issue-articles ul li {
@@ -105,11 +124,6 @@ header {
   @include global-margin;
   padding: 0 1rem;
   line-height: 1.2;
-
-  > div {
-    border-top: 1px dotted $black;
-    padding-top: 1rem;
-  }
 
   font-family: $default-font;
 
@@ -147,13 +161,12 @@ header {
 // Article title
 .page-node-type-article .region-page-title {
   margin-top: 3rem;
-  .article-title {
-    h2.article-title-pre-title {
+  .article {
+    h2.article-pre-title {
       padding-bottom: 1rem;
-      border-bottom: 1px solid black;
       @include font-size(1.5rem);
     }
-    h1.article-title-title {
+    h1.article-title {
       max-width: 720px;
       margin: 0 auto;
       padding: 1rem;
@@ -162,7 +175,7 @@ header {
       @include font-size(3rem);
       text-transform: uppercase;
     }
-    .article-title-author {
+    .article-author {
       text-align: center;
       font-family: $default-font;
       @include font-size(1.5rem);
@@ -185,7 +198,6 @@ header {
     display: inline;
     padding-bottom: 0.9rem;
     letter-spacing: 0.01rem;
-    border-bottom: 1px solid $black;
   }
 
   .page-section {
@@ -254,45 +266,48 @@ header {
 
 // Author container
 .region-content-related .article-author {
-  padding: 3rem 0 3rem;
-  background: darkgray;
-}
-
-.region-content-related {
-  .article-author .article-related-container {
+  background: $current-color;
+  color: $white;
+  .article-author-container {
+    max-width: 640px;
     margin: 0 auto;
-    max-width: $tablet;
-  }
-  h3 {
-    padding-bottom: 2rem;
-    @include mq($until: tablet) {
-      padding-left: 1rem;
+    img {
+      width: 100%;
     }
   }
-  .article-author-portrait,
-  .fields {
-    background: lightgray;
-  }
-
-  .fields {
-    padding: 3rem;
-  }
-  .article-author-name,
-  .article-author-bio {
-  }
 }
 
-// Author content
 .region-content-related .article-author {
-  h3,
-  .article-author-name {
-    @include life-sc;
+  font-family: $univers;
+  line-height: 1.2;
+  em {
+    font-family: $univers-italic;
+  }
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.03rem;
+    padding: 0 3rem 3rem 0;
+    padding-top: calc(3rem + 3px);
+    @include mq($until: mobile-plus) {
+      padding: 0 2rem 2rem 2rem;
+      padding-top: calc(2rem + 3px);
+    }
   }
 
-  .article-author-bio,
-  .article-author-link {
-    line-height: 1.4;
-    @include font-size(1rem);
-    font-family: $default-font;
+  .person-bio,
+  .person-link {
+    padding-top: 2rem;
+    @include mq($until: mobile-plus) {
+      padding-top: 2rem;
+    }
+  }
+  .field-fieldset {
+    padding: 2rem 3rem 3rem 3rem;
+    @include mq($until: mobile-plus) {
+      padding: 1rem 2rem 2rem rem;
+    }
+
+    text-align: justify;
+    text-justify: inter-character;
   }
 }

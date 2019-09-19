@@ -1,3 +1,17 @@
+ul.social-buttons {
+  display: flex;
+  align-items: center;
+}
+
+ul.social-buttons li {
+  height: 20px;
+  width: 30px;
+}
+
+ul.social-buttons li a:hover {
+  color: red;
+}
+
 .about-sa,
 .newsletter-social {
   .button {
