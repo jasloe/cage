@@ -1,5 +1,5 @@
 // palette
-body main {
+.hyla {
   .region-content,
   .region-page-title {
     color: $hyla;
@@ -91,55 +91,80 @@ header {
 
 // sa/issues
 .path-issues .view-issues {
-  div {
+  @include global-margin;
+  max-width: $max-vw;
+  padding: 0 1rem;
+  line-height: 1.2;
+  font-family: $default-font;
+  > div {
     @include mq($from: tablet) {
       display: flex;
     }
   }
 }
 
-.issue-title-fieldset {
-  display: flex;
-  flex-direction: column;
-  background: red;
-}
-
-.issue-articles ul li {
-  display: flex;
-}
-
-.article-pre-title {
-  flex: 1;
-}
-.article-title-author {
-  flex: 1;
-}
-
-.article-title-author {
-  display: flex;
-  flex-direction: column;
-}
-
-.path-issues .view-issues {
-  @include global-margin;
-  padding: 0 1rem;
-  line-height: 1.2;
-
-  font-family: $default-font;
-
-  .article-title-author {
-    padding-bottom: 2rem;
+.path-issues .issue-title-fieldset {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $black;
+  @include mq($from: tablet) {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-right: 1rem;
+    border: none;
   }
+}
+
+.path-issues .issue-articles-fieldset {
   .article-title {
     text-transform: uppercase;
   }
-}
-
-.article-formatted-title {
-  text-transform: uppercase;
   em {
     font-family: $univers-italic;
   }
+}
+
+.path-issues .issue-title-fieldset div {
+  width: 100%;
+}
+
+.path-issues .issue-articles-fieldset {
+  width: 80%;
+}
+
+.path-issues .issue-articles-fieldset .issue-articles ul li {
+  padding-bottom: 1em;
+}
+
+.path-issues .issue-articles ul li {
+  @include mq($from: tablet) {
+    display: flex;
+
+    width: 100%;
+  }
+  .article-pre-title {
+    @include mq($from: tablet) {
+      content: "";
+      width: 36%;
+      min-width: 100px;
+      margin-right: 1rem;
+    }
+  }
+  .article-title a div {
+    width: 480px;
+  }
+}
+
+.path-issues .article-pre-title {
+  text-indent: -2rem;
+}
+
+.path-issues .article-pre-title div:before {
+  content: "ꞏ";
+
+  padding-right: 2rem;
 }
 
 // Article container margins

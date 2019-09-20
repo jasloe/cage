@@ -128,8 +128,14 @@ header {
   }
 }
 
+.follow-us {
+  padding-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
 .region-footer-first ul.social {
   display: flex;
+
   li {
     padding-right: 1rem;
     &:last-child {
@@ -166,21 +172,6 @@ header {
     display: block;
   }
 }
-
-// .social {
-//   a.facebook {
-//     width: 100px;
-//     height: 93px;
-//     background: url("../images/logo-sm-nwr-ware.png") 0 0 no-repeat;
-//     text-indent: -9999px;
-//     overflow: hidden;
-//     display: block;
-//   }
-//   a.twitter {
-
-//   }
-//   a.instagram {}
-// }
 
 // Footer second
 .region-footer-second .container {

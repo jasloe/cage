@@ -1,15 +1,20 @@
 ul.social-buttons {
   display: flex;
   align-items: center;
+  margin-top: 0.5rem;
 }
 
 ul.social-buttons li {
-  height: 20px;
-  width: 30px;
+  height: 15px;
+  width: 25px;
+  padding-right: 0.5rem;
+  &:last-child {
+    padding-right: 0;
+  }
 }
 
 ul.social-buttons li a:hover {
-  color: red;
+  color: $white;
 }
 
 .about-sa,
