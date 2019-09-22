@@ -11,8 +11,14 @@ a {
   @include body-links($link, $visited, $hover, $active);
 }
 
-body {
-  // color: $light-gray !important;
+.is-active {
+  border-bottom: 1px solid;
+  border-color: $black;
+}
+
+a:hover {
+  border-bottom: 1px solid;
+  border-color: $black;
 }
 
 // header {

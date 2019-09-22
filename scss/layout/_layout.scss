@@ -98,73 +98,50 @@ header {
   font-family: $default-font;
   > div {
     @include mq($from: tablet) {
-      display: flex;
+      // display: flex;
     }
   }
 }
-
-.path-issues .issue-title-fieldset {
-  width: 100%;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid $black;
-  @include mq($from: tablet) {
+.path-issues {
+  .issue__list {
     display: flex;
-    flex-direction: column;
-    width: 20%;
-    margin-right: 1rem;
-    border: none;
   }
-}
-
-.path-issues .issue-articles-fieldset {
-  .article-title {
-    text-transform: uppercase;
+  .issue__list .issue__volume-number {
+    width: 25%;
+    span {
+      margin-right: 3rem;
+    }
   }
-  em {
-    font-family: $univers-italic;
+  .issue__list .issue__issue-title {
+    width: 75%;
   }
-}
 
-.path-issues .issue-title-fieldset div {
-  width: 100%;
-}
-
-.path-issues .issue-articles-fieldset {
-  width: 80%;
-}
-
-.path-issues .issue-articles-fieldset .issue-articles ul li {
-  padding-bottom: 1em;
-}
-
-.path-issues .issue-articles ul li {
-  @include mq($from: tablet) {
-    display: flex;
-
-    width: 100%;
-  }
-  .article-pre-title {
+  .article__list {
     @include mq($from: tablet) {
-      content: "";
-      width: 36%;
-      min-width: 100px;
+      margin-left: 25%;
+    }
+  }
+
+  .article__list-container ul {
+    margin-top: 1rem;
+  }
+
+  .article__list-container ul li {
+    @include mq($from: tablet) {
+      display: flex;
+    }
+    padding-bottom: 1rem;
+  }
+  .article__pre-title {
+    @include mq($from: tablet) {
+      min-width: 25%;
+      max-width: 25%;
       margin-right: 1rem;
     }
   }
-  .article-title a div {
-    width: 480px;
+  .article__title {
+    text-transform: uppercase;
   }
-}
-
-.path-issues .article-pre-title {
-  text-indent: -2rem;
-}
-
-.path-issues .article-pre-title div:before {
-  content: "ꞏ";
-
-  padding-right: 2rem;
 }
 
 // Article container margins
@@ -336,3 +313,5 @@ header {
     text-justify: inter-character;
   }
 }
+
+// path-issues-new

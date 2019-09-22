@@ -47,7 +47,7 @@ header.is-active .region-header > div {
   display: flex;
 
   li {
-    padding-right: 0.3rem;
+    // padding-right: 0.3rem;
 
     &:last-child {
       padding-right: 0;
@@ -55,11 +55,11 @@ header.is-active .region-header > div {
 
     > a {
       text-decoration: none;
+      margin-right: 3rem;
     }
 
     > a:after {
-      content: "\2F";
-      padding-left: 5px;
+      content: "";
     }
   }
 }
