@@ -147,8 +147,9 @@ header {
 // Article container margins
 .page-node-type-article .article-paragraph-container {
   .page-section,
-  .drop-quote {
-    margin: 0 auto;
+  .drop-quote,
+  .endnotes {
+    margin: 1rem auto 0;
     max-width: 720px;
     padding: 0 1rem;
   }
@@ -176,6 +177,9 @@ header {
       font-family: $display-font;
       @include font-size(3rem);
       text-transform: uppercase;
+      em {
+        font-family: $life-italic;
+      }
     }
     .article-author {
       text-align: center;
@@ -213,19 +217,26 @@ header {
     }
     p:first-child {
       padding-top: 1rem;
+      padding-left: 3rem;
     }
 
     p:last-child {
       padding-bottom: 1rem;
+      padding-left: 3rem;
     }
 
     p:not(:first-child) {
       padding: 1rem 0;
+      padding-left: 3rem;
+    }
+    p {
+      padding-left: 3rem;
     }
   }
 
   .page-section,
-  .drop-quote {
+  .drop-quote,
+  .endnotes {
     @include font-size(1rem);
     line-height: 1.2;
     @include mq($from: mobile) {
@@ -236,12 +247,21 @@ header {
     }
   }
 
+  .endnotes {
+    @include font-size(0.7rem);
+    line-height: 1.2;
+    @include mq($from: mobile) {
+      @include font-size(1rem);
+    }
+  }
+
   .page-section > p {
     text-indent: 3rem;
   }
 
   .page-section > p,
-  .drop-quote > p {
+  .drop-quote > p,
+  .endnotes > p {
     text-align: justify;
     text-justify: inter-character;
   }

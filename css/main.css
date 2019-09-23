@@ -627,8 +627,9 @@ header {
 }
 
 .page-node-type-article .article-paragraph-container .page-section,
-.page-node-type-article .article-paragraph-container .drop-quote {
-  margin: 0 auto;
+.page-node-type-article .article-paragraph-container .drop-quote,
+.page-node-type-article .article-paragraph-container .endnotes {
+  margin: 1rem auto 0;
   max-width: 720px;
   padding: 0 1rem;
 }
@@ -668,6 +669,10 @@ header {
   .page-node-type-article .region-page-title .article h1.article-title {
     font-size: calc(1.425rem + 2.1vw) ;
   }
+}
+
+.page-node-type-article .region-page-title .article h1.article-title em {
+  font-family: "Life LT Std Italic";
 }
 
 .page-node-type-article .region-page-title .article .article-author {
@@ -711,32 +716,53 @@ header {
 
 .page-node-type-article .drop-quote p:first-child {
   padding-top: 1rem;
+  padding-left: 3rem;
 }
 
 .page-node-type-article .drop-quote p:last-child {
   padding-bottom: 1rem;
+  padding-left: 3rem;
 }
 
 .page-node-type-article .drop-quote p:not(:first-child) {
   padding: 1rem 0;
+  padding-left: 3rem;
+}
+
+.page-node-type-article .drop-quote p {
+  padding-left: 3rem;
 }
 
 .page-node-type-article .page-section,
-.page-node-type-article .drop-quote {
+.page-node-type-article .drop-quote,
+.page-node-type-article .endnotes {
   font-size: 1rem;
   line-height: 1.2;
 }
 
 @media (min-width: 30em) {
   .page-node-type-article .page-section,
-  .page-node-type-article .drop-quote {
+  .page-node-type-article .drop-quote,
+  .page-node-type-article .endnotes {
     font-size: 1.2rem;
   }
 }
 
 .page-node-type-article .page-section em,
-.page-node-type-article .drop-quote em {
+.page-node-type-article .drop-quote em,
+.page-node-type-article .endnotes em {
   font-family: "Life LT Std Italic";
+}
+
+.page-node-type-article .endnotes {
+  font-size: 0.7rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 30em) {
+  .page-node-type-article .endnotes {
+    font-size: 1rem;
+  }
 }
 
 .page-node-type-article .page-section > p {
@@ -744,7 +770,8 @@ header {
 }
 
 .page-node-type-article .page-section > p,
-.page-node-type-article .drop-quote > p {
+.page-node-type-article .drop-quote > p,
+.page-node-type-article .endnotes > p {
   text-align: justify;
   text-justify: inter-character;
 }
@@ -1507,6 +1534,17 @@ input.form-email {
   height: 100vh;
   background-size: cover;
   background-position: 50%;
+}
+
+sup {
+  vertical-align: top;
+  font-size: 11px;
+}
+
+.endnotes sup {
+  vertical-align: baseline;
+  font-size: 1rem;
+  margin-right: 3rem;
 }
 
 /*# sourceMappingURL=maps/main.css.map */
