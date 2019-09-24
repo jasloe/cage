@@ -6,8 +6,8 @@
   }
 }
 
-h2.article-pre-title {
-  border-bottom: 1px solid $hyla;
+h1.article-title {
+  border-top: 1px solid $hyla;
 }
 
 .page-node-type-article {
@@ -18,7 +18,7 @@ h2.article-pre-title {
 
 // header, footer, breadcrumb layouts
 body main {
-  margin-top: 4rem;
+  margin-top: 4.4rem;
 }
 
 header {
@@ -42,7 +42,6 @@ header {
   margin: 1rem;
 }
 
-.region-breadcrumbs,
 .region-page-title,
 .article-container {
   // cont'd with article styling below
@@ -51,7 +50,8 @@ header {
 }
 
 .region-content {
-  margin-top: 3rem;
+  margin-top: 0rem;
+  margin-bottom: 3rem;
 }
 
 // Legal footer
@@ -63,7 +63,7 @@ header {
 .region-legal a {
   line-height: 1.4;
   color: $white;
-  font: $univers;
+  font-family: $univers;
 }
 
 .legal-wrapper ul li:first-child {
@@ -170,9 +170,9 @@ header {
       @include font-size(1.5rem);
     }
     h1.article-title {
-      max-width: 720px;
+      // max-width: 720px;
       margin: 0 auto;
-      padding: 1rem;
+      padding: 0.5rem 1rem;
       text-align: center;
       font-family: $display-font;
       @include font-size(3rem);
@@ -259,6 +259,10 @@ header {
     text-indent: 3rem;
   }
 
+  .page-section p:first-child {
+    text-indent: 0;
+  }
+
   .page-section > p,
   .drop-quote > p,
   .endnotes > p {
@@ -334,4 +338,72 @@ header {
   }
 }
 
-// path-issues-new
+// Imprint
+
+body.imprint {
+  main {
+    line-height: 1.3;
+    margin-top: 3.3rem;
+    max-width: $desktop;
+    margin: 3.3rem auto;
+    padding: 0 2rem;
+  }
+  background-color: $hyla;
+  .region-page-title,
+  .node__content,
+  p,
+  h1,
+  h2 {
+    font-family: $univers;
+    color: $white;
+    padding-bottom: 0rem;
+    padding-top: 0rem;
+    @include font-size(1rem);
+  }
+  .region-page-title,
+  h2 {
+    text-transform: uppercase;
+  }
+
+  .items {
+    padding-bottom: 1rem;
+  }
+
+  .node__content {
+    padding-top: 3rem;
+  }
+
+  .imprint__wrapper {
+    @include mq($from: tablet) {
+      display: flex;
+    }
+  }
+  .imprint__wrapper {
+    .region-page-title {
+      @include mq($from: tablet) {
+        width: 40%;
+        margin-right: 5rem;
+      }
+      padding-bottom: 1rem;
+      padding-left: 0;
+    }
+    .col-1 {
+      @include mq($from: tablet) {
+        width: 40%;
+      }
+    }
+    .col-2 {
+      @include mq($from: tablet) {
+        width: 50%;
+      }
+    }
+  }
+
+  .imprint__wrapper a {
+    color: $white;
+    &:hover {
+      border-bottom: 1px solid;
+      border-color: $white;
+    }
+  }
+}

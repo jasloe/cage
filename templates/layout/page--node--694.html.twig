@@ -53,61 +53,77 @@
     <a id="main" tabindex="-1"></a>
     {# link is in html.html.twig #}
 
-    {{ page.page_title }}
     <div class="node__content">
-      <div class="wrapper">
+      <div class="imprint__wrapper">
+        {{ page.page_title }}
+
         <div class="col-1">
-          <div class="for-sa">
-            <h2>For SA</h2>
+          <div class="for-sa items">
+
+            <h2>For Sound American</h2>
             <div class="field">{{ drupal_entity('block_content', '11') }}</div>
           </div>
 
-          <div class="advisory-board">
+          <div class="advisory-board items">
+
             <h2>2019 Advisory Board</h2>
             <div class="field">{{ drupal_entity('block_content', '18') }}</div>
           </div>
 
-          <div class="editorial-board">
+          <div class="editorial-board items">
+
             <h2>2019 Editorial Board</h2>
             <div class="field">{{ drupal_entity('block_content', '12') }}</div>
           </div>
 
-          <div class="arm">
-            <h2>Anthology of Recorded Music, Inc., Board of Trustees</h2>
+          <div class="arm items">
+
+            <h2>Anthology of Recorded Music, Inc.<br/>Board of Trustees</h2>
             <div class="field">{{ drupal_entity('block_content', '15') }}</div>
           </div>
 
-          <div class="design">
+          <div class="design items">
+
             <h2>Design</h2>
             <div class="field">{{ drupal_entity('block_content', '14') }}</div>
           </div>
 
-          <div class="development">
-            <h2>Web development</h2>
-            <div class="field">{{ drupal_entity('block_content', '13') }}</div>
-          </div>
+          {# <div class="development">
+                                                                                                      <h2>Web development</h2>
+                                                                                                      <div class="field">{{ drupal_entity('block_content', '13') }}</div>
+                                                                                                    </div> #}
 
-          <div class="printing">
+          <div class="printing items">
+
             <h2>Printing & Binding</h2>
             <div class="field">{{ drupal_entity('block_content', '22') }}</div>
           </div>
         </div>
         <div class="col-2">
 
-          <div class="address">
+          <div class="address items">
+
             <h2>Sound American Publications</h2>
             <div class="field">{{ drupal_entity('block_content', '23') }}</div>
           </div>
 
-          <div class="copyright">
-            <h2>℗ & © 2019</h2>
+          <div class="copyright items">
+
+            <h2>℗ & © 2019 Anthology of Recorded Music, Inc.</h2>
             <div class="field">{{ drupal_entity('block_content', '20') }}</div>
           </div>
 
-          <div class="isbn">
-            <h2>℗ & © 2019</h2>
+          <div class="isbn items">
+
+            <h2>ISBN (print edition)</h2>
             <div class="field">{{ drupal_entity('block_content', '21') }}</div>
           </div>
+
+          <div class="for-lee-hyla items">
+
+            <div class="field">{{ drupal_entity('block_content', '24') }}</div>
+          </div>
+
 
         </div>
       </div>

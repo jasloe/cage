@@ -24,6 +24,21 @@
   <div{{attributes.addClass(classes)}}>
     <div class="container">
       <div class="col-1">
+        <div class="about-sa">
+          <div class="about-sa-title">About Sound American</div>
+          {{ drupal_entity('block_content', '10') }}
+          <div class="labels">
+            <div class="labels-dram">
+              <a href="https://dramonline.org">DRAM</a>
+            </div>
+            <div class="labels-nwr">
+              <a href="https://newworldrecords.org">New World Records</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-2">
         <div class="newsletter-social">
           {{ drupal_entity('block_content', '19') }}
           {{ content }}
@@ -59,24 +74,9 @@
                 </svg>
               </a>
             </li>
-
-
           </ul>
-
-
-        </div>
-      </div>
-
-      <div class="col-2">
-        <div class="about-sa">
-          {{ drupal_entity('block_content', '10') }}
-          <div class="labels">
-            <div class="labels-dram">
-              <a href="https://dramonline.org">DRAM</a>
-            </div>
-            <div class="labels-nwr">
-              <a href="https://newworldrecords.org">New World Records</a>
-            </div>
+          <div class="footer-menu">
+            {{ drupal_menu('footer') }}
           </div>
         </div>
       </div>

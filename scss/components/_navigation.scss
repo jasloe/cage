@@ -22,32 +22,24 @@ header.is-active .region-header > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
 
-  > div {
-    // margin-right: auto;
-  }
-  > nav ul {
-    display: flex;
-  }
-  > nav ul li {
-    padding-right: 1rem;
-    &:last-child {
-      padding-right: 1rem;
-    }
-  }
+.region-header > div {
 }
 
 // Breadcrumbs
 // Layout
 #block-cage-breadcrumbs {
-  width: 100%;
+  @include mq($until: tablet) {
+    display: none;
+  }
 }
 
 .breadcrumb ol {
   display: flex;
 
   li {
-    // padding-right: 0.3rem;
+    padding-right: 0.3rem;
 
     &:last-child {
       padding-right: 0;
@@ -55,32 +47,12 @@ header.is-active .region-header > div {
 
     > a {
       text-decoration: none;
-      margin-right: 3rem;
+      margin-right: 0.3rem;
     }
 
     > a:after {
-      content: "";
+      content: " / ";
     }
-  }
-}
-
-// Breadcrumbs
-
-nav.breadcrumb,
-.breadcrumb-title {
-  font-family: $univers;
-  @include font-size(1rem);
-}
-
-.breadcrumb {
-  @include mq($until: tablet) {
-    display: none;
-  }
-}
-
-.breadcrumb-title {
-  @include mq($from: tablet) {
-    display: none;
   }
 }
 
@@ -90,9 +62,41 @@ header {
 
 // Footers
 .region-footer {
-  background-color: gray;
+  @include font-size(0.9rem);
+  color: $white;
+  background-color: $dark-gray;
   padding: 3rem;
   display: block;
+  font-family: $univers;
+  em {
+    font-family: $univers-italic;
+  }
+}
+
+.region-footer .about-sa-title {
+  padding-bottom: 1rem;
+}
+
+.region-footer .about-sa {
+  text-align: justify;
+  text-justify: inter-character;
+}
+
+.region-footer .about-sa .labels {
+  padding-top: 1rem;
+}
+
+.region-footer .about-sa .body {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid $white;
+}
+
+.region-footer .mailchimp-signup-subscribe-form {
+  padding-bottom: 1rem;
+}
+
+.region-footer .newsletter-social .body p {
+  padding-bottom: 1rem;
 }
 
 .region-footer-first .container,
@@ -105,12 +109,19 @@ header {
 // Footer first
 .region-footer-first .container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 
   .col-1 {
-    margin-top: 3rem;
+    margin-top: 1rem;
     .newsletter-social .body p {
       padding: 0rem 1rem 1rem 0;
+    }
+  }
+  .col-2,
+  .newsletter-social {
+    margin-top: 2rem;
+    @include mq($from: tablet) {
+      margin-top: 0;
     }
   }
 
@@ -118,7 +129,7 @@ header {
     flex-direction: row;
     .col-1 {
       margin-top: 0rem;
-      padding-right: 1rem;
+      padding-right: 6rem;
       flex: 1;
     }
     .col-2 {
@@ -128,9 +139,12 @@ header {
   }
 }
 
+.footer-menu {
+  margin-top: 3rem;
+}
+
 .follow-us {
   padding-bottom: 0.5rem;
-  text-transform: uppercase;
 }
 
 .region-footer-first ul.social {
@@ -174,23 +188,23 @@ header {
 }
 
 // Footer second
-.region-footer-second .container {
-  ul li {
-    padding-bottom: 0.5rem;
-  }
-  ul:last-child li:last-child {
-    padding-bottom: 0rem;
-  }
-  @include mq($from: tablet) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 75%;
-    ul li:last-child {
-      padding-bottom: 0rem;
-    }
-  }
-}
+// .region-footer-second .container {
+//   ul li {
+//     padding-bottom: 0.5rem;
+//   }
+//   ul:last-child li:last-child {
+//     padding-bottom: 0rem;
+//   }
+//   @include mq($from: tablet) {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 75%;
+//     ul li:last-child {
+//       padding-bottom: 0rem;
+//     }
+//   }
+// }
 
 // Legal
 .region-legal {

@@ -1,5 +1,7 @@
 .site-name a {
   font-family: $default-font;
+  text-transform: uppercase;
+  letter-spacing: 0.01rem;
 }
 
 a {
@@ -16,62 +18,35 @@ a {
   border-color: $black;
 }
 
-a:hover {
-  border-bottom: 1px solid;
-  border-color: $black;
+.breadcrumb,
+.article {
+  a:hover {
+    color: $white !important;
+    border-bottom: 1px solid;
+    border-color: $white;
+  }
 }
 
-// header {
-//   @include menu-links(
-//     $current-color,
-//     $current-color,
-//     $current-color-accent,
-//     $current-color-accent
-//   );
-// }
-
-// header.is-active,
-// .overlay {
-//   @include menu-links(
-//     $white,
-//     $white,
-//     $white,
-//     $white
-//   )
-
-//   .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
-//     background-color: $white;
-//   }
-// }
-
-// }
-
-// // site name
-.region-header > div a {
-  text-transform: uppercase;
-  letter-spacing: 0.01rem;
+.footer-menu {
+  a {
+    color: $white;
+  }
+  a:hover {
+    color: $white !important;
+    border-bottom: 1px solid;
+    border-color: $white;
+  }
+  .is-active {
+    color: $black;
+    border-bottom: 1px solid;
+    border-color: $black;
+  }
 }
 
-// footer {
-//   @include menu-links(
-//     $white,
-//     $white,
-//     $current-color-accent,
-//     $current-color-accent
-//   );
-// }
-
-// .legal-wrapper {
-//   @include menu-links(
-//     $current-color-gray,
-//     $white,
-//     $current-color-accent,
-//     $current-color-accent
-//   );
-// }
-
-// footer {
-//   ul li a.is-active {
-//     color: $current-color-accent;
-//   }
-// }
+.person-link a {
+  color: $white;
+  &:hover {
+    border-bottom: 1px solid;
+    border-color: $white;
+  }
+}

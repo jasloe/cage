@@ -40,7 +40,6 @@ headroom.init();
   function resize() {
 
     if ($window.width() < 740) {
-
       $hamburger.show()
       $nav.hide()
         return $regionHeader.addClass('mobile')
