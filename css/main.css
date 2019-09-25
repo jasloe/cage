@@ -578,6 +578,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-bottom: 1rem;
 }
 
 .path-issues .issue__list .issue__volume-number {
@@ -646,7 +647,10 @@ header {
 }
 
 .page-node-type-article .region-page-title .article h2.article-pre-title {
+  padding-top: 1rem;
   padding-bottom: 1rem;
+  margin: 0 auto;
+  max-width: 720px;
   font-size: 1.5rem;
 }
 
@@ -1018,9 +1022,9 @@ a {
 
 .breadcrumb a:hover,
 .article a:hover {
-  color: #f7f7f7 !important;
+  color: #000 !important;
   border-bottom: 1px solid;
-  border-color: #f7f7f7;
+  border-color: #000;
 }
 
 .footer-menu a {
@@ -1046,6 +1050,10 @@ a {
 .person-link a:hover {
   border-bottom: 1px solid;
   border-color: #f7f7f7;
+}
+
+.article__title > a div:hover {
+  color: #666666;
 }
 
 /*!
@@ -1168,6 +1176,9 @@ header.is-active .region-header > div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 @media (max-width: 46.24em) {

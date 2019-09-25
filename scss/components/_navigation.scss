@@ -22,6 +22,7 @@ header.is-active .region-header > div {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .region-header > div {
@@ -42,6 +43,7 @@ header.is-active .region-header > div {
     padding-right: 0.3rem;
 
     &:last-child {
+      // width: 50%;
       padding-right: 0;
     }
 

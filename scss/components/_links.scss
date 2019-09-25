@@ -21,9 +21,9 @@ a {
 .breadcrumb,
 .article {
   a:hover {
-    color: $white !important;
+    color: $black !important;
     border-bottom: 1px solid;
-    border-color: $white;
+    border-color: $black;
   }
 }
 
@@ -49,4 +49,8 @@ a {
     border-bottom: 1px solid;
     border-color: $white;
   }
+}
+
+.article__title > a div:hover {
+  color: $dark-gray;
 }

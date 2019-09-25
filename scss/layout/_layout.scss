@@ -105,6 +105,7 @@ header {
 .path-issues {
   .issue__list {
     display: flex;
+    padding-bottom: 1rem;
   }
   .issue__list .issue__volume-number {
     width: 25%;
@@ -167,7 +168,10 @@ header {
   margin-top: 3rem;
   .article {
     h2.article-pre-title {
+      padding-top: 1rem;
       padding-bottom: 1rem;
+      margin: 0 auto;
+      max-width: 720px;
       @include font-size(1.5rem);
     }
     h1.article-title {
