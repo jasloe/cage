@@ -148,7 +148,8 @@ header {
 .page-node-type-article .article-paragraph-container {
   .page-section,
   .drop-quote,
-  .endnotes {
+  .endnotes,
+  .interview {
     margin: 1rem auto 0;
     max-width: 720px;
     padding: 0 1rem;
@@ -170,7 +171,7 @@ header {
       @include font-size(1.5rem);
     }
     h1.article-title {
-      // max-width: 720px;
+      max-width: 720px;
       margin: 0 auto;
       padding: 0.5rem 1rem;
       text-align: center;
@@ -236,7 +237,8 @@ header {
 
   .page-section,
   .drop-quote,
-  .endnotes {
+  .endnotes,
+  .interview {
     @include font-size(1rem);
     line-height: 1.2;
     @include mq($from: mobile) {
@@ -265,9 +267,16 @@ header {
 
   .page-section > p,
   .drop-quote > p,
-  .endnotes > p {
+  .endnotes > p,
+  .interview > p {
     text-align: justify;
     text-justify: inter-character;
+  }
+  .interview__author {
+    font-family: $univers;
+    text-transform: uppercase;
+    @include font-size(0.9rem);
+    letter-spacing: 0.01rem;
   }
 }
 

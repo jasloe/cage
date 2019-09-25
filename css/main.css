@@ -628,7 +628,8 @@ header {
 
 .page-node-type-article .article-paragraph-container .page-section,
 .page-node-type-article .article-paragraph-container .drop-quote,
-.page-node-type-article .article-paragraph-container .endnotes {
+.page-node-type-article .article-paragraph-container .endnotes,
+.page-node-type-article .article-paragraph-container .interview {
   margin: 1rem auto 0;
   max-width: 720px;
   padding: 0 1rem;
@@ -656,6 +657,7 @@ header {
 }
 
 .page-node-type-article .region-page-title .article h1.article-title {
+  max-width: 720px;
   margin: 0 auto;
   padding: 0.5rem 1rem;
   text-align: center;
@@ -734,7 +736,8 @@ header {
 
 .page-node-type-article .page-section,
 .page-node-type-article .drop-quote,
-.page-node-type-article .endnotes {
+.page-node-type-article .endnotes,
+.page-node-type-article .interview {
   font-size: 1rem;
   line-height: 1.2;
 }
@@ -742,14 +745,16 @@ header {
 @media (min-width: 30em) {
   .page-node-type-article .page-section,
   .page-node-type-article .drop-quote,
-  .page-node-type-article .endnotes {
+  .page-node-type-article .endnotes,
+  .page-node-type-article .interview {
     font-size: 1.2rem;
   }
 }
 
 .page-node-type-article .page-section em,
 .page-node-type-article .drop-quote em,
-.page-node-type-article .endnotes em {
+.page-node-type-article .endnotes em,
+.page-node-type-article .interview em {
   font-family: "Life LT Std Italic";
 }
 
@@ -774,9 +779,17 @@ header {
 
 .page-node-type-article .page-section > p,
 .page-node-type-article .drop-quote > p,
-.page-node-type-article .endnotes > p {
+.page-node-type-article .endnotes > p,
+.page-node-type-article .interview > p {
   text-align: justify;
   text-justify: inter-character;
+}
+
+.page-node-type-article .interview__author {
+  font-family: "Univers LT Std";
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.01rem;
 }
 
 .page-node-type-article .article-paragraph-container .media-section img {
