@@ -25,21 +25,27 @@
       <div class="overlay-wrapper-first">
 
         <div class="overlay-issues">
-          <h2>Issues</h2>
-          {{ drupal_view('modal_menu', 'issues_list') }}
+          <div class="issues_list__current">
+            <h2>Current Issue</h2>
+            {{ drupal_view('modal_menu', 'issues_list__current') }}
+          </div>
         </div>
-        <div class="overlay-main-menu">
-          {{ drupal_menu('main') }}
-        </div>
-
+        <div class="issues_list__archive">
+          <h2>Current Issue</h2>
+          {{ drupal_view('modal_menu', 'issues_list__current') }}</div>
       </div>
 
-      <div class="overlay-footer-menu-wrapper">
-        <div class="overlay-footer-menu">
-          {{ drupal_menu('footer')}}
-        </div>
+      <div class="overlay-main-menu">
+        {{ drupal_menu('main') }}
       </div>
 
     </div>
+
+    <div class="overlay-footer-menu-wrapper">
+      <div class="overlay-footer-menu">
+        {{ drupal_menu('footer')}}
+      </div>
+    </div>
+
   </div>
-{% endif %}
+</div>{% endif %}
