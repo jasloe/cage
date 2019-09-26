@@ -6,8 +6,8 @@ core: 8.x
 libraries:
   - cage/global-styling
   - cage/global-scripts
-  - cage/scrollmagic
-  - cage/micromodal
+  - cage/flickity
+  - cage/gallery
 base theme: stable
 
 regions:

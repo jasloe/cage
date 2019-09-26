@@ -25,8 +25,23 @@ header.is-active {
   display: flex;
 }
 
-// .dialog-off-canvas-main-canvas .overlay.open {
-//   .overlay-wrapper-first {
-//     display: flex;
-//   }
-// }
+.overlay .overlay-wrapper-first {
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+.overlay-issues {
+  font-family: $univers;
+}
+
+.overlay-issues h2 {
+  padding-bottom: 1rem;
+}
+
+.overlay-issues a {
+  color: $white;
+}
+
+.overlay-issues a:hover {
+  border-bottom: 1px solid $white;
+}

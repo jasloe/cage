@@ -1,4 +1,18 @@
-.article-author-container .media--image img {
+.carousel-cell {
+  background: $hyla;
+}
+
+.blazy__caption--media-image-caption {
+  color: $white;
+}
+
+.main-carousel {
+  max-width: $desktop;
+  margin: 0 auto;
+}
+
+.article-author-container .media--image img,
+.field-article-gallery img {
   filter: grayscale(100%) contrast(1) blur(0);
   height: 100%;
   max-width: 100%;
@@ -46,8 +60,3 @@
 //   height: 100vh;
 //   width: 100%;
 // }
-
-.article-container {
-  // border-top: 1px solid $current-color;
-  // padding-top: 1rem;
-}

@@ -8,14 +8,16 @@ global-scripts:
   js:
     dist/js/headroom.js: {}
     dist/js/header.js: {}
-    dist/js/micromodal.js: {}
     dist/js/main.js: {}
-scrollmagic:
+flickity:
   version: VERSION
   js:
-    dist/js/gsap/TweenMax.min.js: { weight: -4 }
-    dist/js/ScrollMagic.js: { weight: -3 }
-    dist/js/plugins/animation.gsap.js: { weight: -2 }
-    dist/js/plugins/debug.addIndicators.js: { weight: -1 }
+    dist/js/flickity.min.js: { weight: -10 }
+  dependencies:
+    - core/jquery
+gallery:
+  version: VERSION
+  js:
+    dist/js/gallery.js: { weight: -9 }
   dependencies:
     - core/jquery
