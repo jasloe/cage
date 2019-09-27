@@ -21,17 +21,13 @@
 {% if content %}
   <div{{attributes.addClass(classes)}}>
 
-    <button class='hamburger hamburger--minus' type='button'>
-      <span class='hamburger-box'>
-        <span class='hamburger-inner'></span>
-      </span>
-    </button>
+    {# <button class='hamburger hamburger--minus' type='button'>
+              <span class='hamburger-box'>
+                <span class='hamburger-inner'></span>
+              </span>
+            </button> #}
     {{ content }}
-    {# <nav>
-                              {{ drupal_menu('main') }}
-                            </nav> #}
-    <div class='subscribe'>
-      <a href="https://gumroad.com/l/NZaY">Subscribe</a>
-    </div>
+
+    <a href="https://gumroad.com/l/NZaY">Subscribe</a>
   </div>
-{% endif %}
+</div>{% endif %}

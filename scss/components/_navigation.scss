@@ -1,18 +1,18 @@
 // Navigation.scss
 // Layout
 
-$hamburger-padding-x: 0px;
-$hamburger-padding-y: 0px;
-$hamburger-layer-width: 1rem;
-$hamburger-layer-height: 2px;
-$hamburger-layer-spacing: 4px;
-// $hamburger-layer-color: $current-color;
-$hamburger-layer-border-radius: 0px;
-$hamburger-hover-opacity: 0.7;
-// $hamburger-active-layer-color: $hamburger-layer-color;
-$hamburger-active-hover-opacity: $hamburger-hover-opacity;
+// $hamburger-padding-x: 0px;
+// $hamburger-padding-y: 0px;
+// $hamburger-layer-width: 1rem;
+// $hamburger-layer-height: 2px;
+// $hamburger-layer-spacing: 4px;
+// // $hamburger-layer-color: $current-color;
+// $hamburger-layer-border-radius: 0px;
+// $hamburger-hover-opacity: 0.7;
+// // $hamburger-active-layer-color: $hamburger-layer-color;
+// $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
-@import "../vendor/hamburgers/hamburgers";
+// @import "../vendor/hamburgers/hamburgers";
 
 header.is-active .region-header > div {
   margin-right: 0rem;
