@@ -159,6 +159,56 @@ button,
 }
 
 /* Sass tools, helper files, variables, functions, mixins and other config files. These files don’t output any CSS when compiled. */
+body:before {
+  background-color: #fcf8e3;
+  border-bottom: 1px solid #fbeed5;
+  border-left: 1px solid #fbeed5;
+  color: #c09853;
+  font: small-caption;
+  padding: 3px 6px;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+@media (min-width: 30em) {
+  body:before {
+    content: "mobile ≥ 480px (30em)";
+  }
+}
+
+@media (min-width: 40em) {
+  body:before {
+    content: "mobile-plus ≥ 640px (40em)";
+  }
+}
+
+@media (min-width: 30em) {
+  body:before {
+    content: "mobileLandscape ≥ 480px (30em)";
+  }
+}
+
+@media (min-width: 46.25em) {
+  body:before {
+    content: "tablet ≥ 740px (46.25em)";
+  }
+}
+
+@media (min-width: 61.25em) {
+  body:before {
+    content: "desktop ≥ 980px (61.25em)";
+  }
+}
+
+@media (min-width: 81.25em) {
+  body:before {
+    content: "wide ≥ 1300px (81.25em)";
+  }
+}
+
 @font-face {
   font-family: 'Life LT Std Italic';
   src: url("../fonts/life/hinted-LifeLTStd-Italic.eot");
@@ -1319,18 +1369,19 @@ ul.social-buttons li a:hover {
 textarea:focus,
 input:focus {
   outline: none;
+  background: #e6e6e6;
 }
 
 *:focus {
   outline: none;
 }
 
-input.form-email {
-  width: calc(100% - 0.8rem);
+.user-login-form input[type="text"],
+.user-login-form input[type="password"] {
+  width: calc(50% - 0.8rem);
   height: 2rem;
   text-transform: none;
   color: #000;
-  background-color: #f7f7f7;
   font-stretch: normal;
   border-width: initial;
   border-style: none;
@@ -1339,6 +1390,39 @@ input.form-email {
      border-image: initial;
   border-radius: 0px;
   padding: 0.3rem 0.3rem 0.3rem 0.5rem;
+}
+
+.user-login-form input[type="submit"] {
+  margin-top: 1rem;
+}
+
+.user-login-form .form-item-persistent-login {
+  margin-top: 1rem;
+}
+
+.user-login-form .option {
+  font-size: 0.8rem;
+}
+
+.user-login-form .button {
+  display: inline-block;
+  cursor: pointer;
+  background: #e6e6e6;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #000;
+  border: none;
+  padding: 1rem 1.5rem;
+}
+
+.user-login-form .button:hover {
+  color: #000;
+  background: #755ea3;
+}
+
+.user-login-form .description {
+  font-size: 0.8rem;
+  padding: 0.3rem;
 }
 
 .user-logged-in .headroom {
@@ -1553,6 +1637,15 @@ sup {
   vertical-align: baseline;
   font-size: 1rem;
   margin-right: 3rem;
+}
+
+.path-user .layout {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.path-user main {
+  font-family: "Univers LT Std";
 }
 
 /*! Flickity v2.2.1

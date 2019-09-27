@@ -20,17 +20,17 @@
 {% if children %}
   <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
     {{ children }}
-    <div class="overlay" id="overlay">
-      <div class="overlay-wrapper-first">
-        <div class="overlay-issues">
-          <div class="issues_list__current">
-            <h2>Current Issue</h2>
-            {{ drupal_view('modal_menu', 'issues_list__current') }}
-          </div>
-          <div class="issues_list__archive">
-            <h2>Archival Issues</h2>
-            {{ drupal_view('modal_menu', 'issues_list__archive') }}
-          </div>
-        </div>
-      </div>
-    {% endif %}
+    {# <div class="overlay" id="overlay">
+          <div class="overlay-wrapper-first">
+            <div class="overlay-issues">
+              <div class="issues_list__current">
+                <h2>Current Issue</h2>
+                {{ drupal_view('modal_menu', 'issues_list__current') }}
+              </div>
+              <div class="issues_list__archive">
+                <h2>Archival Issues</h2>
+                {{ drupal_view('modal_menu', 'issues_list__archive') }}
+              </div>
+            </div> #}
+  </div>
+{% endif %}
