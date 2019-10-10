@@ -9,15 +9,8 @@ global-scripts:
     dist/js/headroom.js: {}
     dist/js/header.js: {}
     dist/js/main.js: {}
-flickity:
+swup:
   version: VERSION
   js:
-    dist/js/flickity.min.js: { weight: -10 }
-  dependencies:
-    - core/jquery
-gallery:
-  version: VERSION
-  js:
-    dist/js/gallery.js: { weight: -9 }
-  dependencies:
-    - core/jquery
+    dist/js/swup.min.js: { weight: -1 }
+    dist/js/swup-transitions.js: { weight: 0 }

@@ -16,6 +16,6 @@ module.exports = {
   },
 
   twig: {
-    useCache: true
+    useCache: false
   }
 };

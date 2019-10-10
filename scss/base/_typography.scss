@@ -1,133 +1,34 @@
-@import "../node_modules/rfs/scss";
-
-body,
-p {
-  text-rendering: optimizeLegibility;
+h1,
+article__title {
+  line-height: 1;
 }
 
-header {
-  @include font-size(1rem);
+h1,
+.page-section-title {
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  font-family: $life;
+}
+
+h3 {
+  @include life-sc;
+  @include font-size(0.8rem);
+}
+
+h1 {
+  @include font-size(3rem);
+}
+
+h2 {
+  @include font-size(1.7rem);
 }
 
 header,
-footer {
+footer,
+.region-content-related .article-author {
   font-family: $univers;
-}
-
-.path-frontpage {
-  .short-title {
-    font-family: $univers;
-    text-transform: uppercase;
-  }
-
-  h1 a {
-    font-family: $life;
-    @include font-size(4rem);
-    text-transform: uppercase;
-  }
-}
-
-.region-footer-first,
-.region-footer-second {
-  line-height: 1.4;
-}
-
-.region-footer-second {
-  @include font-size(0.9rem);
-}
-
-// basic page
-.page-node-type-page main h1 {
-  font-family: $life;
-  @include font-size(1.2rem);
-}
-
-.page-node-type-page main p {
-  font-family: $life;
-  line-height: 1.2;
-}
-
-.page-node-type-page main strong {
-  font-family: $life-bold;
-}
-
-.page-node-type-page main em {
-  font-family: $life-italic;
-}
-
-.page-node-type-article {
-  .article-container {
-    .section-title {
-      text-transform: uppercase;
-      font-family: $univers;
-    }
-
-    .body p,
-    .drop-quote p {
-      @include font-size(1rem);
-      line-height: 1.2;
-      @include mq($from: mobile) {
-        @include font-size(1.2rem);
-      }
-    }
-
-    .article-metadata {
-      @include font-size(1.2rem);
-      line-height: 1.2;
-    }
-
-    .body p {
-      font-family: $life;
-      text-indent: 3rem;
-      text-align: justify;
-      text-justify: inter-character;
-    }
-
-    .body em,
-    .drop-quote p {
-      font-family: $life-italic;
-    }
-
-    .drop-quote p {
-      padding-left: 3rem;
-      text-align: justify;
-      text-justify: inter-character;
-    }
-  }
-  .article-metadata {
-    font-family: $univers;
-  }
-
-  .region-content-related .dram-content {
-    > h3,
-    a,
-    .dram-label,
-    .dram-catalog-number {
-      font-family: $univers;
-      text-transform: uppercase;
-      @include font-size(0.7rem);
-      font-weight: 900;
-      letter-spacing: 0.1rem;
-    }
-
-    a {
-      @include font-size(0.6rem);
-      font-weight: 700;
-      letter-spacing: 0.1rem;
-    }
-
-    .primary-author-fieldset,
-    .dram-fieldset {
-      font-family: $life;
-      @include font-size(1rem);
-      line-height: 1.3;
-    }
-
-    .primary-author-name,
-    .dram-title {
-      text-transform: uppercase;
-      font-weight: 900;
-      letter-spacing: 0.05rem;
-    }
-  }
+  -webkit-font-smoothing: antialiased;
 }

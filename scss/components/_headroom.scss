@@ -1,26 +1,26 @@
-// Headroom
+// header
 .user-logged-in .headroom {
-  display: none;
 }
 
-.headroom {
+header.headroom {
+  background-color: $white;
   position: fixed;
-  z-index: 9999;
+  z-index: 100;
   right: 0;
   left: 0;
   top: 0;
 }
 
-.headroom {
+header.headroom {
   will-change: transform;
   transition: transform 200ms linear;
 }
 
-.headroom--pinned {
+header.headroom--pinned {
   transform: translateY(0%);
 }
 
-.headroom--unpinned {
+header.headroom--unpinned {
   transform: translateY(-100%);
 }
 
@@ -96,26 +96,26 @@
   animation-name: slideUp;
 }
 
-//
-.headroom {
+//breadcrumb
+.breadcrumb.headroom {
   background-color: $white;
   position: fixed;
-  z-index: 9999;
+  z-index: 101;
   right: 0;
   left: 0;
-  top: 0;
+  top: 3.4rem;
 }
 
-.headroom {
+.breadcrumb.headroom {
   will-change: transform;
   transition: transform 200ms linear;
 }
 
-.headroom--pinned {
+.breadcrumb.headroom--pinned {
   transform: translateY(0%);
 }
 
-.headroom--unpinned {
+.breadcrumb.headroom--unpinned {
   transform: translateY(-100%);
 }
 

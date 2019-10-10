@@ -14,14 +14,39 @@
 //   header.classList.add("headroom--unpinned");
 // }
 
-// var headroom = new Headroom(header, {
+var hr1 = new Headroom(header, {
+  tolerance: {
+    down: 0,
+    up: 20
+  },
+  offset: 100
+});
+hr1.init();
+
+const breadcrumb = document.querySelector(".breadcrumb")
+
+var hr2 = new Headroom(breadcrumb, {
+  tolerance: {
+    down: 0,
+    up: 100
+  },
+  offset: 100
+});
+hr2.init();
+
+
+// const beep = document.querySelector(".breadcrumb");
+
+// var headroom2 = new Headroom(beep, {
 //   tolerance: {
 //     down: 0,
 //     up: 20
 //   },
-//   offset: 100
+//   offset: 200
 // });
-// headroom.init();
+// headroom2.init();
+
+
 
 // // mobile overlay logic
 // (function ($) {

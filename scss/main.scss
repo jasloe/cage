@@ -2,8 +2,129 @@
 
 @import "vendor/reset";
 @import "vendor/all";
+@import "../node_modules/rfs/scss";
 @import "utilities/all";
 @import "base/all";
 @import "layout/all";
 @import "components/all";
-@import "vendor/flickity/flickity";
+
+main.transition-fade {
+  transition: 3s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+.view-issues-new {
+  font-family: $display-font;
+  @include font-size(2rem);
+  max-width: $tablet;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.view-issues-new div {
+  margin-top: 1rem;
+}
+
+.view-issues-new h2 a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.view-issues-new h2 span {
+  text-transform: uppercase;
+}
+
+body.path-issues-new {
+  background-color: $white;
+  transition: background-color 100ms ease;
+}
+
+body.issue__hyla--active {
+  background-color: $hyla;
+  transition: background-color 100ms ease;
+}
+
+body.issue__change--active {
+  background-color: $hyla;
+  transition: background-color 1000ms ease;
+}
+
+body.issue__just-intonation--active {
+  background-color: $just-intonation;
+  sudotransition: background-color 1000ms ease;
+}
+
+body.issue__place--active {
+  background-color: $place;
+  transition: background-color 1000ms ease;
+}
+
+body.issue__big-band--active {
+  background-color: $big-band;
+  transition: background-color 1000ms ease;
+}
+
+body.issue__mumei--active {
+  background-color: $mumei;
+  transition: background-color 1000ms ease;
+}
+
+body.issue__mumei--active {
+  background-color: $mumei;
+  transition: background-color 1000ms ease;
+}
+
+body.issue__braxton--active {
+  background-color: $braxton;
+  transition: background-color 1000ms ease;
+}
+
+body.issue__propaganda--active {
+  background-color: $propaganda;
+  transition: background-color 1000ms ease;
+}
+
+body.issue__cherry--active {
+  background-color: $cherry;
+  transition: background-color 1000ms ease;
+}
+
+body.issue__listeners--active {
+  background-color: $listeners;
+  transition: background-color 1000ms ease;
+}
+
+body.issue__treatise--active {
+  background-color: $treatise;
+  transition: background-color 1000ms ease;
+}
+
+body {
+  .issue__title a {
+    // color: $black;
+    // transition: color 100ms ease;
+  }
+}
+
+body.active-issue {
+  .issue__title a {
+    opacity: 0.8;
+    transition: opacity 100ms ease;
+  }
+
+  .issue__title.on a {
+    opacity: 1;
+    color: white;
+    transition: all 100ms ease;
+  }
+}

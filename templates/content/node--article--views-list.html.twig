@@ -83,17 +83,17 @@
 {{ attach_library('stable/node') }}
 
 {% if not page %}
-  <div class="article__pre-title">
+  <div class="articles__pre-title">
     {{ content.field_article_pre_title }}
   </div>
-  <div class="article__title-author">
-    <div class="article__title">
+  <div class="articles__title-author">
+    <div class="articles__title">
       <a href="{{ url }}" rel="bookmark">
         {{ content.field_article_formatted_title }}
       </a>
     </div>
 
-    <div class="article__author">
+    <div class="articles__author">
       {% for item in content.field_article_primary_author | children(true) %}
         {{ item }}
       {% endfor %}

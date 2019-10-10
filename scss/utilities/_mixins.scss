@@ -13,35 +13,29 @@ $max-vw: $wide;
   max-width: $max-vw;
 }
 
+@mixin article-title-margin {
+  max-width: $tablet;
+  margin: 3rem auto 3rem auto;
+  padding: 0 1rem;
+}
+
+@mixin article-margin {
+  margin: 1rem auto 0;
+  max-width: $tablet;
+  padding: 0 1rem;
+}
+
+@mixin indent {
+  text-indent: 3rem;
+}
+
 @mixin life-sc {
   font-family: $default-font;
   font-weight: 700;
+  opacity: 0.9;
   @include font-size(0.8rem);
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-}
-
-/* @include grid(true); */
-@mixin grid($flex: true) {
-  @if $flex {
-    @include flex;
-  } @else {
-    display: block;
-  }
-}
-
-/* a { @include padding(2px 4px 6px); } */
-@mixin padding($values...) {
-  @each $var in $values {
-    padding: #{$var};
-  }
-}
-
-/* a { @include margin(2px 4px 6px); } */
-@mixin margin($values...) {
-  @each $var in $values {
-    margin: #{$var};
-  }
 }
 
 @mixin transition($args...) {
@@ -52,18 +46,43 @@ $max-vw: $wide;
   transition: $args;
 }
 
-@mixin menu-links($link, $visited, $hover, $active) {
+// links
+@mixin main-menu-links($link, $visited, $hover, $active) {
   a {
     color: $link;
-    @include transition(color 0.5s ease);
     padding: 0;
+    @include transition(all 0.33s ease);
 
     &:visited {
-      color: $visited;
+      color: $link;
     }
 
     &:hover {
       color: $hover;
+      box-shadow: 0 2px 0 $hover;
+    }
+
+    &:active,
+    &:focus {
+      color: $active;
+      // box-shadow: 0 2px 0 $active;
+    }
+  }
+}
+
+@mixin nav-links($link, $visited, $hover, $active) {
+  a {
+    color: $link;
+    @include transition(all 0.33s ease);
+    padding: 0;
+
+    &:visited {
+      color: $link;
+    }
+
+    &:hover {
+      color: $hover;
+      box-shadow: 0 2px 0 $hover;
     }
 
     &:active,
@@ -75,18 +94,43 @@ $max-vw: $wide;
 
 @mixin body-links($link, $visited, $hover, $active) {
   a {
-    color: $link;
+    color: $current-link;
     text-decoration: none;
-    @include transition(color 0.3s ease);
+    box-shadow: 0 1.2px 0 $current-link;
+    @include transition(all 0.5s ease);
     padding: 0;
 
     &:visited {
-      color: $visited;
+      color: $current-visited;
     }
 
     &:hover {
-      color: $hover;
-      box-shadow: 0 1px 0 #000;
+      color: $current-hover;
+      box-shadow: none;
+    }
+
+    &:active,
+    &:focus {
+      color: $active;
+    }
+  }
+}
+
+@mixin body-links-reverse($link, $visited, $hover, $active) {
+  a {
+    color: $reverse-current-link;
+    text-decoration: none;
+    box-shadow: 0 1.2px 0 $reverse-current-link;
+    @include transition(color 1s ease);
+    padding: 0;
+
+    &:visited {
+      color: $reverse-current-visited;
+    }
+
+    &:hover {
+      color: $reverse-current-hover;
+      box-shadow: none;
     }
 
     &:active,

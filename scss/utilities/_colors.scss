@@ -1,24 +1,60 @@
-// Base
+// base
+$whitest: white;
 $white: hsla(0, 0%, 97%, 1);
 $black: #000;
 $light-gray: lighten($black, 90%);
 $medium-gray: lighten($black, 60%);
 $dark-gray: lighten($black, 40%);
 
-// Issue keys
+// issue keys
 $hyla: #755ea3;
-$change: hsl(215, 100%, 22%);
+$change: green;
+$just-intonation: yellow;
+$place: blue;
+$big-band: purple;
 $mumei: #221e22;
+$braxton: gold;
+$propaganda: goldenrod;
+$cherry: lightblue;
+$listeners: gray;
+$treatise: orange;
+$wolff: black;
+$monophony: indigo;
+$deep-listening: pink;
+$maker: chartreuse;
+$philadelphia: pink;
+$what-is-american: silver;
+$cage: gold;
+$networking: red;
+$gospel: $white;
 
-// Current color scheme
+// default color scheme
+$background: $white;
+$text: $black;
+$link: $black;
+$visited: $medium-gray;
+$hover: $medium-gray;
+$active: $medium-gray;
+
+// current color scheme
 $current-color: $hyla;
 $current-color-black: hsla(60%, 3%, 17%, 1);
 $current-color-gray: hsla(72%, 11%, 35%, 1);
 $current-color-offwhite: hsla(77%, 100%, 97%, 1);
 $current-color-accent: hsla(13%, 90%, 58%, 1);
 
-// Link states
-$link: $current-color;
-$visited: $current-color;
-$hover: $black;
-$active: $black;
+// current link color scheme
+$current-link: $current-color;
+$current-visited: $current-color;
+$current-hover: $black;
+$current-active: $current-color;
+
+// reverse color scheme
+$reverse-background: $current-color;
+$reverse-text: $current-color-offwhite;
+
+// reverse link color scheme
+$reverse-current-link: $white;
+$reverse-current-visited: $white;
+$reverse-current-hover: $light-gray;
+$reverse-current-active: $white;
