@@ -94,6 +94,7 @@ $max-vw: $wide;
 }
 
 @include theme(hyla, $hyla);
+@include theme(change, $change);
 
 .b-lazy,
 .b-responsive {

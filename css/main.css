@@ -370,6 +370,55 @@ body:before {
   width: 100%;
 }
 
+.change header,
+.change main,
+.change .headroom {
+  background: gray;
+}
+
+.change header {
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.change .region-header a {
+  -webkit-transition: all 0.33s ease;
+  transition: all 0.33s ease;
+  color: white;
+}
+
+.change .region-header a:link {
+  color: white;
+}
+
+.change .region-header a:visited {
+  color: white;
+}
+
+.change .region-header a:hover {
+  color: #cdcdcd;
+  -webkit-box-shadow: 0 2px 0 #cdcdcd;
+          box-shadow: 0 2px 0 #cdcdcd;
+}
+
+.change .region-header a:active, .change .region-header a:focus {
+  color: #cdcdcd;
+  -webkit-box-shadow: 0 2px 0 #cdcdcd;
+          box-shadow: 0 2px 0 #cdcdcd;
+}
+
+.media--image img {
+  -webkit-filter: grayscale(100%) contrast(1) blur(0);
+          filter: grayscale(100%) contrast(1) blur(0);
+  height: 100%;
+  max-width: 100%;
+  mix-blend-mode: multiply;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.8;
+  position: relative;
+  width: 100%;
+}
+
 .b-lazy,
 .b-responsive {
   opacity: 0 !important;
