@@ -10,12 +10,12 @@
  */
 function cage_preprocess_html(array &$variables) {
   /* Add class to html tag */
-  //$variables['html_attributes']->addClass('no-js');
+  $variables['html_attributes']->addClass('no-js');
 
   // Don't display the site name twice on the front page (and potentially others)
-  /*if (isset($variables['head_title_array']['title']) && isset($variables['head_title_array']['name']) && ($variables['head_title_array']['title'] == $variables['head_title_array']['name'])) {
+  if (isset($variables['head_title_array']['title']) && isset($variables['head_title_array']['name']) && ($variables['head_title_array']['title'] == $variables['head_title_array']['name'])) {
     $variables['head_title'] = $variables['head_title_array']['name'];
-  }*/
+  }
 }
 
 /**

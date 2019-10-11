@@ -26,6 +26,15 @@ h2 {
   @include font-size(1.7rem);
 }
 
+h2.sans {
+  font-family: $univers;
+  text-transform: uppercase;
+  @include font-size(1rem);
+  em {
+    font-family: $univers-italic;
+  }
+}
+
 header,
 footer,
 .region-content-related .article-author {

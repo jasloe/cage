@@ -1,3 +1,8 @@
+.page-node-type-issue {
+  h2.article__formatted-title {
+  }
+}
+
 .page-node-type-article {
   .article-paragraph-container {
     .page-section,
@@ -180,8 +185,6 @@
 
 // related content primary author
 .region-content-related .article-author {
-  background: $current-color;
-  color: $white;
   .article-author-container {
     max-width: 640px;
     margin: 0 auto;

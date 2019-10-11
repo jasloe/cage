@@ -3,7 +3,6 @@
 }
 
 header.headroom {
-  background-color: $white;
   position: fixed;
   z-index: 100;
   right: 0;
@@ -98,7 +97,6 @@ header.headroom--unpinned {
 
 //breadcrumb
 .breadcrumb.headroom {
-  background-color: $white;
   position: fixed;
   z-index: 101;
   right: 0;

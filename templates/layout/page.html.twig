@@ -45,29 +45,24 @@
 
 <div class="layout-container">
   <div class="layout">
-
-
     <header id="header" role="banner">
       {{ page.header }}
     </header>
-
-    <main role="main" class="swup transition-fade">
+    <main role="main">
       <a id="main" tabindex="-1"></a>
-      {# link is in html.html.twig #}
-
       {% if page.breadcrumb %}
         {{ page.breadcrumb }}
       {% endif %}
       {{ page.page_title }}
       {{ page.content }}
       {{ page.content_related }}
-    </div>
-    {# /.layout-content #}
-  </main>
+    </main>
 
-  <footer>
-    {{ page.footer_first }}
-    {# {{ page.footer_second }} #}
-    {{ page.legal }}
-  </footer>
-</div></div>{# /.layout-container #}
+    <footer>
+      {{ page.footer_first }}
+      {# {{ page.footer_second }} #}
+      {{ page.legal }}
+    </footer>
+  </div>
+</div>
+{# /.layout-container #}

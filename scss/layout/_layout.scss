@@ -1,6 +1,7 @@
 // header, footer, breadcrumb layouts
 main {
-  margin-top: 8.2rem;
+  margin-top: 0rem;
+  padding-top: 8.2rem;
 }
 
 .page-node-type-article {
@@ -37,7 +38,6 @@ main {
 .region-legal .body p,
 .region-legal a {
   line-height: 1.4;
-  color: $white;
 }
 
 .legal-wrapper ul li:first-child {
@@ -78,14 +78,12 @@ body.imprint {
     margin: 3.3rem auto;
     padding: 0 2rem;
   }
-  background-color: $hyla;
   .region-page-title,
   .node__content,
   p,
   h1,
   h2 {
     font-family: $univers;
-    color: $white;
     padding-bottom: 0rem;
     padding-top: 0rem;
     @include font-size(1rem);

@@ -6,72 +6,58 @@
 
 // main menu links
 .block-main-menu {
-  @include main-menu-links($link, $visited, $hover, $active);
+  // @include main-menu-links($link, $visited, $hover, $active);
 }
 
 .block-main-menu a.is-active {
-  color: $link;
-  box-shadow: 0 2px 0 $link;
+  // box-shadow: 0 2px 0 $link;
   &:hover {
-    color: $hover;
-    box-shadow: 0 2px 0 $hover;
+    // box-shadow: 0 2px 0 $hover;
     @include transition(all 0.33s ease);
   }
 }
 
 // breadcrumb links
 .breadcrumb {
-  @include nav-links($link, $visited, $hover, $active);
+  // @include nav-links($link, $visited, $hover, $active);
 }
 
 .breadcrumb a.is-active {
-  color: $link;
-  box-shadow: 0 2px 0 $link;
+  // box-shadow: 0 2px 0 $link;
   &:hover {
-    color: $hover;
-    box-shadow: 0 2px 0 $hover;
+    // box-shadow: 0 2px 0 $hover;
     @include transition(all 0.33s ease);
   }
 }
 
 // article links
 .region-content article {
-  @include body-links($link, $visited, $hover, $active);
 }
 
 // social media links
 
 .social-media-sharing {
   a.facebook-share {
-    color: red;
   }
 }
 
 // footer links
 .footer-menu {
   a {
-    color: $white;
   }
   a:hover {
-    color: $white !important;
     border-bottom: 1px solid;
-    border-color: $white;
   }
   .is-active {
-    color: $black;
     border-bottom: 1px solid;
-    border-color: $black;
   }
 }
 
 .person-link a {
-  color: $white;
   &:hover {
     border-bottom: 1px solid;
-    border-color: $white;
   }
 }
 
 .article__title > a div:hover {
-  color: $dark-gray;
 }

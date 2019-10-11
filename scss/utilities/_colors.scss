@@ -6,9 +6,17 @@ $light-gray: lighten($black, 90%);
 $medium-gray: lighten($black, 60%);
 $dark-gray: lighten($black, 40%);
 
+// default color scheme
+$background: $white;
+$default-text: $black;
+$default-link: $black;
+$default-visited: $medium-gray;
+$default-hover: $medium-gray;
+$default-active: $medium-gray;
+
 // issue keys
 $hyla: #755ea3;
-$change: green;
+$change: gray;
 $just-intonation: yellow;
 $place: blue;
 $big-band: purple;
@@ -20,41 +28,33 @@ $listeners: gray;
 $treatise: orange;
 $wolff: black;
 $monophony: indigo;
-$deep-listening: pink;
-$maker: chartreuse;
+$maker: black;
 $philadelphia: pink;
 $what-is-american: silver;
 $cage: gold;
 $networking: red;
 $gospel: $white;
+$deep-listening: blue;
 
-// default color scheme
-$background: $white;
-$text: $black;
-$link: $black;
-$visited: $medium-gray;
-$hover: $medium-gray;
-$active: $medium-gray;
-
-// current color scheme
-$current-color: $hyla;
-$current-color-black: hsla(60%, 3%, 17%, 1);
-$current-color-gray: hsla(72%, 11%, 35%, 1);
-$current-color-offwhite: hsla(77%, 100%, 97%, 1);
-$current-color-accent: hsla(13%, 90%, 58%, 1);
-
-// current link color scheme
-$current-link: $current-color;
-$current-visited: $current-color;
-$current-hover: $black;
-$current-active: $current-color;
-
-// reverse color scheme
-$reverse-background: $current-color;
-$reverse-text: $current-color-offwhite;
-
-// reverse link color scheme
-$reverse-current-link: $white;
-$reverse-current-visited: $white;
-$reverse-current-hover: $light-gray;
-$reverse-current-active: $white;
+$themes: (
+  hyla: $hyla,
+  change: $change,
+  just-intonation: $just-intonation,
+  place: $place,
+  big-band: $big-band,
+  mumei: $mumei,
+  braxton: $braxton,
+  propaganda: $propaganda,
+  cherry: $cherry,
+  listeners: $listeners,
+  treatise: $treatise,
+  wolff: $wolff,
+  monophony: $monophony,
+  maker: $maker,
+  philadelphia: $philadelphia,
+  what-is-american: $what-is-american,
+  cage: $cage,
+  networking: $networking,
+  gospel: $gospel,
+  deep-listening: $deep-listening
+);

@@ -124,14 +124,11 @@ button.hamburger {
 
 .breadcrumb.headroom--unpinned {
   border-bottom: 1px solid $black;
-  background-color: $whitest !important;
 }
 
 // Footers
 .region-footer {
   @include font-size(0.9rem);
-  color: $white;
-  background-color: $dark-gray;
   padding: 3rem;
   display: block;
   font-family: $univers;
@@ -276,8 +273,6 @@ button.hamburger {
 // Legal
 .region-legal {
   padding: 1rem 3rem;
-  background-color: $black;
-  color: $white;
   .container {
     @include mq($from: tablet) {
       display: flex;
