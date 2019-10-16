@@ -73,11 +73,18 @@
   <div class="article__col-1">
     <div class="article__pre-title">{{ content.field_article_pre_title }}
     </div>
-    <div class="article__col-2">
-      <a href="{{ url }}" class="article__link">
-        <h2 class="article__formatted-title sans">{{ content.field_article_formatted_title }}</h2>
-        <div class="article__primary-author">{{ content.field_article_primary_author}}
-        </div>
-      </a>
-    </div>
   </div>
+  <div class="article__col-2">
+    <a href="{{ url }}" class="article__link">
+
+      <h2 class="article__formatted-title sans">
+        {{ content.field_article_formatted_title }}
+      </h2>
+    </a>
+
+
+    <div class="article__primary-author">{{ content.field_article_primary_author}}
+    </div>
+
+  </div>
+</div>

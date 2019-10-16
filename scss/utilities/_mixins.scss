@@ -20,7 +20,7 @@ $max-vw: $wide;
 }
 
 @mixin article-margin {
-  margin: 1rem auto 0;
+  margin: 3rem auto 0;
   max-width: $tablet;
   padding: 0 1rem;
 }
@@ -46,38 +46,56 @@ $max-vw: $wide;
   transition: $args;
 }
 
-@mixin theme($name, $color) {
+$percentage: 40;
+
+// toc dark
+@mixin toc-dark($name, $color, $bg) {
   .#{$name} {
     header,
     main,
     .headroom {
       background: $color;
     }
+
+    article {
+      color: lighten($color, 100%);
+    }
+
     header {
-      border-bottom: 1px solid lighten($color, 30%);
+      border-bottom: 1px solid lighten($color, $percentage);
+    }
+
+    a.article__link {
+      @include transition(all 0.33s ease);
+      color: lighten($color, 100%);
+
+      &:link,
+      &:visited {
+        color: lighten($color, 100%);
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: lighten($color, 100%);
+        box-shadow: 0 2px 0 lighten($color, $percentage);
+      }
     }
 
     .region-header a {
       @include transition(all 0.33s ease);
       color: lighten($color, 100%);
 
-      &:link {
-        color: lighten($color, 100%);
-      }
-
+      &:link,
       &:visited {
         color: lighten($color, 100%);
       }
 
-      &:hover {
-        color: lighten($color, 30%);
-        box-shadow: 0 2px 0 lighten($color, 30%);
-      }
-
+      &:hover,
       &:active,
       &:focus {
-        color: lighten($color, 30%);
-        box-shadow: 0 2px 0 lighten($color, 30%);
+        color: lighten($color, 100%);
+        box-shadow: 0 2px 0 lighten($color, $percentage);
       }
     }
   }
@@ -91,17 +109,4 @@ $max-vw: $wide;
     position: relative;
     width: 100%;
   }
-}
-
-@include theme(hyla, $hyla);
-@include theme(change, $change);
-
-.b-lazy,
-.b-responsive {
-  opacity: 0 !important;
-  transition: opacity 500ms ease-in-out !important;
-}
-.b-loaded {
-  opacity: 1 !important;
-  transition: opacity 500ms ease-in-out !important;
 }

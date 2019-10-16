@@ -10,7 +10,7 @@ var autoprefixer = require('autoprefixer');
 
 var fs = require("fs");
 var runSequence = require('run-sequence');
-var config = require("./example.config.js");
+var config = require("./config.js");
 
 /**
  * If config.js exists, load that config for overriding certain values below.

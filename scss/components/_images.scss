@@ -9,3 +9,13 @@
   position: relative;
   width: 100%;
 }
+
+.b-lazy,
+.b-responsive {
+  opacity: 0 !important;
+  transition: opacity 500ms ease-in-out !important;
+}
+.b-loaded {
+  opacity: 1 !important;
+  transition: opacity 500ms ease-in-out !important;
+}

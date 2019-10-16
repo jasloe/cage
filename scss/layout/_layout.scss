@@ -4,9 +4,13 @@ main {
   padding-top: 8.2rem;
 }
 
+.region-page-title {
+  padding: 0 1rem;
+}
+
 .page-node-type-article {
   main {
-    margin-top: 10rem;
+    margin-top: 3rem;
   }
 }
 
@@ -30,6 +34,54 @@ main {
   padding: 0 1rem;
 }
 
+// .page-node-type-issue {
+//   .article__list {
+//     display: flex;
+//     flex-direction: column;
+//     max-width: $max-vw;
+//     padding: 1rem;
+//   }
+
+//   .article__content {
+//     display: flex;
+//     align-items: top;
+//     margin-bottom: 1rem;
+//   }
+
+//   .article__col-1 {
+//     width: 25%;
+//   }
+
+//   .article__col-2 {
+//     width: 75%;
+//   }
+
+//   .article__pre-title {
+//     padding-right: 1rem;
+//   }
+
+//   .article__link {
+//     margin-bottom: 3px;
+//     display: inline-block;
+//     em {
+//       display: inline-block;
+//     }
+//   }
+// }
+
+.page-node-type-article {
+  .block-social-media-sharing {
+    @include article-margin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    h3 {
+      padding-bottom: 1rem;
+    }
+  }
+}
+
 // Legal footer
 .region-legal {
   @include font-size(0.9rem);
@@ -45,10 +97,6 @@ main {
 }
 
 // basic page
-.page-node-type-page h1 {
-  padding: 1rem 0;
-}
-
 .page-node-type-page .region-page-title {
   @include global-margin;
 }
