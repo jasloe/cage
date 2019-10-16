@@ -68,11 +68,18 @@
 #}
 {%
   set classes = [
-    'node--type-' ~ node.bundle|clean_class,
-    'issue-toc'
+    'issue',
+    'issue__toc'
   ]
 %}
 {{ attach_library('stable/node') }}
-<article{{attributes.addClass(classes)}}>
-  {{ content }}
-</article>
+<div{{attributes.addClass(classes)}}>
+  <div class="issue__container-text">
+    <div class="issue__volume-number">{{ content.field_issue_volume_number }}</div>
+    <h2 class="issue__title">{{ label }}</h2>
+  </div>
+  <div class="issue__container-image">
+    <div class="issue__marquee">{{ content.field_issue_marquee }}</div>
+  </div>
+</div>
+<div class="issue__rel-articles">{{ content.field_issue_rel_articles }}</div></div>

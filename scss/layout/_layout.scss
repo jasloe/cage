@@ -1,7 +1,7 @@
 // header, footer, breadcrumb layouts
 main {
   margin-top: 0rem;
-  padding-top: 8.2rem;
+  // padding-top: 8.2rem;
 }
 
 .region-page-title {
@@ -34,40 +34,60 @@ main {
   padding: 0 1rem;
 }
 
-// .page-node-type-issue {
-//   .article__list {
-//     display: flex;
-//     flex-direction: column;
-//     max-width: $max-vw;
-//     padding: 1rem;
-//   }
+// issue front page
+.page-node-type-issue {
+  .issue__container-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: red;
+    top: 140;
+    width: 50%;
+  }
 
-//   .article__content {
-//     display: flex;
-//     align-items: top;
-//     margin-bottom: 1rem;
-//   }
+  .issue__container-image {
+    position: relative;
+  }
 
-//   .article__col-1 {
-//     width: 25%;
-//   }
+  .issue__marquee {
+    max-width: $max-vw;
+    text-align: center;
+    margin: 0 auto;
+  }
 
-//   .article__col-2 {
-//     width: 75%;
-//   }
+  .article__list {
+    display: flex;
+    flex-direction: column;
+    max-width: $max-vw;
+    padding: 1rem;
+  }
 
-//   .article__pre-title {
-//     padding-right: 1rem;
-//   }
+  .article__content {
+    display: flex;
+    align-items: top;
+    margin-bottom: 1rem;
+  }
 
-//   .article__link {
-//     margin-bottom: 3px;
-//     display: inline-block;
-//     em {
-//       display: inline-block;
-//     }
-//   }
-// }
+  .article__col-1 {
+    width: 25%;
+  }
+
+  .article__col-2 {
+    width: 75%;
+  }
+
+  .article__pre-title {
+    padding-right: 1rem;
+  }
+
+  .article__link {
+    margin-bottom: 3px;
+    display: inline-block;
+    em {
+      display: inline-block;
+    }
+  }
+}
 
 .page-node-type-article {
   .block-social-media-sharing {

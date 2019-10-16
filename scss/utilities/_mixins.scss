@@ -51,9 +51,7 @@ $percentage: 40;
 // toc dark
 @mixin toc-dark($name, $color, $bg) {
   .#{$name} {
-    header,
-    main,
-    .headroom {
+    main {
       background: $color;
     }
 
@@ -62,7 +60,7 @@ $percentage: 40;
     }
 
     header {
-      border-bottom: 1px solid lighten($color, $percentage);
+      // border-bottom: 1px solid lighten($color, $percentage);
     }
 
     a.article__link {

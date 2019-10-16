@@ -13,7 +13,6 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 @import "../vendor/hamburgers/hamburgers";
 
 header {
-  border-bottom: 2px solid $dark-gray;
   @include font-size(1.2rem);
   -webkit-font-smoothing: antialiased;
 }
