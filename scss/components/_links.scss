@@ -1,3 +1,8 @@
+// default link
+a {
+  color: $black;
+}
+
 .site-name a {
   text-transform: uppercase;
   letter-spacing: 0.04rem;
@@ -13,5 +18,25 @@
   &:hover {
     // box-shadow: 0 2px 0 $hover;
     @include transition(all 0.33s ease);
+  }
+}
+
+// links: header
+header a:hover {
+  display: inline;
+  border-bottom: 1px solid;
+  transition: all 0.2s ease;
+}
+
+// links: issue article list
+.article__content:hover {
+  cursor: pointer;
+  opacity: 1 !important;
+  transition: all 0.2s ease;
+  .article__formatted-title {
+    opacity: 1 !important;
+    display: inline;
+    border-bottom: 1px solid;
+    transition: all 0.2s ease;
   }
 }

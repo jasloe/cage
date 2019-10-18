@@ -1,7 +1,6 @@
 // header, footer, breadcrumb layouts
 main {
-  margin-top: 8rem;
-  // padding-top: 8.2rem;
+  padding-top: 8rem;
 }
 
 .region-page-title {
@@ -10,7 +9,7 @@ main {
 
 .page-node-type-article {
   main {
-    margin-top: 3rem;
+    padding-top: 8rem;
   }
 }
 
@@ -27,6 +26,10 @@ main {
 }
 
 .region-content {
+  padding-bottom: 3rem;
+}
+
+.node--type-article {
   padding-bottom: 3rem;
 }
 

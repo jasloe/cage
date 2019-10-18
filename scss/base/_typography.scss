@@ -23,12 +23,13 @@ h1 {
 }
 
 h2 {
-  @include font-size(3rem);
+  @include font-size(2rem);
 }
 
 h2.issue__title {
   text-transform: uppercase;
 }
+
 h2.sans {
   font-family: $univers;
   text-transform: uppercase;

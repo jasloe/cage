@@ -25,7 +25,7 @@
 
     .article {
       h1.article__title {
-        padding: 1rem 0 2rem 0;
+        padding: 0.7rem 0 2rem 0;
         em {
           font-family: $life-italic;
         }
@@ -181,7 +181,7 @@
 }
 
 // related content primary author
-.region-content-related .article-author {
+.region-content-related .article__author {
   .article-author-container {
     max-width: 640px;
     margin: 0 auto;
@@ -191,7 +191,7 @@
   }
 }
 
-.region-content-related .article-author {
+.region-content-related .article__author {
   font-family: $univers;
   -webkit-font-smoothing: antialiased;
   text-align: justify;
@@ -221,3 +221,14 @@
     }
   }
 }
+
+// metadata
+.region-content-metadata {
+  max-width: $tablet;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: top;
+}
+
+// subjects

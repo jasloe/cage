@@ -15,6 +15,7 @@ regions:
   page_title: Page title
   content_pre: Pre-content
   content: Content
+  content_metadata: Related metadata
   content_related: Related content
   footer_first: First footer
   footer_second: Second footer
