@@ -1,6 +1,6 @@
 // header, footer, breadcrumb layouts
 main {
-  margin-top: 0rem;
+  margin-top: 8rem;
   // padding-top: 8.2rem;
 }
 
@@ -27,45 +27,92 @@ main {
 }
 
 .region-content {
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 
-.region-content .view-issues {
-  padding: 0 1rem;
+// issue index
+.path-issues {
+  .view-issue-index {
+    max-width: $tablet;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .issue__container {
+    margin-bottom: 4rem;
+    &:last-child {
+      margin-bottom: 0rem;
+    }
+  }
 }
 
-// issue front page
+// issue index, toc shared
+.page-node-type-issue,
+.path-issues {
+  .issue__publication-wrapper {
+    display: flex;
+    justify-content: center;
+    font-family: $life;
+    @include font-size(1.1rem);
+    padding-bottom: 0.5rem;
+  }
+  .issue__volume-number {
+    &:after {
+      content: "/";
+      padding-right: 0.3rem;
+    }
+  }
+  h2.issue__title {
+    line-height: 1;
+    padding-bottom: 0.5rem;
+  }
+  .issue__notice {
+    @include life-sc;
+  }
+}
+
+// issue index
 .page-node-type-issue {
-  .issue__container-text {
-    position: absolute;
-    left: 0;
-    right: 0;
-    color: red;
-    top: 140;
-    width: 50%;
+  main {
+    margin-top: 0rem; // marquee top of window
   }
 
-  .issue__container-image {
+  .issue__toc,
+  .issue__toc-wrapper {
     position: relative;
   }
 
-  .issue__marquee {
-    max-width: $max-vw;
+  .issue__frontis {
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    margin: 0 auto;
+    vertical-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .article__list {
     display: flex;
     flex-direction: column;
-    max-width: $max-vw;
-    padding: 1rem;
+    margin: 0 auto;
+    line-height: 1.25;
+
+    max-width: $tablet;
+    padding: 4rem 1rem 1rem 1rem;
   }
 
   .article__content {
     display: flex;
+    flex-direction: column;
     align-items: top;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    @include mq($from: tablet) {
+      flex-direction: row;
+    }
   }
 
   .article__col-1 {
@@ -81,7 +128,6 @@ main {
   }
 
   .article__link {
-    margin-bottom: 3px;
     display: inline-block;
     em {
       display: inline-block;

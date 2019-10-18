@@ -128,18 +128,3 @@ body.active-issue {
     transition: all 100ms ease;
   }
 }
-
-.article__formatted-title {
-  // background: white;
-  // text-decoration: underline;
-}
-// .article__formatted-title span {
-
-// }
-h2 {
-}
-.article__formatted-title:hover {
-  box-shadow: inset 0 -4px #fff, inset 0 -6px #00bcf1;
-  display: initial;
-  padding-bottom: 5px;
-}

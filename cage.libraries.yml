@@ -9,8 +9,5 @@ global-scripts:
     dist/js/headroom.js: {}
     dist/js/header.js: {}
     dist/js/main.js: {}
-swup:
-  version: VERSION
-  js:
-    dist/js/swup.min.js: { weight: -1 }
-    dist/js/swup-transitions.js: { weight: 0 }
+  dependencies:
+    - core/jquery

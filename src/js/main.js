@@ -70,47 +70,50 @@
 
 
 
-// // when mouse enters check to see if
+// when mouse enters check to see if
 
 
-// // $(".issue__title").hover(
-// //   function () {
-// //     $($body).toggleClass('foo');
-// //   });
+(function ($) {
 
-// // $(".issue__title").mouseenter(
-// //   function () {
-// //     var $activeIssue = ($(this).attr('class').split(' ')[1] + '--active')
-// //     $($body).addClass($activeIssue)
-// //     console.log($body)
-// //   });
+  var $body = $('body');
+$(".issue__title span").hover(
+  function () {
+    $($body).toggleClass('foo');
+  });
 
-
-
-//   // if ($($body).hasClass('active-issue')) {
-
-//         // $($body).removeClass('active-issue')
-//       // $($body).addClass($activeIssue).addClass('active-issue')
-//       // $($body).addClass($activeIssue)
-//       // .addClass('active-issue')
-//     // $(this).toggleClass( "active-issue").toggleClass('on');
+$(".issue__link").mouseenter(
+  function () {
+    var $activeIssue = ($(this).attr('class').split(' ')[1] + '--active')
+    // $($body).addClass($activeIssue)
+    console.log($activeIssue)
+  });
+})(jQuery);
 
 
-//   // $("li.fade").hover(function () {
-//   //   $(this).fadeOut(100);
-//   //   $(this).fadeIn(500);
-//   // });
+  // if ($($body).hasClass('active-issue')) {
+
+        // $($body).removeClass('active-issue')
+      // $($body).addClass($activeIssue).addClass('active-issue')
+      // $($body).addClass($activeIssue)
+      // .addClass('active-issue')
+    // $(this).toggleClass( "active-issue").toggleClass('on');
 
 
-// //   $('.issue__hyla').hover(function () {
-// //     $('body').css('background-color', 'yellow');
-// //   },
+  // $("li.fade").hover(function () {
+  //   $(this).fadeOut(100);
+  //   $(this).fadeIn(500);
+  // });
 
-// //   function () {
-// //   // on mouseout, reset the background colour
-// //   $('#b').css('background-color', '');
 
-// // });
+//   $('.issue__hyla').hover(function () {
+//     $('body').css('background-color', 'yellow');
+//   },
+
+//   function () {
+//   // on mouseout, reset the background colour
+//   $('#b').css('background-color', '');
+
+// });
 
 
 

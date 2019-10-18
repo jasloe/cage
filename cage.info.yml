@@ -6,7 +6,6 @@ core: 8.x
 libraries:
   - cage/global-styling
   - cage/global-scripts
-  - cage/swup
 base theme: stable
 
 regions:

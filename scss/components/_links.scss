@@ -1,7 +1,6 @@
 .site-name a {
   text-transform: uppercase;
   letter-spacing: 0.04rem;
-  -webkit-font-smoothing: antialiased;
 }
 
 // main menu links
@@ -15,49 +14,4 @@
     // box-shadow: 0 2px 0 $hover;
     @include transition(all 0.33s ease);
   }
-}
-
-// breadcrumb links
-.breadcrumb {
-  // @include nav-links($link, $visited, $hover, $active);
-}
-
-.breadcrumb a.is-active {
-  // box-shadow: 0 2px 0 $link;
-  &:hover {
-    // box-shadow: 0 2px 0 $hover;
-    @include transition(all 0.33s ease);
-  }
-}
-
-// article links
-.region-content article {
-}
-
-// social media links
-
-.social-media-sharing {
-  a.facebook-share {
-  }
-}
-
-// footer links
-.footer-menu {
-  a {
-  }
-  a:hover {
-    border-bottom: 1px solid;
-  }
-  .is-active {
-    border-bottom: 1px solid;
-  }
-}
-
-.person-link a {
-  &:hover {
-    border-bottom: 1px solid;
-  }
-}
-
-.article__title > a div:hover {
 }
