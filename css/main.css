@@ -574,7 +574,7 @@ body.toc .breadcrumb.headroom--pinned {
           filter: grayscale(100%) contrast(1) blur(0);
   height: 100%;
   max-width: 100%;
-  mix-blend-mode: overlay;
+  mix-blend-mode: screen;
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;

@@ -124,7 +124,7 @@ $light: $white;
       filter: grayscale(100%) contrast(1) blur(0);
       height: 100%;
       max-width: 100%;
-      mix-blend-mode: overlay;
+      mix-blend-mode: screen;
       object-fit: cover;
       position: relative;
       width: 100%;
