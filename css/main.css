@@ -335,7 +335,7 @@ header.headroom--unpinned {
   border-bottom: none;
 }
 
-/* issue index page, .toc
+/* issue toc theme
 remove white background from default */
 body.toc header,
 body.toc .breadcrumb.headroom--unpinned {
@@ -556,6 +556,31 @@ body.toc .breadcrumb.headroom--pinned {
   position: relative;
 }
 
+.hyla-article .region {
+  color: #8053ae;
+}
+
+.hyla-article .article__title {
+  border-top: 1px solid rgba(128, 83, 174, 0.7);
+}
+
+.hyla-article .media--image {
+  background: #8053ae;
+}
+
+.hyla-article .media--image img,
+.hyla-article .field-article-gallery img {
+  -webkit-filter: grayscale(100%) contrast(1) blur(0);
+          filter: grayscale(100%) contrast(1) blur(0);
+  height: 100%;
+  max-width: 100%;
+  mix-blend-mode: overlay;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  width: 100%;
+}
+
 header {
   opacity: 1;
 }
@@ -729,6 +754,7 @@ main {
 
 .page-node-type-issue main {
   margin-top: 0rem;
+  padding-top: 0rem;
 }
 
 .page-node-type-issue .issue__toc,
@@ -1638,20 +1664,6 @@ header.headroom--unpinned {
 .animated.slideUp {
   -webkit-animation-name: slideUp;
   animation-name: slideUp;
-}
-
-.article-author-container .media--image img,
-.field-article-gallery img {
-  -webkit-filter: grayscale(100%) contrast(1) blur(0);
-          filter: grayscale(100%) contrast(1) blur(0);
-  height: 100%;
-  max-width: 100%;
-  mix-blend-mode: multiply;
-  -o-object-fit: cover;
-     object-fit: cover;
-  opacity: 0.8;
-  position: relative;
-  width: 100%;
 }
 
 .b-lazy,

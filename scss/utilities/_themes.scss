@@ -13,7 +13,7 @@ header.headroom--unpinned {
   border-bottom: none;
 }
 
-/* issue index page, .toc
+/* issue toc theme
 remove white background from default */
 body.toc {
   header,
@@ -103,8 +103,37 @@ $light: $white;
   }
 }
 
+// article theme mixins, from the editor
+
+@mixin article($name, $primary) {
+  .#{$name} {
+    .region {
+      color: $primary;
+    }
+
+    .article__title {
+      border-top: 1px solid rgba($primary, 0.7);
+    }
+
+    .media--image {
+      background: $primary;
+    }
+
+    .media--image img,
+    .field-article-gallery img {
+      filter: grayscale(100%) contrast(1) blur(0);
+      height: 100%;
+      max-width: 100%;
+      mix-blend-mode: overlay;
+      object-fit: cover;
+      position: relative;
+      width: 100%;
+    }
+  }
+}
+
 @include toc(hyla-toc, $hyla, $light);
 @include toc(hyla-editor, $hyla, $light);
 @include toc(change-toc, $change, $light);
 
-// article theme mixins, from the editor
+@include article(hyla-article, $hyla);
