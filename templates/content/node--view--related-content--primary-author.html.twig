@@ -66,36 +66,5 @@
  * @see template_preprocess_node()
  */
 #}
-{{ attach_library('stable/node') }}
-
-{% set archive_link = content.field_link[0]['#url']|render %}
-
-{% set foo = [
-(render_var(content.field_issue_short_title.0.value|raw))
-  ]
-%}
-
-{% if archive_link|trim is not empty %}
-  <a href="{{ archive_link }}" class="issue__link">
-
-    <div class="issue__publication-wrapper">
-      <div class="issue__volume-number">{{ content.field_issue_volume_number }}</div>
-      <div class="issue__publication-date">{{ content.field_issue_publication_date }}</div>
-    </div>
-    <h2 class="issue__title">
-      {{ label }}
-    </h2>
-    <div class="issue__notice">archive.soundamerican.org</div>
-  </a>
-{% else %}
-  <a href="{{ url }}" class="issue__link">
-    <div class="issue__publication-wrapper">
-      <div class="issue__volume-number">{{ content.field_issue_volume_number }}</div>
-      <div class="issue__publication-date">{{ content.field_issue_publication_date }}</div>
-    </div>
-    <h2 class="issue__title">
-      {{ label }}
-    </h2>
-  </a>
-
-{% endif %}
+etset
+{{ content }}

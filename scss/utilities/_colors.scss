@@ -1,6 +1,6 @@
 // base
 $whitest: white;
-$white: hsla(0, 0%, 97%, 1);
+$white: hsla(0, 0%, 100%, 1);
 $black: #000;
 $light-gray: lighten($black, 90%);
 $medium-gray: lighten($black, 60%);
@@ -17,10 +17,10 @@ $default-active: $medium-gray;
 // issue keys
 $hyla: #8053ae;
 $change: #002e6f;
-$just-intonation: yellow;
-$place: blue;
-$big-band: purple;
-$mumei: #221e22;
+$just-intonation: #8e3161;
+$place: #f26b01;
+$big-band: #00efe0;
+$mumei: red;
 $braxton: gold;
 $propaganda: goldenrod;
 $cherry: lightblue;

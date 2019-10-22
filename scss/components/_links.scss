@@ -1,4 +1,4 @@
-// default link
+// default links
 a {
   color: $black;
 }
@@ -12,8 +12,41 @@ ol li a {
   line-height: 1;
 }
 
-// article social buttoons
+// header links
+header {
+  a {
+    box-shadow: none;
+    transition: all 0.2s ease;
+  }
+  a:hover {
+    color: $dark-gray;
+    box-shadow: 0 1px 0 $dark-gray;
+    transition: all 0.2s ease;
+  }
+  .site-name a:hover {
+    box-shadow: none;
+  }
+  a.is-active {
+    color: $dark-gray;
+    box-shadow: 0 1px 0 $dark-gray;
+    transition: all 0.2s ease;
+  }
+  a.is-active:hover {
+    color: $black;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 0 $black;
+  }
+}
 
+a.issue__link:hover {
+  color: $dark-gray;
+
+  transition: all 0.2s ease;
+  .issue__title span {
+    display: inline;
+    box-shadow: 0 1px 0 $dark-gray;
+  }
+}
 
 // footer social buttons
 .region-footer-first .social-buttons {
@@ -22,16 +55,12 @@ ol li a {
     padding-top: 0.7rem;
   }
   li {
-    padding-right: .7rem;
+    padding-right: 0.7rem;
     position: relative;
     &:last-child {
       padding-right: 0;
-    // a {
-    //   top: 5px;
-    //   position: absolute;
-    // }
+    }
   }
-}
 }
 
 // footer region links
@@ -56,14 +85,14 @@ footer {
 }
 
 // static page links
-.distribution .body {
-    a {
-      box-shadow: 0 1px 0 $black;
-      transition: all 0.2s ease;
-    }
-    a:hover {
-      color: $dark-gray;
-      box-shadow: none;
-      transition: all 0.2s ease;
-    }
+.page-node-type-page .node__content {
+  a {
+    box-shadow: 0 1px 0 $black;
+    transition: all 0.2s ease;
+  }
+  a:hover {
+    color: $dark-gray;
+    box-shadow: none;
+    transition: all 0.2s ease;
+  }
 }

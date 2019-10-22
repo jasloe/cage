@@ -1,11 +1,3 @@
-main {
-  margin-top: 8rem;
-}
-
-footer {
-
-}
-
 .region-page-title {
   padding: 0 1rem;
 }
@@ -28,14 +20,6 @@ footer {
   justify-content: center;
 }
 
-.region-content {
-  padding-bottom: 3rem;
-}
-
-.node--type-article {
-  padding-bottom: 3rem;
-}
-
 // issue index
 .path-issues {
   .view-issue-index {
@@ -46,6 +30,7 @@ footer {
   }
   .issue__container {
     margin-bottom: 4rem;
+    line-height: 1.4;
     &:last-child {
       margin-bottom: 0rem;
     }
@@ -69,7 +54,6 @@ footer {
     }
   }
   h2.issue__title {
-    line-height: 1;
     padding-bottom: 0.5rem;
   }
   .issue__notice {
@@ -243,15 +227,10 @@ body.imprint {
 }
 
 // static pages
-.page-node-type-page.static {
+.page-node-type-page {
   .region-page-title,
   .region-content {
     max-width: $tablet;
     margin: 0 auto;
-    padding: 0 1rem;
-  }
-  .region-content {
-    padding: 2rem 0;
   }
 }
-

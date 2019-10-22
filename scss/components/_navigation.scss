@@ -14,7 +14,6 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
 header {
   @include font-size(1rem);
-  -webkit-font-smoothing: antialiased;
 }
 
 .region-header {
@@ -34,7 +33,7 @@ button.hamburger {
 // menu tablet up
 @include mq($from: tablet) {
   .region-header {
-    justify-content: space-between;
+    // justify-content: space-between;
   }
 
   .block-main-menu,
@@ -53,7 +52,7 @@ button.hamburger {
 }
 
 .block-main-menu li {
-  margin: 0 2rem;
+  margin: 0 1rem;
 
   &:last-child {
     padding-right: 0;
@@ -63,7 +62,8 @@ button.hamburger {
 // breadcrumb
 .breadcrumb {
   @include font-size(0.9rem);
-  -webkit-font-smoothing: antialiased;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }
 
 .breadcrumb ol {
@@ -71,7 +71,7 @@ button.hamburger {
   align-items: top;
 
   li {
-    margin: 0 2rem;
+    margin: 0 0.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -84,11 +84,10 @@ button.hamburger {
       height: 6px;
       width: 6px;
       padding-bottom: 4px;
-      padding-right: 3rem;
+      padding-right: 1rem;
     }
 
     &:last-child {
-      display: none;
       @include mq($from: tablet) {
         display: flex;
         padding-right: 1rem;
@@ -130,14 +129,13 @@ footer .body p {
 .social-buttons {
   margin-top: 3rem;
   h3 {
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
 }
 
 .legal__container {
   background: $black;
   padding: 1rem 3rem;
-
 }
 
 @include mq($from: tablet) {

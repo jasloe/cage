@@ -1,31 +1,16 @@
-// default header, breadcrumb
-header,
-.breadcrumb.headroom--unpinned {
-  background: $white;
-  border-bottom: 1px solid $black;
-}
-
-.breadcrumb.headroom--pinned {
-  background: $white;
-}
-
-header.headroom--unpinned {
-  border-bottom: none;
-}
-
 /* issue toc theme
 remove white background from default */
-body.toc {
-  header,
-  .breadcrumb.headroom--unpinned {
-    background: none;
-    border-bottom: 1px solid $black;
-  }
-  .breadcrumb.headroom--pinned {
-    background: none;
-    transition: all 0.3s ease;
-  }
-}
+// body.toc {
+//   header,
+//   .breadcrumb.headroom--unpinned {
+//     background: none;
+//     border-bottom: 1px solid $black;
+//   }
+//   .breadcrumb.headroom--pinned {
+//     background: none;
+//     transition: all 0.3s ease;
+//   }
+// }
 
 // issue theme mixins
 $light: $white;
@@ -45,6 +30,14 @@ $light: $white;
       background: none !important;
       border-bottom: 1px solid rgba($secondary, 0.9) !important;
       -webkit-font-smoothing: antialiased !important;
+    }
+
+    .hamburger-inner {
+      &,
+      &::before,
+      &::after {
+        background-color: $secondary;
+      }
     }
 
     .breadcrumb ol {
@@ -131,13 +124,27 @@ $light: $white;
   }
 }
 
-
-
 // article theme mixins, from the editor
 @mixin article($name, $primary) {
   .#{$name} {
-    .region {
+    .region-header a,
+    .region-breadcrumb,
+    .region-content,
+    .region-content h3,
+    .region-page-title {
       color: $primary;
+    }
+
+    header {
+      border-bottom-color: $primary;
+    }
+
+    .region-content-related {
+      background: $primary;
+      color: $white;
+      a {
+        color: $white;
+      }
     }
 
     .article__title {
@@ -161,7 +168,7 @@ $light: $white;
   }
 }
 
-@mixin foo($name, $primary) {
+@mixin editor($name, $primary) {
   .#{$name} {
     .page-section p {
       font-family: $univers;
@@ -169,8 +176,8 @@ $light: $white;
   }
 }
 
-@include foo(hyla-editor, $hyla);
-
+@include editor(hyla-editor, $hyla);
 @include toc(hyla-toc, $hyla, $light);
 @include article(hyla-article, $hyla);
+@include article(change-article, $change);
 @include toc(change-toc, $change, $light);

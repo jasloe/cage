@@ -231,10 +231,33 @@
   align-items: top;
 }
 
-// subjects
+// basic page
+.page-node-type-page {
+  .node__content {
+    padding: 3rem;
+    text-align: justify;
+    text-justify: inter-character;
+    font-family: $life;
+    @include font-size(1rem);
+    line-height: 1.2;
+    @include mq($from: mobile) {
+      @include font-size(1.2rem);
+    }
+    em {
+      font-family: $life-italic;
+    }
+  }
 
+  .node__content p {
+    padding-bottom: 1rem;
+  }
+  .node__content p:last-child {
+    padding-bottom: 0rem;
+  }
+}
 
-// distribution
-.distribution .body p {
-padding: 0;
+.distribution.page-node-type-page {
+  .node__content p {
+    padding-bottom: 0rem;
+  }
 }
