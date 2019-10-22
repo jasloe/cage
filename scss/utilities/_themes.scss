@@ -32,21 +32,13 @@ $light: $white;
 
 @mixin toc($name, $primary, $secondary) {
   .#{$name} {
-    main,
-    footer {
+    main {
       background: $primary;
     }
 
-    main,
-    footer {
+    main {
       color: rgba($secondary, 0.9);
       -webkit-font-smoothing: antialiased !important;
-    }
-
-    header a,
-    ol li a,
-    main a {
-      color: rgba($secondary, 0.9);
     }
 
     header {
@@ -83,28 +75,65 @@ $light: $white;
       color: rgba($secondary, 0.9);
     }
 
+    // issue link states
     .article__content:hover {
       .article__formatted-title {
-        border-color: $secondary;
       }
     }
 
-    header a:hover {
-      border-color: $secondary;
+    // "duotone" images
+    .media--image {
+      background: $primary;
     }
 
-    // "duotone" images
     .media--image img {
-      filter: grayscale(100%) contrast(0.9) blur(0);
+      filter: grayscale(100%) contrast(1) blur(0);
+      height: 100%;
+      max-width: 100%;
       mix-blend-mode: multiply;
       object-fit: cover;
       position: relative;
+      width: 100%;
+    }
+
+    // issue global links
+    .site-name,
+    main {
+      a {
+        color: rgba($secondary, 0.9);
+      }
+    }
+
+    .block-main-menu,
+    .subscribe,
+    ol li {
+      a {
+        color: rgba($secondary, 0.9);
+        transition: all 0.2s ease;
+      }
+      a:hover {
+        box-shadow: 0 1px 0 $secondary;
+        transition: all 0.2s ease;
+      }
+    }
+
+    // issue toc links
+    .article__link h2 {
+      box-shadow: none;
+      transition: all 0.2s ease;
+      padding-bottom: 0;
+      display: inline;
+    }
+    .article__link:hover h2 {
+      box-shadow: 0 1px 0 $secondary;
+      transition: all 0.2s ease;
     }
   }
 }
 
-// article theme mixins, from the editor
 
+
+// article theme mixins, from the editor
 @mixin article($name, $primary) {
   .#{$name} {
     .region {
@@ -132,8 +161,16 @@ $light: $white;
   }
 }
 
-@include toc(hyla-toc, $hyla, $light);
-@include toc(hyla-editor, $hyla, $light);
-@include toc(change-toc, $change, $light);
+@mixin foo($name, $primary) {
+  .#{$name} {
+    .page-section p {
+      font-family: $univers;
+    }
+  }
+}
 
+@include foo(hyla-editor, $hyla);
+
+@include toc(hyla-toc, $hyla, $light);
 @include article(hyla-article, $hyla);
+@include toc(change-toc, $change, $light);

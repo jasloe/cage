@@ -1,6 +1,9 @@
-// header, footer, breadcrumb layouts
 main {
-  padding-top: 8rem;
+  margin-top: 8rem;
+}
+
+footer {
+
 }
 
 .region-page-title {
@@ -15,7 +18,7 @@ main {
 
 .region-header {
   padding-top: 3px; // "fixes" Univers baseline
-  margin: 0.8rem;
+  margin: 1rem;
 }
 
 .breadcrumb {
@@ -78,7 +81,7 @@ main {
 .page-node-type-issue {
   main {
     margin-top: 0rem; // marquee top of window
-    padding-top: 0rem;
+    padding-top: 0rem !important;
   }
 
   .issue__toc,
@@ -166,21 +169,6 @@ main {
   padding-right: 1rem;
 }
 
-// basic page
-.page-node-type-page .region-page-title {
-  @include global-margin;
-}
-
-.page-node-type-page .node__content,
-.path-user .region-content {
-  @include global-margin;
-  padding: 0 1rem;
-}
-
-.page-node-type-page main p {
-  padding-bottom: 1rem;
-}
-
 // sa/issues
 .view-issues .issue__title,
 .view-issues .articles__title {
@@ -253,3 +241,17 @@ body.imprint {
     }
   }
 }
+
+// static pages
+.page-node-type-page.static {
+  .region-page-title,
+  .region-content {
+    max-width: $tablet;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .region-content {
+    padding: 2rem 0;
+  }
+}
+

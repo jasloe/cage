@@ -1,26 +1,19 @@
-ul.social-buttons {
+.social-buttons ul {
   display: flex;
   align-items: center;
-  margin-top: 0.5rem;
+  flex-direction: row;
 }
 
-ul.social-buttons li {
-  height: 15px;
-  width: 25px;
+.social-buttons ul li {
+  height: 20px;
+  width: 30px;
   padding-right: 0.5rem;
   &:last-child {
     padding-right: 0;
   }
 }
 
-ul.social-buttons li a {
-}
-
-ul.social-buttons li a:hover {
-}
-
-.about-sa,
-.newsletter-social {
+.social-buttons {
   .button {
     margin: 1rem 0;
     font-family: $univers;

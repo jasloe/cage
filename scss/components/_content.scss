@@ -226,9 +226,15 @@
 .region-content-metadata {
   max-width: $tablet;
   margin: 1rem auto;
-  padding: 0 1rem;
+  // padding: 0 1rem;
   display: flex;
   align-items: top;
 }
 
 // subjects
+
+
+// distribution
+.distribution .body p {
+padding: 0;
+}

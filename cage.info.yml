@@ -17,6 +17,4 @@ regions:
   content: Content
   content_metadata: Related metadata
   content_related: Related content
-  footer_first: First footer
-  footer_second: Second footer
-  legal: Legal
+  footer: Footer

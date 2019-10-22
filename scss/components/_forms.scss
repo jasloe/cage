@@ -6,6 +6,8 @@ input:focus {
 *:focus {
   outline: none;
 }
+
+// mc input
 .mailchimp-signup-subscribe-form {
   input.form-email {
     width: calc(100% - 0.8rem);
@@ -18,10 +20,23 @@ input:focus {
     border-image: initial;
     border-radius: 0px;
     padding: 0.3rem 0.3rem 0.3rem 0.5rem;
+    background: darken($white, 10%);
+    color: darken($black, 95%);
+    margin-top: 0.7rem;
   }
 }
 
-// User login form
+// mc submit button
+.mailchimp-signup-subscribe-form {
+  .button {
+    background: darken($white, 10%);
+    line-height: 1;
+    margin-top: 0.7rem;
+    padding: 0.7rem 2rem;
+  }
+}
+
+// user login form
 .user-login-form {
   input[type="text"],
   input[type="password"] {

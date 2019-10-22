@@ -106,166 +106,58 @@ button.hamburger {
   }
 }
 
-// Footers
-.region-footer {
+// footer region
+// footer layout & styling
+footer,
+footer .body p {
   @include font-size(0.9rem);
-  padding: 3rem;
-  display: block;
   font-family: $univers;
+  color: $white;
   em {
     font-family: $univers-italic;
   }
 }
 
-.region-footer .about-sa-title {
-  padding-bottom: 1rem;
-}
-
-.region-footer .about-sa {
-  text-align: justify;
-  text-justify: inter-character;
-}
-
-.region-footer .about-sa .labels {
-  padding-top: 1rem;
-}
-
-.region-footer .about-sa .body {
-  padding-bottom: 2rem;
-  border-bottom: 1px solid $white;
-}
-
-.region-footer .mailchimp-signup-subscribe-form {
-  padding-bottom: 1rem;
-}
-
-.region-footer .newsletter-social .body p {
-  padding-bottom: 1rem;
-}
-
-.region-footer-first .container,
-.region-footer-second .container,
-.region-legal .container {
-  @include global-margin;
-  max-width: $max-vw;
-}
-
-// Footer first
-.region-footer-first .container {
+.footer__container {
   display: flex;
-  flex-direction: column;
-
-  .col-1 {
-    margin-top: 1rem;
-    .newsletter-social .body p {
-      padding: 0rem 1rem 1rem 0;
-    }
-  }
-  .col-2,
-  .newsletter-social {
-    margin-top: 2rem;
-    @include mq($from: tablet) {
-      margin-top: 0;
-    }
-  }
-
-  @include mq($from: tablet) {
-    flex-direction: row;
-    .col-1 {
-      margin-top: 0rem;
-      padding-right: 6rem;
-      flex: 1;
-    }
-    .col-2 {
-      padding-left: 1rem;
-      flex: 1;
-    }
-  }
 }
 
-.footer-menu {
+.region-footer {
+  background: lighten($black, 12%);
+  padding: 3rem;
+}
+
+.social-buttons {
   margin-top: 3rem;
-}
-
-.follow-us {
-  padding-bottom: 0.5rem;
-}
-
-.region-footer-first ul.social {
-  display: flex;
-
-  li {
-    padding-right: 1rem;
-    &:last-child {
-      padding-right: 0;
-    }
+  h3 {
+    padding-bottom: .5rem;
   }
 }
 
-// Footer labels menu
-.labels {
-  margin-top: 1rem;
-  display: flex;
-  align-items: center;
-  .labels-dram {
-    padding-right: 2rem;
-  }
-}
-
-.labels {
-  .labels-dram a {
-    width: 100px;
-    height: 57px;
-    background: url("../images/logo-sm-dram.png") 0 0 no-repeat;
-    text-indent: -9999px;
-    overflow: hidden;
-    display: block;
-  }
-  .labels-nwr a {
-    width: 100px;
-    height: 93px;
-    background: url("../images/logo-sm-nwr-ware.png") 0 0 no-repeat;
-    text-indent: -9999px;
-    overflow: hidden;
-    display: block;
-  }
-}
-
-// Footer second
-// .region-footer-second .container {
-//   ul li {
-//     padding-bottom: 0.5rem;
-//   }
-//   ul:last-child li:last-child {
-//     padding-bottom: 0rem;
-//   }
-//   @include mq($from: tablet) {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     width: 75%;
-//     ul li:last-child {
-//       padding-bottom: 0rem;
-//     }
-//   }
-// }
-
-// Legal
-.region-legal {
+.legal__container {
+  background: $black;
   padding: 1rem 3rem;
-  .container {
-    @include mq($from: tablet) {
-      display: flex;
-      justify-content: space-between;
+
+}
+
+@include mq($from: tablet) {
+  .copyright__container {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+  }
+  .legal ul.menu {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    li.menu-item:first-child {
+      padding-right: 1rem;
     }
   }
-  nav ul {
-    display: block;
-    @include mq($from: tablet) {
-      display: flex;
-      li:first-child {
-        padding-right: 1rem;
-      }
-    }
-  }
+}
+
+.social-buttons ul li a {
+  height: 15px;
+  width: 25px;
+  padding-right: 0.5rem;
 }

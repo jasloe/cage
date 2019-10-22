@@ -8,35 +8,62 @@ a {
   letter-spacing: 0.04rem;
 }
 
-// main menu links
-.block-main-menu {
-  // @include main-menu-links($link, $visited, $hover, $active);
+ol li a {
+  line-height: 1;
 }
 
-.block-main-menu a.is-active {
-  // box-shadow: 0 2px 0 $link;
-  &:hover {
-    // box-shadow: 0 2px 0 $hover;
-    @include transition(all 0.33s ease);
+// article social buttoons
+
+
+// footer social buttons
+.region-footer-first .social-buttons {
+  margin-top: 2rem;
+  ul {
+    padding-top: 0.7rem;
+  }
+  li {
+    padding-right: .7rem;
+    position: relative;
+    &:last-child {
+      padding-right: 0;
+    // a {
+    //   top: 5px;
+    //   position: absolute;
+    // }
   }
 }
-
-// links: header
-header a:hover {
-  display: inline;
-  border-bottom: 1px solid;
-  transition: all 0.2s ease;
 }
 
-// links: issue article list
-.article__content:hover {
-  cursor: pointer;
-  opacity: 1 !important;
-  transition: all 0.2s ease;
-  .article__formatted-title {
-    opacity: 1 !important;
-    display: inline;
-    border-bottom: 1px solid;
+// footer region links
+footer {
+  a {
+    color: $white;
     transition: all 0.2s ease;
   }
+  a:hover {
+    color: $dark-gray;
+    transition: all 0.2s ease;
+  }
+  a.is-active {
+    color: $dark-gray;
+  }
+}
+
+.social-buttons {
+  a:hover {
+    box-shadow: none;
+  }
+}
+
+// static page links
+.distribution .body {
+    a {
+      box-shadow: 0 1px 0 $black;
+      transition: all 0.2s ease;
+    }
+    a:hover {
+      color: $dark-gray;
+      box-shadow: none;
+      transition: all 0.2s ease;
+    }
 }
