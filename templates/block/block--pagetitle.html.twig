@@ -25,12 +25,23 @@
  * @see template_preprocess_block()
  */
 #}
-<div{{attributes.addClass('block-page-title')}}>
-  {{ title_prefix }}
+{# {%
+  set classes = [
+    'block',
+    'block__' ~ plugin_id|clean_class
+  ]
+%} #}
+
+{% set attributes = attributes.addClass([
+  'block',
+  'block__' ~ configuration.provider|clean_class,
+  'block__' ~ configuration.label|replace({' ' : "-"})|lower
+]) %}
+
+<div{{attributes}}>
   {% if label %}
     <h3{{title_attributes}}>{{ label }}</h3>
   {% endif %}
-  {{ title_suffix }}
   {% block content %}
     {{ content }}
   {% endblock %}

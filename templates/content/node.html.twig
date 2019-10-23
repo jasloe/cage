@@ -73,11 +73,11 @@
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
-    'clearfix',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class
   ]
 %}
 {{ attach_library('stable/node') }}
+
 <article{{attributes.addClass(classes)}}>
 
   {{ title_prefix }}
@@ -88,7 +88,7 @@
   {% endif %}
   {{ title_suffix }}
 
-  <div{{content_attributes.addClass('node__content','clearfix')}}>
+  <div{{content_attributes.addClass('node__content')}}>
     {{ content }}
   </div>
 </article>
