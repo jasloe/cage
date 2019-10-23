@@ -49,14 +49,23 @@
       {{ page.header }}
     </header>
     <main role="main">
+
       <a id="main" tabindex="-1"></a>
+
       {% if page.breadcrumb %}
         {{ page.breadcrumb }}
       {% endif %}
+
       {{ page.page_title }}
+
+      {% if page.content_pre %}
+        {{ page.content_pre }}
+      {% endif %}
+
       {{ page.content }}
-      {{ page.content_metadata }}
-      {{ page.content_related }}
+
+      {{ page.content_post }}
+
     </main>
 
     <footer>

@@ -13,6 +13,13 @@ $max-vw: $wide;
   max-width: $max-vw;
 }
 
+@mixin type($font-family, $size, $text-transform, $color: $black) {
+  font-family: $font-family;
+  @include font-size($size);
+  text-transform: $text-transform;
+  color: $color;
+}
+
 @mixin article-title-margin {
   max-width: $tablet;
   margin: 3rem auto 3rem auto;

@@ -1,0 +1,20 @@
+header {
+  display: none;
+}
+
+.article-title h1 {
+  @include type($life, 3rem, uppercase);
+  border-top: 1px solid $black;
+  padding-top: 0.2rem;
+  text-align: center;
+}
+
+.article-title h2 {
+  @include type($life, 2rem, normal);
+  margin-bottom: 1rem;
+}
+
+.author {
+  @include type($univers, 1.4rem, normal);
+  text-align: center;
+}

@@ -25,7 +25,17 @@
  * @see template_preprocess_block()
  */
 #}
-<div class="about-author__container">
-  <h3{{title_attributes}}>{{ label }}</h3>
-  {{ content }}
+
+{% set attributes = attributes.addClass([
+  'block',
+  'block__' ~ configuration.provider|clean_class
+]) %}
+
+<div{{attributes}}>
+  {% if label %}
+    <h3{{title_attributes}}>{{ label }}</h3>
+  {% endif %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
 </div>
