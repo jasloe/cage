@@ -22,7 +22,7 @@
  *
  * Page content (in order of occurrence in the default page.html.twig):
  * - node: Fully loaded node, if there is an automatically-loaded node
- *   associated with the page and the node ID is the second argument in the
+ *   associated with the page and the node ID is the second argument in œthe
  *   page's path (e.g. node/12345 and node/12345/revisions, but not
  *   comment/reply/12345).
  *
@@ -43,6 +43,7 @@
  */
 #}
 
+
 <div class="layout-container">
   <div class="layout">
     <header id="header" role="banner">
@@ -58,9 +59,8 @@
 
       {{ page.page_title }}
 
-      {% if page.content_pre %}
-        {{ page.content_pre }}
-      {% endif %}
+
+      {{ page.content_pre }}
 
       {{ page.content }}
 

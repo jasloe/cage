@@ -634,10 +634,26 @@ a {
   text-decoration: none;
 }
 
-.region__page-title {
+.region__page-title,
+.field-article-page-section .page-section,
+.field-media-image-caption,
+.endnotes {
   max-width: 740px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+.region__content {
+  margin: 2rem 0;
+}
+
+.field-article-page-section .field__item .media {
+  margin: 1rem 0;
+}
+
+.field-article-page-section .field-media-image {
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 /*!
@@ -1150,8 +1166,9 @@ header {
   text-transform: uppercase;
   color: #000;
   border-top: 1px solid #000;
-  padding-top: 0.2rem;
+  padding-top: 1rem;
   text-align: center;
+  line-height: 1;
 }
 
 @media (min-width: 1200px) {
@@ -1160,12 +1177,16 @@ header {
   }
 }
 
+.article-title h1 em {
+  font-style: italic;
+}
+
 .article-title h2 {
   font-family: "Life LT Std Roman";
   font-size: calc(1.325rem + 0.9vw);
   text-transform: normal;
   color: #000;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: 1200px) {
@@ -1180,12 +1201,94 @@ header {
   text-transform: normal;
   color: #000;
   text-align: center;
+  margin-top: 2rem;
 }
 
 @media (min-width: 1200px) {
   .author {
     font-size: 1.4rem;
   }
+}
+
+.page-section {
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page-section em {
+  font-style: italic;
+}
+
+.page-section .field-section-title {
+  font-family: "Univers LT Std";
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.page-section .field-section-title em {
+  font-style: italic;
+}
+
+.page-section .field-section-title p {
+  position: relative;
+  display: inline;
+  padding-bottom: 1rem;
+}
+
+.page-section .field-section-title p:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid #000;
+  content: "";
+}
+
+.page-section .field-body {
+  font-family: "Life LT Std Roman";
+  font-size: 1.2rem;
+  text-transform: normal;
+  color: #000;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.page-section .field-body p {
+  text-indent: 3rem;
+}
+
+.page-section .field-body p:first-child {
+  text-indent: 0;
+}
+
+.field-media-image-caption {
+  padding: 0 0 1rem 0;
+  text-align: justify;
+}
+
+.field-media-image-caption em {
+  font-style: italic;
+}
+
+.endnotes span {
+  padding-right: 3rem;
+}
+
+.endnotes .field__item p {
+  margin-top: 1rem;
+  font-family: "Life LT Std Roman";
+  font-size: 1rem;
+  text-transform: normal;
+  color: #000;
+}
+
+.endnotes .field__item p em {
+  font-style: italic;
 }
 
 /*# sourceMappingURL=maps/main.css.map */

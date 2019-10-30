@@ -1,5 +1,19 @@
-.region__page-title {
-  max-width: $tablet;
+.region__page-title,
+.field-article-page-section .page-section,
+.field-media-image-caption,
+.endnotes {
+  @include article-layout;
+}
+
+.region__content {
+  margin: 2rem 0;
+}
+
+.field-article-page-section .field__item .media {
+  margin: 1rem 0;
+}
+
+.field-article-page-section .field-media-image {
+  max-width: $wide;
   margin: 0 auto;
-  padding: 0 1rem;
 }

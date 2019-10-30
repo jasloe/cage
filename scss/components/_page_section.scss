@@ -1,0 +1,46 @@
+.page-section {
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  em {
+    font-style: italic;
+  }
+}
+
+.page-section .field-section-title {
+  @include type($univers, 1rem, uppercase, $black);
+  margin-bottom: 2rem;
+  line-height: 1.4;
+  em {
+    font-style: italic;
+  }
+  p {
+    position: relative;
+    display: inline;
+    padding-bottom: 1rem;
+
+    &:after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      border-bottom: 1px solid $black;
+      content: "";
+    }
+  }
+}
+
+.page-section .field-body {
+  @include type($life, 1.2rem, normal);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.page-section .field-body p {
+  text-indent: $indent;
+  &:first-child {
+    text-indent: 0;
+  }
+}

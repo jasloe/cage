@@ -39,7 +39,9 @@
 #}
 {%
   set classes = [
-    field_name|clean_class
+    'field',
+    field_name|clean_class,
+    field_type|clean_class
   ]
 %}
 {%

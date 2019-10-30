@@ -20,9 +20,15 @@ $max-vw: $wide;
   color: $color;
 }
 
-@mixin article-title-margin {
+@mixin article-layout {
   max-width: $tablet;
-  margin: 3rem auto 3rem auto;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@mixin media-layout {
+  max-width: $wide;
+  margin: 2rem auto;
   padding: 0 1rem;
 }
 
@@ -32,9 +38,7 @@ $max-vw: $wide;
   padding: 0 1rem;
 }
 
-@mixin indent {
-  text-indent: 3rem;
-}
+$indent: 3rem;
 
 @mixin life-sc {
   font-family: $default-font;

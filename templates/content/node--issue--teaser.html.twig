@@ -70,11 +70,6 @@
 
 {% set archive_link = content.field_link[0]['#url']|render %}
 
-{% set foo = [
-(render_var(content.field_issue_short_title.0.value|raw))
-  ]
-%}
-
 {% if archive_link|trim is not empty %}
   <a href="{{ archive_link }}" class="issue__link">
 
