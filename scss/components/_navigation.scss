@@ -16,10 +16,11 @@ header {
   @include font-size(1rem);
 }
 
-.region-header {
+.region__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
 }
 
 // default mobile navigation
@@ -32,8 +33,8 @@ button.hamburger {
 
 // menu tablet up
 @include mq($from: tablet) {
-  .region-header {
-    // justify-content: space-between;
+  .region__header {
+    justify-content: space-between;
   }
 
   .block-main-menu,
@@ -47,15 +48,14 @@ button.hamburger {
 }
 
 // main menu
-.block-main-menu ul {
+ul.menu {
   display: flex;
 }
 
-.block-main-menu li {
-  margin: 0 1rem;
-
+ul.menu li.menu-item {
+  padding-right: 1rem;
   &:last-child {
-    padding-right: 0;
+    padding-right: 0rem;
   }
 }
 
@@ -64,9 +64,10 @@ button.hamburger {
   @include font-size(0.9rem);
   border-bottom-width: 1px;
   border-bottom-style: solid;
+  padding: 1rem;
 }
 
-.breadcrumb ol {
+ol.breadcrumb {
   display: flex;
   align-items: top;
 

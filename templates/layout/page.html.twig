@@ -45,32 +45,32 @@
 
 
 <div class="layout-container">
-  <div class="layout">
-    <header id="header" role="banner">
-      {{ page.header }}
-    </header>
-    <main role="main">
+	<div class="layout">
+		<header id="header" role="banner">
+			{{ page.header }}
+		</header>
+		<main role="main">
 
-      <a id="main" tabindex="-1"></a>
+			<a id="main" tabindex="-1"></a>
 
-      {% if page.breadcrumb %}
-        {{ page.breadcrumb }}
-      {% endif %}
+			{% if page.breadcrumb %}
+				{{ page.breadcrumb }}
+			{% endif %}
 
-      {{ page.page_title }}
+			{{ page.page_title }}
 
 
-      {{ page.content_pre }}
+			{{ page.content_pre }}
 
-      {{ page.content }}
+			{{ page.content }}
 
-      {{ page.content_post }}
+			{{ page.content_post }}
 
-    </main>
+		</main>
 
-    <footer>
-      {{ page.footer }}
-    </footer>
-  </div>
+		{# <footer>
+									{{ page.footer }}
+								</footer> #}
+	</div>
 </div>
 {# /.layout-container #}

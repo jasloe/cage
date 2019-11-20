@@ -1,7 +1,8 @@
-.region__page-title,
+// .region__page-title,
 .field-article-page-section .page-section,
 .field-media-image-caption,
-.endnotes {
+.endnotes,
+.region__breadcrumb {
   @include article-layout;
 }
 

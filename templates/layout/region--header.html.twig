@@ -1,15 +1,15 @@
 {% extends "region.html.twig" %}
 
 {% if content %}
-  {% block content %}
+	{% block content %}
 
-    <button class='hamburger hamburger--minus' type='button'>
-      <span class='hamburger-box'>
-        <span class='hamburger-inner'></span>
-      </span>
-    </button>
+		<button class='hamburger hamburger--minus' type='button'>
+			<span class='hamburger-box'>
+				<span class='hamburger-inner'></span>
+			</span>
+		</button>
 
-    {{ parent() }}
+		{{ parent() }}
 
-  {% endblock %}
+	{% endblock %}
 {% endif %}
