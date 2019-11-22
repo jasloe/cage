@@ -20,6 +20,21 @@ $max-vw: $wide;
   color: $color;
 }
 
+@mixin caption {
+  @include font-size(0.8rem);
+}
+
+@mixin justify {
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  em {
+    font-style: italic;
+  }
+}
+
 @mixin article-layout {
   max-width: $tablet;
   margin: 0 auto;
@@ -27,15 +42,8 @@ $max-vw: $wide;
 }
 
 @mixin media-layout {
-  max-width: $wide;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-@mixin article-margin {
-  margin: 3rem auto 0;
-  max-width: $tablet;
-  padding: 0 1rem;
+  max-width: $desktop;
+  margin: 0 auto;
 }
 
 $indent: 3rem;

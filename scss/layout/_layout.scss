@@ -1,20 +1,23 @@
-// .region__page-title,
-.field-article-page-section .page-section,
-.field-media-image-caption,
-.endnotes,
-.region__breadcrumb {
-  @include article-layout;
+.region__page-title {
+  margin: 3rem auto 0;
+  max-width: $tablet;
+  padding-top: 3rem;
+}
+
+.block__social-media {
+  margin: 0 auto;
+  max-width: $tablet;
+  text-align: center;
+  padding: 2rem;
 }
 
 .region__content {
-  margin: 2rem 0;
 }
 
-.field-article-page-section .field__item .media {
-  margin: 1rem 0;
-}
-
-.field-article-page-section .field-media-image {
-  max-width: $wide;
-  margin: 0 auto;
+.endnotes,
+.interview,
+.page-section,
+.about_author article,
+.about_author h3 {
+  @include article-layout;
 }

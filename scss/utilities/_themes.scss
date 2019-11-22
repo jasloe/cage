@@ -124,14 +124,21 @@ $light: $white;
   }
 }
 
+@include toc(hyla-toc, $hyla, $light);
+@include toc(change-toc, $change, $light);
+
 // article theme mixins, from the editor
-@mixin article($name, $primary) {
+@mixin article($name, $primary, $secondary) {
   .#{$name} {
-    .region-header a,
-    .region-breadcrumb,
-    .region-content,
-    .region-content h3,
-    .region-page-title {
+    .region__header a,
+    .region__breadcrumb,
+    .breadcrumb li a,
+    .region__page-title h1,
+    .region__page-title h2,
+    .region__page-title .author,
+    .region__content p,
+    .interview p span,
+    .endnotes .field__item p {
       color: $primary;
     }
 
@@ -139,16 +146,10 @@ $light: $white;
       border-bottom-color: $primary;
     }
 
-    .region-content-related {
-      background: $primary;
-      color: $white;
-      a {
-        color: $white;
-      }
-    }
-
-    .article__title {
-      border-top: 1px solid rgba($primary, 0.7);
+    .article-title h1,
+    .interview .field-body,
+    .endnotes {
+      border-top-color: $primary;
     }
 
     .media--image {
@@ -163,21 +164,115 @@ $light: $white;
       mix-blend-mode: screen;
       object-fit: cover;
       position: relative;
-      width: 100%;
+    }
+
+    .about_author {
+      background: $primary;
+    }
+
+    .about_author .field__item {
+      color: $secondary;
+    }
+
+    // links (about the author)
+    .about_author a {
+      @include transition(all 0.33s ease);
+      color: $secondary;
+      &:link,
+      &:visited {
+        box-shadow: 0 1px 0 $secondary;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: darken($primary, 25);
+        box-shadow: 0 1px 0 darken($primary, 25);
+      }
+    }
+
+    .about_author .field-person-url a {
+      &:link,
+      &:active {
+        box-shadow: none;
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        color: darken($primary, 25);
+        box-shadow: 0 1px 0 darken($primary, 25);
+      }
     }
   }
 }
 
-@mixin editor($name, $primary) {
+// editor theme switch
+@mixin editor($name, $primary, $secondary) {
   .#{$name} {
+    .layout-container,
+    .headroom {
+      background: $primary !important;
+    }
+
+    .article-title {
+      h1,
+      h2,
+      .author {
+        color: $secondary;
+      }
+    }
+
     .page-section p {
       font-family: $univers;
+      color: $secondary;
     }
   }
 }
 
-@include editor(hyla-editor, $hyla);
-@include toc(hyla-toc, $hyla, $light);
-@include article(hyla-article, $hyla);
-@include article(change-article, $change);
-@include toc(change-toc, $change, $light);
+// @include article(alien-article, $alien);
+@include article(hyla-article, $hyla, $light);
+// @include article(hyla-article, $hyla);
+// @include article(just-intonation-article, $just-intonation);
+// @include article(place-article, $place);
+// @include article(big-band-article, $big-band);
+// @include article(mumei-article, $mumei);
+// @include article(braxton-article, $braxton);
+@include article(propaganda-article, $propaganda, $light);
+// @include article(listeners-article, $listeners);
+// @include article(treatise-article, $treatise);
+// @include article(ritual-article, $ritual);
+@include article(wolff-article, $wolff, $light);
+// @include article(monophony-article, $monophony);
+// @include article(what-is-jazz-article, $what-is-jazz);
+@include article(deep-listening-article, $deep-listening, $light);
+// @include article(maker-article, $maker);
+// @include article(philadelphia-article, $philadelphia);
+// @include article(what-is-american-article, $what-is-american);
+// @include article(cage-article, $cage);
+// @include article(networking-article, $networking);
+// @include article(gospel-article, $gospel);
+
+// @include editor(gospel-editor, $gospel, $light);
+
+// $alien
+// $hyla
+// $change
+// $just-intonation
+// $place
+// $big-band
+// $mumei
+// $braxton
+// $propaganda
+// $listeners
+// $treatise
+// $ritual
+// $wolff
+// $monophony
+// $what-is-jazz
+// $deep-listening
+// $maker
+// $philadelphia
+// $what-is-american
+// $cage
+// $networking
+// $gospel

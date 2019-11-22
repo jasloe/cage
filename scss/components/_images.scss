@@ -19,3 +19,10 @@
 .media--loading::before {
   display: none !important;
 }
+
+// article media, remote media wrapper
+.page-node-type-article article {
+  .media__wrapper {
+    @include media-layout;
+  }
+}

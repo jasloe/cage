@@ -59,18 +59,21 @@
 
 			{{ page.page_title }}
 
-
 			{{ page.content_pre }}
 
 			{{ page.content }}
 
-			{{ page.content_post }}
+			{% set has_content_post = page.content_post|render|striptags|trim is not empty %}
+			{% if has_content_post %}
+				{{ page.content_post }}
+			{% endif %}
 
 		</main>
 
+
 		{# <footer>
-									{{ page.footer }}
-								</footer> #}
+																	{{ page.footer }}
+																</footer> #}
 	</div>
 </div>
 {# /.layout-container #}

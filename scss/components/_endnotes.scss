@@ -1,10 +1,14 @@
-.endnotes span {
-  padding-right: $indent;
+.endnotes {
+  border-top: 1px solid $black;
+}
+
+.endnotes sup {
+  padding-right: 5%;
 }
 
 .endnotes .field__item p {
   margin-top: 1rem;
-  @include type($life, 1rem, normal, $black);
+  @include type($life, 1rem, normal);
   em {
     font-style: italic;
   }
