@@ -73,21 +73,21 @@
 // when mouse enters check to see if
 
 
-(function ($) {
+// (function ($) {
 
-  var $body = $('body');
-$(".issue__title span").hover(
-  function () {
-    $($body).toggleClass('foo');
-  });
+//   var $body = $('body');
+// $(".issue__title span").hover(
+//   function () {
+//     $($body).toggleClass('foo');
+//   });
 
-$(".issue__link").mouseenter(
-  function () {
-    var $activeIssue = ($(this).attr('class').split(' ')[1] + '--active')
-    // $($body).addClass($activeIssue)
-    console.log($activeIssue)
-  });
-})(jQuery);
+// $(".issue__link").mouseenter(
+//   function () {
+//     var $activeIssue = ($(this).attr('class').split(' ')[1] + '--active')
+//     // $($body).addClass($activeIssue)
+//     console.log($activeIssue)
+//   });
+// })(jQuery);
 
 
   // if ($($body).hasClass('active-issue')) {
@@ -117,3 +117,25 @@ $(".issue__link").mouseenter(
 
 
 
+let progressBar = document.getElementById('progress_bar')
+let body = document.body,
+    html = document.documentElement;
+
+let x = document.getElementsByClassName('region__content')[0]
+
+// let articleHeight = x.scrollHeight;
+
+let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+const setProgress = () => {
+  let scrollFromTop = (document.documentElement.scrollTop || body.scrollTop) + html.clientHeight;
+  let width = scrollFromTop / height * 100 + '%';
+
+  console.log('scroll', html.clientHeight, body.scrollTop);
+
+  progressBar.style.width = width;
+}
+
+window.addEventListener('scroll', setProgress);
+
+setProgress();
