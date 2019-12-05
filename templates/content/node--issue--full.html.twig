@@ -74,21 +74,21 @@
 %}
 {{ attach_library('stable/node') }}
 <div{{attributes.addClass(classes)}}>
-  <div class="issue__toc-wrapper">
-    <div class="issue__frontis">
-      <div class="issue__publication-wrapper">
-        <div class="issue__volume-number">{{ content.field_issue_volume_number }}</div>
-        <div class="issue__publication-date">{{ content.field_issue_publication_date }}</div>
-      </div>
-      <h1 class="issue__title">
-        {{ label }}
-      </h1>
-    </div>
+	{# <div class="issue__toc-wrapper">
+			<div class="issue__frontis">
+				<div class="issue__publication-wrapper">
+					<div class="issue__volume-number">{{ content.field_issue_volume_number }}</div>
+					<div class="issue__publication-date">{{ content.field_issue_publication_date }}</div>
+				</div>
+				<h1 class="issue__title">
+					{{ label }}
+				</h1>
+			</div>
 
 
-    <div class="issue__container-image">
-      <div class="issue__marquee">{{ content.field_issue_marquee }}</div>
-    </div>
-  </div>
+			<div class="issue__container-image">
+				<div class="issue__marquee">{{ content.field_issue_marquee }}</div>
+				<div class="issue__rel-articles">{{ content.field_issue_rel_articles }}</div>
+			</div>
+		</div> #}
 </div>
-<div class="issue__rel-articles">{{ content.field_issue_rel_articles }}</div></div>
