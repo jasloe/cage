@@ -1,3 +1,5 @@
+// front
+
 .region__page-title {
   margin: 3rem auto 0;
   max-width: $tablet;
@@ -20,4 +22,8 @@
 .about_author article,
 .about_author h3 {
   @include article-layout;
+}
+
+.hamburger {
+  display: none !important;
 }

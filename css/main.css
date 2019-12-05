@@ -865,6 +865,10 @@ img {
   padding: 0 1rem;
 }
 
+.hamburger {
+  display: none !important;
+}
+
 a {
   color: #000;
   text-decoration: none;
@@ -1774,6 +1778,10 @@ header.headroom--unpinned {
   width: 0%;
   height: 2px;
   z-index: 1000;
+}
+
+.hamburger {
+  display: none !important;
 }
 
 /*# sourceMappingURL=maps/main.css.map */

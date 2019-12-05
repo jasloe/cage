@@ -71,26 +71,29 @@
 {% set archive_link = content.field_link[0]['#url']|render %}
 
 {% if archive_link|trim is not empty %}
-  <a href="{{ archive_link }}" class="issue__link">
+	<a href="{{ archive_link }}" class="issue__link">
 
-    <div class="issue__publication-wrapper">
-      <div class="issue__volume-number">{{ content.field_issue_volume_number }}</div>
-      <div class="issue__publication-date">{{ content.field_issue_publication_date }}</div>
-    </div>
-    <h2 class="issue__title">
-      {{ label }}
-    </h2>
-    <div class="issue__notice">archive.soundamerican.org</div>
-  </a>
+		<div class="issue__publication-wrapper">
+			<div class="issue__volume-number">{{ content.field_issue_volume_number }}</div>
+
+			<h2 class="issue__title">
+				{{ label }}
+			</h2>
+			<div class="issue__publication-date">{{ content.field_issue_publication_date }}</div>
+		</div>
+
+
+	</a>
 {% else %}
-  <a href="{{ url }}" class="issue__link">
-    <div class="issue__publication-wrapper">
-      <div class="issue__volume-number">{{ content.field_issue_volume_number }}</div>
-      <div class="issue__publication-date">{{ content.field_issue_publication_date }}</div>
-    </div>
-    <h2 class="issue__title">
-      {{ label }}
-    </h2>
-  </a>
+	<a href="{{ url }}" class="issue__link">
+		<div class="issue__publication-wrapper">
+			<div class="issue__volume-number">{{ content.field_issue_volume_number }}</div>
+		</div>
+		<h2 class="issue__title">
+			{{ label }}
+		</h2>
+		<div class="issue__publication-date">{{ content.field_issue_publication_date }}</div>
+
+	</a>
 
 {% endif %}
