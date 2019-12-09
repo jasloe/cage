@@ -1,4 +1,41 @@
 // front
+.path-frontpage {
+  .region__content-post .articles {
+    @include global-margin;
+  }
+}
+
+.region__content-post {
+  background: beige;
+}
+
+.path-frontpage .articles .c-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@include mq($from: desktop) {
+  .path-frontpage .articles .c-flex {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    .c-item {
+      flex-basis: calc(32% - 1rem);
+      position: relative;
+    }
+    .c-item:nth-child(odd) {
+      // padding-left: 10px;
+    }
+    .c-item:nth-child(even) {
+      // padding-right: 10px;
+    }
+  }
+}
+
+.articles {
+  padding: 0 0 5rem 0;
+}
+
+// post-content blocks
 
 .region__page-title {
   margin: 3rem auto 0;

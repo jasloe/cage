@@ -1,0 +1,51 @@
+// front typography
+.path-frontpage {
+}
+
+.articles .c-item {
+  h2 {
+    padding-top: 1rem;
+  }
+  .c-item__issue-title {
+    padding-top: 1.4rem;
+  }
+}
+
+.c-item__title {
+  margin-bottom: 1rem;
+}
+.c-item {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+}
+
+.c-item__author {
+  margin-top: auto;
+  margin-bottom: 1rem;
+  @include type($univers, 1.1rem, normal);
+}
+
+.articles h3 {
+  border-bottom: 1px solid $black;
+  margin-bottom: 2rem;
+}
+
+.articles h3 {
+  @include type($life, 1.3rem, normal);
+  margin: 1rem 1rem 3rem 1rem;
+  padding-bottom: 0.1rem;
+  letter-spacing: 0.04rem;
+}
+
+.articles .c-item {
+  h2 {
+    @include type($life, 1.6rem, uppercase);
+    em {
+      font-family: $life-italic;
+    }
+  }
+  .c-item__issue-title {
+    @include type($univers, 1.1rem, uppercase);
+  }
+}

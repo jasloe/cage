@@ -336,6 +336,45 @@ img {
   width: 100%;
 }
 
+.path-frontpage .region__content-post .articles {
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+.region__content-post {
+  background: beige;
+}
+
+.path-frontpage .articles .c-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 61.25em) {
+  .path-frontpage .articles .c-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .path-frontpage .articles .c-flex .c-item {
+    -ms-flex-preferred-size: calc(32% - 1rem);
+        flex-basis: calc(32% - 1rem);
+    position: relative;
+  }
+}
+
+.articles {
+  padding: 0 0 5rem 0;
+}
+
 .region__page-title {
   margin: 3rem auto 0;
   max-width: 740px;
@@ -1041,7 +1080,86 @@ header.headroom--unpinned {
   padding: 0 1rem;
 }
 
-.article-title h1 {
+.articles .c-item h2 {
+  padding-top: 1rem;
+}
+
+.articles .c-item .c-item__issue-title {
+  padding-top: 1.4rem;
+}
+
+.c-item__title {
+  margin-bottom: 1rem;
+}
+
+.c-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.c-item__author {
+  margin-top: auto;
+  margin-bottom: 1rem;
+  font-family: "Univers LT Std";
+  font-size: 1.1rem;
+  text-transform: normal;
+  color: #000;
+}
+
+.articles h3 {
+  border-bottom: 1px solid #000;
+  margin-bottom: 2rem;
+}
+
+.articles h3 {
+  font-family: "Life LT Std Roman";
+  font-size: calc(1.255rem + 0.06vw);
+  text-transform: normal;
+  color: #000;
+  margin: 1rem 1rem 3rem 1rem;
+  padding-bottom: 0.1rem;
+  letter-spacing: 0.04rem;
+}
+
+@media (min-width: 1200px) {
+  .articles h3 {
+    font-size: 1.3rem;
+  }
+}
+
+.articles .c-item h2 {
+  font-family: "Life LT Std Roman";
+  font-size: calc(1.285rem + 0.42vw);
+  text-transform: uppercase;
+  color: #000;
+}
+
+@media (min-width: 1200px) {
+  .articles .c-item h2 {
+    font-size: 1.6rem;
+  }
+}
+
+.articles .c-item h2 em {
+  font-family: "Life LT Std Italic";
+}
+
+.articles .c-item .c-item__issue-title {
+  font-family: "Univers LT Std";
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #000;
+}
+
+h1.c-title__title {
   font-family: "Life LT Std Roman";
   font-size: calc(1.425rem + 2.1vw);
   text-transform: uppercase;
@@ -1053,17 +1171,17 @@ header.headroom--unpinned {
 }
 
 @media (min-width: 1200px) {
-  .article-title h1 {
+  h1.c-title__title {
     font-size: 3rem;
   }
 }
 
-.article-title h1 em {
+h1.c-title__title em {
   font-style: italic;
 }
 
-.article-title h2 {
-  font-family: "Life LT Std Roman";
+.c-title__author {
+  font-family: "Univers LT Std";
   font-size: calc(1.285rem + 0.42vw);
   text-transform: normal;
   color: #000;
@@ -1071,7 +1189,7 @@ header.headroom--unpinned {
 }
 
 @media (min-width: 1200px) {
-  .article-title h2 {
+  .c-title__author {
     font-size: 1.6rem;
   }
 }
