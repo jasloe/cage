@@ -63,10 +63,11 @@
 			<div id="progress_bar" class="progress"></div>
 
 			{{ page.content_pre }}
-			{{ page.search }}
 
-
-			{{ page.content }}
+			<div class="region__wrapper">
+				{{ page.search }}
+				{{ page.content }}
+			</div>
 
 			{% set has_content_post = page.content_post|render|striptags|trim is not empty %}
 			{% if has_content_post %}

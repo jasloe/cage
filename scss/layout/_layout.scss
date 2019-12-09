@@ -1,10 +1,39 @@
-// front
-.path-frontpage {
-  .region__content-post .articles {
-    @include global-margin;
-  }
+// "pin" footer to bottom of page
+// ???
+
+// main
+main {
+  margin-top: 5rem;
 }
 
+// footer, legal
+footer,
+footer a {
+  color: white !important;
+}
+.region__footer,
+.region__legal {
+  padding: 1rem;
+}
+
+footer {
+  background: gray;
+}
+
+.region__legal {
+  background: black;
+}
+
+// front
+.path-search .region__wrapper,
+footer .region__footer nav,
+footer .region__legal nav,
+footer .region__legal .block,
+.path-frontpage .region__content-post .articles {
+  @include global-margin;
+}
+
+// post content region
 .region__content-post {
   background: beige;
 }
@@ -22,35 +51,17 @@
       flex-basis: calc(32% - 1rem);
       position: relative;
     }
-    .c-item:nth-child(odd) {
-      // padding-left: 10px;
-    }
-    .c-item:nth-child(even) {
-      // padding-right: 10px;
-    }
+  }
+  .path-frontpage .articles {
+    padding: 0 0 5rem 0;
   }
 }
 
-.articles {
-  padding: 0 0 5rem 0;
-}
-
 // post-content blocks
-
 .region__page-title {
   margin: 3rem auto 0;
   max-width: $tablet;
   padding-top: 3rem;
-}
-
-.block__social-media {
-  margin: 0 auto;
-  max-width: $tablet;
-  text-align: center;
-  padding: 2rem;
-}
-
-.region__content {
 }
 
 .endnotes,
@@ -61,6 +72,8 @@
   @include article-layout;
 }
 
-.hamburger {
-  display: none !important;
+// search
+.path-search .region__wrapper {
+  display: flex;
+  padding: 0 1rem;
 }

@@ -6,6 +6,17 @@ input:focus {
 *:focus {
   outline: none;
 }
+// buttons
+
+.button {
+  background: darken($white, 10%);
+  line-height: 1;
+  padding: 14px 40px;
+}
+
+// search
+input {
+}
 
 // mc input
 .mailchimp-signup-subscribe-form {

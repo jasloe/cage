@@ -8,6 +8,11 @@ $mobileLandscape: 480px;
 
 $max-vw: $wide;
 
+$font-sm: 0.8rem;
+$font-md: 1.2rem;
+$font-lg: 1.8rem;
+$font-display: 2.4rem;
+
 @mixin global-margin {
   margin: 0 auto;
   max-width: $max-vw;
@@ -18,6 +23,32 @@ $max-vw: $wide;
   @include font-size($size);
   text-transform: $text-transform;
   color: $color;
+  line-height: 1;
+}
+
+@mixin title-sm {
+  @include type($univers, $font-md, normal);
+  em {
+    font-family: $univers-italic;
+  }
+}
+
+@mixin title-md {
+  @include type($life, $font-lg, uppercase);
+  em {
+    font-family: $life-italic;
+  }
+}
+
+@mixin title-sc {
+  @include type($univers, $font-sm, uppercase);
+  em {
+    font-family: $univers-italic;
+  }
+}
+
+@mixin topic-header {
+  @include type($life, $font-md, normal);
 }
 
 @mixin caption {

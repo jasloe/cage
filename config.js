@@ -1,6 +1,6 @@
 module.exports = {
   browserSync: {
-    hostname: "local.sa.local",
+    hostname: "local.sound.local",
     port: 8080,
     openAutomatically: true,
     reloadDelay: 50,
