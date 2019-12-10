@@ -15,6 +15,9 @@
   .c-item__issue-title {
     @include title-sc;
     padding-top: 1rem;
+    span {
+      padding-right: 25px;
+    }
   }
   .c-item__author {
     @include title-sm;
@@ -27,4 +30,26 @@
     margin: 1rem 0 2rem 1rem;
     padding-bottom: 0.2rem;
   }
+}
+
+.in-this-issue h3,
+.slick-arrow {
+  // display: none;
+}
+
+.slick__slide .slide__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.c-item__title {
+  @include title-md;
+}
+
+.c-item__author {
+  @include title-sm;
+  margin-top: auto;
 }

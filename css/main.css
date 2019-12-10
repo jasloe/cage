@@ -1087,6 +1087,10 @@ header.headroom--unpinned {
   font-family: "Univers LT Std Oblique";
 }
 
+.path-frontpage .region__content-post .articles .c-item__issue-title span {
+  padding-right: 25px;
+}
+
 .path-frontpage .region__content-post .articles .c-item__author {
   font-family: "Univers LT Std";
   font-size: 1.2rem;
@@ -1104,6 +1108,52 @@ header.headroom--unpinned {
   border-bottom: 1px solid #000;
   margin: 1rem 0 2rem 1rem;
   padding-bottom: 0.2rem;
+}
+
+.slick__slide .slide__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.c-item__title {
+  font-family: "Life LT Std Roman";
+  font-size: calc(1.305rem + 0.66vw);
+  text-transform: uppercase;
+  color: #000;
+  line-height: 1;
+}
+
+@media (min-width: 1200px) {
+  .c-item__title {
+    font-size: 1.8rem;
+  }
+}
+
+.c-item__title em {
+  font-family: "Life LT Std Italic";
+}
+
+.c-item__author {
+  font-family: "Univers LT Std";
+  font-size: 1.2rem;
+  text-transform: normal;
+  color: #000;
+  line-height: 1;
+  margin-top: auto;
+}
+
+.c-item__author em {
+  font-family: "Univers LT Std Oblique";
 }
 
 h1.c-title__title {
