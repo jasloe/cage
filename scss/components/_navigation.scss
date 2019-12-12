@@ -25,13 +25,6 @@ header {
 }
 
 // default mobile navigation
-.block-main-menu {
-  display: none;
-}
-button.hamburger {
-  display: none;
-}
-
 // menu tablet up
 @include mq($from: tablet) {
   .region__header {
@@ -49,16 +42,16 @@ button.hamburger {
 }
 
 // main menu
-ul.menu {
-  display: flex;
-}
+// ul.menu {
+//   display: flex;
+// }
 
-ul.menu li.menu-item {
-  padding-right: 1rem;
-  &:last-child {
-    padding-right: 0rem;
-  }
-}
+// ul.menu li.menu-item {
+//   padding-right: 1rem;
+//   &:last-child {
+//     padding-right: 0rem;
+//   }
+// }
 
 // breadcrumb
 .breadcrumb {
@@ -106,58 +99,3 @@ ol.breadcrumb {
     }
   }
 }
-
-// footer region
-// // footer layout & styling
-// footer,
-// footer .body p {
-//   @include font-size(0.9rem);
-//   font-family: $univers;
-//   color: $white;
-//   em {
-//     font-family: $univers-italic;
-//   }
-// }
-
-// .footer__container {
-//   display: flex;
-// }
-
-// .region-footer {
-//   background: lighten($black, 12%);
-//   padding: 3rem;
-// }
-
-// .social-buttons {
-//   margin-top: 3rem;
-//   h3 {
-//     padding-bottom: 0.5rem;
-//   }
-// }
-
-// .legal__container {
-//   background: $black;
-//   padding: 1rem 3rem;
-// }
-
-// @include mq($from: tablet) {
-//   .copyright__container {
-//     display: flex;
-//     align-items: top;
-//     justify-content: space-between;
-//   }
-//   .legal ul.menu {
-//     display: flex;
-//     align-items: top;
-//     justify-content: space-between;
-//     li.menu-item:first-child {
-//       padding-right: 1rem;
-//     }
-//   }
-// }
-
-// .social-buttons ul li a {
-//   height: 15px;
-//   width: 25px;
-//   padding-right: 0.5rem;
-// }

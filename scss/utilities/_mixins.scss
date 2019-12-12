@@ -10,7 +10,7 @@ $max-vw: $wide;
 
 $font-sm: 0.8rem;
 $font-md: 1.2rem;
-$font-lg: 1.8rem;
+$font-lg: 1.6rem;
 $font-display: 2.4rem;
 
 @mixin global-margin {
@@ -40,6 +40,13 @@ $font-display: 2.4rem;
   }
 }
 
+@mixin title-md-lower {
+  @include type($life, $font-lg, static);
+  em {
+    font-family: $life-italic;
+  }
+}
+
 @mixin title-sc {
   @include type($univers, $font-sm, uppercase);
   em {
@@ -49,6 +56,13 @@ $font-display: 2.4rem;
 
 @mixin topic-header {
   @include type($life, $font-md, normal);
+}
+
+@mixin topic-ornament {
+  border-bottom: 1px solid $black;
+  margin: 1rem;
+  padding-bottom: 0.2rem;
+  @include topic-header;
 }
 
 @mixin caption {

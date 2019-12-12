@@ -15,7 +15,9 @@ regions:
   page_title: Page title
   content_pre: Pre-content
   search: Search
+  content_first: Content first
   content: Content
+  content_second: Content second
   content_post: Post-content
   footer: Footer
   legal: Legal

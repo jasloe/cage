@@ -1,0 +1,54 @@
+// // social media
+.bandcamp,
+.facebook,
+.instagram,
+.soundcloud,
+.twitter,
+.email {
+  padding-right: 1rem;
+  display: block;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  text-indent: -9000px;
+  vertical-align: top;
+}
+
+.email {
+  padding-right: 0rem;
+}
+
+.bandcamp {
+  background-image: url(../images/bandcamp.svg);
+  padding-right: 0;
+}
+
+.facebook {
+  background-image: url(../images/facebook.svg);
+}
+
+.instagram {
+  background-image: url(../images/instagram.svg);
+}
+
+.soundcloud {
+  background-image: url(../images/soundcloud.svg);
+  padding-right: 1.6rem;
+}
+
+.twitter {
+  background-image: url(../images/twitter.svg);
+}
+
+.email {
+  background-image: url(../images/email.svg);
+}
+
+// override social-media-sharing default
+.social-media-sharing ul {
+  display: initial;
+}
+
+.social-media-sharing li {
+  margin-right: 0;
+}

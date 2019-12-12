@@ -1,40 +1,87 @@
+h3 {
+  @include topic-ornament;
+}
 // front typography
+.path-issues .toc,
 .path-frontpage .region__content-post .articles {
-  h3 {
-    @include topic-header;
-  }
   .c-item {
     display: flex;
     flex-direction: column;
+    background-color: $medium-white;
+    text-align: center;
+    margin-bottom: 2rem;
   }
+
+  .c-item__tag {
+    @include title-sc;
+    padding-top: 1rem;
+  }
+
   .c-item__title {
     @include title-md;
-    padding-top: 0.5rem;
-    padding-bottom: 2rem;
+    padding: 0.5rem 1rem 2rem 1rem;
   }
+
   .c-item__issue-title {
     @include title-sc;
     padding-top: 1rem;
     span {
-      padding-right: 25px;
+      padding-right: 3px;
+      text-transform: initial;
     }
   }
+
   .c-item__author {
     @include title-sm;
     margin-top: auto;
   }
 
   // front ornamentation
-  h3 {
-    border-bottom: 1px solid $black;
-    margin: 1rem 0 2rem 1rem;
-    padding-bottom: 0.2rem;
+}
+
+.region__page-title .c-title {
+  .c-title__tag,
+  .c-title__pre-title {
+    @include title-md-lower;
   }
 }
 
-.in-this-issue h3,
-.slick-arrow {
-  // display: none;
+// issue main
+.path-issues .issue-marquee {
+  margin: 0 auto;
+  max-width: $wide;
+  text-align: center;
+  img {
+    height: calc(100vh - 5rem);
+    width: auto;
+  }
+}
+
+// issue editor
+.path-issues .editor {
+  margin: 0 auto;
+  max-width: $tablet;
+  padding: 0 1rem;
+  h1.c-title__title {
+    @include type($life, 3rem, uppercase);
+    border-top: 1px solid $black;
+    padding: 0.7rem 1rem 0rem 1rem;
+    line-height: 1;
+    em {
+      font-family: $life-italic;
+    }
+  }
+
+  .c-title__author {
+    @include type($univers, 1.6rem, normal);
+    margin: 2rem 0;
+    padding: 0 1rem;
+  }
+}
+
+// issue toc
+.path-issues h3 {
+  @include topic-ornament;
 }
 
 .slick__slide .slide__content {
@@ -43,13 +90,4 @@
   align-items: flex-start;
   margin-left: 1rem;
   margin-right: 1rem;
-}
-
-.c-item__title {
-  @include title-md;
-}
-
-.c-item__author {
-  @include title-sm;
-  margin-top: auto;
 }

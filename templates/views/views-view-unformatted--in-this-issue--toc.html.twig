@@ -1,0 +1,10 @@
+{% if title %}
+	<h3>{{ title }}</h3>asdfasdfasdf
+{% endif %}
+<div class="c-flex">
+	{% for row in rows %}
+		<div class="c-item">
+			{{- row.content -}}
+		</div>
+	{% endfor %}
+</div>

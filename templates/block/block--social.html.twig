@@ -26,11 +26,7 @@
  */
 #}
 <div{{attributes}}>
-	{{ title_prefix }}
-	{% if label %}
-		<h2{{title_attributes}}>{{ label }}</h2>
-	{% endif %}
-	{{ title_suffix }}
+	<h2>Share this article</h2>
 	{% block content %}
 		{{ content }}
 	{% endblock %}

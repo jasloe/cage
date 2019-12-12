@@ -22,7 +22,34 @@
 
 	{% block content %}
 		<div{{attributes.addClass(classes)}}>
-			{{ content }}
+
+			<div class="footer-social">
+				<div class="footer-social__mailchimp">
+					<h2>Subscribe to the Sound American Newsletter</h2>
+					{{ drupal_block('mailchimp_signup_subscribe_block:newsletter') }}
+				</div>
+				<div class="footer-social__social">
+					<h2>Follow Sound American</h2>
+					{{ drupal_menu('social') }}
+				</div>
+			</div>
+
+			<div class="footer-menu">
+				{{ drupal_menu('footer') }}
+			</div>
+
+			<div class="footer-about">
+				<div class="footer-about__about">
+
+					<h2>About Sound American</h2>
+					{{ drupal_entity('block_content', '10') }}
+				</div>
+				<div class="footer-about__credits">
+					<h2>Site credits</h2>
+					{{ drupal_entity('block_content', '25') }}
+				</div>
+			</div>
+
 		</div>
 	{% endblock %}
 

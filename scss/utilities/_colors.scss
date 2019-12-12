@@ -2,9 +2,12 @@
 $whitest: white;
 $white: hsla(0, 0%, 100%, 1);
 $black: #000;
+$medium-white: darken($white, 1%);
+$dark-white: darken($white, 25%);
 $light-gray: lighten($black, 90%);
 $medium-gray: lighten($black, 60%);
 $dark-gray: lighten($black, 40%);
+$darker-gray: lighten($black, 20%);
 
 // default color scheme
 $background: $white;
@@ -14,7 +17,7 @@ $default-visited: $medium-gray;
 $default-hover: $medium-gray;
 $default-active: $medium-gray;
 
-// issue keys
+// issue theme keys
 $alien: green;
 $hyla: #664d94;
 $change: #002e6f;
