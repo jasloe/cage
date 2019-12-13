@@ -40,8 +40,9 @@ $font-display: 2.4rem;
   }
 }
 
-@mixin title-md-lower {
+@mixin title-md-normal {
   @include type($life, $font-lg, static);
+  padding-bottom: 1.4rem;
   em {
     font-family: $life-italic;
   }
@@ -56,10 +57,12 @@ $font-display: 2.4rem;
 
 @mixin topic-header {
   @include type($life, $font-md, normal);
+  color: $dark-gray;
 }
 
 @mixin topic-ornament {
-  border-bottom: 1px solid $black;
+  border-bottom: 1px solid $medium-gray;
+
   margin: 1rem;
   padding-bottom: 0.2rem;
   @include topic-header;

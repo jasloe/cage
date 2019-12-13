@@ -19,14 +19,7 @@ main {
 }
 
 .front .c-item__title-wrapper {
-  position: absolute;
   text-align: center;
-}
-
-h1,
-h2 {
-  font-size: 60px;
-  color: white;
 }
 
 .hyla-front {
@@ -54,7 +47,7 @@ h2 {
   .c-title__author {
     margin: 3rem auto 0;
     max-width: $tablet;
-    padding: 0 1rem;
+    padding: 1rem;
   }
 
   .region__content-wrapper {
@@ -112,8 +105,11 @@ h2 {
   background: lightblue;
 }
 
+.region__content-post {
+  background: #f9f9f2;
+}
+
 .page-node-type-article .region__content-post .authors {
-  background: gray;
   margin: 0 auto;
   max-width: $tablet;
   .c-item__link {
@@ -155,7 +151,7 @@ h2 {
 
 // footer
 footer {
-  background: $darker-gray;
+  background: #48525b;
 }
 
 .region__footer {
@@ -211,7 +207,15 @@ footer {
 .region__footer h2 {
   @include title-sc;
   padding-bottom: 0.5rem;
-  color: #80ced7;
+  color: #dcf5f9;
+}
+
+.region__footer p {
+  color: #f4DCF5F9f4c3;
+}
+
+.region__footer a {
+  color: #dcf5f9;
 }
 
 .footer-social__social ul {

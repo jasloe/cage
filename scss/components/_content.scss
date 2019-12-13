@@ -7,7 +7,7 @@ h3 {
   .c-item {
     display: flex;
     flex-direction: column;
-    background-color: $medium-white;
+    background-color: $white;
     text-align: center;
     margin-bottom: 2rem;
   }
@@ -34,6 +34,7 @@ h3 {
   .c-item__author {
     @include title-sm;
     margin-top: auto;
+    margin-bottom: 2rem;
   }
 
   // front ornamentation
@@ -42,7 +43,7 @@ h3 {
 .region__page-title .c-title {
   .c-title__tag,
   .c-title__pre-title {
-    @include title-md-lower;
+    @include title-md-normal;
   }
 }
 
@@ -90,4 +91,76 @@ h3 {
   align-items: flex-start;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+// article page section
+// basic page section
+
+.page-node-type-article {
+  .interview,
+  .page-section,
+  .endnotes {
+    @include justify;
+  }
+
+  .interview .field-body p,
+  .page-section .field-body p {
+    padding: 0.5rem 0;
+  }
+
+  .interview .field-body,
+  .page-section .field-body {
+    @include type($life, 1.2rem, normal);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    em {
+      font-family: $life-italic;
+    }
+  }
+
+  .page-section .field-section-title {
+    max-width: $tablet;
+    margin: 0 auto;
+    @include type($univers, 1rem, uppercase, $black);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    em {
+      font-style: $univers-italic;
+    }
+    p {
+      position: relative;
+      display: inline;
+      padding-bottom: 1rem;
+
+      &:after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        border-bottom: 1px solid $black;
+        content: "";
+      }
+    }
+  }
+
+  .page-section .field-body p {
+    text-indent: $indent;
+    &:first-child {
+      text-indent: 0;
+    }
+  }
+
+  .interview .field-body {
+    border-top: 1px solid $black;
+    padding-top: 1rem;
+  }
+
+  .interview .field-body p {
+    text-indent: $indent;
+  }
+
+  .interview .field-body span {
+    @include type($univers, 1rem, uppercase, $black);
+    padding-right: 1rem;
+  }
 }

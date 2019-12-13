@@ -8,8 +8,8 @@
   padding-right: 1rem;
   display: block;
   background-repeat: no-repeat;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   text-indent: -9000px;
   vertical-align: top;
 }
@@ -45,10 +45,6 @@
 }
 
 // override social-media-sharing default
-.social-media-sharing ul {
-  display: initial;
-}
-
 .social-media-sharing li {
   margin-right: 0;
 }

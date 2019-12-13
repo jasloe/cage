@@ -358,20 +358,7 @@ main {
 }
 
 .front .c-item__title-wrapper {
-  position: absolute;
-  top: 50%;
   text-align: center;
-}
-
-h1,
-h2 {
-  font-size: 60px;
-  color: white;
-  position: absolute;
-  left: 50%;
-  margin-left: -50px;
-  top: 50%;
-  margin-top: -50px;
 }
 
 .hyla-front {
@@ -396,7 +383,7 @@ h2 {
 .page-node-type-article .c-title__author {
   margin: 3rem auto 0;
   max-width: 740px;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
 .page-node-type-article .region__content-wrapper {
@@ -428,7 +415,7 @@ h2 {
 .page-node-type-article .region__content .endnotes .field-body {
   max-width: 740px;
   margin: 1rem auto;
-  border-top: 1px solid #000;
+  border-top: 1px solid #01041e;
 }
 
 .page-node-type-article .region__content-first .social {
@@ -465,8 +452,11 @@ h2 {
   background: lightblue;
 }
 
+.region__content-post {
+  background: #f9f9f2;
+}
+
 .page-node-type-article .region__content-post .authors {
-  background: gray;
   margin: 0 auto;
   max-width: 740px;
 }
@@ -521,7 +511,7 @@ h2 {
 }
 
 footer {
-  background: #333333;
+  background: #48525b;
 }
 
 .region__footer {
@@ -600,14 +590,22 @@ footer {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #000;
+  color: #01041e;
   line-height: 1;
   padding-bottom: 0.5rem;
-  color: #80ced7;
+  color: #dcf5f9;
 }
 
 .region__footer h2 em {
   font-family: "Univers LT Std Oblique";
+}
+
+.region__footer p {
+  color: #f4DCF5F9f4c3;
+}
+
+.region__footer a {
+  color: #dcf5f9;
 }
 
 .footer-social__social ul {
@@ -628,7 +626,7 @@ footer {
 
 .region__legal {
   padding: 2rem;
-  background: #000;
+  background: #01041e;
   color: #bfbfbf !important;
   font-size: 0.8rem;
   line-height: 1.5;
@@ -655,13 +653,14 @@ footer {
 }
 
 a {
-  color: #000;
+  color: #01041e;
   text-decoration: none;
 }
 
 .site-name a {
   text-transform: uppercase;
   letter-spacing: 0.04rem;
+  color: white;
 }
 
 ol li a {
@@ -676,9 +675,9 @@ header a {
 }
 
 header a:hover {
-  color: #666666;
-  -webkit-box-shadow: 0 1px 0 #666666;
-          box-shadow: 0 1px 0 #666666;
+  color: #081ee3;
+  -webkit-box-shadow: 0 1px 0 #081ee3;
+          box-shadow: 0 1px 0 #081ee3;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -689,38 +688,38 @@ header .site-name a:hover {
 }
 
 header a.is-active {
-  color: #666666;
-  -webkit-box-shadow: 0 1px 0 #666666;
-          box-shadow: 0 1px 0 #666666;
+  color: #081ee3;
+  -webkit-box-shadow: 0 1px 0 #081ee3;
+          box-shadow: 0 1px 0 #081ee3;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 header a.is-active:hover {
-  color: #000;
+  color: #01041e;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-box-shadow: 0 1px 0 #000;
-          box-shadow: 0 1px 0 #000;
+  -webkit-box-shadow: 0 1px 0 #01041e;
+          box-shadow: 0 1px 0 #01041e;
 }
 
 .page-section a {
-  -webkit-box-shadow: 0 1px 0 #666666;
-          box-shadow: 0 1px 0 #666666;
+  -webkit-box-shadow: 0 1px 0 #081ee3;
+          box-shadow: 0 1px 0 #081ee3;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .page-section a:hover {
-  -webkit-box-shadow: 0 1px 0 #666666;
-          box-shadow: 0 1px 0 #666666;
+  -webkit-box-shadow: 0 1px 0 #081ee3;
+          box-shadow: 0 1px 0 #081ee3;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .page-section a.is-active {
-  -webkit-box-shadow: 0 1px 0 #666666;
-          box-shadow: 0 1px 0 #666666;
+  -webkit-box-shadow: 0 1px 0 #081ee3;
+          box-shadow: 0 1px 0 #081ee3;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -728,20 +727,20 @@ header a.is-active:hover {
 .page-section a.is-active:hover {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-box-shadow: 0 1px 0 #000;
-          box-shadow: 0 1px 0 #000;
+  -webkit-box-shadow: 0 1px 0 #01041e;
+          box-shadow: 0 1px 0 #01041e;
 }
 
 a.issue__link:hover {
-  color: #666666;
+  color: #081ee3;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 a.issue__link:hover .issue__title span {
   display: inline;
-  -webkit-box-shadow: 0 1px 0 #666666;
-          box-shadow: 0 1px 0 #666666;
+  -webkit-box-shadow: 0 1px 0 #081ee3;
+          box-shadow: 0 1px 0 #081ee3;
 }
 
 .region-footer-first .social-buttons {
@@ -768,13 +767,13 @@ footer a {
 }
 
 footer a:hover {
-  color: #666666;
+  color: #081ee3;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 footer a.is-active {
-  color: #666666;
+  color: #081ee3;
 }
 
 .social-buttons a:hover {
@@ -783,14 +782,14 @@ footer a.is-active {
 }
 
 .page-node-type-page .node__content a {
-  -webkit-box-shadow: 0 1px 0 #000;
-          box-shadow: 0 1px 0 #000;
+  -webkit-box-shadow: 0 1px 0 #01041e;
+          box-shadow: 0 1px 0 #01041e;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .page-node-type-page .node__content a:hover {
-  color: #666666;
+  color: #081ee3;
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transition: all 0.2s ease;
@@ -1093,7 +1092,7 @@ header.headroom {
   left: 0;
   top: 0;
   opacity: 1;
-  background: white;
+  background: #01041e;
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
@@ -1246,14 +1245,15 @@ header.headroom--unpinned {
 }
 
 h3 {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #5868f9;
   margin: 1rem;
   padding-bottom: 0.2rem;
   font-family: "Life LT Std Roman";
   font-size: 1.2rem;
   text-transform: normal;
-  color: #000;
+  color: #01041e;
   line-height: 1;
+  color: #081ee3;
 }
 
 .path-issues .toc .c-item,
@@ -1265,7 +1265,7 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #fcfcfc;
+  background-color: white;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -1275,7 +1275,7 @@ h3 {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #000;
+  color: #01041e;
   line-height: 1;
   padding-top: 1rem;
 }
@@ -1290,7 +1290,7 @@ h3 {
   font-family: "Life LT Std Roman";
   font-size: calc(1.285rem + 0.42vw);
   text-transform: uppercase;
-  color: #000;
+  color: #01041e;
   line-height: 1;
   padding: 0.5rem 1rem 2rem 1rem;
 }
@@ -1312,7 +1312,7 @@ h3 {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #000;
+  color: #01041e;
   line-height: 1;
   padding-top: 1rem;
 }
@@ -1333,9 +1333,10 @@ h3 {
   font-family: "Univers LT Std";
   font-size: 1.2rem;
   text-transform: normal;
-  color: #000;
+  color: #01041e;
   line-height: 1;
   margin-top: auto;
+  margin-bottom: 2rem;
 }
 
 .path-issues .toc .c-item__author em,
@@ -1348,8 +1349,9 @@ h3 {
   font-family: "Life LT Std Roman";
   font-size: calc(1.285rem + 0.42vw);
   text-transform: static;
-  color: #000;
+  color: #01041e;
   line-height: 1;
+  padding-bottom: 1.4rem;
 }
 
 @media (min-width: 1200px) {
@@ -1385,9 +1387,9 @@ h3 {
   font-family: "Life LT Std Roman";
   font-size: calc(1.425rem + 2.1vw);
   text-transform: uppercase;
-  color: #000;
+  color: #01041e;
   line-height: 1;
-  border-top: 1px solid #000;
+  border-top: 1px solid #01041e;
   padding: 0.7rem 1rem 0rem 1rem;
   line-height: 1;
 }
@@ -1406,7 +1408,7 @@ h3 {
   font-family: "Univers LT Std";
   font-size: calc(1.285rem + 0.42vw);
   text-transform: normal;
-  color: #000;
+  color: #01041e;
   line-height: 1;
   margin: 2rem 0;
   padding: 0 1rem;
@@ -1419,14 +1421,15 @@ h3 {
 }
 
 .path-issues h3 {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #5868f9;
   margin: 1rem;
   padding-bottom: 0.2rem;
   font-family: "Life LT Std Roman";
   font-size: 1.2rem;
   text-transform: normal;
-  color: #000;
+  color: #01041e;
   line-height: 1;
+  color: #081ee3;
 }
 
 .slick__slide .slide__content {
@@ -1444,13 +1447,106 @@ h3 {
   margin-right: 1rem;
 }
 
+.page-node-type-article .interview,
+.page-node-type-article .page-section,
+.page-node-type-article .endnotes {
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page-node-type-article .interview em,
+.page-node-type-article .page-section em,
+.page-node-type-article .endnotes em {
+  font-style: italic;
+}
+
+.page-node-type-article .interview .field-body p,
+.page-node-type-article .page-section .field-body p {
+  padding: 0.5rem 0;
+}
+
+.page-node-type-article .interview .field-body,
+.page-node-type-article .page-section .field-body {
+  font-family: "Life LT Std Roman";
+  font-size: 1.2rem;
+  text-transform: normal;
+  color: #01041e;
+  line-height: 1;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.page-node-type-article .interview .field-body em,
+.page-node-type-article .page-section .field-body em {
+  font-family: "Life LT Std Italic";
+}
+
+.page-node-type-article .page-section .field-section-title {
+  max-width: 740px;
+  margin: 0 auto;
+  font-family: "Univers LT Std";
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #01041e;
+  line-height: 1;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.page-node-type-article .page-section .field-section-title em {
+  font-style: "Univers LT Std Oblique";
+}
+
+.page-node-type-article .page-section .field-section-title p {
+  position: relative;
+  display: inline;
+  padding-bottom: 1rem;
+}
+
+.page-node-type-article .page-section .field-section-title p:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid #01041e;
+  content: "";
+}
+
+.page-node-type-article .page-section .field-body p {
+  text-indent: 3rem;
+}
+
+.page-node-type-article .page-section .field-body p:first-child {
+  text-indent: 0;
+}
+
+.page-node-type-article .interview .field-body {
+  border-top: 1px solid #01041e;
+  padding-top: 1rem;
+}
+
+.page-node-type-article .interview .field-body p {
+  text-indent: 3rem;
+}
+
+.page-node-type-article .interview .field-body span {
+  font-family: "Univers LT Std";
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #01041e;
+  line-height: 1;
+  padding-right: 1rem;
+}
+
 h1.c-title__title {
   font-family: "Life LT Std Roman";
   font-size: calc(1.425rem + 2.1vw);
   text-transform: uppercase;
-  color: #000;
+  color: #01041e;
   line-height: 1;
-  border-top: 1px solid #000;
+  border-top: 1px solid #01041e;
   padding: 0.7rem 1rem 0rem 1rem;
   text-align: center;
   line-height: 1;
@@ -1470,7 +1566,7 @@ h1.c-title__title em {
   font-family: "Univers LT Std";
   font-size: calc(1.285rem + 0.42vw);
   text-transform: normal;
-  color: #000;
+  color: #01041e;
   line-height: 1;
   margin: 2rem 0;
   padding: 0 1rem;
@@ -1487,9 +1583,10 @@ h1.c-title__title em {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #000;
+  color: #01041e;
   line-height: 1;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.5rem;
+  color: #5868f9;
 }
 
 .region__content-first .social h2 em {
@@ -1521,7 +1618,7 @@ h1.c-title__title em {
   font-family: "Life LT Std Roman";
   font-size: 1.2rem;
   text-transform: normal;
-  color: #000;
+  color: #01041e;
   line-height: 1;
   line-height: 1.1;
   margin-bottom: 1rem;
@@ -1533,10 +1630,12 @@ h1.c-title__title em {
 }
 
 .page-section .field-section-title {
+  max-width: 740px;
+  margin: 0 auto;
   font-family: "Univers LT Std";
   font-size: 1rem;
   text-transform: uppercase;
-  color: #000;
+  color: #01041e;
   line-height: 1;
   margin-bottom: 2rem;
   line-height: 1.4;
@@ -1557,7 +1656,7 @@ h1.c-title__title em {
   left: 0;
   bottom: 0;
   width: 100%;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #01041e;
   content: "";
 }
 
@@ -1570,7 +1669,7 @@ h1.c-title__title em {
 }
 
 .interview .field-body {
-  border-top: 1px solid #000;
+  border-top: 1px solid #01041e;
   padding-top: 1rem;
 }
 
@@ -1582,7 +1681,7 @@ h1.c-title__title em {
   font-family: "Univers LT Std";
   font-size: 1rem;
   text-transform: uppercase;
-  color: #000;
+  color: #01041e;
   line-height: 1;
   padding-right: 1rem;
 }
@@ -1605,7 +1704,7 @@ h1.c-title__title em {
   font-family: "Life LT Std Roman";
   font-size: 1rem;
   text-transform: normal;
-  color: #000;
+  color: #01041e;
   line-height: 1;
 }
 
@@ -1656,8 +1755,8 @@ h1.c-title__title em {
   padding-right: 1rem;
   display: block;
   background-repeat: no-repeat;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   text-indent: -9000px;
   vertical-align: top;
 }
@@ -1690,10 +1789,6 @@ h1.c-title__title em {
 
 .email {
   background-image: url(../images/email.svg);
-}
-
-.social-media-sharing ul {
-  display: initial;
 }
 
 .social-media-sharing li {
