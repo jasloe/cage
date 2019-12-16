@@ -1,6 +1,6 @@
 // main
 main {
-  margin-top: 3rem;
+  margin-top: 5em;
 }
 
 .front {
@@ -56,7 +56,8 @@ main {
     margin: 0 auto;
     padding-bottom: 1rem;
     .region__content .field-body,
-    .region__content .field-media-image-caption {
+    .region__content .field-media-image-caption,
+    .region__content .field-section-title {
       padding: 0 1rem;
     }
   }

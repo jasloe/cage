@@ -337,7 +337,7 @@ img {
 }
 
 main {
-  margin-top: 3rem;
+  margin-top: 5em;
 }
 
 .front {
@@ -399,7 +399,8 @@ main {
 }
 
 .page-node-type-article .region__content-wrapper .region__content .field-body,
-.page-node-type-article .region__content-wrapper .region__content .field-media-image-caption {
+.page-node-type-article .region__content-wrapper .region__content .field-media-image-caption,
+.page-node-type-article .region__content-wrapper .region__content .field-section-title {
   padding: 0 1rem;
 }
 
@@ -1591,99 +1592,6 @@ h1.c-title__title em {
 
 .region__content-first .social h2 em {
   font-family: "Univers LT Std Oblique";
-}
-
-.interview,
-.page-section,
-.endnotes {
-  text-align: justify;
-  text-justify: inter-word;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.interview em,
-.page-section em,
-.endnotes em {
-  font-style: italic;
-}
-
-.interview .field-body p,
-.page-section .field-body p {
-  padding: 0.5rem 0;
-}
-
-.interview .field-body,
-.page-section .field-body {
-  font-family: "Life LT Std Roman";
-  font-size: 1.2rem;
-  text-transform: normal;
-  color: #01041e;
-  line-height: 1;
-  line-height: 1.1;
-  margin-bottom: 1rem;
-}
-
-.interview .field-body em,
-.page-section .field-body em {
-  font-family: "Life LT Std Italic";
-}
-
-.page-section .field-section-title {
-  max-width: 740px;
-  margin: 0 auto;
-  font-family: "Univers LT Std";
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: #01041e;
-  line-height: 1;
-  margin-bottom: 2rem;
-  line-height: 1.4;
-}
-
-.page-section .field-section-title em {
-  font-style: "Univers LT Std Oblique";
-}
-
-.page-section .field-section-title p {
-  position: relative;
-  display: inline;
-  padding-bottom: 1rem;
-}
-
-.page-section .field-section-title p:after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  border-bottom: 1px solid #01041e;
-  content: "";
-}
-
-.page-section .field-body p {
-  text-indent: 3rem;
-}
-
-.page-section .field-body p:first-child {
-  text-indent: 0;
-}
-
-.interview .field-body {
-  border-top: 1px solid #01041e;
-  padding-top: 1rem;
-}
-
-.interview .field-body p {
-  text-indent: 3rem;
-}
-
-.interview .field-body span {
-  font-family: "Univers LT Std";
-  font-size: 1rem;
-  text-transform: uppercase;
-  color: #01041e;
-  line-height: 1;
-  padding-right: 1rem;
 }
 
 .field-media-image-caption {
