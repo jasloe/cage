@@ -43,48 +43,44 @@ main {
 // articles
 .page-node-type-article {
   // title region
-  .region__page-title,
-  .c-title__author {
+  .region__page-title {
     margin: 3rem auto 0;
     max-width: $tablet;
     padding: 1rem;
   }
 
   .region__content-wrapper {
+    .region__content-first {
+      .social {
+        text-align: center;
+        padding: 1rem 0;
+      }
+    }
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     padding-bottom: 1rem;
     .region__content .field-body,
-    .region__content .field-media-image-caption,
     .region__content .field-section-title {
       padding: 0 1rem;
     }
-  }
-
-  .region__content .field-body {
-    max-width: $tablet;
-    margin: 0 auto;
-  }
-
-  .region__content .endnotes {
-    margin: 0 1rem;
-  }
-
-  .region__content .endnotes .field-body {
-    max-width: $tablet;
-    margin: 1rem auto;
-    border-top: 1px solid $black;
-  }
-
-  .region__content-first {
-    .social {
-      text-align: center;
-      padding: 1rem 0;
+    .region__content .field-body {
+      max-width: $tablet;
+      margin: 0 auto;
+    }
+    .region__content .endnotes {
+      margin: 0 1rem;
+    }
+    .region__content .endnotes .field-body {
+      max-width: $tablet;
+      margin: 1rem auto;
+      border-top: 1px solid $black;
+      padding-top: 1rem;
     }
   }
 }
 
+// issues toc
 @include mq($from: desktop) {
   .path-issues .toc {
     padding: 0 1rem;

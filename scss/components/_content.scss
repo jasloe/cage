@@ -1,6 +1,7 @@
 h3 {
   @include topic-ornament;
 }
+
 // front typography
 .path-issues .toc,
 .path-frontpage .region__content-post .articles {
@@ -36,8 +37,6 @@ h3 {
     margin-top: auto;
     margin-bottom: 2rem;
   }
-
-  // front ornamentation
 }
 
 .region__page-title .c-title {
@@ -95,12 +94,19 @@ h3 {
 
 // article page section
 // basic page section
-
 .page-node-type-article {
   .interview,
   .page-section,
   .endnotes {
     @include justify;
+  }
+
+  blockquote {
+    padding: 0 3rem;
+    font-family: $life-italic;
+    em {
+      font-family: $life;
+    }
   }
 
   .interview .field-body p,

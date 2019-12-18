@@ -41,7 +41,8 @@ header {
 }
 
 // article links
-.page-section {
+.page-section,
+.endnotes {
   a {
     box-shadow: 0 1px 0 $dark-gray;
     transition: all 0.2s ease;

@@ -1,10 +1,18 @@
-.endnotes sup {
+.endnotes p {
+  padding-top: 1rem;
+}
+
+.endnotes p:first-child {
+  padding-top: 0;
+}
+
+.endnotes p span {
   padding-right: $indent;
 }
 
 .endnotes .field__item p {
-  margin-top: 1rem;
   @include type($life, 1rem, normal);
+  line-height: 1.2;
   em {
     font-style: $life-italic;
   }

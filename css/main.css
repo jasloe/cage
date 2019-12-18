@@ -379,8 +379,7 @@ main {
   max-width: 1300px;
 }
 
-.page-node-type-article .region__page-title,
-.page-node-type-article .c-title__author {
+.page-node-type-article .region__page-title {
   margin: 3rem auto 0;
   max-width: 740px;
   padding: 1rem;
@@ -398,30 +397,30 @@ main {
   padding-bottom: 1rem;
 }
 
+.page-node-type-article .region__content-wrapper .region__content-first .social {
+  text-align: center;
+  padding: 1rem 0;
+}
+
 .page-node-type-article .region__content-wrapper .region__content .field-body,
-.page-node-type-article .region__content-wrapper .region__content .field-media-image-caption,
 .page-node-type-article .region__content-wrapper .region__content .field-section-title {
   padding: 0 1rem;
 }
 
-.page-node-type-article .region__content .field-body {
+.page-node-type-article .region__content-wrapper .region__content .field-body {
   max-width: 740px;
   margin: 0 auto;
 }
 
-.page-node-type-article .region__content .endnotes {
+.page-node-type-article .region__content-wrapper .region__content .endnotes {
   margin: 0 1rem;
 }
 
-.page-node-type-article .region__content .endnotes .field-body {
+.page-node-type-article .region__content-wrapper .region__content .endnotes .field-body {
   max-width: 740px;
   margin: 1rem auto;
-  border-top: 1px solid #01041e;
-}
-
-.page-node-type-article .region__content-first .social {
-  text-align: center;
-  padding: 1rem 0;
+  border-top: 1px solid #000;
+  padding-top: 1rem;
 }
 
 @media (min-width: 61.25em) {
@@ -591,7 +590,7 @@ footer {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #01041e;
+  color: #000;
   line-height: 1;
   padding-bottom: 0.5rem;
   color: #dcf5f9;
@@ -627,7 +626,7 @@ footer {
 
 .region__legal {
   padding: 2rem;
-  background: #01041e;
+  background: #000;
   color: #bfbfbf !important;
   font-size: 0.8rem;
   line-height: 1.5;
@@ -654,7 +653,7 @@ footer {
 }
 
 a {
-  color: #01041e;
+  color: #000;
   text-decoration: none;
 }
 
@@ -676,9 +675,9 @@ header a {
 }
 
 header a:hover {
-  color: #081ee3;
-  -webkit-box-shadow: 0 1px 0 #081ee3;
-          box-shadow: 0 1px 0 #081ee3;
+  color: #666666;
+  -webkit-box-shadow: 0 1px 0 #666666;
+          box-shadow: 0 1px 0 #666666;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -689,59 +688,63 @@ header .site-name a:hover {
 }
 
 header a.is-active {
-  color: #081ee3;
-  -webkit-box-shadow: 0 1px 0 #081ee3;
-          box-shadow: 0 1px 0 #081ee3;
+  color: #666666;
+  -webkit-box-shadow: 0 1px 0 #666666;
+          box-shadow: 0 1px 0 #666666;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 header a.is-active:hover {
-  color: #01041e;
+  color: #000;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-box-shadow: 0 1px 0 #01041e;
-          box-shadow: 0 1px 0 #01041e;
+  -webkit-box-shadow: 0 1px 0 #000;
+          box-shadow: 0 1px 0 #000;
 }
 
-.page-section a {
-  -webkit-box-shadow: 0 1px 0 #081ee3;
-          box-shadow: 0 1px 0 #081ee3;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.page-section a:hover {
-  -webkit-box-shadow: 0 1px 0 #081ee3;
-          box-shadow: 0 1px 0 #081ee3;
+.page-section a,
+.endnotes a {
+  -webkit-box-shadow: 0 1px 0 #666666;
+          box-shadow: 0 1px 0 #666666;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
-.page-section a.is-active {
-  -webkit-box-shadow: 0 1px 0 #081ee3;
-          box-shadow: 0 1px 0 #081ee3;
+.page-section a:hover,
+.endnotes a:hover {
+  -webkit-box-shadow: 0 1px 0 #666666;
+          box-shadow: 0 1px 0 #666666;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
-.page-section a.is-active:hover {
+.page-section a.is-active,
+.endnotes a.is-active {
+  -webkit-box-shadow: 0 1px 0 #666666;
+          box-shadow: 0 1px 0 #666666;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-box-shadow: 0 1px 0 #01041e;
-          box-shadow: 0 1px 0 #01041e;
+}
+
+.page-section a.is-active:hover,
+.endnotes a.is-active:hover {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-box-shadow: 0 1px 0 #000;
+          box-shadow: 0 1px 0 #000;
 }
 
 a.issue__link:hover {
-  color: #081ee3;
+  color: #666666;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 a.issue__link:hover .issue__title span {
   display: inline;
-  -webkit-box-shadow: 0 1px 0 #081ee3;
-          box-shadow: 0 1px 0 #081ee3;
+  -webkit-box-shadow: 0 1px 0 #666666;
+          box-shadow: 0 1px 0 #666666;
 }
 
 .region-footer-first .social-buttons {
@@ -768,13 +771,13 @@ footer a {
 }
 
 footer a:hover {
-  color: #081ee3;
+  color: #666666;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 footer a.is-active {
-  color: #081ee3;
+  color: #666666;
 }
 
 .social-buttons a:hover {
@@ -783,14 +786,14 @@ footer a.is-active {
 }
 
 .page-node-type-page .node__content a {
-  -webkit-box-shadow: 0 1px 0 #01041e;
-          box-shadow: 0 1px 0 #01041e;
+  -webkit-box-shadow: 0 1px 0 #000;
+          box-shadow: 0 1px 0 #000;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 .page-node-type-page .node__content a:hover {
-  color: #081ee3;
+  color: #666666;
   -webkit-box-shadow: none;
           box-shadow: none;
   -webkit-transition: all 0.2s ease;
@@ -1093,7 +1096,7 @@ header.headroom {
   left: 0;
   top: 0;
   opacity: 1;
-  background: #01041e;
+  background: #000;
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
@@ -1216,7 +1219,13 @@ header.headroom--unpinned {
 
 .page-node-type-article article .media__wrapper {
   max-width: 980px;
-  margin: 0 auto;
+  margin: 1rem auto;
+}
+
+@media (min-width: 61.25em) {
+  .page-node-type-article article .media__wrapper {
+    padding: 1rem 0;
+  }
 }
 
 .path-user .layout {
@@ -1246,15 +1255,15 @@ header.headroom--unpinned {
 }
 
 h3 {
-  border-bottom: 1px solid #5868f9;
+  border-bottom: 1px solid #999999;
   margin: 1rem;
   padding-bottom: 0.2rem;
   font-family: "Life LT Std Roman";
   font-size: 1.2rem;
   text-transform: normal;
-  color: #01041e;
+  color: #000;
   line-height: 1;
-  color: #081ee3;
+  color: #666666;
 }
 
 .path-issues .toc .c-item,
@@ -1276,7 +1285,7 @@ h3 {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #01041e;
+  color: #000;
   line-height: 1;
   padding-top: 1rem;
 }
@@ -1291,7 +1300,7 @@ h3 {
   font-family: "Life LT Std Roman";
   font-size: calc(1.285rem + 0.42vw);
   text-transform: uppercase;
-  color: #01041e;
+  color: #000;
   line-height: 1;
   padding: 0.5rem 1rem 2rem 1rem;
 }
@@ -1313,7 +1322,7 @@ h3 {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #01041e;
+  color: #000;
   line-height: 1;
   padding-top: 1rem;
 }
@@ -1334,7 +1343,7 @@ h3 {
   font-family: "Univers LT Std";
   font-size: 1.2rem;
   text-transform: normal;
-  color: #01041e;
+  color: #000;
   line-height: 1;
   margin-top: auto;
   margin-bottom: 2rem;
@@ -1350,7 +1359,7 @@ h3 {
   font-family: "Life LT Std Roman";
   font-size: calc(1.285rem + 0.42vw);
   text-transform: static;
-  color: #01041e;
+  color: #000;
   line-height: 1;
   padding-bottom: 1.4rem;
 }
@@ -1388,9 +1397,9 @@ h3 {
   font-family: "Life LT Std Roman";
   font-size: calc(1.425rem + 2.1vw);
   text-transform: uppercase;
-  color: #01041e;
+  color: #000;
   line-height: 1;
-  border-top: 1px solid #01041e;
+  border-top: 1px solid #000;
   padding: 0.7rem 1rem 0rem 1rem;
   line-height: 1;
 }
@@ -1409,7 +1418,7 @@ h3 {
   font-family: "Univers LT Std";
   font-size: calc(1.285rem + 0.42vw);
   text-transform: normal;
-  color: #01041e;
+  color: #000;
   line-height: 1;
   margin: 2rem 0;
   padding: 0 1rem;
@@ -1422,15 +1431,15 @@ h3 {
 }
 
 .path-issues h3 {
-  border-bottom: 1px solid #5868f9;
+  border-bottom: 1px solid #999999;
   margin: 1rem;
   padding-bottom: 0.2rem;
   font-family: "Life LT Std Roman";
   font-size: 1.2rem;
   text-transform: normal;
-  color: #01041e;
+  color: #000;
   line-height: 1;
-  color: #081ee3;
+  color: #666666;
 }
 
 .slick__slide .slide__content {
@@ -1463,6 +1472,15 @@ h3 {
   font-style: italic;
 }
 
+.page-node-type-article blockquote {
+  padding: 0 3rem;
+  font-family: "Life LT Std Italic";
+}
+
+.page-node-type-article blockquote em {
+  font-family: "Life LT Std Roman";
+}
+
 .page-node-type-article .interview .field-body p,
 .page-node-type-article .page-section .field-body p {
   padding: 0.5rem 0;
@@ -1473,7 +1491,7 @@ h3 {
   font-family: "Life LT Std Roman";
   font-size: 1.2rem;
   text-transform: normal;
-  color: #01041e;
+  color: #000;
   line-height: 1;
   line-height: 1.1;
   margin-bottom: 1rem;
@@ -1490,7 +1508,7 @@ h3 {
   font-family: "Univers LT Std";
   font-size: 1rem;
   text-transform: uppercase;
-  color: #01041e;
+  color: #000;
   line-height: 1;
   margin-bottom: 2rem;
   line-height: 1.4;
@@ -1511,7 +1529,7 @@ h3 {
   left: 0;
   bottom: 0;
   width: 100%;
-  border-bottom: 1px solid #01041e;
+  border-bottom: 1px solid #000;
   content: "";
 }
 
@@ -1524,7 +1542,7 @@ h3 {
 }
 
 .page-node-type-article .interview .field-body {
-  border-top: 1px solid #01041e;
+  border-top: 1px solid #000;
   padding-top: 1rem;
 }
 
@@ -1536,7 +1554,7 @@ h3 {
   font-family: "Univers LT Std";
   font-size: 1rem;
   text-transform: uppercase;
-  color: #01041e;
+  color: #000;
   line-height: 1;
   padding-right: 1rem;
 }
@@ -1545,9 +1563,9 @@ h1.c-title__title {
   font-family: "Life LT Std Roman";
   font-size: calc(1.425rem + 2.1vw);
   text-transform: uppercase;
-  color: #01041e;
+  color: #000;
   line-height: 1;
-  border-top: 1px solid #01041e;
+  border-top: 1px solid #000;
   padding: 0.7rem 1rem 0rem 1rem;
   text-align: center;
   line-height: 1;
@@ -1567,7 +1585,7 @@ h1.c-title__title em {
   font-family: "Univers LT Std";
   font-size: calc(1.285rem + 0.42vw);
   text-transform: normal;
-  color: #01041e;
+  color: #000;
   line-height: 1;
   margin: 2rem 0;
   padding: 0 1rem;
@@ -1584,10 +1602,10 @@ h1.c-title__title em {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #01041e;
+  color: #000;
   line-height: 1;
   padding-bottom: 0.5rem;
-  color: #5868f9;
+  color: #999999;
 }
 
 .region__content-first .social h2 em {
@@ -1595,25 +1613,35 @@ h1.c-title__title em {
 }
 
 .field-media-image-caption {
-  padding: 0 0 1rem 0;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 480px;
   text-align: justify;
 }
 
 .field-media-image-caption em {
-  font-style: italic;
+  font-family: "Univers LT Std Oblique";
 }
 
-.endnotes sup {
+.endnotes p {
+  padding-top: 1rem;
+}
+
+.endnotes p:first-child {
+  padding-top: 0;
+}
+
+.endnotes p span {
   padding-right: 3rem;
 }
 
 .endnotes .field__item p {
-  margin-top: 1rem;
   font-family: "Life LT Std Roman";
   font-size: 1rem;
   text-transform: normal;
-  color: #01041e;
+  color: #000;
   line-height: 1;
+  line-height: 1.2;
 }
 
 .endnotes .field__item p em {

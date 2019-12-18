@@ -91,7 +91,10 @@ $font-display: 2.4rem;
 
 @mixin media-layout {
   max-width: $desktop;
-  margin: 0 auto;
+  margin: 1rem auto;
+  @include mq($from: desktop) {
+    padding: 1rem 0;
+  }
 }
 
 $indent: 3rem;
