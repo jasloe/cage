@@ -127,7 +127,7 @@ h3 {
   .page-section .field-section-title {
     max-width: $tablet;
     margin: 0 auto;
-    @include type($univers, 1rem, uppercase, $black);
+    @include type($univers, 1rem, uppercase);
     margin-bottom: 2rem;
     line-height: 1.4;
     em {
@@ -166,7 +166,7 @@ h3 {
   }
 
   .interview .field-body span {
-    @include type($univers, 1rem, uppercase, $black);
+    @include type($univers, 1rem, uppercase);
     padding-right: 1rem;
   }
 }

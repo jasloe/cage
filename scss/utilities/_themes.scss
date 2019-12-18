@@ -1,279 +1,36 @@
-/* issue toc theme
-remove white background from default */
-// body.toc {
-//   header,
-//   .breadcrumb.headroom--unpinned {
-//     background: none;
-//     border-bottom: 1px solid $black;
-//   }
-//   .breadcrumb.headroom--pinned {
-//     background: none;
-//     transition: all 0.3s ease;
-//   }
-// }
-
-// issue theme mixins
-$light: $white;
-
-@mixin toc($name, $primary, $secondary) {
+// article theme mixins, from the editor
+@mixin article($name, $primary) {
   .#{$name} {
-    main {
-      background: $primary;
+    // color
+    .region__page-title,
+    .region__content-wrapper {
+      color: $primary;
+    }
+    // borders
+    h1.c-title__title,
+    .region__content .endnotes .field-body {
+      border-top-color: $primary;
     }
 
-    main {
-      color: rgba($secondary, 0.9);
-      -webkit-font-smoothing: antialiased !important;
+    // icons
+    .social-media-sharing .share {
+      color: $primary;
     }
 
-    header {
-      background: none !important;
-      border-bottom: 1px solid rgba($secondary, 0.9) !important;
-      -webkit-font-smoothing: antialiased !important;
-    }
-
-    .hamburger-inner {
-      &,
-      &::before,
-      &::after {
-        background-color: $secondary;
-      }
-    }
-
-    .breadcrumb ol {
-      display: flex;
-      align-items: top;
-
-      li {
-        &::before {
-          background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='5' height='5'><circle cx='2.5' cy='2.5' r='2.5' fill='white'/></svg>")
-            no-repeat;
-          opacity: 0.9;
-        }
-      }
-    }
-
-    .breadcrumb.headroom--unpinned {
-      background: $primary !important;
-      border-bottom: 1px solid rgba($secondary, 0.7) !important;
-      transition: all 0.3s ease;
-    }
-
-    .article__title {
-      border-top: 1px solid rgba($secondary, 0.7);
-    }
-
-    // issue title/frontis
-    .issue__frontis {
-      color: rgba($secondary, 0.9);
-    }
-
-    // issue link states
-    .article__content:hover {
-      .article__formatted-title {
-      }
-    }
-
-    // "duotone" images
+    // images
     .media--image {
       background: $primary;
+      line-height: 0;
     }
 
     .media--image img {
       filter: grayscale(100%) contrast(1) blur(0);
-      height: 100%;
-      max-width: 100%;
-      mix-blend-mode: multiply;
-      object-fit: cover;
-      position: relative;
-      width: 100%;
-    }
-
-    // issue global links
-    .site-name,
-    main {
-      a {
-        color: rgba($secondary, 0.9);
-      }
-    }
-
-    .block-main-menu,
-    .subscribe,
-    ol li {
-      a {
-        color: rgba($secondary, 0.9);
-        transition: all 0.2s ease;
-      }
-      a:hover {
-        box-shadow: 0 1px 0 $secondary;
-        transition: all 0.2s ease;
-      }
-    }
-
-    // issue toc links
-    .article__link h2 {
-      box-shadow: none;
-      transition: all 0.2s ease;
-      padding-bottom: 0;
-      display: inline;
-    }
-    .article__link:hover h2 {
-      box-shadow: 0 1px 0 $secondary;
-      transition: all 0.2s ease;
-    }
-  }
-}
-
-@include toc(hyla-toc, $hyla, $light);
-@include toc(change-toc, $change, $light);
-
-// article theme mixins, from the editor
-@mixin article($name, $primary, $secondary) {
-  .#{$name} {
-    .region__header a,
-    .region__breadcrumb,
-    .breadcrumb li a,
-    .region__page-title h1,
-    .region__page-title h2,
-    .region__page-title .author,
-    .region__content p,
-    .interview p span,
-    .endnotes .field__item p {
-      color: $primary;
-    }
-
-    header {
-      border-bottom-color: $primary;
-    }
-
-    .article-title h1,
-    .interview .field-body,
-    .endnotes {
-      border-top-color: $primary;
-    }
-
-    .media--image,
-    .progress {
-      background: $primary;
-    }
-
-    .media--image img,
-    .field-article-gallery img {
-      filter: grayscale(100%) contrast(1) blur(0);
-      height: 100%;
       max-width: 100%;
       mix-blend-mode: screen;
-      object-fit: cover;
-      position: relative;
-    }
-
-    .about_author {
-      background: $primary;
-    }
-
-    .about_author .field__item {
-      color: $secondary;
-    }
-
-    // links (about the author)
-    .about_author a {
-      @include transition(all 0.33s ease);
-      color: $secondary;
-      &:link,
-      &:visited {
-        box-shadow: 0 1px 0 $secondary;
-      }
-
-      &:hover,
-      &:active,
-      &:focus {
-        color: darken($primary, 25);
-        box-shadow: 0 1px 0 darken($primary, 25);
-      }
-    }
-
-    .about_author .field-person-url a {
-      &:link,
-      &:active {
-        box-shadow: none;
-      }
-      &:hover,
-      &:active,
-      &:focus {
-        color: darken($primary, 25);
-        box-shadow: 0 1px 0 darken($primary, 25);
-      }
     }
   }
 }
 
-// editor theme switch
-@mixin editor($name, $primary, $secondary) {
-  .#{$name} {
-    .layout-container,
-    .headroom {
-      background: $primary !important;
-    }
-
-    .article-title {
-      h1,
-      h2,
-      .author {
-        color: $secondary;
-      }
-    }
-
-    .page-section p {
-      font-family: $univers;
-      color: $secondary;
-    }
-  }
-}
-
-// @include article(alien-article, $alien);
-@include article(hyla-article, $hyla, $light);
-// @include article(hyla-article, $hyla);
-// @include article(just-intonation-article, $just-intonation);
-// @include article(place-article, $place);
-// @include article(big-band-article, $big-band);
-// @include article(mumei-article, $mumei);
-// @include article(braxton-article, $braxton);
-@include article(propaganda-article, $propaganda, $light);
-// @include article(listeners-article, $listeners);
-// @include article(treatise-article, $treatise);
-// @include article(ritual-article, $ritual);
-@include article(wolff-article, $wolff, $light);
-// @include article(monophony-article, $monophony);
-// @include article(what-is-jazz-article, $what-is-jazz);
-@include article(deep-listening-article, $deep-listening, $light);
-// @include article(maker-article, $maker);
-// @include article(philadelphia-article, $philadelphia);
-// @include article(what-is-american-article, $what-is-american);
-// @include article(cage-article, $cage);
-// @include article(networking-article, $networking);
-// @include article(gospel-article, $gospel);
-
-// @include editor(gospel-editor, $gospel, $light);
-
-// $alien
-// $hyla
-// $change
-// $just-intonation
-// $place
-// $big-band
-// $mumei
-// $braxton
-// $propaganda
-// $listeners
-// $treatise
-// $ritual
-// $wolff
-// $monophony
-// $what-is-jazz
-// $deep-listening
-// $maker
-// $philadelphia
-// $what-is-american
-// $cage
-// $networking
-// $gospel
+@include article(hyla-article, $hyla);
+@include article(change-article, $change);
+@include article(wolff-article, $wolff);

@@ -74,7 +74,7 @@ main {
     .region__content .endnotes .field-body {
       max-width: $tablet;
       margin: 1rem auto;
-      border-top: 1px solid $black;
+      border-top: 1px solid;
       padding-top: 1rem;
     }
   }

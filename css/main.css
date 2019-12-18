@@ -321,6 +321,84 @@ body:before {
   font-style: normal;
 }
 
+.hyla-article .region__page-title,
+.hyla-article .region__content-wrapper {
+  color: #664d94;
+}
+
+.hyla-article h1.c-title__title,
+.hyla-article .region__content .endnotes .field-body {
+  border-top-color: #664d94;
+}
+
+.hyla-article .social-media-sharing .share {
+  color: #664d94;
+}
+
+.hyla-article .media--image {
+  background: #664d94;
+  line-height: 0;
+}
+
+.hyla-article .media--image img {
+  -webkit-filter: grayscale(100%) contrast(1) blur(0);
+          filter: grayscale(100%) contrast(1) blur(0);
+  max-width: 100%;
+  mix-blend-mode: screen;
+}
+
+.change-article .region__page-title,
+.change-article .region__content-wrapper {
+  color: #002e6f;
+}
+
+.change-article h1.c-title__title,
+.change-article .region__content .endnotes .field-body {
+  border-top-color: #002e6f;
+}
+
+.change-article .social-media-sharing .share {
+  color: #002e6f;
+}
+
+.change-article .media--image {
+  background: #002e6f;
+  line-height: 0;
+}
+
+.change-article .media--image img {
+  -webkit-filter: grayscale(100%) contrast(1) blur(0);
+          filter: grayscale(100%) contrast(1) blur(0);
+  max-width: 100%;
+  mix-blend-mode: screen;
+}
+
+.wolff-article .region__page-title,
+.wolff-article .region__content-wrapper {
+  color: #f26b01;
+}
+
+.wolff-article h1.c-title__title,
+.wolff-article .region__content .endnotes .field-body {
+  border-top-color: #f26b01;
+}
+
+.wolff-article .social-media-sharing .share {
+  color: #f26b01;
+}
+
+.wolff-article .media--image {
+  background: #f26b01;
+  line-height: 0;
+}
+
+.wolff-article .media--image img {
+  -webkit-filter: grayscale(100%) contrast(1) blur(0);
+          filter: grayscale(100%) contrast(1) blur(0);
+  max-width: 100%;
+  mix-blend-mode: screen;
+}
+
 header {
   opacity: 1;
 }
@@ -419,7 +497,7 @@ main {
 .page-node-type-article .region__content-wrapper .region__content .endnotes .field-body {
   max-width: 740px;
   margin: 1rem auto;
-  border-top: 1px solid #000;
+  border-top: 1px solid;
   padding-top: 1rem;
 }
 
@@ -590,7 +668,6 @@ footer {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #000;
   line-height: 1;
   padding-bottom: 0.5rem;
   color: #dcf5f9;
@@ -1219,7 +1296,7 @@ header.headroom--unpinned {
 
 .page-node-type-article article .media__wrapper {
   max-width: 980px;
-  margin: 1rem auto;
+  margin: 0 auto;
 }
 
 @media (min-width: 61.25em) {
@@ -1261,7 +1338,6 @@ h3 {
   font-family: "Life LT Std Roman";
   font-size: 1.2rem;
   text-transform: normal;
-  color: #000;
   line-height: 1;
   color: #666666;
 }
@@ -1285,7 +1361,6 @@ h3 {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #000;
   line-height: 1;
   padding-top: 1rem;
 }
@@ -1300,7 +1375,6 @@ h3 {
   font-family: "Life LT Std Roman";
   font-size: calc(1.285rem + 0.42vw);
   text-transform: uppercase;
-  color: #000;
   line-height: 1;
   padding: 0.5rem 1rem 2rem 1rem;
 }
@@ -1322,7 +1396,6 @@ h3 {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #000;
   line-height: 1;
   padding-top: 1rem;
 }
@@ -1343,7 +1416,6 @@ h3 {
   font-family: "Univers LT Std";
   font-size: 1.2rem;
   text-transform: normal;
-  color: #000;
   line-height: 1;
   margin-top: auto;
   margin-bottom: 2rem;
@@ -1359,7 +1431,6 @@ h3 {
   font-family: "Life LT Std Roman";
   font-size: calc(1.285rem + 0.42vw);
   text-transform: static;
-  color: #000;
   line-height: 1;
   padding-bottom: 1.4rem;
 }
@@ -1397,7 +1468,6 @@ h3 {
   font-family: "Life LT Std Roman";
   font-size: calc(1.425rem + 2.1vw);
   text-transform: uppercase;
-  color: #000;
   line-height: 1;
   border-top: 1px solid #000;
   padding: 0.7rem 1rem 0rem 1rem;
@@ -1418,7 +1488,6 @@ h3 {
   font-family: "Univers LT Std";
   font-size: calc(1.285rem + 0.42vw);
   text-transform: normal;
-  color: #000;
   line-height: 1;
   margin: 2rem 0;
   padding: 0 1rem;
@@ -1437,7 +1506,6 @@ h3 {
   font-family: "Life LT Std Roman";
   font-size: 1.2rem;
   text-transform: normal;
-  color: #000;
   line-height: 1;
   color: #666666;
 }
@@ -1491,7 +1559,6 @@ h3 {
   font-family: "Life LT Std Roman";
   font-size: 1.2rem;
   text-transform: normal;
-  color: #000;
   line-height: 1;
   line-height: 1.1;
   margin-bottom: 1rem;
@@ -1508,7 +1575,6 @@ h3 {
   font-family: "Univers LT Std";
   font-size: 1rem;
   text-transform: uppercase;
-  color: #000;
   line-height: 1;
   margin-bottom: 2rem;
   line-height: 1.4;
@@ -1554,7 +1620,6 @@ h3 {
   font-family: "Univers LT Std";
   font-size: 1rem;
   text-transform: uppercase;
-  color: #000;
   line-height: 1;
   padding-right: 1rem;
 }
@@ -1563,9 +1628,8 @@ h1.c-title__title {
   font-family: "Life LT Std Roman";
   font-size: calc(1.425rem + 2.1vw);
   text-transform: uppercase;
-  color: #000;
   line-height: 1;
-  border-top: 1px solid #000;
+  border-top: 1px solid;
   padding: 0.7rem 1rem 0rem 1rem;
   text-align: center;
   line-height: 1;
@@ -1585,7 +1649,6 @@ h1.c-title__title em {
   font-family: "Univers LT Std";
   font-size: calc(1.285rem + 0.42vw);
   text-transform: normal;
-  color: #000;
   line-height: 1;
   margin: 2rem 0;
   padding: 0 1rem;
@@ -1602,10 +1665,8 @@ h1.c-title__title em {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
-  color: #000;
   line-height: 1;
   padding-bottom: 0.5rem;
-  color: #999999;
 }
 
 .region__content-first .social h2 em {
@@ -1614,7 +1675,7 @@ h1.c-title__title em {
 
 .field-media-image-caption {
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 1rem 0;
   max-width: 480px;
   text-align: justify;
 }
@@ -1639,7 +1700,6 @@ h1.c-title__title em {
   font-family: "Life LT Std Roman";
   font-size: 1rem;
   text-transform: normal;
-  color: #000;
   line-height: 1;
   line-height: 1.2;
 }

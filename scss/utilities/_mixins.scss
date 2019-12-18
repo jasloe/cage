@@ -18,11 +18,10 @@ $font-display: 2.4rem;
   max-width: $max-vw;
 }
 
-@mixin type($font-family, $size, $text-transform, $color: $black) {
+@mixin type($font-family, $size, $text-transform) {
   font-family: $font-family;
   @include font-size($size);
   text-transform: $text-transform;
-  color: $color;
   line-height: 1;
 }
 
@@ -91,7 +90,7 @@ $font-display: 2.4rem;
 
 @mixin media-layout {
   max-width: $desktop;
-  margin: 1rem auto;
+  margin: 0 auto;
   @include mq($from: desktop) {
     padding: 1rem 0;
   }
