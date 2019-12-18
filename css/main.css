@@ -1305,30 +1305,37 @@ header.headroom--unpinned {
   }
 }
 
-.path-user .layout {
-  max-width: 740px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  margin: 0 auto;
+html,
+body {
+  height: 100%;
 }
 
-.path-user main {
-  margin-top: 4rem;
-  font-family: "Univers LT Std";
+.layout {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
-.path-user .js-form-submit {
-  border: 1px solid black;
+main {
+  min-height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
-.user-logged-in header.headroom {
-  position: static;
-}
-
-.user-logged-in .region__content {
-  max-width: 740px;
-  margin: 0 auto;
-  padding: 0 1rem;
+header,
+footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
 }
 
 h3 {
