@@ -399,6 +399,95 @@ body:before {
   mix-blend-mode: screen;
 }
 
+.in-this-issue {
+  background: #664d94;
+}
+
+.in-this-issue h3,
+.in-this-issue .slide__description,
+.in-this-issue .slide__description a {
+  color: white;
+}
+
+.in-this-issue h3 {
+  border-bottom-color: white;
+}
+
+.in-this-issue .media--image {
+  background: #664d94;
+  line-height: 0;
+}
+
+.in-this-issue .media--image img {
+  -webkit-filter: grayscale(100%) contrast(1) blur(0);
+          filter: grayscale(100%) contrast(1) blur(0);
+  max-width: 100%;
+  mix-blend-mode: luminosity;
+}
+
+.topic-first .c-item {
+  border: 1px solid #bf5501;
+}
+
+.topic-first .c-item {
+  background: #f26b01;
+}
+
+.topic-first .c-item__issue-title a,
+.topic-first .c-item__title a,
+.topic-first .c-item__author {
+  color: white;
+}
+
+.topic-first .media--image {
+  background: #f26b01;
+  line-height: 0;
+}
+
+.topic-first .media--image img {
+  -webkit-filter: grayscale(10%) contrast(1) blur(1);
+          filter: grayscale(10%) contrast(1) blur(1);
+  max-width: 100%;
+  mix-blend-mode: screen;
+}
+
+.path-issues {
+  background: #664d94;
+}
+
+.path-issues h3,
+.path-issues .editor .page-section,
+.path-issues .c-item__tag,
+.path-issues .c-title__author {
+  color: white;
+}
+
+.path-issues a {
+  color: white;
+}
+
+.path-issues .c-item {
+  background: #775baa;
+}
+
+.path-issues .c-item__issue-title a,
+.path-issues .c-item__title a,
+.path-issues .c-item__author {
+  color: white;
+}
+
+.path-issues .media--image {
+  background: #664d94;
+  line-height: 0;
+}
+
+.path-issues .media--image img {
+  -webkit-filter: grayscale(10%) contrast(1) blur(1);
+          filter: grayscale(10%) contrast(1) blur(1);
+  max-width: 100%;
+  mix-blend-mode: screen;
+}
+
 header {
   opacity: 1;
 }
@@ -457,6 +546,10 @@ main {
   max-width: 1300px;
 }
 
+.home .region__content-post .articles {
+  padding: 3rem 0;
+}
+
 .page-node-type-article .region__page-title {
   margin: 3rem auto 0;
   max-width: 740px;
@@ -503,6 +596,8 @@ main {
 
 @media (min-width: 61.25em) {
   .path-issues .toc {
+    max-width: 1300px;
+    margin: 0 auto;
     padding: 0 1rem;
   }
   .path-issues .toc .c-flex {
@@ -515,23 +610,25 @@ main {
             flex-direction: row;
     -ms-flex-flow: row wrap;
         flex-flow: row wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .path-issues .toc .c-flex .c-item {
     -ms-flex-preferred-size: calc(33% - 1rem);
         flex-basis: calc(33% - 1rem);
     position: relative;
   }
-}
-
-.page-node-type-article .region__content-post {
-  background: lightblue;
-}
-
-.region__content-post {
-  background: #f9f9f2;
+  .path-issues .toc .c-flex::after {
+    content: "";
+    -webkit-box-flex: 1;
+        -ms-flex: auto;
+            flex: auto;
+    -ms-flex-preferred-size: calc(33% - 1rem);
+        flex-basis: calc(33% - 1rem);
+  }
 }
 
 .page-node-type-article .region__content-post .authors {
@@ -578,6 +675,10 @@ main {
   }
   .path-frontpage .articles {
     padding: 0 0 5rem 0;
+  }
+  .in-this-issue__wrapper {
+    margin: 0 auto;
+    max-width: 740px;
   }
 }
 
@@ -1339,14 +1440,45 @@ footer {
 }
 
 h3 {
-  border-bottom: 1px solid #999999;
-  margin: 1rem;
+  border-bottom: 1px solid;
+  margin: 1rem 0;
   padding-bottom: 0.2rem;
-  font-family: "Life LT Std Roman";
-  font-size: 1.2rem;
+  font-family: "Univers LT Std";
+  font-size: 0.8rem;
   text-transform: normal;
   line-height: 1;
-  color: #666666;
+  text-transform: uppercase;
+}
+
+@media (min-width: 81.25em) {
+  h3 {
+    padding-left: 0;
+    margin: 1rem 0;
+  }
+}
+
+.in-this-issue h3 {
+  border-bottom: 1px solid;
+  margin: 1rem;
+  padding-bottom: 0.2rem;
+  font-family: "Univers LT Std";
+  font-size: calc(1.285rem + 0.42vw);
+  text-transform: normal;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+  .in-this-issue h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 81.25em) {
+  .in-this-issue h3 {
+    padding-left: 0;
+    margin: 1rem 0;
+  }
 }
 
 .path-issues .toc .c-item,
@@ -1358,9 +1490,12 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: white;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 
 .path-issues .toc .c-item__tag,
@@ -1369,7 +1504,7 @@ h3 {
   font-size: 0.8rem;
   text-transform: uppercase;
   line-height: 1;
-  padding-top: 1rem;
+  padding-top: 3rem;
 }
 
 .path-issues .toc .c-item__tag em,
@@ -1383,7 +1518,7 @@ h3 {
   font-size: calc(1.285rem + 0.42vw);
   text-transform: uppercase;
   line-height: 1;
-  padding: 0.5rem 1rem 2rem 1rem;
+  padding: 0.5rem 2rem 3rem 2rem;
 }
 
 @media (min-width: 1200px) {
@@ -1425,12 +1560,81 @@ h3 {
   text-transform: normal;
   line-height: 1;
   margin-top: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .path-issues .toc .c-item__author em,
 .path-frontpage .region__content-post .articles .c-item__author em {
   font-family: "Univers LT Std Oblique";
+}
+
+.path-frontpage .in-this-issue .slide__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2rem;
+}
+
+.path-frontpage .in-this-issue .slide__caption {
+  width: 50%;
+  text-align: center;
+}
+
+.path-frontpage .in-this-issue .slide__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.path-frontpage .in-this-issue .c-item__title {
+  font-family: "Univers LT Std";
+  font-size: calc(1.285rem + 0.42vw);
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+@media (min-width: 1200px) {
+  .path-frontpage .in-this-issue .c-item__title {
+    font-size: 1.6rem;
+  }
+}
+
+.path-frontpage .in-this-issue .c-item__title em {
+  font-family: "Univers LT Std Oblique";
+}
+
+.path-frontpage .in-this-issue .c-item__author {
+  font-family: "Life LT Std Roman";
+  font-size: 1.2rem;
+  text-transform: normal;
+  line-height: 1;
+  margin-top: auto;
+  margin-bottom: 2rem;
+}
+
+.path-frontpage .in-this-issue .c-item__author em {
+  font-family: "Life LT Std Italic";
 }
 
 .region__page-title .c-title .c-title__tag,
@@ -1506,15 +1710,49 @@ h3 {
   }
 }
 
-.path-issues h3 {
-  border-bottom: 1px solid #999999;
-  margin: 1rem;
-  padding-bottom: 0.2rem;
-  font-family: "Life LT Std Roman";
+.path-issues .editor .page-section {
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Univers LT Std";
   font-size: 1.2rem;
   text-transform: normal;
   line-height: 1;
-  color: #666666;
+}
+
+.path-issues .editor .page-section em {
+  font-style: italic;
+}
+
+.path-issues .editor .page-section .field-body p {
+  text-indent: 3rem;
+}
+
+.path-issues .editor .page-section .field-body p:first-child {
+  text-indent: 0;
+}
+
+.path-issues .editor .c-title__tag {
+  padding-top: 1rem;
+}
+
+.path-issues h3 {
+  border-bottom: 1px solid;
+  margin: 1rem 0;
+  padding-bottom: 0.2rem;
+  font-family: "Univers LT Std";
+  font-size: 0.8rem;
+  text-transform: normal;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@media (min-width: 81.25em) {
+  .path-issues h3 {
+    padding-left: 0;
+    margin: 1rem 0;
+  }
 }
 
 .slick__slide .slide__content {

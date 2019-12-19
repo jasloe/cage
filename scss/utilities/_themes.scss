@@ -34,3 +34,107 @@
 @include article(hyla-article, $hyla);
 @include article(change-article, $change);
 @include article(wolff-article, $wolff);
+
+// article theme mixins, from the editor
+@mixin in-this-issue($name, $primary, $secondary) {
+  .#{$name} {
+    background: $primary;
+
+    // color
+    h3,
+    .slide__description,
+    .slide__description a {
+      color: $secondary;
+    }
+    // borders
+    h3 {
+      border-bottom-color: $secondary;
+    }
+
+    // images
+    .media--image {
+      background: $primary;
+      line-height: 0;
+    }
+
+    .media--image img {
+      filter: grayscale(100%) contrast(1) blur(0);
+      max-width: 100%;
+      mix-blend-mode: luminosity;
+    }
+  }
+}
+
+@include in-this-issue(in-this-issue, $hyla, $white);
+
+@mixin topics($name, $primary, $secondary) {
+  .#{$name} {
+    // images
+    .c-item {
+      border: 1px solid darken($primary, 10%);
+    }
+
+    .c-item {
+      background: $primary;
+    }
+
+    .c-item__issue-title a,
+    .c-item__title a,
+    .c-item__author {
+      color: $secondary;
+    }
+
+    .media--image {
+      background: $primary;
+      line-height: 0;
+    }
+
+    .media--image img {
+      filter: grayscale(10%) contrast(1) blur(1);
+      max-width: 100%;
+      mix-blend-mode: screen;
+    }
+  }
+}
+
+@include topics(topic-first, $wolff, $white);
+
+@mixin toc($name, $primary, $secondary) {
+  .#{$name} {
+    background: $primary;
+    h3,
+    .editor .page-section,
+    .c-item__tag,
+    .c-title__author {
+      color: $secondary;
+    }
+
+    a {
+      color: $secondary;
+    }
+
+    // images
+    .c-item {
+      background: lighten($primary, 7%);
+    }
+
+    .c-item__issue-title a,
+    .c-item__title a,
+    .c-item__author {
+      color: $secondary;
+    }
+
+    .media--image {
+      background: $primary;
+      line-height: 0;
+    }
+
+    .media--image img {
+      filter: grayscale(10%) contrast(1) blur(1);
+      max-width: 100%;
+      mix-blend-mode: screen;
+    }
+  }
+}
+
+@include toc(path-issues, $hyla, $white);

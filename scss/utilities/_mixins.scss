@@ -32,10 +32,24 @@ $font-display: 2.4rem;
   }
 }
 
+@mixin title-sm-serif {
+  @include type($life, $font-md, normal);
+  em {
+    font-family: $life-italic;
+  }
+}
+
 @mixin title-md {
   @include type($life, $font-lg, uppercase);
   em {
     font-family: $life-italic;
+  }
+}
+
+@mixin title-md-sans {
+  @include type($univers, $font-lg, uppercase);
+  em {
+    font-family: $univers-italic;
   }
 }
 
@@ -55,16 +69,35 @@ $font-display: 2.4rem;
 }
 
 @mixin topic-header {
-  @include type($life, $font-md, normal);
-  color: $dark-gray;
+  @include type($univers, $font-sm, normal);
+  text-transform: uppercase;
+}
+
+@mixin topic-header-sans {
+  @include type($univers, $font-lg, normal);
+  text-transform: uppercase;
 }
 
 @mixin topic-ornament {
-  border-bottom: 1px solid $medium-gray;
-
-  margin: 1rem;
+  border-bottom: 1px solid;
+  margin: 1rem 0;
   padding-bottom: 0.2rem;
   @include topic-header;
+  @include mq($from: wide) {
+    padding-left: 0;
+    margin: 1rem 0;
+  }
+}
+
+@mixin topic-ornament-sans {
+  border-bottom: 1px solid;
+  margin: 1rem;
+  padding-bottom: 0.2rem;
+  @include topic-header-sans;
+  @include mq($from: wide) {
+    padding-left: 0;
+    margin: 1rem 0;
+  }
 }
 
 @mixin caption {

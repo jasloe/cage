@@ -40,6 +40,13 @@ main {
   @include global-margin;
 }
 
+.home .region__content-post .articles {
+  padding: 3rem 0;
+  // @include mq($from: desktop) {
+  //   padding: 0 1rem;
+  // }
+}
+
 // articles
 .page-node-type-article {
   // title region
@@ -83,27 +90,34 @@ main {
 // issues toc
 @include mq($from: desktop) {
   .path-issues .toc {
+    max-width: $wide;
+    margin: 0 auto;
     padding: 0 1rem;
     .c-flex {
       display: flex;
       flex-direction: row;
       flex-flow: row wrap;
-      justify-content: space-between;
+      justify-content: space-around;
+      align-items: flex-start;
       .c-item {
-        flex-basis: calc(33% - 1rem);
+        flex-basis: calc(33% - 1rem;
         position: relative;
       }
+    }
+    .c-flex::after {
+      content: "";
+      flex: auto;
+      flex-basis: calc(33% - 1rem);
     }
   }
 }
 
 // post content region, article
+
 .page-node-type-article .region__content-post {
-  background: lightblue;
 }
 
 .region__content-post {
-  background: #f9f9f2;
 }
 
 .page-node-type-article .region__content-post .authors {
@@ -137,6 +151,10 @@ main {
   }
   .path-frontpage .articles {
     padding: 0 0 5rem 0;
+  }
+  .in-this-issue__wrapper {
+    margin: 0 auto;
+    max-width: $tablet;
   }
 }
 
