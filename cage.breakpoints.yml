@@ -11,16 +11,32 @@
 
 cage.mobile:
   label: mobile
-  mediaQuery: 'all and (max-width: 480px)'
-  weight: 2
+  mediaQuery: "all and (max-width: 480px)"
+  weight: 1
   multipliers:
     - 1x
     - 2x
 
 cage.tablet:
   label: tablet
-  mediaQuery: 'all and (min-width: 481px) and (max-width: 980px)'
-  weight: 1
+  mediaQuery: "all and (min-width: 481px) and (max-width: 980px)"
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+
+cage.desktop:
+  label: desktop
+  mediaQuery: "all and (min-width: 981px) and (max-width: 1300px)"
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+
+cage.wide:
+  label: wide
+  mediaQuery: "all and (min-width: 1301px)"
+  weight: 4
   multipliers:
     - 1x
     - 2x

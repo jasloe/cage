@@ -19,13 +19,21 @@
 {% for row in rows %}
 	<div{{row.attributes.addClass(row_classes)}}>
 
-		{{- row.content -}}
 
-		<div class="c-item__title-wrapper">
-			<h2 class="c-item__volume_numner">
-				<span>No.{{row.content['#row']._entity.field_issue_volume_number[0].value}}</span>
-			</h2>
-			<h1 class="c-item__title">{{row.content['#row']._entity.title[0].value}}</h1>
-		</div>
+		{{- row.content -}}
+		<a href="/issues/{{row.content['#row']._entity.field_issue_short_title[0].value}}">
+
+
+			<div class="c-item__title-wrapper">
+				<h2 class="c-item__volume-number">
+					<span>No.{{row.content['#row']._entity.field_issue_volume_number[0].value}}</span>
+				</h2>
+				<h1 class="c-item__title">{{row.content['#row']._entity.title[0].value}}</h1>
+				<div class="c-item__summary">{{row.content['#row']._entity.field_issue_precis[0].value|raw}}</div>
+				<div class="c-item__cta">
+					Read this issue
+				</div>
+			</div>
+		</a>
 	</div>
 {% endfor %}

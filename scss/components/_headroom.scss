@@ -9,9 +9,7 @@ header.headroom {
   left: 0;
   top: 0;
   opacity: 1;
-  background: $black;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  border-bottom: 1px solid $white;
 }
 
 header.headroom {

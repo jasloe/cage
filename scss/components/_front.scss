@@ -1,0 +1,94 @@
+.home main {
+  margin-top: 0;
+}
+
+// center text wrapper
+.home .region__content {
+  text-align: center;
+}
+
+// center text elements
+.front .c-item__title-wrapper {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  transform: translate(0%, -50%);
+  opacity: 0.8;
+
+  .c-item__title,
+  .c-item__volume-number {
+    position: relative;
+    text-align: center;
+    @include title-front;
+    color: $white;
+  }
+  .c-item__volume-number {
+    text-transform: initial;
+    border-bottom: 1px solid $white;
+    padding-bottom: 0.1rem;
+  }
+  .c-item__title {
+    padding-top: 0.5rem;
+  }
+  .c-item__summary {
+    padding: 3rem 0;
+    @include title-sm;
+    color: $white;
+  }
+  .c-item__cta {
+    position: relative;
+    @include title-sc;
+    background: $white;
+    margin-top: 2rem;
+    padding: 1.2rem 1rem 1rem 1rem;
+    width: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+// handling front image
+.front {
+  position: relative;
+  min-height: 100vh;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: initial;
+    width: initial;
+    filter: grayscale(100%) contrast(1) blur(0);
+    mix-blend-mode: multiply;
+    object-fit: cover;
+  }
+}
+
+// scroll snapping
+.home .region__content {
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(300px);
+  scroll-snap-type: y mandatory;
+}
+
+.home .region__content .front {
+  scroll-snap-align: start;
+}
+
+.alien-front {
+  background-color: $alien;
+}
+
+.hyla-front {
+  background-color: $hyla;
+}
+
+.change-front {
+  background-color: $change;
+}
+
+.just-intonation-front {
+  background-color: $just-intonation;
+}

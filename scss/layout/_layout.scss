@@ -1,50 +1,23 @@
+
 // main
 main {
   margin-top: 5em;
 }
 
-.front {
-  position: relative;
-  min-height: 100vh;
-
-  img {
-    filter: grayscale(100%) contrast(1) blur(0);
-    height: 100%;
-    max-width: 100%;
-    mix-blend-mode: multiply;
-    object-fit: cover;
-    position: relative;
-    width: 100%;
-  }
-}
-
-.front .c-item__title-wrapper {
-  text-align: center;
-}
-
-.hyla-front {
-  background-color: $hyla;
-}
-
-.change-front {
-  background-color: $change;
-}
-
-.just-intonation-front {
-  background-color: $just-intonation;
-}
-
 // front
 .path-search .region__wrapper,
-.home .region__content-post .articles {
+.home .region__content-post .articles,
+.home .region__content-post .latest-release {
   @include global-margin;
 }
 
-.home .region__content-post .articles {
+.home .region__content-post .latest-release {
+  display: flex;
+}
+
+.home .region__content-post .articles,
+.home .region__content-post .latest-release {
   padding: 3rem 0;
-  // @include mq($from: desktop) {
-  //   padding: 0 1rem;
-  // }
 }
 
 // articles

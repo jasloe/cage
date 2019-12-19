@@ -507,46 +507,21 @@ main {
   margin-top: 5em;
 }
 
-.front {
-  position: relative;
-  min-height: 100vh;
-}
-
-.front img {
-  -webkit-filter: grayscale(100%) contrast(1) blur(0);
-          filter: grayscale(100%) contrast(1) blur(0);
-  height: 100%;
-  max-width: 100%;
-  mix-blend-mode: multiply;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: relative;
-  width: 100%;
-}
-
-.front .c-item__title-wrapper {
-  text-align: center;
-}
-
-.hyla-front {
-  background-color: #664d94;
-}
-
-.change-front {
-  background-color: #002e6f;
-}
-
-.just-intonation-front {
-  background-color: #8e3161;
-}
-
 .path-search .region__wrapper,
-.home .region__content-post .articles {
+.home .region__content-post .articles,
+.home .region__content-post .latest-release {
   margin: 0 auto;
   max-width: 1300px;
 }
 
-.home .region__content-post .articles {
+.home .region__content-post .latest-release {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home .region__content-post .articles,
+.home .region__content-post .latest-release {
   padding: 3rem 0;
 }
 
@@ -833,6 +808,10 @@ footer {
 a {
   color: #000;
   text-decoration: none;
+}
+
+.site-name {
+  padding-top: 3px;
 }
 
 .site-name a {
@@ -1274,9 +1253,7 @@ header.headroom {
   left: 0;
   top: 0;
   opacity: 1;
-  background: #000;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
+  border-bottom: 1px solid white;
 }
 
 header.headroom {
@@ -1515,17 +1492,10 @@ h3 {
 .path-issues .toc .c-item__title,
 .path-frontpage .region__content-post .articles .c-item__title {
   font-family: "Life LT Std Roman";
-  font-size: calc(1.285rem + 0.42vw);
+  font-size: 1.2rem;
   text-transform: uppercase;
   line-height: 1;
   padding: 0.5rem 2rem 3rem 2rem;
-}
-
-@media (min-width: 1200px) {
-  .path-issues .toc .c-item__title,
-  .path-frontpage .region__content-post .articles .c-item__title {
-    font-size: 1.6rem;
-  }
 }
 
 .path-issues .toc .c-item__title em,
@@ -2034,6 +2004,140 @@ h1.c-title__title em {
 
 .social-media-sharing li {
   margin-right: 0;
+}
+
+.home main {
+  margin-top: 0;
+}
+
+.home .region__content {
+  text-align: center;
+}
+
+.front .c-item__title-wrapper {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+  opacity: 0.8;
+}
+
+.front .c-item__title-wrapper .c-item__title,
+.front .c-item__title-wrapper .c-item__volume-number {
+  position: relative;
+  text-align: center;
+  font-family: "Life LT Std Roman";
+  font-size: calc(1.465rem + 2.58vw);
+  text-transform: static;
+  line-height: 1;
+  text-transform: uppercase;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .front .c-item__title-wrapper .c-item__title,
+  .front .c-item__title-wrapper .c-item__volume-number {
+    font-size: 3.4rem;
+  }
+}
+
+.front .c-item__title-wrapper .c-item__title em,
+.front .c-item__title-wrapper .c-item__volume-number em {
+  font-family: "Life LT Std Italic";
+}
+
+.front .c-item__title-wrapper .c-item__volume-number {
+  text-transform: initial;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.1rem;
+}
+
+.front .c-item__title-wrapper .c-item__title {
+  padding-top: 0.5rem;
+}
+
+.front .c-item__title-wrapper .c-item__summary {
+  padding: 3rem 0;
+  font-family: "Univers LT Std";
+  font-size: 1.2rem;
+  text-transform: normal;
+  line-height: 1;
+  color: white;
+}
+
+.front .c-item__title-wrapper .c-item__summary em {
+  font-family: "Univers LT Std Oblique";
+}
+
+.front .c-item__title-wrapper .c-item__cta {
+  position: relative;
+  font-family: "Univers LT Std";
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  line-height: 1;
+  background: white;
+  margin-top: 2rem;
+  padding: 1.2rem 1rem 1rem 1rem;
+  width: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.front .c-item__title-wrapper .c-item__cta em {
+  font-family: "Univers LT Std Oblique";
+}
+
+.front {
+  position: relative;
+  min-height: 100vh;
+}
+
+.front img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: initial;
+  width: initial;
+  -webkit-filter: grayscale(100%) contrast(1) blur(0);
+          filter: grayscale(100%) contrast(1) blur(0);
+  mix-blend-mode: multiply;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.home .region__content {
+  -ms-scroll-snap-type: mandatory;
+      scroll-snap-type: mandatory;
+  -ms-scroll-snap-points-y: repeat(300px);
+      scroll-snap-points-y: repeat(300px);
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+.home .region__content .front {
+  scroll-snap-align: start;
+}
+
+.alien-front {
+  background-color: #3587a4;
+}
+
+.hyla-front {
+  background-color: #664d94;
+}
+
+.change-front {
+  background-color: #002e6f;
+}
+
+.just-intonation-front {
+  background-color: #8e3161;
 }
 
 .hamburger {

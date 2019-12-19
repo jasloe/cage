@@ -12,6 +12,7 @@ $font-sm: 0.8rem;
 $font-md: 1.2rem;
 $font-lg: 1.6rem;
 $font-display: 2.4rem;
+$font-xl: 3.4rem;
 
 @mixin global-margin {
   margin: 0 auto;
@@ -23,6 +24,10 @@ $font-display: 2.4rem;
   @include font-size($size);
   text-transform: $text-transform;
   line-height: 1;
+}
+
+@mixin body-default($font-family, $size, $text-transform) {
+  @include type($life, $font-md, normal);
 }
 
 @mixin title-sm {
@@ -40,7 +45,7 @@ $font-display: 2.4rem;
 }
 
 @mixin title-md {
-  @include type($life, $font-lg, uppercase);
+  @include type($life, $font-md, uppercase);
   em {
     font-family: $life-italic;
   }
@@ -56,6 +61,14 @@ $font-display: 2.4rem;
 @mixin title-md-normal {
   @include type($life, $font-lg, static);
   padding-bottom: 1.4rem;
+  em {
+    font-family: $life-italic;
+  }
+}
+
+@mixin title-front {
+  @include type($life, $font-xl, static);
+  text-transform: uppercase;
   em {
     font-family: $life-italic;
   }
