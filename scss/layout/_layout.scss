@@ -1,26 +1,11 @@
 // main
 main {
-  margin-top: 5em;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
 }
 
 // front
-.path-search .region__wrapper,
-.home .region__content-post .articles,
-.home .region__content-post .featured-release {
-  @include global-margin;
-}
-
-.home .region__content-post .articles,
-.home .region__content-post .featured-release {
-  padding: 3rem 1rem;
-}
-
-.home .region__content-post .featured-release .flex-container {
-  display: flex;
-}
-
 // front page article teasers
-
 .home .articles .flex-container {
   display: flex;
   flex-direction: column;
@@ -35,15 +20,38 @@ main {
   }
 }
 
-// front page in conversation
-.home .in-conversation {
-  max-width: $wide;
-  margin: 0 auto;
+// front page blocks
+.home .region__content-post {
+  @include global-margin;
   padding: 0 1rem;
+  .block {
+    margin-top: 3rem;
+    &:first-child {
+      margin-top: 0rem;
+    }
+  }
+}
 
+.home .region__content-post .featured-release h3,
+.home .region__content-post .in-conversation h3 {
+  padding: 3rem 3rem 0rem 3rem;
+  border: none;
+}
+
+// front page in conversation
+.home .featured-release {
+  background: #e8dcdd;
+}
+
+.home .in-conversation {
+  background: #dce3e8;
+}
+
+.home .featured-release,
+.home .in-conversation {
   header {
     margin: 0;
-    padding: 1rem 0rem;
+
     p {
       @include justify;
     }
@@ -52,14 +60,13 @@ main {
 
 .home .in-conversation .flex-container {
   display: flex;
-  background: #dce3e8;
-  padding: 3rem;
+  padding: 0rem 2rem 2rem 2rem;
   flex-direction: column;
   @include mq($from: desktop) {
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
-    padding: 2rem;
+    padding: 2rem 2rem 3rem 2rem;
     header,
     .authors {
       flex-basis: 40%;
@@ -67,14 +74,39 @@ main {
   }
 }
 
-.home .in-conversation .authors {
+.home .featured-release .flex-container {
+  padding: 1rem 3rem 3rem 3rem;
+}
+
+.home .featured-release .item a {
+  // display: flex;
+  // align-items: flex-start;
+  // justify-content: center;
+
+  // .release,
+  // .release-cover {
+  //   flex-basis: 50%;
+  // }
+  // .release {
+  //   padding: 2rem;
+  // }
+}
+
+.home .featured-release .item a {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 1rem;
-  @include type($life, 1.2rem, normal);
-  a {
-    line-height: 1.2;
+  align-items: center;
+  @include mq($from: desktop) {
+    flex-direction: row;
+    text-align: initial;
+    .release,
+    .release-cover {
+      flex-basis: 50%;
+    }
+    .release {
+      padding: 2rem;
+    }
   }
 }
 
@@ -171,13 +203,15 @@ main {
 
 // footer
 footer {
-  background: #48525b;
+  background: #2b2b2b;
 }
 
 .region__footer {
+  @include global-margin;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+
   .footer-about {
     order: 3;
   }
@@ -201,7 +235,7 @@ footer {
 
 @include mq($from: desktop) {
   .region__footer {
-    padding: 5rem;
+    padding: 3rem;
     flex-direction: row;
     flex-wrap: none;
     justify-content: space-between;
@@ -227,15 +261,18 @@ footer {
 .region__footer h2 {
   @include title-sc;
   padding-bottom: 0.5rem;
-  color: #dcf5f9;
+  color: #dee3e8;
+  opacity: 0.7;
 }
 
 .region__footer p {
-  color: #f4DCF5F9f4c3;
+  color: #dee3e8;
+  opacity: 0.8;
 }
 
 .region__footer a {
-  color: #dcf5f9;
+  color: #dee3e8;
+  opacity: 0.8;
 }
 
 .footer-social__social ul {
@@ -247,7 +284,7 @@ footer {
 
 // legal
 .region__legal {
-  padding: 2rem;
+  padding: 3rem;
   background: $black;
   color: $dark-white !important;
   @include font-size(0.8rem);
@@ -259,7 +296,7 @@ footer {
 
 @include mq($from: tablet) {
   .region__legal {
-    padding: 2rem 5rem;
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;

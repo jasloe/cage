@@ -51,6 +51,13 @@ $font-xl: 3.4rem;
   }
 }
 
+@mixin title-lg {
+  @include type($life, $font-lg, uppercase);
+  em {
+    font-family: $life-italic;
+  }
+}
+
 @mixin title-md-sans {
   @include type($univers, $font-lg, uppercase);
   em {

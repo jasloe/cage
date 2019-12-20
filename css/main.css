@@ -441,25 +441,8 @@ img {
 }
 
 main {
-  margin-top: 5em;
-}
-
-.path-search .region__wrapper,
-.home .region__content-post .articles,
-.home .region__content-post .featured-release {
-  margin: 0 auto;
-  max-width: 1300px;
-}
-
-.home .region__content-post .articles,
-.home .region__content-post .featured-release {
-  padding: 3rem 1rem;
-}
-
-.home .region__content-post .featured-release .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
 }
 
 .home .articles .flex-container {
@@ -489,17 +472,40 @@ main {
   }
 }
 
-.home .in-conversation {
-  max-width: 1300px;
+.home .region__content-post {
   margin: 0 auto;
+  max-width: 1300px;
   padding: 0 1rem;
 }
 
-.home .in-conversation header {
-  margin: 0;
-  padding: 1rem 0rem;
+.home .region__content-post .block {
+  margin-top: 3rem;
 }
 
+.home .region__content-post .block:first-child {
+  margin-top: 0rem;
+}
+
+.home .region__content-post .featured-release h3,
+.home .region__content-post .in-conversation h3 {
+  padding: 3rem 3rem 0rem 3rem;
+  border: none;
+}
+
+.home .featured-release {
+  background: #e8dcdd;
+}
+
+.home .in-conversation {
+  background: #dce3e8;
+}
+
+.home .featured-release header,
+.home .in-conversation header {
+  margin: 0;
+}
+
+.home .featured-release header p,
 .home .in-conversation header p {
   text-align: justify;
   text-justify: inter-word;
@@ -507,6 +513,7 @@ main {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.home .featured-release header p em,
 .home .in-conversation header p em {
   font-style: italic;
 }
@@ -515,8 +522,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #dce3e8;
-  padding: 3rem;
+  padding: 0rem 2rem 2rem 2rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -535,7 +541,7 @@ main {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 2rem;
+    padding: 2rem 2rem 3rem 2rem;
   }
   .home .in-conversation .flex-container header,
   .home .in-conversation .flex-container .authors {
@@ -544,7 +550,11 @@ main {
   }
 }
 
-.home .in-conversation .authors {
+.home .featured-release .flex-container {
+  padding: 1rem 3rem 3rem 3rem;
+}
+
+.home .featured-release .item a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -553,15 +563,27 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  padding: 1rem;
-  font-family: "Life LT Std Roman";
-  font-size: 1.2rem;
-  text-transform: normal;
-  line-height: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.home .in-conversation .authors a {
-  line-height: 1.2;
+@media (min-width: 61.25em) {
+  .home .featured-release .item a {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: initial;
+  }
+  .home .featured-release .item a .release,
+  .home .featured-release .item a .release-cover {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .home .featured-release .item a .release {
+    padding: 2rem;
+  }
 }
 
 @media (min-width: 61.25em) {
@@ -674,10 +696,13 @@ main {
 }
 
 footer {
-  background: #48525b;
+  background: #2b2b2b;
 }
 
 .region__footer {
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -685,7 +710,6 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2rem;
 }
 
 .region__footer .footer-about {
@@ -718,7 +742,7 @@ footer {
 
 @media (min-width: 61.25em) {
   .region__footer {
-    padding: 5rem;
+    padding: 3rem;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -755,7 +779,8 @@ footer {
   text-transform: uppercase;
   line-height: 1;
   padding-bottom: 0.5rem;
-  color: #dcf5f9;
+  color: #dee3e8;
+  opacity: 0.7;
 }
 
 .region__footer h2 em {
@@ -763,11 +788,13 @@ footer {
 }
 
 .region__footer p {
-  color: #f4DCF5F9f4c3;
+  color: #dee3e8;
+  opacity: 0.8;
 }
 
 .region__footer a {
-  color: #dcf5f9;
+  color: #dee3e8;
+  opacity: 0.8;
 }
 
 .footer-social__social ul {
@@ -787,7 +814,7 @@ footer {
 }
 
 .region__legal {
-  padding: 2rem;
+  padding: 3rem;
   background: #000;
   color: #bfbfbf !important;
   font-size: 0.8rem;
@@ -800,7 +827,7 @@ footer {
 
 @media (min-width: 46.25em) {
   .region__legal {
-    padding: 2rem 5rem;
+    padding: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1443,6 +1470,20 @@ h3 {
   }
 }
 
+.featured-release h3,
+.in-conversation h3 {
+  font-family: "Univers LT Std";
+  font-size: 1.2rem;
+  text-transform: normal;
+  line-height: 1;
+  text-transform: initial;
+}
+
+.featured-release h3 em,
+.in-conversation h3 em {
+  font-family: "Univers LT Std Oblique";
+}
+
 .in-this-issue h3 {
   border-bottom: 1px solid;
   margin: 1rem;
@@ -1501,6 +1542,19 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  margin-top: 1rem;
+}
+
+.issues .toc .item:first-child,
+.home .articles .flex-container .item:first-child {
+  margin-top: 0rem;
+}
+
+@media (min-width: 46.25em) {
+  .issues .toc .item,
+  .home .articles .flex-container .item {
+    margin-top: 0rem;
+  }
 }
 
 .issues .toc .field-article-rel-issues,
@@ -1551,11 +1605,119 @@ h3 {
   font-family: "Univers LT Std Oblique";
 }
 
+.home .featured-release .title {
+  font-family: "Life LT Std Roman";
+  font-size: calc(1.285rem + 0.42vw);
+  text-transform: uppercase;
+  line-height: 1;
+  padding-top: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .home .featured-release .title {
+    font-size: 1.6rem;
+  }
+}
+
+.home .featured-release .title em {
+  font-family: "Life LT Std Italic";
+}
+
+.home .featured-release .field-release-artists {
+  font-family: "Univers LT Std";
+  font-size: 1.2rem;
+  text-transform: normal;
+  line-height: 1;
+}
+
+.home .featured-release .field-release-artists em {
+  font-family: "Univers LT Std Oblique";
+}
+
+.home .featured-release .release-metadata {
+  font-family: "Univers LT Std";
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  line-height: 1;
+  display: inline;
+}
+
+.home .featured-release .release-metadata em {
+  font-family: "Univers LT Std Oblique";
+}
+
+.home .featured-release .release-metadata > div {
+  display: inline;
+}
+
+.home .featured-release .field-release-catalog-number:after {
+  content: "ꞏ";
+  padding: 0 5px;
+}
+
+.home .featured-release .field-release-release-summary {
+  font-family: "Life LT Std Roman";
+  font-size: 1.2rem;
+  text-transform: normal;
+  line-height: 1;
+  padding-top: 2rem;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.home .featured-release .field-release-release-summary em {
+  font-style: italic;
+}
+
+.home .featured-release .field-release-release-date {
+  font-family: "Univers LT Std";
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  line-height: 1;
+  display: block;
+  padding-top: 2rem;
+}
+
+.home .featured-release .field-release-release-date em {
+  font-family: "Univers LT Std Oblique";
+}
+
+.home .featured-release .field-release-release-date > div {
+  display: inline;
+}
+
+.home .featured-release .field-release-release-date .field__label:after {
+  content: "ꞏ";
+  padding: 0 5px;
+}
+
 .home .in-conversation p {
   font-family: "Univers LT Std";
   font-size: 1.2rem;
   text-transform: normal;
   line-height: 1;
+}
+
+.home .in-conversation .authors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  font-family: "Life LT Std Roman";
+  font-size: 1.2rem;
+  text-transform: normal;
+  line-height: 1;
+}
+
+.home .in-conversation .authors a {
+  line-height: 1.2;
 }
 
 .path-frontpage .in-this-issue .slide__content {
@@ -1997,10 +2159,6 @@ h1.c-title__title em {
 
 .social-media-sharing li {
   margin-right: 0;
-}
-
-.home main {
-  margin-top: 0;
 }
 
 .home .region__content {

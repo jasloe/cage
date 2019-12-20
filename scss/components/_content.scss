@@ -2,6 +2,12 @@ h3 {
   @include topic-ornament;
 }
 
+.featured-release h3,
+.in-conversation h3 {
+  @include title-sm;
+  text-transform: initial;
+}
+
 .in-this-issue h3 {
   @include topic-ornament-sans;
 }
@@ -19,9 +25,16 @@ h3 {
     display: flex;
     flex-direction: column;
     text-align: center;
-
     align-items: center;
     height: 100%;
+    margin-top: 1rem;
+    &:first-child {
+      margin-top: 0rem;
+    }
+
+    @include mq($from: tablet) {
+      margin-top: 0rem;
+    }
   }
 
   .field-article-rel-issues {
@@ -44,10 +57,61 @@ h3 {
   }
 }
 
+// featured release
+.home .featured-release {
+  .title {
+    @include title-lg;
+    padding-top: 1rem;
+  }
+  .field-release-artists {
+    @include title-sm;
+  }
+  .release-metadata {
+    @include title-sc;
+    display: inline;
+    > div {
+      display: inline;
+    }
+  }
+  .field-release-catalog-number:after {
+    content: "ꞏ";
+    padding: 0 5px;
+  }
+
+  .field-release-release-summary {
+    @include type($life, 1.2rem, normal);
+    padding-top: 2rem;
+    @include justify;
+  }
+  .field-release-release-date {
+    @include title-sc;
+    display: block;
+    padding-top: 2rem;
+    > div {
+      display: inline;
+    }
+    .field__label:after {
+      content: "ꞏ";
+      padding: 0 5px;
+    }
+  }
+}
+
 // in conversation
 .home .in-conversation {
   p {
     @include type($univers, $font-md, normal);
+  }
+}
+
+.home .in-conversation .authors {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  @include type($life, 1.2rem, normal);
+  a {
+    line-height: 1.2;
   }
 }
 
