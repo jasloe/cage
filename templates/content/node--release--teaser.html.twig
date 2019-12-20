@@ -70,13 +70,17 @@
  *   in different view modes.
  */
 #}
-<article{{attributes.addClass("item")}}>
+<article{{attributes.addClass("c-item")}}>
 
-	<a href="{{ url }}" target="_blank">
-		{{ content.field_article_marquee }}
-		{{ content.field_article_rel_issues }}
-		{{ content.field_article_formatted_title }}
-		{{ content.field_article_primary_author }}
+	<a href="{{ url }}" class="c-item__link" target="_blank">
+		<div class="c-item__marquee">{{ content.field_release_album_cover }}</div>
+		<h2 class="c-item__title">{{ label }}</h2>
+		<div class="c-item__author">{{ content.field_release_artists }}</div>
+		<div class="c-item__tag">
+			<span>{{ content.field_release_catalog_number }}
+				{{ content.field_release_label }}</span>
+		</div>
+		<div class="c-item__title">{{ content.field_article_formatted_title }}</div>
 	</a>
 
 </article>

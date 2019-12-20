@@ -6,10 +6,16 @@ h3 {
   @include topic-ornament-sans;
 }
 
+.from-the-editor h3 {
+  @include title-md-normal;
+  text-transform: initial;
+  padding-bottom: 1.4rem;
+}
+
 // article teaser components: home, issue toc
-.path-issues .toc,
-.home .articles .c-flex {
-  .c-item {
+.issues .toc,
+.home .articles .flex-container {
+  .item {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -18,17 +24,7 @@ h3 {
     height: 100%;
   }
 
-  .c-item__tag {
-    @include title-sc;
-    padding-top: 3rem;
-  }
-
-  .c-item__title {
-    @include title-md;
-    padding: 0.5rem 2rem 3rem 2rem;
-  }
-
-  .c-item__issue-title {
+  .field-article-rel-issues {
     @include title-sc;
     padding-top: 1rem;
     span {
@@ -37,9 +33,21 @@ h3 {
     }
   }
 
-  .c-item__author {
+  .field-article-formatted-title {
+    @include title-md;
+    padding: 0.5rem 2rem 3rem 2rem;
+  }
+
+  .field-article-primary-author {
     @include title-sm;
     margin-top: auto;
+  }
+}
+
+// in conversation
+.home .in-conversation {
+  p {
+    @include type($univers, $font-md, normal);
   }
 }
 
@@ -94,25 +102,16 @@ h3 {
 }
 
 // issue editor
-.path-issues .editor {
-  margin: 0 auto;
-  max-width: $tablet;
-  padding: 0 1rem;
-  h1.c-title__title {
+.issues .from-the-editor {
+  .title {
     @include type($life, 3rem, uppercase);
-    border-top: 1px solid $black;
-    padding: 0.7rem 1rem 0rem 1rem;
+
     line-height: 1;
     em {
       font-family: $life-italic;
     }
   }
 
-  .c-title__author {
-    @include type($univers, 1.6rem, normal);
-    margin: 2rem 0;
-    padding: 0 1rem;
-  }
   .page-section {
     @include justify;
     @include type($univers, $font-md, normal);
@@ -122,9 +121,6 @@ h3 {
     &:first-child {
       text-indent: 0;
     }
-  }
-  .c-title__tag {
-    padding-top: 1rem;
   }
 }
 

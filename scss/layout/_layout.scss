@@ -6,39 +6,106 @@ main {
 // front
 .path-search .region__wrapper,
 .home .region__content-post .articles,
-.home .region__content-post .latest-release {
+.home .region__content-post .featured-release {
   @include global-margin;
 }
 
 .home .region__content-post .articles,
-.home .region__content-post .latest-release {
-  padding: 3rem 0;
+.home .region__content-post .featured-release {
+  padding: 3rem 1rem;
 }
 
-.home .region__content-post .latest-release {
+.home .region__content-post .featured-release .flex-container {
   display: flex;
 }
 
 // front page article teasers
-.home .articles .c-flex {
+
+.home .articles .flex-container {
   display: flex;
   flex-direction: column;
 
   @include mq($from: desktop) {
     flex-flow: row wrap;
     justify-content: space-between;
-    .c-item {
+    .item {
       flex-basis: calc(32% - 1rem);
       position: relative;
     }
+  }
+}
 
-    .path-frontpage .articles {
-      padding: 0 0 5rem 0;
+// front page in conversation
+.home .in-conversation {
+  max-width: $wide;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  header {
+    margin: 0;
+    padding: 1rem 0rem;
+    p {
+      @include justify;
     }
-    .in-this-issue__wrapper {
-      margin: 0 auto;
-      max-width: $tablet;
+  }
+}
+
+.home .in-conversation .flex-container {
+  display: flex;
+  background: #dce3e8;
+  padding: 3rem;
+  flex-direction: column;
+  @include mq($from: desktop) {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    header,
+    .authors {
+      flex-basis: 40%;
     }
+  }
+}
+
+.home .in-conversation .authors {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1rem;
+  @include type($life, 1.2rem, normal);
+  a {
+    line-height: 1.2;
+  }
+}
+
+// toc article teasers
+@include mq($from: desktop) {
+  .issues .toc {
+    max-width: $wide;
+    margin: 0 auto;
+    padding: 0 1rem;
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      max-width: 100%;
+      align-items: flex-start;
+      .item {
+        flex-basis: calc(33% - 1rem);
+      }
+    }
+  }
+}
+
+// from the editor
+.issues .from-the-editor {
+  max-width: $tablet;
+  margin: 0 auto;
+  padding: 0 1rem;
+  .title {
+    text-align: center;
+    padding-bottom: 5rem;
   }
 }
 
@@ -78,31 +145,6 @@ main {
       margin: 1rem auto;
       border-top: 1px solid;
       padding-top: 1rem;
-    }
-  }
-}
-
-// issues toc
-@include mq($from: desktop) {
-  .path-issues .toc {
-    max-width: $wide;
-    margin: 0 auto;
-    padding: 0 1rem;
-    .c-flex {
-      display: flex;
-      flex-direction: row;
-      flex-flow: row wrap;
-      justify-content: space-around;
-      align-items: flex-start;
-      .c-item {
-        flex-basis: calc(33% - 1rem);
-        position: relative;
-      }
-    }
-    .c-flex::after {
-      content: "";
-      flex: auto;
-      flex-basis: calc(33% - 1rem);
     }
   }
 }
