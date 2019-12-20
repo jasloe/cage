@@ -1,4 +1,3 @@
-
 // main
 main {
   margin-top: 5em;
@@ -11,13 +10,36 @@ main {
   @include global-margin;
 }
 
+.home .region__content-post .articles,
+.home .region__content-post .latest-release {
+  padding: 3rem 0;
+}
+
 .home .region__content-post .latest-release {
   display: flex;
 }
 
-.home .region__content-post .articles,
-.home .region__content-post .latest-release {
-  padding: 3rem 0;
+// front page article teasers
+.home .articles .c-flex {
+  display: flex;
+  flex-direction: column;
+
+  @include mq($from: desktop) {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    .c-item {
+      flex-basis: calc(32% - 1rem);
+      position: relative;
+    }
+
+    .path-frontpage .articles {
+      padding: 0 0 5rem 0;
+    }
+    .in-this-issue__wrapper {
+      margin: 0 auto;
+      max-width: $tablet;
+    }
+  }
 }
 
 // articles
@@ -73,7 +95,7 @@ main {
       justify-content: space-around;
       align-items: flex-start;
       .c-item {
-        flex-basis: calc(33% - 1rem;
+        flex-basis: calc(33% - 1rem);
         position: relative;
       }
     }
@@ -83,14 +105,6 @@ main {
       flex-basis: calc(33% - 1rem);
     }
   }
-}
-
-// post content region, article
-
-.page-node-type-article .region__content-post {
-}
-
-.region__content-post {
 }
 
 .page-node-type-article .region__content-post .authors {
@@ -104,30 +118,6 @@ main {
   }
   p {
     padding: 0 1rem;
-  }
-}
-
-// post content region, home
-.home .articles .c-flex {
-  display: flex;
-  flex-direction: column;
-}
-
-@include mq($from: desktop) {
-  .path-frontpage .articles .c-flex {
-    flex-flow: row wrap;
-    justify-content: space-between;
-    .c-item {
-      flex-basis: calc(32% - 1rem);
-      position: relative;
-    }
-  }
-  .path-frontpage .articles {
-    padding: 0 0 5rem 0;
-  }
-  .in-this-issue__wrapper {
-    margin: 0 auto;
-    max-width: $tablet;
   }
 }
 

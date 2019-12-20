@@ -425,69 +425,6 @@ body:before {
   mix-blend-mode: luminosity;
 }
 
-.topic-first .c-item {
-  border: 1px solid #bf5501;
-}
-
-.topic-first .c-item {
-  background: #f26b01;
-}
-
-.topic-first .c-item__issue-title a,
-.topic-first .c-item__title a,
-.topic-first .c-item__author {
-  color: white;
-}
-
-.topic-first .media--image {
-  background: #f26b01;
-  line-height: 0;
-}
-
-.topic-first .media--image img {
-  -webkit-filter: grayscale(10%) contrast(1) blur(1);
-          filter: grayscale(10%) contrast(1) blur(1);
-  max-width: 100%;
-  mix-blend-mode: screen;
-}
-
-.path-issues {
-  background: #664d94;
-}
-
-.path-issues h3,
-.path-issues .editor .page-section,
-.path-issues .c-item__tag,
-.path-issues .c-title__author {
-  color: white;
-}
-
-.path-issues a {
-  color: white;
-}
-
-.path-issues .c-item {
-  background: #775baa;
-}
-
-.path-issues .c-item__issue-title a,
-.path-issues .c-item__title a,
-.path-issues .c-item__author {
-  color: white;
-}
-
-.path-issues .media--image {
-  background: #664d94;
-  line-height: 0;
-}
-
-.path-issues .media--image img {
-  -webkit-filter: grayscale(10%) contrast(1) blur(1);
-          filter: grayscale(10%) contrast(1) blur(1);
-  max-width: 100%;
-  mix-blend-mode: screen;
-}
-
 header {
   opacity: 1;
 }
@@ -514,15 +451,49 @@ main {
   max-width: 1300px;
 }
 
+.home .region__content-post .articles,
+.home .region__content-post .latest-release {
+  padding: 3rem 0;
+}
+
 .home .region__content-post .latest-release {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.home .region__content-post .articles,
-.home .region__content-post .latest-release {
-  padding: 3rem 0;
+.home .articles .c-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 61.25em) {
+  .home .articles .c-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .home .articles .c-flex .c-item {
+    -ms-flex-preferred-size: calc(32% - 1rem);
+        flex-basis: calc(32% - 1rem);
+    position: relative;
+  }
+  .home .articles .c-flex .path-frontpage .articles {
+    padding: 0 0 5rem 0;
+  }
+  .home .articles .c-flex .in-this-issue__wrapper {
+    margin: 0 auto;
+    max-width: 740px;
+  }
 }
 
 .page-node-type-article .region__page-title {
@@ -621,40 +592,6 @@ main {
 
 .page-node-type-article .region__content-post .authors p {
   padding: 0 1rem;
-}
-
-.home .articles .c-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media (min-width: 61.25em) {
-  .path-frontpage .articles .c-flex {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .path-frontpage .articles .c-flex .c-item {
-    -ms-flex-preferred-size: calc(32% - 1rem);
-        flex-basis: calc(32% - 1rem);
-    position: relative;
-  }
-  .path-frontpage .articles {
-    padding: 0 0 5rem 0;
-  }
-  .in-this-issue__wrapper {
-    margin: 0 auto;
-    max-width: 740px;
-  }
 }
 
 .path-search .region__wrapper {
@@ -1459,7 +1396,7 @@ h3 {
 }
 
 .path-issues .toc .c-item,
-.path-frontpage .region__content-post .articles .c-item {
+.home .articles .c-flex .c-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1468,7 +1405,6 @@ h3 {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  margin-bottom: 5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1476,7 +1412,7 @@ h3 {
 }
 
 .path-issues .toc .c-item__tag,
-.path-frontpage .region__content-post .articles .c-item__tag {
+.home .articles .c-flex .c-item__tag {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -1485,12 +1421,12 @@ h3 {
 }
 
 .path-issues .toc .c-item__tag em,
-.path-frontpage .region__content-post .articles .c-item__tag em {
+.home .articles .c-flex .c-item__tag em {
   font-family: "Univers LT Std Oblique";
 }
 
 .path-issues .toc .c-item__title,
-.path-frontpage .region__content-post .articles .c-item__title {
+.home .articles .c-flex .c-item__title {
   font-family: "Life LT Std Roman";
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -1499,12 +1435,12 @@ h3 {
 }
 
 .path-issues .toc .c-item__title em,
-.path-frontpage .region__content-post .articles .c-item__title em {
+.home .articles .c-flex .c-item__title em {
   font-family: "Life LT Std Italic";
 }
 
 .path-issues .toc .c-item__issue-title,
-.path-frontpage .region__content-post .articles .c-item__issue-title {
+.home .articles .c-flex .c-item__issue-title {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
@@ -1513,28 +1449,27 @@ h3 {
 }
 
 .path-issues .toc .c-item__issue-title em,
-.path-frontpage .region__content-post .articles .c-item__issue-title em {
+.home .articles .c-flex .c-item__issue-title em {
   font-family: "Univers LT Std Oblique";
 }
 
 .path-issues .toc .c-item__issue-title span,
-.path-frontpage .region__content-post .articles .c-item__issue-title span {
+.home .articles .c-flex .c-item__issue-title span {
   padding-right: 3px;
   text-transform: initial;
 }
 
 .path-issues .toc .c-item__author,
-.path-frontpage .region__content-post .articles .c-item__author {
+.home .articles .c-flex .c-item__author {
   font-family: "Univers LT Std";
   font-size: 1.2rem;
   text-transform: normal;
   line-height: 1;
   margin-top: auto;
-  margin-bottom: 5rem;
 }
 
 .path-issues .toc .c-item__author em,
-.path-frontpage .region__content-post .articles .c-item__author em {
+.home .articles .c-flex .c-item__author em {
   font-family: "Univers LT Std Oblique";
 }
 
