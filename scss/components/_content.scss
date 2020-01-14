@@ -39,16 +39,11 @@ h3 {
 
   .field-article-rel-issues {
     @include title-sc;
+    text-transform: uppercase;
     padding-top: 1rem;
     span {
       padding-right: 3px;
-      text-transform: initial;
     }
-  }
-
-  .field-article-formatted-title {
-    @include title-md;
-    padding: 0.5rem 2rem 3rem 2rem;
   }
 
   .field-article-primary-author {

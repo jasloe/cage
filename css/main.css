@@ -1563,6 +1563,7 @@ h3 {
   font-size: 0.8rem;
   text-transform: uppercase;
   line-height: 1;
+  text-transform: uppercase;
   padding-top: 1rem;
 }
 
@@ -1574,21 +1575,6 @@ h3 {
 .issues .toc .field-article-rel-issues span,
 .home .articles .flex-container .field-article-rel-issues span {
   padding-right: 3px;
-  text-transform: initial;
-}
-
-.issues .toc .field-article-formatted-title,
-.home .articles .flex-container .field-article-formatted-title {
-  font-family: "Life LT Std Roman";
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  line-height: 1;
-  padding: 0.5rem 2rem 3rem 2rem;
-}
-
-.issues .toc .field-article-formatted-title em,
-.home .articles .flex-container .field-article-formatted-title em {
-  font-family: "Life LT Std Italic";
 }
 
 .issues .toc .field-article-primary-author,

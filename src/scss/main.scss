@@ -13,13 +13,6 @@
   display: none !important;
 }
 
-// <article{{attributes.addClass("item")}}>
-
-// 	<a href="{{ url }}" target="_blank">
-// 		{{ content.field_article_marquee }}
-// 		{{ content.field_article_rel_issues }}
-// 		{{ label }}
-// 		{{ content.field_article_primary_author }}
-// 	</a>
-
-// </article>
+body {
+  background: red;
+}
