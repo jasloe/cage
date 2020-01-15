@@ -4,10 +4,8 @@ $hamburger-padding-y: 0px;
 $hamburger-layer-width: 1rem;
 $hamburger-layer-height: 2px;
 $hamburger-layer-spacing: 4px;
-// $hamburger-layer-color: $current-color;
 $hamburger-layer-border-radius: 0px;
 $hamburger-hover-opacity: 0.7;
-// $hamburger-active-layer-color: $hamburger-layer-color;
 $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
 @import "../vendor/hamburgers/hamburgers";
@@ -35,67 +33,40 @@ header {
   .breadcrumb {
     display: flex;
   }
+}
 
-  button.hamburger {
-    display: none;
+.main ul.menu {
+  display: flex;
+}
+
+.main ul.menu li.menu-item {
+  padding-right: 1rem;
+  &:last-child {
+    padding-right: 0rem;
   }
 }
 
-// main menu
-// ul.menu {
-//   display: flex;
-// }
-
-// ul.menu li.menu-item {
-//   padding-right: 1rem;
-//   &:last-child {
-//     padding-right: 0rem;
-//   }
-// }
-
 // breadcrumb
-.breadcrumb {
+.now-reading {
   @include font-size(0.9rem);
   border-bottom-width: 1px;
   border-bottom-style: solid;
   padding: 1rem;
 }
 
-ol.breadcrumb {
+.now-reading {
   display: flex;
   align-items: top;
 
-  li {
-    margin: 0 0.5rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    &::before {
+  span {
+    &::after {
       content: "";
       background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='5' height='5'><circle cx='2.5' cy='2.5' r='2.5' /></svg>")
         no-repeat;
       height: 6px;
       width: 6px;
       padding-bottom: 4px;
-      padding-right: 1rem;
-    }
-
-    &:last-child {
-      @include mq($from: tablet) {
-        display: flex;
-        padding-right: 1rem;
-      }
-    }
-  }
-  li:first-of-type {
-    background: none;
-    &::before {
-      background: none;
-      padding-right: 0;
-      height: 0;
-      width: 0;
+      padding-left: 2rem;
     }
   }
 }

@@ -853,11 +853,14 @@ a {
 .site-name a {
   text-transform: uppercase;
   letter-spacing: 0.04rem;
-  color: white;
 }
 
 ol li a {
   line-height: 1;
+}
+
+header {
+  background: white;
 }
 
 header a {
@@ -1129,19 +1132,30 @@ header {
     display: -ms-flexbox;
     display: flex;
   }
-  button.hamburger {
-    display: none;
-  }
 }
 
-.breadcrumb {
+.main ul.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main ul.menu li.menu-item {
+  padding-right: 1rem;
+}
+
+.main ul.menu li.menu-item:last-child {
+  padding-right: 0rem;
+}
+
+.now-reading {
   font-size: 0.9rem;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   padding: 1rem;
 }
 
-ol.breadcrumb {
+.now-reading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1150,50 +1164,13 @@ ol.breadcrumb {
           align-items: top;
 }
 
-ol.breadcrumb li {
-  margin: 0 0.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-ol.breadcrumb li::before {
+.now-reading span::after {
   content: "";
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='5' height='5'><circle cx='2.5' cy='2.5' r='2.5' /></svg>") no-repeat;
   height: 6px;
   width: 6px;
   padding-bottom: 4px;
-  padding-right: 1rem;
-}
-
-@media (min-width: 46.25em) {
-  ol.breadcrumb li:last-child {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding-right: 1rem;
-  }
-}
-
-ol.breadcrumb li:first-of-type {
-  background: none;
-}
-
-ol.breadcrumb li:first-of-type::before {
-  background: none;
-  padding-right: 0;
-  height: 0;
-  width: 0;
+  padding-left: 2rem;
 }
 
 textarea:focus,
@@ -1361,7 +1338,7 @@ header.headroom--unpinned {
   animation-name: slideUp;
 }
 
-.breadcrumb.headroom {
+.now-reading.headroom {
   z-index: 20;
   position: fixed;
   right: 0;
@@ -1370,17 +1347,17 @@ header.headroom--unpinned {
   background: white;
 }
 
-.breadcrumb.headroom {
+.now-reading.headroom {
   will-change: transform;
   -webkit-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
 }
 
-.breadcrumb.headroom--pinned {
+.now-reading.headroom--pinned {
   opacity: 0;
 }
 
-.breadcrumb.headroom--unpinned {
+.now-reading.headroom--unpinned {
   opacity: 1;
 }
 
@@ -1530,6 +1507,7 @@ h3 {
 
 .issues .toc .item,
 .home .articles .flex-container .item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1557,24 +1535,47 @@ h3 {
   }
 }
 
-.issues .toc .field-article-rel-issues,
-.home .articles .flex-container .field-article-rel-issues {
+.issues .toc .item a.article-link,
+.home .articles .flex-container .item a.article-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.issues .toc .item .field-article-rel-issues,
+.home .articles .flex-container .item .field-article-rel-issues {
   font-family: "Univers LT Std";
   font-size: 0.8rem;
   text-transform: uppercase;
   line-height: 1;
   text-transform: uppercase;
   padding-top: 1rem;
+  z-index: 100;
 }
 
-.issues .toc .field-article-rel-issues em,
-.home .articles .flex-container .field-article-rel-issues em {
+.issues .toc .item .field-article-rel-issues em,
+.home .articles .flex-container .item .field-article-rel-issues em {
   font-family: "Univers LT Std Oblique";
 }
 
-.issues .toc .field-article-rel-issues span,
-.home .articles .flex-container .field-article-rel-issues span {
+.issues .toc .item .field-article-rel-issues span,
+.home .articles .flex-container .item .field-article-rel-issues span {
   padding-right: 3px;
+}
+
+.issues .toc h2.title,
+.home .articles .flex-container h2.title {
+  font-family: "Life LT Std Roman";
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.issues .toc h2.title em,
+.home .articles .flex-container h2.title em {
+  font-family: "Life LT Std Italic";
 }
 
 .issues .toc .field-article-primary-author,
@@ -1980,7 +1981,7 @@ h3 {
   padding-right: 1rem;
 }
 
-h1.c-title__title {
+h1.c-title {
   font-family: "Life LT Std Roman";
   font-size: calc(1.425rem + 2.1vw);
   text-transform: uppercase;
@@ -1992,12 +1993,12 @@ h1.c-title__title {
 }
 
 @media (min-width: 1200px) {
-  h1.c-title__title {
+  h1.c-title {
     font-size: 3rem;
   }
 }
 
-h1.c-title__title em {
+h1.c-title em {
   font-family: "Life LT Std Italic";
 }
 
@@ -2090,12 +2091,11 @@ h1.c-title__title em {
 
 .progress {
   position: fixed;
-  top: 0;
+  top: 4rem;
   bottom: auto;
   left: 0;
-  width: 0%;
   height: 2px;
-  z-index: 1000;
+  background-color: red;
 }
 
 .bandcamp,
@@ -2277,8 +2277,8 @@ h1.c-title__title em {
   background-color: #8e3161;
 }
 
-.hamburger {
-  display: none !important;
+#block-breadcrumbs {
+  display: none;
 }
 
 /*# sourceMappingURL=maps/main.css.map */

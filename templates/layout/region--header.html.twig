@@ -9,13 +9,10 @@
 			</span>
 		</button>
 
-
-		{# <div class="legal__col-1">{{ drupal_entity('block_content', '262') }}</div> #}
-
 		{{ drupal_block('system_branding_block') }}
-	{# {{ drupal_view('issue_index', 'issue_title_header') }} #}
 
-		{# <div class="subscribe">{{ drupal_menu('subscribe') }}</div> #}
+		<div class="subscribe">{{ drupal_menu('subscribe') }}</div>
+		<div class="main">{{ drupal_menu('main') }}</div>
 
 
 	{% endblock %}

@@ -100,8 +100,8 @@ header.headroom--unpinned {
   animation-name: slideUp;
 }
 
-//breadcrumb
-.breadcrumb.headroom {
+// now reading
+.now-reading.headroom {
   z-index: 20;
   position: fixed;
   right: 0;
@@ -110,15 +110,15 @@ header.headroom--unpinned {
   background: $white;
 }
 
-.breadcrumb.headroom {
+.now-reading.headroom {
   will-change: transform;
   transition: opacity 0.2s linear;
 }
 
-.breadcrumb.headroom--pinned {
+.now-reading.headroom--pinned {
   opacity: 0;
 }
 
-.breadcrumb.headroom--unpinned {
+.now-reading.headroom--unpinned {
   opacity: 1;
 }

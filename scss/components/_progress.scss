@@ -1,9 +1,8 @@
 .progress {
   position: fixed;
-  top: 0;
+  top: 4rem;
   bottom: auto;
   left: 0;
-  width: 0%;
   height: 2px;
-  z-index: 1000;
+  background-color: red;
 }

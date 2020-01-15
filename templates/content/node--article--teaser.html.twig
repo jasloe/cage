@@ -75,16 +75,16 @@
 	<article{{attributes}}>
 
 
-		<a href="{{ url }}" rel="bookmark">
-			{{ content.field_article_marquee }}
+		{{ content.field_article_marquee }}
 
-			{{ content.field_article_rel_issues }}
+		{{ content.field_article_rel_issues }}
 
-			<h2 class="article-title">{{ label }}</h2>
-			{{ content.field_article_primary_author }}
+		<h2 class="title">
+			{{ label }}
+		</h2>
 
-		</a>
+		{{ content.field_article_primary_author }}
 
-
-	</article>
-</div>
+	</a>
+</article>
+<a href="{{ url }}" class="article-link" rel=" bookmark" title=""></a></div>
