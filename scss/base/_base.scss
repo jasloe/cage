@@ -1,6 +1,8 @@
 // base, reset enhancements
-header {
-  opacity: 1;
+html {
+  // margin-left: calc(100vw - 100%);
+  // margin-right: 0;
+  // overflow: auto;
 }
 
 body {
@@ -12,4 +14,11 @@ body {
 img {
   height: auto;
   width: 100%;
+}
+
+.now-reading {
+}
+
+.media picture {
+  display: none;
 }

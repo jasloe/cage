@@ -4,7 +4,8 @@
 .instagram,
 .soundcloud,
 .twitter,
-.email {
+.email,
+.search {
   padding-right: 1rem;
   display: block;
   background-repeat: no-repeat;
@@ -14,8 +15,14 @@
   vertical-align: top;
 }
 
-.email {
+.email,
+.search {
   padding-right: 0rem;
+}
+
+.search {
+  width: 0.9rem;
+  height: 0.9rem;
 }
 
 .bandcamp {
@@ -47,4 +54,12 @@
 // override social-media-sharing default
 .social-media-sharing li {
   margin-right: 0;
+}
+
+.search {
+  background-image: url(../images/search.svg);
+}
+
+.social {
+  display: none;
 }

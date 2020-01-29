@@ -8,10 +8,10 @@ $mobileLandscape: 480px;
 
 $max-vw: $wide;
 
-$font-sm: 0.8rem;
-$font-md: 1.2rem;
-$font-lg: 1.6rem;
-$font-display: 2.4rem;
+$font-sm: 1.5rem;
+$font-md: 2.1rem;
+$font-lg: 2.4rem;
+$font-display: 3.2rem;
 $font-xl: 3.4rem;
 
 @mixin global-margin {
@@ -59,15 +59,23 @@ $font-xl: 3.4rem;
   }
 }
 
-@mixin title-lg {
-  @include type($life, $font-lg, uppercase);
+@mixin article-type {
+  @include type($life, $font-sm, initial);
+}
+
+@mixin article-title {
+  @include type($life, $font-display, uppercase);
   em {
     font-family: $life-italic;
   }
 }
 
+@mixin article-author {
+  @include type($univers, $font-md, initial);
+}
+
 @mixin title-md-sans {
-  @include type($univers, $font-lg, uppercase);
+  @include type($univers, $font-md, uppercase);
   em {
     font-family: $univers-italic;
   }
@@ -140,6 +148,10 @@ $font-xl: 3.4rem;
 
   em {
     font-style: italic;
+  }
+  @include mq($until: mobile) {
+    text-align: left;
+    text-justify: none;
   }
 }
 

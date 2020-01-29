@@ -1,22 +1,23 @@
-h1.c-title {
-  @include type($life, 3rem, uppercase);
-  border-top: 1px solid;
-  padding: 0.7rem 1rem 0rem 1rem;
-  text-align: center;
-  line-height: 1;
-  em {
-    font-family: $life-italic;
+.page-node-type-article {
+  h2.pre-title {
+    @include article-type;
+    padding-bottom: 1.2rem;
   }
-}
 
-.c-title__author {
-  @include type($univers, 1.6rem, normal);
-  margin: 2rem 0;
-  padding: 0 1rem;
-  text-align: center;
-}
+  h1.title {
+    @include article-title;
+    border-top: 1px solid;
+    padding: 0.7rem 1rem 0rem 1rem;
+    text-align: center;
+    line-height: 1;
+    em {
+      font-family: $life-italic;
+    }
+  }
 
-.region__content-first .social h2 {
-  @include title-sc;
-  padding-bottom: 0.5rem;
+  h3.author {
+    @include article-author;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
 }

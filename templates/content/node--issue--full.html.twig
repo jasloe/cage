@@ -70,21 +70,17 @@
  *   in different view modes.
  */
 #}
+<div class="issue">
 
-<div class="item">
-
-	{{ content.field_article_marquee }}
-
-	{{ content.field_article_rel_issues }}
-
-	<h2 class="title">
+	{{ title_prefix }}
+	<h1{{title_attributes}}>
 		{{ label }}
-	</h2>
+	</h1>
 
-	{{ content.field_article_primary_author }}
+	{{ title_suffix }}
 
-</a>
+	<div{{content_attributes}}>
+		{{ content }}
+	</div>
 
-<a href="{{ url }}" class="article-link" rel="bookmark">
-	<span></span>
-</a></div>
+</div>

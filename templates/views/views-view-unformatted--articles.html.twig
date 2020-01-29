@@ -15,21 +15,16 @@
  * @see template_preprocess_views_view_unformatted()
  */
 #}
-
+{% if title %}
+	<h3>{{ title }}</h3>
+{% endif %}
 {% for row in rows %}
-	<div class="front issue-container">
+	{%
+    set row_classes = [
+      default_row_class ? 'views-row',
+    ]
+  %}
+	<div class="article">
 		{{- row.content -}}
-		<a href="/issues/{{row.content['#row']._entity.field_issue_short_title[0].value}}">
-			<div class="issue-wrapper">
-				<h2 class="volume-number">
-					<span>No.{{row.content['#row']._entity.field_issue_volume_number[0].value}}</span>
-				</h2>
-				<h1 class="title">{{row.content['#row']._entity.title[0].value}}</h1>
-				<div class="summary">{{row.content['#row']._entity.field_issue_precis[0].value|raw}}</div>
-				<div class="link">
-					Read this issue
-				</div>
-			</div>
-		</a>
 	</div>
 {% endfor %}

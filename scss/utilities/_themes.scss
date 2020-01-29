@@ -2,19 +2,12 @@
 @mixin article($name, $primary) {
   .#{$name} {
     // color
-    .region__page-title,
-    .region__content-wrapper {
+    main {
       color: $primary;
     }
     // borders
-    h1.c-title__title,
-    .region__content .endnotes .field-body {
+    h1.title {
       border-top-color: $primary;
-    }
-
-    // icons
-    .social-media-sharing .share {
-      color: $primary;
     }
 
     // images
@@ -31,9 +24,7 @@
   }
 }
 
-@include article(hyla-article, $hyla);
 @include article(change-article, $change);
-@include article(wolff-article, $wolff);
 
 // article theme mixins, from the editor
 @mixin in-this-issue($name, $primary, $secondary) {

@@ -2,6 +2,10 @@
 .user-logged-in .headroom {
 }
 
+main {
+  margin-top: 5rem;
+}
+
 header.headroom {
   position: fixed;
   z-index: 100;
@@ -26,6 +30,34 @@ header.headroom--unpinned {
   border-bottom: none;
   transform: translateY(-100%);
   opacity: 0;
+}
+
+// now reading
+.now-reading.headroom {
+  z-index: 20;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.now-reading.headroom {
+  will-change: transform;
+  transition: all 0.2s linear;
+}
+
+.now-reading.headroom--pinned {
+  // opacity: 0;
+  transform: translateY(-100%);
+}
+
+.now-reading.headroom--unpinned {
+  // opacity: 1;
+  transform: translateY(0%);
+}
+
+.now-reading {
+  background: $white;
 }
 
 @-webkit-keyframes slideDown {
@@ -98,27 +130,4 @@ header.headroom--unpinned {
   -webkit-animation-name: slideUp;
   -moz-animation-name: slideUp;
   animation-name: slideUp;
-}
-
-// now reading
-.now-reading.headroom {
-  z-index: 20;
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  background: $white;
-}
-
-.now-reading.headroom {
-  will-change: transform;
-  transition: opacity 0.2s linear;
-}
-
-.now-reading.headroom--pinned {
-  opacity: 0;
-}
-
-.now-reading.headroom--unpinned {
-  opacity: 1;
 }

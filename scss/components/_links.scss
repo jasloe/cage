@@ -4,10 +4,6 @@ a {
   text-decoration: none;
 }
 
-.site-name {
-  padding-top: 3px;
-}
-
 .site-name a {
   text-transform: uppercase;
   letter-spacing: 0.04rem;
@@ -92,16 +88,14 @@ a.issue__link:hover {
 
 // footer region links
 footer {
+  @include font-size(0.9rem);
   a {
-    color: $white;
     transition: all 0.2s ease;
   }
   a:hover {
-    color: $dark-gray;
     transition: all 0.2s ease;
   }
   a.is-active {
-    color: $dark-gray;
   }
 }
 

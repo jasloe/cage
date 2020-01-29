@@ -117,31 +117,35 @@
 
 
 
-let progressBar = document.getElementById('progress_bar')
-let body = document.body,
-    html = document.documentElement;
+// let progressBar = document.getElementById('progress_bar')
+// let body = document.body,
+//     html = document.documentElement;
 
-let x = document.getElementsByClassName('region__content-wrapper')[0]
+// let x = document.getElementsByClassName('region__content-wrapper')[0]
 
-let articleHeight = x.scrollHeight;
+// let articleHeight = x.scrollHeight;
 
-// console.log(x.offsetHeight);
+// // console.log(x.offsetHeight);
 
-// let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+// // let height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
-let height = x.offsetHeight;
+// let height = x.offsetHeight;
 
-console.log(height);
+// console.log(height);
 
-const setProgress = () => {
-  // let scrollFromTop = (document.documentElement.scrollTop || body.scrollTop) + html.clientHeight;
-  let width = html.clientHeight / height) / 10 + "%";
+// const setProgress = () => {
+//   // let scrollFromTop = (document.documentElement.scrollTop || body.scrollTop) + html.clientHeight;
+//   let width = html.clientHeight / height) / 10 + "%";
 
-  progressBar.style.width = width;
-}
+//   progressBar.style.width = width;
+// }
 
-window.addEventListener('scroll', setProgress);
+// window.addEventListener('scroll', setProgress);
 
-setProgress();
+// setProgress();
+
+
+// MicroModal.init();
+
 
 //# sourceMappingURL=maps/main.js.map

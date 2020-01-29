@@ -1,147 +1,61 @@
-// main
-main {
-  margin-top: 5rem;
-  margin-bottom: 3rem;
-}
-
-// front
-// front page article teasers
-.home .articles .flex-container {
+// home page, basic layout
+.home .articles .flex {
   display: flex;
   flex-direction: column;
 
   @include mq($from: desktop) {
     flex-flow: row wrap;
     justify-content: space-between;
-    .item {
+    .article {
       flex-basis: calc(32% - 1rem);
       position: relative;
     }
   }
 }
 
-// front page blocks
-.home .region__content-post {
-  @include global-margin;
-  padding: 0 1rem;
-  .block {
-    margin-top: 3rem;
-    &:first-child {
-      margin-top: 0rem;
-    }
-  }
-}
-
-.home .region__content-post .featured-release h3,
-.home .region__content-post .in-conversation h3 {
-  padding: 3rem 3rem 0rem 3rem;
-  border: none;
-}
-
-// front page in conversation
-.home .featured-release {
-  background: #e8dcdd;
-}
-
-.home .in-conversation {
-  background: #dce3e8;
-}
-
-.home .featured-release,
-.home .in-conversation {
-  header {
-    margin: 0;
-
-    p {
-      @include justify;
-    }
-  }
-}
-
-.home .in-conversation .flex-container {
-  display: flex;
-  padding: 0rem 2rem 2rem 2rem;
-  flex-direction: column;
-  @include mq($from: desktop) {
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 2rem 2rem 3rem 2rem;
-    header,
-    .authors {
-      flex-basis: 40%;
-    }
-  }
-}
-
-.home .featured-release .flex-container {
-  padding: 1rem 3rem 3rem 3rem;
-}
-
-.home .featured-release .item a {
-  // display: flex;
-  // align-items: flex-start;
-  // justify-content: center;
-
-  // .release,
-  // .release-cover {
-  //   flex-basis: 50%;
-  // }
-  // .release {
-  //   padding: 2rem;
-  // }
-}
-
-.home .featured-release .item a {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  @include mq($from: desktop) {
-    flex-direction: row;
-    text-align: initial;
-    .release,
-    .release-cover {
-      flex-basis: 50%;
-    }
-    .release {
-      padding: 2rem;
-    }
-  }
-}
-
-// toc article teasers
-@include mq($from: desktop) {
-  .issues .toc {
-    max-width: $wide;
-    margin: 0 auto;
-    padding: 0 1rem;
-    .flex-container {
-      display: flex;
-      flex-direction: row;
-      flex-flow: row wrap;
-      justify-content: space-between;
-      max-width: 100%;
-      align-items: flex-start;
-      .item {
-        flex-basis: calc(33% - 1rem);
-      }
-    }
-  }
-}
-
-// from the editor
-.issues .from-the-editor {
+// issue front page, basic layout
+.issues .issue,
+.issues .from-the-editor,
+.issues .block.toc {
   max-width: $tablet;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+// issue colors
+
+// from the editor
+.issues .block.toc {
   .title {
     text-align: center;
     padding-bottom: 5rem;
   }
 }
 
-// articles
+.issues .block.toc .flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.issues .block.toc .flex .article {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.issues .block.toc .flex .article {
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+  h3 {
+    @include title-sm;
+  }
+}
+
+// articles, inside page layout
 .page-node-type-article {
   // title region
   .region__page-title {
@@ -202,10 +116,6 @@ main {
 }
 
 // footer
-footer {
-  background: #2b2b2b;
-}
-
 .region__footer {
   @include global-margin;
   padding: 3rem;
@@ -260,18 +170,10 @@ footer {
 
 .region__footer h2 {
   @include title-sc;
-  padding-bottom: 0.5rem;
-  color: #dee3e8;
-  opacity: 0.7;
-}
-
-.region__footer p {
-  color: #dee3e8;
-  opacity: 0.8;
+  padding-bottom: 0.2rem;
 }
 
 .region__footer a {
-  color: #dee3e8;
   opacity: 0.8;
 }
 
@@ -287,8 +189,7 @@ footer {
   padding: 3rem;
   background: $black;
   color: $dark-white !important;
-  @include font-size(0.8rem);
-  line-height: 1.5;
+  @include font-size(0.9rem);
   a {
     color: $dark-white !important;
   }

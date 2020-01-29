@@ -13,13 +13,34 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 header {
   @include font-size(1rem);
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  @include mq($until: mobile) {
+    .site-name {
+    }
+  }
 }
 
 .region__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+}
+
+.subscribe-search {
+  display: flex;
+
+  @include mq($until: mobile) {
+    .subscribe {
+      display: none;
+    }
+  }
+
+  @include mq($from: mobile) {
+    .subscribe {
+      margin-right: 0.5rem;
+    }
+  }
 }
 
 // default mobile navigation
@@ -51,22 +72,39 @@ header {
   @include font-size(0.9rem);
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  padding: 1rem;
 }
 
 .now-reading {
-  display: flex;
-  align-items: top;
+  max-width: $tablet;
+  margin: 0 auto;
 
-  span {
+  .title-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    @include mq($from: tablet) {
+      flex-direction: row;
+      align-items: center;
+    }
+    @include mq($until: tablet) {
+      padding: 1rem;
+    }
+  }
+  .label {
+    position: relative;
+    padding-right: 1rem;
     &::after {
+      display: inline-block;
       content: "";
       background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='5' height='5'><circle cx='2.5' cy='2.5' r='2.5' /></svg>")
         no-repeat;
       height: 6px;
       width: 6px;
-      padding-bottom: 4px;
-      padding-left: 2rem;
+      margin-left: calc(0.5rem + 6px);
+      margin-right: calc(0.5rem - 6px);
+      text-align: center;
     }
+  }
+  .title {
   }
 }

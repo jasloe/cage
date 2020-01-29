@@ -321,78 +321,20 @@ body:before {
   font-style: normal;
 }
 
-.hyla-article .region__page-title,
-.hyla-article .region__content-wrapper {
-  color: #664d94;
+.change-article main {
+  color: red;
 }
 
-.hyla-article h1.c-title__title,
-.hyla-article .region__content .endnotes .field-body {
-  border-top-color: #664d94;
-}
-
-.hyla-article .social-media-sharing .share {
-  color: #664d94;
-}
-
-.hyla-article .media--image {
-  background: #664d94;
-  line-height: 0;
-}
-
-.hyla-article .media--image img {
-  -webkit-filter: grayscale(100%) contrast(1) blur(0);
-          filter: grayscale(100%) contrast(1) blur(0);
-  max-width: 100%;
-  mix-blend-mode: screen;
-}
-
-.change-article .region__page-title,
-.change-article .region__content-wrapper {
-  color: #002e6f;
-}
-
-.change-article h1.c-title__title,
-.change-article .region__content .endnotes .field-body {
-  border-top-color: #002e6f;
-}
-
-.change-article .social-media-sharing .share {
-  color: #002e6f;
+.change-article h1.title {
+  border-top-color: red;
 }
 
 .change-article .media--image {
-  background: #002e6f;
+  background: red;
   line-height: 0;
 }
 
 .change-article .media--image img {
-  -webkit-filter: grayscale(100%) contrast(1) blur(0);
-          filter: grayscale(100%) contrast(1) blur(0);
-  max-width: 100%;
-  mix-blend-mode: screen;
-}
-
-.wolff-article .region__page-title,
-.wolff-article .region__content-wrapper {
-  color: #f26b01;
-}
-
-.wolff-article h1.c-title__title,
-.wolff-article .region__content .endnotes .field-body {
-  border-top-color: #f26b01;
-}
-
-.wolff-article .social-media-sharing .share {
-  color: #f26b01;
-}
-
-.wolff-article .media--image {
-  background: #f26b01;
-  line-height: 0;
-}
-
-.wolff-article .media--image img {
   -webkit-filter: grayscale(100%) contrast(1) blur(0);
           filter: grayscale(100%) contrast(1) blur(0);
   max-width: 100%;
@@ -425,10 +367,6 @@ body:before {
   mix-blend-mode: luminosity;
 }
 
-header {
-  opacity: 1;
-}
-
 body {
   line-height: 1.2;
   font-family: "Univers LT Std";
@@ -440,12 +378,11 @@ img {
   width: 100%;
 }
 
-main {
-  margin-top: 5rem;
-  margin-bottom: 3rem;
+.media picture {
+  display: none;
 }
 
-.home .articles .flex-container {
+.home .articles .flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,7 +393,7 @@ main {
 }
 
 @media (min-width: 61.25em) {
-  .home .articles .flex-container {
+  .home .articles .flex {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -465,166 +402,73 @@ main {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .home .articles .flex-container .item {
+  .home .articles .flex .article {
     -ms-flex-preferred-size: calc(32% - 1rem);
         flex-basis: calc(32% - 1rem);
     position: relative;
   }
 }
 
-.home .region__content-post {
-  margin: 0 auto;
-  max-width: 1300px;
-  padding: 0 1rem;
-}
-
-.home .region__content-post .block {
-  margin-top: 3rem;
-}
-
-.home .region__content-post .block:first-child {
-  margin-top: 0rem;
-}
-
-.home .region__content-post .featured-release h3,
-.home .region__content-post .in-conversation h3 {
-  padding: 3rem 3rem 0rem 3rem;
-  border: none;
-}
-
-.home .featured-release {
-  background: #e8dcdd;
-}
-
-.home .in-conversation {
-  background: #dce3e8;
-}
-
-.home .featured-release header,
-.home .in-conversation header {
-  margin: 0;
-}
-
-.home .featured-release header p,
-.home .in-conversation header p {
-  text-align: justify;
-  text-justify: inter-word;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.home .featured-release header p em,
-.home .in-conversation header p em {
-  font-style: italic;
-}
-
-.home .in-conversation .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0rem 2rem 2rem 2rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media (min-width: 61.25em) {
-  .home .in-conversation .flex-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 2rem 2rem 3rem 2rem;
-  }
-  .home .in-conversation .flex-container header,
-  .home .in-conversation .flex-container .authors {
-    -ms-flex-preferred-size: 40%;
-        flex-basis: 40%;
-  }
-}
-
-.home .featured-release .flex-container {
-  padding: 1rem 3rem 3rem 3rem;
-}
-
-.home .featured-release .item a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media (min-width: 61.25em) {
-  .home .featured-release .item a {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    text-align: initial;
-  }
-  .home .featured-release .item a .release,
-  .home .featured-release .item a .release-cover {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-  .home .featured-release .item a .release {
-    padding: 2rem;
-  }
-}
-
-@media (min-width: 61.25em) {
-  .issues .toc {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  .issues .toc .flex-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-flow: row wrap;
-        flex-flow: row wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    max-width: 100%;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .issues .toc .flex-container .item {
-    -ms-flex-preferred-size: calc(33% - 1rem);
-        flex-basis: calc(33% - 1rem);
-  }
-}
-
-.issues .from-the-editor {
+.issues .issue,
+.issues .from-the-editor,
+.issues .block.toc {
   max-width: 740px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 
-.issues .from-the-editor .title {
+.issues .block.toc .title {
   text-align: center;
   padding-bottom: 5rem;
+}
+
+.issues .block.toc .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.issues .block.toc .flex .article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+}
+
+.issues .block.toc .flex .article h2 {
+  margin-bottom: 0.5rem;
+}
+
+.issues .block.toc .flex .article h3 {
+  font-family: "Univers LT Std";
+  font-size: calc(1.335rem + 1.02vw);
+  text-transform: normal;
+  line-height: 1;
+}
+
+@media (min-width: 1200px) {
+  .issues .block.toc .flex .article h3 {
+    font-size: 2.1rem;
+  }
+}
+
+.issues .block.toc .flex .article h3 em {
+  font-family: "Univers LT Std Oblique";
 }
 
 .page-node-type-article .region__page-title {
@@ -693,10 +537,6 @@ main {
   display: -ms-flexbox;
   display: flex;
   padding: 0 1rem;
-}
-
-footer {
-  background: #2b2b2b;
 }
 
 .region__footer {
@@ -775,25 +615,23 @@ footer {
 
 .region__footer h2 {
   font-family: "Univers LT Std";
-  font-size: 0.8rem;
+  font-size: calc(1.275rem + 0.3vw);
   text-transform: uppercase;
   line-height: 1;
-  padding-bottom: 0.5rem;
-  color: #dee3e8;
-  opacity: 0.7;
+  padding-bottom: 0.2rem;
+}
+
+@media (min-width: 1200px) {
+  .region__footer h2 {
+    font-size: 1.5rem;
+  }
 }
 
 .region__footer h2 em {
   font-family: "Univers LT Std Oblique";
 }
 
-.region__footer p {
-  color: #dee3e8;
-  opacity: 0.8;
-}
-
 .region__footer a {
-  color: #dee3e8;
   opacity: 0.8;
 }
 
@@ -817,8 +655,7 @@ footer {
   padding: 3rem;
   background: #000;
   color: #bfbfbf !important;
-  font-size: 0.8rem;
-  line-height: 1.5;
+  font-size: 0.9rem;
 }
 
 .region__legal a {
@@ -841,13 +678,25 @@ footer {
   }
 }
 
+.overlay.open {
+  position: fixed;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  z-index: 10000;
+}
+
+body.no-scroll {
+  height: 100vh;
+  overflow-y: hidden;
+  padding: 0 3rem !important;
+}
+
 a {
   color: #000;
   text-decoration: none;
-}
-
-.site-name {
-  padding-top: 3px;
 }
 
 .site-name a {
@@ -960,20 +809,18 @@ a.issue__link:hover .issue__title span {
   padding-right: 0;
 }
 
+footer {
+  font-size: 0.9rem;
+}
+
 footer a {
-  color: white;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 footer a:hover {
-  color: #666666;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-}
-
-footer a.is-active {
-  color: #666666;
 }
 
 .social-buttons a:hover {
@@ -1105,6 +952,12 @@ footer a.is-active {
 header {
   font-size: 1rem;
   padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .region__header {
@@ -1117,7 +970,24 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem;
+}
+
+.subscribe-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 29.99em) {
+  .subscribe-search .subscribe {
+    display: none;
+  }
+}
+
+@media (min-width: 30em) {
+  .subscribe-search .subscribe {
+    margin-right: 0.5rem;
+  }
 }
 
 @media (min-width: 46.25em) {
@@ -1152,25 +1022,56 @@ header {
   font-size: 0.9rem;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  padding: 1rem;
 }
 
 .now-reading {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.now-reading .title-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: top;
-      -ms-flex-align: top;
-          align-items: top;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem 0;
 }
 
-.now-reading span::after {
+@media (min-width: 46.25em) {
+  .now-reading .title-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 46.24em) {
+  .now-reading .title-wrapper {
+    padding: 1rem;
+  }
+}
+
+.now-reading .label {
+  position: relative;
+  padding-right: 1rem;
+}
+
+.now-reading .label::after {
+  display: inline-block;
   content: "";
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='5' height='5'><circle cx='2.5' cy='2.5' r='2.5' /></svg>") no-repeat;
   height: 6px;
   width: 6px;
-  padding-bottom: 4px;
-  padding-left: 2rem;
+  margin-left: calc(0.5rem + 6px);
+  margin-right: calc(0.5rem - 6px);
+  text-align: center;
 }
 
 textarea:focus,
@@ -1259,6 +1160,10 @@ input:focus {
   padding-left: 0.3rem;
 }
 
+main {
+  margin-top: 5rem;
+}
+
 header.headroom {
   position: fixed;
   z-index: 100;
@@ -1286,6 +1191,34 @@ header.headroom--unpinned {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   opacity: 0;
+}
+
+.now-reading.headroom {
+  z-index: 20;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.now-reading.headroom {
+  will-change: transform;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.now-reading.headroom--pinned {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.now-reading.headroom--unpinned {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.now-reading {
+  background: white;
 }
 
 @-webkit-keyframes slideDown {
@@ -1336,29 +1269,6 @@ header.headroom--unpinned {
 .animated.slideUp {
   -webkit-animation-name: slideUp;
   animation-name: slideUp;
-}
-
-.now-reading.headroom {
-  z-index: 20;
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  background: white;
-}
-
-.now-reading.headroom {
-  will-change: transform;
-  -webkit-transition: opacity 0.2s linear;
-  transition: opacity 0.2s linear;
-}
-
-.now-reading.headroom--pinned {
-  opacity: 0;
-}
-
-.now-reading.headroom--unpinned {
-  opacity: 1;
 }
 
 .b-lazy,
@@ -1429,44 +1339,12 @@ footer {
           flex: 0;
 }
 
-h3 {
-  border-bottom: 1px solid;
-  margin: 1rem 0;
-  padding-bottom: 0.2rem;
-  font-family: "Univers LT Std";
-  font-size: 0.8rem;
-  text-transform: normal;
-  line-height: 1;
-  text-transform: uppercase;
-}
-
-@media (min-width: 81.25em) {
-  h3 {
-    padding-left: 0;
-    margin: 1rem 0;
-  }
-}
-
-.featured-release h3,
-.in-conversation h3 {
-  font-family: "Univers LT Std";
-  font-size: 1.2rem;
-  text-transform: normal;
-  line-height: 1;
-  text-transform: initial;
-}
-
-.featured-release h3 em,
-.in-conversation h3 em {
-  font-family: "Univers LT Std Oblique";
-}
-
 .in-this-issue h3 {
   border-bottom: 1px solid;
   margin: 1rem;
   padding-bottom: 0.2rem;
   font-family: "Univers LT Std";
-  font-size: calc(1.285rem + 0.42vw);
+  font-size: calc(1.365rem + 1.38vw);
   text-transform: normal;
   line-height: 1;
   text-transform: uppercase;
@@ -1474,7 +1352,7 @@ h3 {
 
 @media (min-width: 1200px) {
   .in-this-issue h3 {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -1487,7 +1365,7 @@ h3 {
 
 .from-the-editor h3 {
   font-family: "Life LT Std Roman";
-  font-size: calc(1.285rem + 0.42vw);
+  font-size: calc(1.365rem + 1.38vw);
   text-transform: static;
   line-height: 1;
   padding-bottom: 1.4rem;
@@ -1497,7 +1375,7 @@ h3 {
 
 @media (min-width: 1200px) {
   .from-the-editor h3 {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -1547,12 +1425,19 @@ h3 {
 .issues .toc .item .field-article-rel-issues,
 .home .articles .flex-container .item .field-article-rel-issues {
   font-family: "Univers LT Std";
-  font-size: 0.8rem;
+  font-size: calc(1.275rem + 0.3vw);
   text-transform: uppercase;
   line-height: 1;
   text-transform: uppercase;
   padding-top: 1rem;
   z-index: 100;
+}
+
+@media (min-width: 1200px) {
+  .issues .toc .item .field-article-rel-issues,
+  .home .articles .flex-container .item .field-article-rel-issues {
+    font-size: 1.5rem;
+  }
 }
 
 .issues .toc .item .field-article-rel-issues em,
@@ -1568,9 +1453,16 @@ h3 {
 .issues .toc h2.title,
 .home .articles .flex-container h2.title {
   font-family: "Life LT Std Roman";
-  font-size: 1.2rem;
+  font-size: calc(1.335rem + 1.02vw);
   text-transform: uppercase;
   line-height: 1;
+}
+
+@media (min-width: 1200px) {
+  .issues .toc h2.title,
+  .home .articles .flex-container h2.title {
+    font-size: 2.1rem;
+  }
 }
 
 .issues .toc h2.title em,
@@ -1581,10 +1473,17 @@ h3 {
 .issues .toc .field-article-primary-author,
 .home .articles .flex-container .field-article-primary-author {
   font-family: "Univers LT Std";
-  font-size: 1.2rem;
+  font-size: calc(1.335rem + 1.02vw);
   text-transform: normal;
   line-height: 1;
   margin-top: auto;
+}
+
+@media (min-width: 1200px) {
+  .issues .toc .field-article-primary-author,
+  .home .articles .flex-container .field-article-primary-author {
+    font-size: 2.1rem;
+  }
 }
 
 .issues .toc .field-article-primary-author em,
@@ -1592,194 +1491,10 @@ h3 {
   font-family: "Univers LT Std Oblique";
 }
 
-.home .featured-release .title {
-  font-family: "Life LT Std Roman";
-  font-size: calc(1.285rem + 0.42vw);
-  text-transform: uppercase;
-  line-height: 1;
-  padding-top: 1rem;
-}
-
-@media (min-width: 1200px) {
-  .home .featured-release .title {
-    font-size: 1.6rem;
-  }
-}
-
-.home .featured-release .title em {
-  font-family: "Life LT Std Italic";
-}
-
-.home .featured-release .field-release-artists {
-  font-family: "Univers LT Std";
-  font-size: 1.2rem;
-  text-transform: normal;
-  line-height: 1;
-}
-
-.home .featured-release .field-release-artists em {
-  font-family: "Univers LT Std Oblique";
-}
-
-.home .featured-release .release-metadata {
-  font-family: "Univers LT Std";
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  line-height: 1;
-  display: inline;
-}
-
-.home .featured-release .release-metadata em {
-  font-family: "Univers LT Std Oblique";
-}
-
-.home .featured-release .release-metadata > div {
-  display: inline;
-}
-
-.home .featured-release .field-release-catalog-number:after {
-  content: "ꞏ";
-  padding: 0 5px;
-}
-
-.home .featured-release .field-release-release-summary {
-  font-family: "Life LT Std Roman";
-  font-size: 1.2rem;
-  text-transform: normal;
-  line-height: 1;
-  padding-top: 2rem;
-  text-align: justify;
-  text-justify: inter-word;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.home .featured-release .field-release-release-summary em {
-  font-style: italic;
-}
-
-.home .featured-release .field-release-release-date {
-  font-family: "Univers LT Std";
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  line-height: 1;
-  display: block;
-  padding-top: 2rem;
-}
-
-.home .featured-release .field-release-release-date em {
-  font-family: "Univers LT Std Oblique";
-}
-
-.home .featured-release .field-release-release-date > div {
-  display: inline;
-}
-
-.home .featured-release .field-release-release-date .field__label:after {
-  content: "ꞏ";
-  padding: 0 5px;
-}
-
-.home .in-conversation p {
-  font-family: "Univers LT Std";
-  font-size: 1.2rem;
-  text-transform: normal;
-  line-height: 1;
-}
-
-.home .in-conversation .authors {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-  padding: 1rem;
-  font-family: "Life LT Std Roman";
-  font-size: 1.2rem;
-  text-transform: normal;
-  line-height: 1;
-}
-
-.home .in-conversation .authors a {
-  line-height: 1.2;
-}
-
-.path-frontpage .in-this-issue .slide__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 2rem;
-}
-
-.path-frontpage .in-this-issue .slide__caption {
-  width: 50%;
-  text-align: center;
-}
-
-.path-frontpage .in-this-issue .slide__description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.path-frontpage .in-this-issue .c-item__title {
-  font-family: "Univers LT Std";
-  font-size: calc(1.285rem + 0.42vw);
-  text-transform: uppercase;
-  line-height: 1;
-  padding: 1rem 1rem 2rem 1rem;
-}
-
-@media (min-width: 1200px) {
-  .path-frontpage .in-this-issue .c-item__title {
-    font-size: 1.6rem;
-  }
-}
-
-.path-frontpage .in-this-issue .c-item__title em {
-  font-family: "Univers LT Std Oblique";
-}
-
-.path-frontpage .in-this-issue .c-item__author {
-  font-family: "Life LT Std Roman";
-  font-size: 1.2rem;
-  text-transform: normal;
-  line-height: 1;
-  margin-top: auto;
-  margin-bottom: 2rem;
-}
-
-.path-frontpage .in-this-issue .c-item__author em {
-  font-family: "Life LT Std Italic";
-}
-
 .region__page-title .c-title .c-title__tag,
 .region__page-title .c-title .c-title__pre-title {
   font-family: "Life LT Std Roman";
-  font-size: calc(1.285rem + 0.42vw);
+  font-size: calc(1.365rem + 1.38vw);
   text-transform: static;
   line-height: 1;
   padding-bottom: 1.4rem;
@@ -1788,7 +1503,7 @@ h3 {
 @media (min-width: 1200px) {
   .region__page-title .c-title .c-title__tag,
   .region__page-title .c-title .c-title__pre-title {
-    font-size: 1.6rem;
+    font-size: 2.4rem;
   }
 }
 
@@ -1832,13 +1547,26 @@ h3 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Univers LT Std";
-  font-size: 1.2rem;
+  font-size: calc(1.335rem + 1.02vw);
   text-transform: normal;
   line-height: 1;
 }
 
 .issues .from-the-editor .page-section em {
   font-style: italic;
+}
+
+@media (max-width: 29.99em) {
+  .issues .from-the-editor .page-section {
+    text-align: left;
+    text-justify: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .issues .from-the-editor .page-section {
+    font-size: 2.1rem;
+  }
 }
 
 .issues .from-the-editor .page-section .field-body p {
@@ -1854,10 +1582,16 @@ h3 {
   margin: 1rem 0;
   padding-bottom: 0.2rem;
   font-family: "Univers LT Std";
-  font-size: 0.8rem;
+  font-size: calc(1.275rem + 0.3vw);
   text-transform: normal;
   line-height: 1;
   text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+  .path-issues h3 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 81.25em) {
@@ -1895,6 +1629,15 @@ h3 {
 .page-node-type-article .page-section em,
 .page-node-type-article .endnotes em {
   font-style: italic;
+}
+
+@media (max-width: 29.99em) {
+  .page-node-type-article .interview,
+  .page-node-type-article .page-section,
+  .page-node-type-article .endnotes {
+    text-align: left;
+    text-justify: none;
+  }
 }
 
 .page-node-type-article blockquote {
@@ -1981,9 +1724,23 @@ h3 {
   padding-right: 1rem;
 }
 
-h1.c-title {
+.page-node-type-article h2.pre-title {
   font-family: "Life LT Std Roman";
-  font-size: calc(1.425rem + 2.1vw);
+  font-size: calc(1.275rem + 0.3vw);
+  text-transform: initial;
+  line-height: 1;
+  padding-bottom: 1.2rem;
+}
+
+@media (min-width: 1200px) {
+  .page-node-type-article h2.pre-title {
+    font-size: 1.5rem;
+  }
+}
+
+.page-node-type-article h1.title {
+  font-family: "Life LT Std Roman";
+  font-size: calc(1.445rem + 2.34vw);
   text-transform: uppercase;
   line-height: 1;
   border-top: 1px solid;
@@ -1993,41 +1750,32 @@ h1.c-title {
 }
 
 @media (min-width: 1200px) {
-  h1.c-title {
-    font-size: 3rem;
+  .page-node-type-article h1.title {
+    font-size: 3.2rem;
   }
 }
 
-h1.c-title em {
+.page-node-type-article h1.title em {
   font-family: "Life LT Std Italic";
 }
 
-.c-title__author {
+.page-node-type-article h1.title em {
+  font-family: "Life LT Std Italic";
+}
+
+.page-node-type-article h3.author {
   font-family: "Univers LT Std";
-  font-size: calc(1.285rem + 0.42vw);
-  text-transform: normal;
+  font-size: calc(1.335rem + 1.02vw);
+  text-transform: initial;
   line-height: 1;
-  margin: 2rem 0;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
 @media (min-width: 1200px) {
-  .c-title__author {
-    font-size: 1.6rem;
+  .page-node-type-article h3.author {
+    font-size: 2.1rem;
   }
-}
-
-.region__content-first .social h2 {
-  font-family: "Univers LT Std";
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  line-height: 1;
-  padding-bottom: 0.5rem;
-}
-
-.region__content-first .social h2 em {
-  font-family: "Univers LT Std Oblique";
 }
 
 .field-media-image-caption {
@@ -2103,7 +1851,8 @@ h1.c-title em {
 .instagram,
 .soundcloud,
 .twitter,
-.email {
+.email,
+.search {
   padding-right: 1rem;
   display: block;
   background-repeat: no-repeat;
@@ -2113,8 +1862,14 @@ h1.c-title em {
   vertical-align: top;
 }
 
-.email {
+.email,
+.search {
   padding-right: 0rem;
+}
+
+.search {
+  width: 0.9rem;
+  height: 0.9rem;
 }
 
 .bandcamp {
@@ -2147,12 +1902,39 @@ h1.c-title em {
   margin-right: 0;
 }
 
+.search {
+  background-image: url(../images/search.svg);
+}
+
+.social {
+  display: none;
+}
+
 .home .region__content {
   text-align: center;
 }
 
-.front .c-item__title-wrapper {
-  margin: 0;
+.home front.issue-container {
+  height: 100vh;
+}
+
+.home .front.issue-container {
+  position: relative;
+}
+
+.home .front.issue-container .media--background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.home .front .issue-wrapper {
   position: absolute;
   top: 50%;
   left: 5%;
@@ -2162,8 +1944,8 @@ h1.c-title em {
   opacity: 0.8;
 }
 
-.front .c-item__title-wrapper .c-item__title,
-.front .c-item__title-wrapper .c-item__volume-number {
+.home .front .issue-wrapper .title,
+.home .front .issue-wrapper .volume-number {
   position: relative;
   text-align: center;
   font-family: "Life LT Std Roman";
@@ -2171,51 +1953,54 @@ h1.c-title em {
   text-transform: static;
   line-height: 1;
   text-transform: uppercase;
-  color: white;
 }
 
 @media (min-width: 1200px) {
-  .front .c-item__title-wrapper .c-item__title,
-  .front .c-item__title-wrapper .c-item__volume-number {
+  .home .front .issue-wrapper .title,
+  .home .front .issue-wrapper .volume-number {
     font-size: 3.4rem;
   }
 }
 
-.front .c-item__title-wrapper .c-item__title em,
-.front .c-item__title-wrapper .c-item__volume-number em {
+.home .front .issue-wrapper .title em,
+.home .front .issue-wrapper .volume-number em {
   font-family: "Life LT Std Italic";
 }
 
-.front .c-item__title-wrapper .c-item__volume-number {
+.home .front .issue-wrapper .volume-number {
   text-transform: initial;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid;
   padding-bottom: 0.1rem;
 }
 
-.front .c-item__title-wrapper .c-item__title {
+.home .front .issue-wrapper .title {
   padding-top: 0.5rem;
 }
 
-.front .c-item__title-wrapper .c-item__summary {
+.home .front .issue-wrapper .summary {
   padding: 3rem 0;
   font-family: "Univers LT Std";
-  font-size: 1.2rem;
+  font-size: calc(1.335rem + 1.02vw);
   text-transform: normal;
   line-height: 1;
-  color: white;
 }
 
-.front .c-item__title-wrapper .c-item__summary em {
+@media (min-width: 1200px) {
+  .home .front .issue-wrapper .summary {
+    font-size: 2.1rem;
+  }
+}
+
+.home .front .issue-wrapper .summary em {
   font-family: "Univers LT Std Oblique";
 }
 
-.front .c-item__title-wrapper .c-item__cta {
+.home .front .issue-wrapper .link {
   position: relative;
   font-family: "Univers LT Std";
-  font-size: 0.8rem;
+  font-size: calc(1.275rem + 0.3vw);
   text-transform: uppercase;
   line-height: 1;
-  background: white;
   margin-top: 2rem;
   padding: 1.2rem 1rem 1rem 1rem;
   width: 30%;
@@ -2224,57 +2009,14 @@ h1.c-title em {
           transform: translate(-50%, -50%);
 }
 
-.front .c-item__title-wrapper .c-item__cta em {
+@media (min-width: 1200px) {
+  .home .front .issue-wrapper .link {
+    font-size: 1.5rem;
+  }
+}
+
+.home .front .issue-wrapper .link em {
   font-family: "Univers LT Std Oblique";
-}
-
-.front {
-  position: relative;
-  min-height: 100vh;
-}
-
-.front img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  height: initial;
-  width: initial;
-  -webkit-filter: grayscale(100%) contrast(1) blur(0);
-          filter: grayscale(100%) contrast(1) blur(0);
-  mix-blend-mode: multiply;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.home .region__content {
-  -ms-scroll-snap-type: mandatory;
-      scroll-snap-type: mandatory;
-  -ms-scroll-snap-points-y: repeat(300px);
-      scroll-snap-points-y: repeat(300px);
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-}
-
-.home .region__content .front {
-  scroll-snap-align: start;
-}
-
-.alien-front {
-  background-color: #3587a4;
-}
-
-.hyla-front {
-  background-color: #664d94;
-}
-
-.change-front {
-  background-color: #002e6f;
-}
-
-.just-intonation-front {
-  background-color: #8e3161;
 }
 
 #block-breadcrumbs {

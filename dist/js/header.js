@@ -10,11 +10,27 @@
 // mobileLandscape: 480px
 
 // headroom.js implementation
-if (window.location.hash) {
-  header.classList.add("headroom--unpinned");
+
+const el = document.querySelector("body");
+const nowReading = document.querySelector(".now-reading");
+const hr2 = new Headroom(nowReading, {
+    tolerance: {
+      down: 0,
+      up: 20
+    },
+    offset: 100
+  });
+
+function checkClass() {
+  if (el.classList.contains("page-node-type-article")) {
+    hr2.init();
+  }
+  return;
 }
 
-var hr1 = new Headroom(header, {
+document.querySelector("body").addEventListener("load", checkClass());
+
+const hr1 = new Headroom(header, {
   tolerance: {
     down: 0,
     up: 20
@@ -23,16 +39,7 @@ var hr1 = new Headroom(header, {
 });
 hr1.init();
 
-const nowReading = document.querySelector(".now-reading")
 
-var hr2 = new Headroom(nowReading, {
-  tolerance: {
-    down: 0,
-    up: 100
-  },
-  offset: 100
-});
-hr2.init();
 
 
 
@@ -43,8 +50,10 @@ hr2.init();
   var $regionHeader = $("header");
   var $hamburger = $(".hamburger");
   var $body = $("body");
-  // var $headerOverlay = $("header");
+  var $headerOverlay = $("header");
   var $nav = $(".main");
+  var $overlay = $(".overlay")
+  var $overlayClose = $("button.overlay-close");
 
   function resize() {
 
@@ -71,8 +80,14 @@ hr2.init();
     // toggle overlay
     $headerOverlay.toggleClass('is-active');
     $overlay.toggleClass('open');
+
   });
 
+  $overlayClose.on('click', function () {
+    $body.toggleClass("no-scroll");
+       $overlay.toggleClass("open");
+          $hamburger.toggleClass("is-active");
+  });
 
   function checkMobile() {
     var $isOpen = $('.overlay.open')
@@ -90,5 +105,8 @@ $window.resize(checkMobile);
 
 
 })(jQuery);
+
+
+
 
 //# sourceMappingURL=maps/header.js.map
