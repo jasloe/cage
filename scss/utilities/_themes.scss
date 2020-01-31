@@ -1,7 +1,7 @@
 // article theme mixins, from the editor
 @mixin article($name, $primary) {
   .#{$name} {
-    // color
+    // font color
     main {
       color: $primary;
     }
@@ -10,7 +10,6 @@
       border-top-color: $primary;
     }
 
-    // images
     .media--image {
       background: $primary;
       line-height: 0;
