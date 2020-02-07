@@ -2019,8 +2019,38 @@ footer {
   font-family: "Univers LT Std Oblique";
 }
 
-#block-breadcrumbs {
-  display: none;
+.wolff-article {
+  background: #f26b01;
+  color: #ededed;
+}
+
+.wolff-article header {
+  background: #f26b01;
+}
+
+.region__footer {
+  background: gray !important;
+  color: #000;
+}
+
+.region__footer h2 {
+  font-size: 1rem !important;
+}
+
+.type {
+  font-family: serif;
+  font-size: 1rem;
+}
+
+nav {
+  background: red;
+  padding: 1rem;
+}
+
+nav .breadcrumb {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=maps/main.css.map */
