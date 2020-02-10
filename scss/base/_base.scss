@@ -1,12 +1,5 @@
 // base, reset enhancements
-html {
-  // margin-left: calc(100vw - 100%);
-  // margin-right: 0;
-  // overflow: auto;
-}
-
 body {
-  line-height: 1.2;
   font-family: $default-font;
   text-rendering: optimizeLegibility;
 }
@@ -14,11 +7,4 @@ body {
 img {
   height: auto;
   width: 100%;
-}
-
-.now-reading {
-}
-
-.media picture {
-  display: none;
 }
