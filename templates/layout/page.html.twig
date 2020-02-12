@@ -48,6 +48,8 @@
 	<div class="layout">
 		<header id="header" role="banner">
 			{{ page.header }}
+			{{ page.breadcrumb }}
+
 		</header>
 		<main role="main">
 
@@ -59,11 +61,10 @@
 
 			{{ page.search }}
 
-			{{ page.breadcrumb }}
-			{{ page.page_title }}
 
 			<div class="region__content-wrapper">
 				{{ page.content_first }}
+				{{ page.page_title }}
 				{{ page.content }}
 				{{ page.content_second }}
 			</div>
