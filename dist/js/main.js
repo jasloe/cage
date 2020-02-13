@@ -147,5 +147,24 @@
 
 // MicroModal.init();
 
+let listSpan = document.querySelectorAll(".page-node-type-article .interview p")
+
+let listP = document.querySelectorAll(".page-node-type-article .interview p span")
+
+for (i = 0; i < listP.length; i +=2) {
+  // listP[i].style.textIndent = "4rem";
+  listP[i].className = "odd";
+}
+
+let promoBlock = document.querySelector(".subscribe-promo .field p")
+
+let closeBtn = document.createElement("button");
+let closeBtnText = document.createTextNode("close");
+closeBtn.appendChild("closeBtnText")
+
+promoBlock.appendChild(closeBtn)
+
+
+
 
 //# sourceMappingURL=maps/main.js.map

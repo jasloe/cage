@@ -1,3 +1,15 @@
+// distance between top of page & top of article
+main {
+  padding-top: 7rem;
+}
+
+// header, article relationship
+.page-node-type-article {
+  .region__content-wrapper {
+    @include article-margin;
+  }
+}
+
 // home page, basic layout
 .home .articles .flex {
   display: flex;
@@ -53,63 +65,6 @@
   }
 }
 
-// articles, inside page layout
-
-
-
-.page-node-type-article {
-  .region__content-wrapper {
-    margin: 0 auto;
-    max-width: $desktop;
-    display: flex;
-  }
-  .region__content {
-    flex-basis: 80%;
-  }
-  .region__content-first,
-  .region__content-second {
-    flex-basis: 10%;
-  }
-}
-
-  // title region
-  .region__page-title {
-    margin: 3rem auto 0;
-    max-width: $tablet;
-    padding: 1rem;
-  }
-
-//   .region__content-wrapper {
-//     .region__content-first {
-//       .social {
-//         text-align: center;
-//         padding: 1rem 0;
-//       }
-//     }
-//     display: flex;
-//     flex-direction: column;
-//     margin: 0 auto;
-//     padding-bottom: 1rem;
-//     .region__content .field-body,
-//     .region__content .field-section-title {
-//       padding: 0 1rem;
-//     }
-//     .region__content .field-body {
-//       max-width: $tablet;
-//       margin: 0 auto;
-//     }
-//     .region__content .endnotes {
-//       margin: 0 1rem;
-//     }
-//     .region__content .endnotes .field-body {
-//       max-width: $tablet;
-//       margin: 1rem auto;
-//       border-top: 1px solid;
-//       padding-top: 1rem;
-//     }
-//   }
-// }
-
 .page-node-type-article .region__content-post .authors {
   margin: 0 auto;
   max-width: $tablet;
@@ -139,8 +94,8 @@
 
 .region__footer .footer-about {
   @include type($life, 1.8rem, initial) padding: 3rem;
-  border-top: 1px solid $light-gray;
-  border-bottom: 1px solid $light-gray;
+  border-top: $border-light;
+  border-bottom: $border-light;
   color: $dark-gray;
 }
 
@@ -226,8 +181,4 @@
     align-items: flex-start;
     line-height: 1.2;
   }
-}
-
-.region {
-  backgroud: red;
 }

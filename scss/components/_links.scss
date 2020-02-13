@@ -14,8 +14,16 @@ ol li a {
 }
 
 // header links
+header .hamburger,
+header .site-name,
+header .main,
+header .subscribe-search {
+  padding-top: 3px; // Univers has a dodgy baseline
+}
+
+
 header {
-  background: white;
+
   a {
     box-shadow: none;
     transition: all 0.2s ease;

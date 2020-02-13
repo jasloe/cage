@@ -1,0 +1,28 @@
+.region__header-pre {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: indigo;
+  width: 100%;
+  height: calc(3rem + 5px);
+}
+
+.subscribe-promo,
+.subscribe-promo a {
+  color: gold;
+}
+
+.subscribe-promo {
+  display: flex;
+  align-items: center;
+  padding: calc(1rem + 2px);
+}
+
+.subscribe-promo .field {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+

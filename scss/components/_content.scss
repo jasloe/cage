@@ -177,11 +177,40 @@
   }
 
   .interview .field-body p {
-    text-indent: $indent;
   }
 
   .interview .field-body span {
     @include type($univers, 1rem, uppercase);
-    padding-right: 1rem;
+
+    display: inline-block;
+
   }
+
+.interview .field-body p > span:first-child.odd {
+  width: 4rem;
+  padding-left: 4rem;
+}
+
+.interview .field-body p > span:first-child {
+  width: 4rem;
+}
+
+.interview .field-body p {
+// https://stackoverflow.com/questions/7258606/how-to-select-elements-which-do-not-have-a-specific-child-element-with-jquery
+}
+
+
+  // .interview .field-body p:nth-child(even) > span {
+  //   color: red !important;
+
+  // }
+
+  //   .interview .field-body p:first-child span {
+  //   padding-right: 4rem;
+  // }
+  //   .interview .field-body p:nth-child(2) span {
+  //   padding-right: 0rem;
+  // }
+
+
 }

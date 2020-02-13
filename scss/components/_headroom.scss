@@ -1,24 +1,16 @@
 // header
-.user-logged-in .headroom {
-}
-
-main {
-  margin-top: 5rem;
-}
-
 header.headroom {
   position: fixed;
   z-index: 100;
   right: 0;
   left: 0;
   top: 0;
-  opacity: 1;
-  border-bottom: 1px solid $white;
+  border-bottom: $border-light;
 }
 
 header.headroom {
   will-change: transform;
-  transition: all 200ms linear;
+  transition: all 200ms ease;
 }
 
 header.headroom--pinned {
@@ -32,8 +24,8 @@ header.headroom--unpinned {
   opacity: 0;
 }
 
-// now reading
-.now-reading.headroom {
+// breadcrumb
+.breadcrumbs.headroom {
   z-index: 20;
   position: fixed;
   right: 0;
@@ -41,23 +33,17 @@ header.headroom--unpinned {
   top: 0;
 }
 
-.now-reading.headroom {
-  will-change: transform;
-  transition: all 0.2s linear;
+
+.breadcrumbs.headroom {
+  transition: all 0.5s linear;
 }
 
-.now-reading.headroom--pinned {
-  // opacity: 0;
-  transform: translateY(-100%);
+.breadcrumbs.headroom--pinned {
+  opacity: 0;
 }
 
-.now-reading.headroom--unpinned {
-  // opacity: 1;
-  transform: translateY(0%);
-}
-
-.now-reading {
-  background: $white;
+.breadcrumbs.headroom--unpinned {
+  opacity: 1;
 }
 
 @-webkit-keyframes slideDown {

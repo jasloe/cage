@@ -1,5 +1,6 @@
 // restating global breakpoints
 $mobile: 480px;
+$article: 60vw;
 $tablet: 740px;
 $desktop: 980px;
 $wide: 1300px;
@@ -8,15 +9,31 @@ $mobileLandscape: 480px;
 
 $max-vw: $wide;
 
+$font-nav-sm: .9rem;
 $font-sm: 1rem;
-$font-md: 2.1rem;
-$font-lg: 2.4rem;
+$font-md: 1.9rem;
+$font-lg: 2.5rem;
 $font-display: 3.2rem;
 $font-xl: 3.4rem;
+
+$border-light: 1px solid $light-gray;
+$border-medium: 1px solid $medium-gray;
+$border-dark: 1px solid $dark-gray;
+
+@mixin font-nav-sm {
+  font-size: $font-nav-sm;
+}
 
 @mixin global-margin {
   margin: 0 auto;
   max-width: $max-vw;
+  padding: 0 1rem;
+}
+
+@mixin article-margin {
+  margin: 0 auto;
+  max-width: $article;
+  padding: 0 1rem;
 }
 
 @mixin link-cover {
@@ -60,7 +77,7 @@ $font-xl: 3.4rem;
 }
 
 @mixin article-type {
-  @include type($life, $font-sm, initial);
+  @include type($life, $font-md, initial);
 }
 
 @mixin article-title {

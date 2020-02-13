@@ -1,13 +1,13 @@
 .page-node-type-article {
-  h2.pre-title {
+  .rubric {
     @include article-type;
-    padding-bottom: 1.2rem;
+    padding-bottom: 2.8rem;
   }
 
   h1.title {
     @include article-title;
     border-top: 1px solid;
-    padding: 0.7rem 1rem 0rem 1rem;
+    padding: 0.7rem 2rem;
     text-align: center;
     line-height: 1;
     em {
@@ -15,9 +15,9 @@
     }
   }
 
-  h3.author {
+  h2.author {
     @include article-author;
-    padding: 2rem 1rem;
+    padding: 3rem 2rem;
     text-align: center;
   }
 }

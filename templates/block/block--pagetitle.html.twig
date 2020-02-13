@@ -25,12 +25,12 @@
  * @see template_preprocess_block()
  */
 #}
-{# {%
+{%
   set classes = [
     'block',
     'block__' ~ plugin_id|clean_class
   ]
-%} #}
+%}
 
 {% set attributes = attributes.addClass([
   'block',

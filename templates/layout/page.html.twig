@@ -43,24 +43,14 @@
  */
 #}
 
-
 <div class="layout-container">
 	<div class="layout">
-		<header id="header" role="banner">
-			{{ page.header }}
-			{{ page.breadcrumb }}
 
-		</header>
+		{{ page.header_pre }}
+		{{ page.header }}
+		{{ page.breadcrumb }}
+
 		<main role="main">
-
-			<a id="main" tabindex="-1"></a>
-
-			<div id="progress_bar" class="progress"></div>
-
-			{% if page.breadcrumb %}{% endif %}
-
-			{{ page.search }}
-
 
 			<div class="region__content-wrapper">
 				{{ page.content_first }}
@@ -68,7 +58,6 @@
 				{{ page.content }}
 				{{ page.content_second }}
 			</div>
-
 
 			{% set has_content_post = page.content_post|render|striptags|trim is not empty %}
 			{% if has_content_post %}

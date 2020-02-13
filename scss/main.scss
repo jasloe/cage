@@ -13,17 +13,17 @@
 
 .wolff-article {
   header {
-    background: $wolff;
+    background: $white;
   }
-  background: $wolff;
-  color: darken($white, 7%);
-}
+  background: $white;
 
-.region__page-title {
-  display: none;
 }
 
 .region__content-first,
 .region__content-second {
   display: none;
+}
+
+header {
+  vertical-align: flex-start;
 }

@@ -29,8 +29,23 @@
  * @see template_preprocess_views_view_fields()
  */
 #}
-this is a test
 
-<div class="type">{{ fields.field_article_type.content }}</div>
-<h1 class="title">{{ fields.title.content }}<h1>
-		<h2 class="author">{{ fields.field_article_primary_author.content }}</h2>
+{% set has_pre_title = fields.field_article_pre_title.content|render|striptags|trim is not empty %}
+
+{% set article_type = fields.field_article_type.content %}
+
+{% if has_pre_title is defined and has_pre_title is not empty %}
+	<div class="rubric">
+		{{ fields.field_article_pre_title.content }}
+	</div>
+{% endif %}
+
+{% if article_type != "Article" and has_pre_title is empty %}
+	<div class="rubric">
+		{{ fields.field_article_type.content }}
+	</div>
+{% endif %}
+
+<h1 class="title">
+	{{ fields.title.content }}</h1>
+<h2 class="author">{{ fields.field_article_primary_author.content }}</h2>
