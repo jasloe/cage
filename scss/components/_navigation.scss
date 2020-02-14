@@ -10,19 +10,17 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
 @import "../vendor/hamburgers/hamburgers";
 
-
-
 header {
   background: $white;
-  @include font-size(1rem);
-  padding: 1rem;
+  @include font-size(1.2rem);
+  padding: calc(1.5rem - 3px);
   display: flex;
   justify-content: space-between;
 }
 
 .header__second .main,
 .header__third .subscribe {
-    display: none;
+  display: none;
 }
 
 .subscribe-search {
@@ -46,13 +44,13 @@ header {
       display: flex;
     }
     ul li {
-  padding-right: 1rem;
-    &:last-child {
-      padding-right: 0rem;
+      padding-right: 1rem;
+      &:last-child {
+        padding-right: 0rem;
       }
     }
-  }d
-  .header__third .subscribe {
+  }
+  d .header__third .subscribe {
     display: initial;
     margin-right: 0.5rem;
   }
@@ -62,11 +60,9 @@ header {
 .breadcrumbs {
   background: $white;
   font-size: $font-nav-sm;
-  padding: 1rem;
+  padding: 1.5rem;
   border-bottom: $border-light;
 }
-
-
 
 ol.breadcrumb {
   display: flex;
@@ -79,7 +75,6 @@ ol.breadcrumb {
 
   li:last-child {
     flex-basis: 90%;
-
   }
 
   li:after {

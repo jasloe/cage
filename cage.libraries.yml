@@ -8,5 +8,8 @@ global-scripts:
   js:
     dist/js/headroom.js: {}
     dist/js/header.js: {}
-    dist/js/progress.js: {}
     dist/js/main.js: {}
+progress:
+  version: VERSION
+  js:
+    dist/js/progress.js: {}

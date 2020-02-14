@@ -34,17 +34,20 @@
 
 {% set article_type = fields.field_article_type.content %}
 
+{# prints pre_title if populated #}
 {% if has_pre_title is defined and has_pre_title is not empty %}
 	<div class="rubric">
 		{{ fields.field_article_pre_title.content }}
+		{# prints pre_title if populated #
+											</div>
+										{% endif %}
+
+										{# {% if ("Article" in article_type) or (has_pre_title is empty) %}
+											{{ empty }}
+										{% endif %} #}
 	</div>
 {% endif %}
 
-{% if article_type != "Article" and has_pre_title is empty %}
-	<div class="rubric">
-		{{ fields.field_article_type.content }}
-	</div>
-{% endif %}
 
 <h1 class="title">
 	{{ fields.title.content }}</h1>

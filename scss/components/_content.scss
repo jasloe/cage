@@ -108,7 +108,6 @@
 }
 
 // article page section
-// basic page section
 .page-node-type-article {
   .interview,
   .page-section,
@@ -131,7 +130,7 @@
 
   .interview .field-body,
   .page-section .field-body {
-    @include type($life, 1.2rem, normal);
+    @include body;
     line-height: 1.1;
     margin-bottom: 1rem;
     em {
@@ -142,12 +141,10 @@
   .page-section .field-section-title {
     max-width: $tablet;
     margin: 0 auto;
-    @include type($univers, 1rem, uppercase);
+    @include section-title;
     margin-bottom: 2rem;
     line-height: 1.4;
-    em {
-      font-style: $univers-italic;
-    }
+
     p {
       position: relative;
       display: inline;
@@ -158,7 +155,7 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        border-bottom: 1px solid $black;
+        border-bottom: 1px solid;
         content: "";
       }
     }
@@ -183,22 +180,20 @@
     @include type($univers, 1rem, uppercase);
 
     display: inline-block;
-
   }
 
-.interview .field-body p > span:first-child.odd {
-  width: 4rem;
-  padding-left: 4rem;
-}
+  .interview .field-body p > span:first-child.odd {
+    width: 4rem;
+    padding-left: 4rem;
+  }
 
-.interview .field-body p > span:first-child {
-  width: 4rem;
-}
+  .interview .field-body p > span:first-child {
+    width: 4rem;
+  }
 
-.interview .field-body p {
-// https://stackoverflow.com/questions/7258606/how-to-select-elements-which-do-not-have-a-specific-child-element-with-jquery
-}
-
+  .interview .field-body p {
+    // https://stackoverflow.com/questions/7258606/how-to-select-elements-which-do-not-have-a-specific-child-element-with-jquery
+  }
 
   // .interview .field-body p:nth-child(even) > span {
   //   color: red !important;
@@ -211,6 +206,62 @@
   //   .interview .field-body p:nth-child(2) span {
   //   padding-right: 0rem;
   // }
+}
 
+// basic pages
+.page-node-type-page {
+  .region__content-wrapper {
+    .region__page-title {
+      @include basic-page-title;
+      padding-bottom: 3rem;
+    }
+    .body {
+      @include body;
+      line-height: 1.2;
+    }
+    .body p {
+      padding-bottom: 1rem;
+    }
+    .body {
+      a {
+        color: $default-link;
+        text-decoration: none;
+        border-bottom: 1px solid $default-link;
+        transition: color 0.22s ease;
+      }
+      a:hover {
+        color: $default-hover;
+        border-bottom: 1px solid $default-hover;
+      }
+    }
+  }
+}
 
+.distribution {
+  .region__content-wrapper {
+    .body p {
+      padding-bottom: 0rem;
+    }
+  }
+}
+
+.imprint {
+  .region__content-wrapper {
+    h2 {
+      @include section-title;
+      padding: 2rem 0 0.3rem;
+    }
+    .body p {
+      padding-bottom: 0rem;
+    }
+  }
+}
+@include mq($from: tablet) {
+  .page-node-type-page {
+    .region__content-wrapper {
+      .body p {
+        @include justify;
+      }
+    }
+  }
 }

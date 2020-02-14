@@ -1,6 +1,8 @@
 // base
 $whitest: white;
 $white: hsla(0, 0%, 100%, 1);
+$yellow: #fffbbd;
+$blue: #0020d6;
 $black: #000;
 $medium-white: darken($white, 1%);
 $dark-white: darken($white, 25%);
@@ -17,31 +19,25 @@ $default-visited: $medium-gray;
 $default-hover: $medium-gray;
 $default-active: $medium-gray;
 
+$footer-link: $yellow;
+$footer-nav-link: $dark-gray;
+$footer-nav-hover: $blue;
+
 // issue theme keys
-$alien: #3587a4;
+$alien: #676060;
 $hyla: #664d94;
 $change: #002e6f;
 $just-intonation: #8e3161;
-$place: #f26b01;
+$place: #304930;
 $big-band: #00efe0;
 $mumei: red;
-$braxton: gold;
-$propaganda: #ca3c25;
+// $braxton: #331e36;
+$braxton: blue;
+$propaganda: #f8333c;
 $cherry: lightblue;
 $listeners: gray;
-$treatise: orange;
+$treatise: #25283d;
 $ritual: orange;
-$wolff: #f26b01;
-$monophony: indigo;
-$what-is-jazz: black;
-$deep-listening: #4e6e6c;
-$maker: black;
-$philadelphia: pink;
-$what-is-american: silver;
-$cage: gold;
-$networking: red;
-$gospel: #3cb2fc;
-$change: red;
 
 $themes: (
   hyla: $hyla,
@@ -54,14 +50,5 @@ $themes: (
   propaganda: $propaganda,
   cherry: $cherry,
   listeners: $listeners,
-  treatise: $treatise,
-  wolff: $wolff,
-  monophony: $monophony,
-  maker: $maker,
-  philadelphia: $philadelphia,
-  what-is-american: $what-is-american,
-  cage: $cage,
-  networking: $networking,
-  gospel: $gospel,
-  deep-listening: $deep-listening
+  treatise: $treatise
 );

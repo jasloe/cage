@@ -34,38 +34,39 @@
 <!DOCTYPE html>
 <html{{html_attributes}}>
 
-  <head>
-    <head-placeholder token="{{ placeholder_token }}">
-      <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/sites/default/files/favicons/apple-touch-icon-57x57.png"/>
-      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/sites/default/files/favicons/apple-touch-icon-114x114.png"/>
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/sites/default/files/favicons/apple-touch-icon-72x72.png"/>
-      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/sites/default/files/favicons/apple-touch-icon-144x144.png"/>
-      <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/sites/default/files/favicons/apple-touch-icon-60x60.png"/>
-      <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/sites/default/files/favicons/apple-touch-icon-120x120.png"/>
-      <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/sites/default/files/favicons/apple-touch-icon-76x76.png"/>
-      <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/sites/default/files/favicons/apple-touch-icon-152x152.png"/>
-      <link rel="icon" type="image/png" href="/sites/default/files/favicons/favicon-196x196.png" sizes="196x196"/>
-      <link rel="icon" type="image/png" href="/sites/default/files/favicons/favicon-96x96.png" sizes="96x96"/>
-      <link rel="icon" type="image/png" href="/sites/default/files/favicons/favicon-32x32.png" sizes="32x32"/>
-      <link rel="icon" type="image/png" href="/sites/default/files/favicons/favicon-16x16.png" sizes="16x16"/>
-      <link rel="icon" type="image/png" href="/sites/default/files/favicons/favicon-128.png" sizes="128x128"/>
-      <meta name="application-name" content="&nbsp;"/>
-      <meta name="msapplication-TileColor" content="#FFFFFF"/>
-      <meta name="msapplication-TileImage" content="/sites/default/files/favicons/mstile-144x144.png"/>
-      <meta name="msapplication-square70x70logo" content="/sites/default/files/favicons/mstile-70x70.png"/>
-      <meta name="msapplication-square150x150logo" content="/sites/default/files/favicons/mstile-150x150.png"/>
-      <meta name="msapplication-wide310x150logo" content="/sites/default/files/favicons/mstile-310x150.png"/>
-      <meta name="msapplication-square310x310logo" content="/sites/default/files/favicons/mstile-310x310.png"/>
-      <title>{{ head_title|safe_join(' | ') }}</title>
-      <css-placeholder token="{{ placeholder_token }}">
-        <js-placeholder token="{{ placeholder_token }}"></head>
-        <body{{attributes.addClass(body_classes)}}>
-          <a class="visually-hidden focusable skip-link" href="#main">
-            {{ 'Skip to main content'|t }}
-          </a>
-          {{ page_top }}
-          {{ page }}
-          {{ page_bottom }}
-          <js-bottom-placeholder token="{{ placeholder_token }}"></body>
+	<head>
+		<head-placeholder token="{{ placeholder_token }}">
+			<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/sites/default/files/favicons/apple-touch-icon-57x57.png"/>
+			<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/sites/default/files/favicons/apple-touch-icon-114x114.png"/>
+			<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/sites/default/files/favicons/apple-touch-icon-72x72.png"/>
+			<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/sites/default/files/favicons/apple-touch-icon-144x144.png"/>
+			<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/sites/default/files/favicons/apple-touch-icon-60x60.png"/>
+			<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/sites/default/files/favicons/apple-touch-icon-120x120.png"/>
+			<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/sites/default/files/favicons/apple-touch-icon-76x76.png"/>
+			<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/sites/default/files/favicons/apple-touch-icon-152x152.png"/>
+			<link rel="icon" type="image/png" href="/sites/default/files/favicons/favicon-196x196.png" sizes="196x196"/>
+			<link rel="icon" type="image/png" href="/sites/default/files/favicons/favicon-96x96.png" sizes="96x96"/>
+			<link rel="icon" type="image/png" href="/sites/default/files/favicons/favicon-32x32.png" sizes="32x32"/>
+			<link rel="icon" type="image/png" href="/sites/default/files/favicons/favicon-16x16.png" sizes="16x16"/>
+			<link rel="icon" type="image/png" href="/sites/default/files/favicons/favicon-128.png" sizes="128x128"/>
+			<meta name="application-name" content="&nbsp;"/>
+			<meta name="msapplication-TileColor" content="#FFFFFF"/>
+			<meta name="msapplication-TileImage" content="/sites/default/files/favicons/mstile-144x144.png"/>
+			<meta name="msapplication-square70x70logo" content="/sites/default/files/favicons/mstile-70x70.png"/>
+			<meta name="msapplication-square150x150logo" content="/sites/default/files/favicons/mstile-150x150.png"/>
+			<meta name="msapplication-wide310x150logo" content="/sites/default/files/favicons/mstile-310x150.png"/>
+			<meta name="msapplication-square310x310logo" content="/sites/default/files/favicons/mstile-310x310.png"/>
+			<title>{{ head_title|safe_join(' | ') }}</title>
+			<css-placeholder token="{{ placeholder_token }}">
+				<js-placeholder token="{{ placeholder_token }}"></head>
+				<body{{attributes.addClass(body_classes)}}>
+					<a class="visually-hidden focusable skip-link" href="#main">
+						{{ 'Skip to main content'|t }}
+					</a>
 
-        </html>
+					{{ page_top }}
+					{{ page }}
+					{{ page_bottom }}
+					<js-bottom-placeholder token="{{ placeholder_token }}"></body>
+
+				</html>
