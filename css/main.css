@@ -1457,12 +1457,30 @@ main {
   margin: 3rem 0rem;
 }
 
+.page-node-type-issue .toc .flex .article .title {
+  padding: 0 1rem;
+}
+
 .page-node-type-issue .toc .flex .article .media {
   padding-bottom: 1rem;
 }
 
+.page-node-type-issue .toc .flex .article .author {
+  padding: 0.5rem;
+}
+
 .page-node-type-issue .toc .flex .article .date {
-  padding-top: 2rem;
+  display: none;
+}
+
+.page-node-type-issue .toc .flex .article .summary p {
+  font-family: "Life LT Std Roman";
+  font-size: 1.4rem;
+  padding: 1rem 0 2rem 0;
+}
+
+.page-node-type-issue .toc .flex .article .summary p em {
+  font-family: "Life LT Std Italic";
 }
 
 time {
