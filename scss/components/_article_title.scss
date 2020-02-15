@@ -1,23 +1,8 @@
-.page-node-type-article {
-  .rubric {
-    @include article-type;
-    padding-bottom: 2.8rem;
-  }
+.page-node-type-article,
+.page-node-type-issue {
+  @include article-title-display;
+}
 
-  h1.title {
-    @include article-title;
-    border-top: 1px solid;
-    padding: 0.7rem 2rem;
-    text-align: center;
-    line-height: 1;
-    em {
-      font-family: $life-italic;
-    }
-  }
-
-  h2.author {
-    @include article-author;
-    padding: 3rem 2rem;
-    text-align: center;
-  }
+.page-node-type-issue .toc {
+  @include article-title-display-small;
 }

@@ -4,23 +4,78 @@ main {
 }
 
 // header, article relationship
-.page-node-type-article {
-  .region__content-wrapper {
-    @include article-margin;
+.page-node-type-article .region__content-wrapper,
+.page-node-type-issue .from-the-editor {
+  max-width: $tablet;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@include mq($from: tablet) {
+  .page-node-type-article .region__content-wrapper,
+  .page-node-type-issue .from-the-editor {
+    max-width: $tablet;
+    margin: 0 auto;
+    padding: 0 3rem;
   }
 }
 
-// home page, basic layout
-.home .articles .flex {
-  display: flex;
-  flex-direction: column;
+.page-node-type-issue .toc {
+  margin: 0 auto;
+  padding: 0 1rem;
 
-  @include mq($from: desktop) {
-    flex-flow: row wrap;
-    justify-content: space-between;
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
     .article {
-      flex-basis: calc(32% - 1rem);
-      position: relative;
+      text-align: center;
+      margin: 3rem 0rem;
+      .media {
+        padding-bottom: 1rem;
+      }
+      .date {
+        padding-top: 2rem;
+      }
+    }
+  }
+}
+
+time {
+  margin-top: 1rem !important;
+}
+
+@include mq($until: tablet) {
+  .page-node-type-issue .toc .flex {
+    flex-direction: column;
+  }
+}
+
+@include mq($from: tablet, $until: desktop) {
+  .page-node-type-issue .toc .flex {
+    flex-direction: row;
+    .article {
+      flex-basis: calc(50% - 2rem);
+      margin: 3rem 1rem;
+    }
+  }
+}
+
+@include mq($from: desktop) {
+  .page-node-type-issue .toc .flex {
+    flex-direction: row;
+    .article {
+      flex-basis: calc(33% - 2rem);
+      margin: 3rem 1rem;
+    }
+  }
+}
+
+@include mq($from: wide) {
+  .page-node-type-issue .toc .flex {
+    flex-direction: row;
+    .article {
+      flex-basis: calc(25% - 2rem);
+      margin: 3rem 1rem;
     }
   }
 }
@@ -35,57 +90,10 @@ main {
 }
 
 // issue front page, basic layout
-.issues .issue,
-.issues .from-the-editor,
-.issues .block.toc {
+.page-node-type-issue .from-the-editor {
   max-width: $tablet;
   margin: 0 auto;
-  padding: 0 3rem;
-}
-
-// from the editor
-.issues .block.toc {
-  .title {
-    text-align: center;
-    padding-bottom: 5rem;
-  }
-}
-
-.issues .block.toc .flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: center;
-}
-
-.issues .block.toc .flex .article {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-}
-
-.issues .block.toc .flex .article {
-  h2 {
-    margin-bottom: 0.5rem;
-  }
-  h3 {
-    @include title-sm;
-  }
-}
-
-.page-node-type-article .region__content-post .authors {
-  margin: 0 auto;
-  max-width: $tablet;
-  .c-item__link {
-    padding: 1rem 0rem 1rem 1rem;
-  }
-  .c-item__title {
-    padding: 1rem;
-  }
-  p {
-    padding: 0 1rem;
-  }
+  padding: 0 1rem;
 }
 
 // search
@@ -140,7 +148,7 @@ main {
 }
 
 .footer-social-subscribe {
-  background: lighten($yellow, 10%);
+  background: lighten($dark-gray, 55%);
 }
 
 .footer-social ul {

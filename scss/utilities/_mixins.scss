@@ -16,6 +16,8 @@ $font-lg: 2.5rem;
 $font-display: 3.2rem;
 $font-xl: 3.4rem;
 
+$font-sans-text: 1.3rem;
+
 $body: 1.2rem;
 
 $border-light: 1px solid $light-gray;
@@ -36,6 +38,48 @@ $border-dark: 2px solid $dark-gray;
   margin: 0 auto;
   max-width: $article;
   padding: 0 1rem;
+}
+
+@mixin article-title-display {
+  h1 {
+    @include article-title;
+    border-top: 1px solid;
+    padding: 0.5rem 3rem 3rem 3rem;
+    text-align: center;
+    line-height: 1;
+    em {
+      font-family: $life-italic;
+    }
+  }
+  .rubric {
+    @include article-type;
+    padding-bottom: 3rem;
+  }
+
+  h2.author {
+    @include article-author;
+    padding: 0rem 1rem 4rem 1rem;
+    text-align: center;
+  }
+}
+
+@mixin article-title-display-small {
+  h2 {
+    @include article-title;
+    @include font-size($font-md);
+    em {
+      font-family: $life-italic;
+    }
+  }
+  .rubric {
+    @include font-size($font-sm);
+    font-family: $univers;
+    padding-bottom: 1rem;
+  }
+
+  h2.author {
+    @include article-author;
+  }
 }
 
 @mixin link-cover {
@@ -188,7 +232,7 @@ $border-dark: 2px solid $dark-gray;
   em {
     font-style: italic;
   }
-  @include mq($until: mobile) {
+  @include mq($until: $tablet) {
     text-align: left;
     text-justify: none;
   }

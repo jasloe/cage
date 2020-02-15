@@ -16,7 +16,6 @@
       progressBar.attr('value', value);
     });
 
-
 })(jQuery);
 
 

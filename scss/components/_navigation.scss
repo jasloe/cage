@@ -23,20 +23,36 @@ header {
   display: none;
 }
 
+.header__first {
+  display: block;
+}
+
+.header__second {
+  padding: 0 1rem;
+}
+
 .subscribe-search {
   display: flex;
   justify-content: flex-end;
 }
 
 @include mq($from: desktop) {
+  .header__first {
+    display: none;
+  }
+
+  .header__second {
+    padding-left: 0rem;
+    padding-right: 1rem;
+  }
   .header__first,
   .header__third {
-    flex-basis: calc(20vw - 1rem);
+    flex-shrink: 1;
   }
   .header__second {
-    flex-basis: 60vw;
     display: flex;
     justify-content: space-between;
+    flex-grow: 1;
   }
   .header__second .main {
     display: flex;
@@ -70,19 +86,15 @@ ol.breadcrumb {
   justify-content: flex-start;
 
   li {
-    flex-basis: 10%;
-  }
-
-  li:last-child {
-    flex-basis: 90%;
+    padding-top: 3px;
   }
 
   li:after {
     display: inline-block;
     content: "/";
-
     text-align: center;
-    padding-bottom: 2px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   li:last-child:after {

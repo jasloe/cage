@@ -1,113 +1,26 @@
-.in-this-issue h3 {
-  @include topic-ornament-sans;
-}
-
-.from-the-editor h3 {
-  @include title-md-normal;
-  text-transform: initial;
-  padding-bottom: 1.4rem;
-}
-
-// article teaser components: home, issue toc
-.issues .toc,
-.home .articles .flex-container {
-  .item {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    height: 100%;
-    margin-top: 1rem;
-    &:first-child {
-      margin-top: 0rem;
-    }
-
-    @include mq($from: tablet) {
-      margin-top: 0rem;
-    }
-  }
-
-  .item a.article-link {
-    @include link-cover;
-  }
-
-  .item .field-article-rel-issues {
-    @include title-sc;
-    text-transform: uppercase;
-    padding-top: 1rem;
-
-    span {
-      padding-right: 3px;
-    }
-    z-index: 100;
-  }
-
-  h2.title {
-    @include title-md;
-  }
-
-  .field-article-primary-author {
-    @include title-sm;
-    margin-top: auto;
-  }
-}
-
-.region__page-title .c-title {
-  .c-title__tag,
-  .c-title__pre-title {
-    @include title-md-normal;
-  }
-}
-
-// issue main
-.path-issues .issue-marquee {
-  margin: 0 auto;
-  max-width: $wide;
-  text-align: center;
-  img {
-    height: calc(100vh - 5rem);
-    width: auto;
-  }
-}
-
-// issue editor
-.issues .from-the-editor {
-  .title {
-    @include type($life, 3rem, uppercase);
-
-    line-height: 1;
-    em {
-      font-family: $life-italic;
-    }
-  }
-
+// issue toc
+.from-the-editor {
   .page-section {
     @include justify;
-    @include type($univers, $font-md, normal);
+    @include type($univers, $font-sans-text, normal);
+    line-height: 1.2;
   }
   .page-section .field-body p {
     text-indent: $indent;
+    padding: 0.5rem 0;
     &:first-child {
       text-indent: 0;
+      padding: 0rem;
     }
   }
 }
 
-// issue toc
-.path-issues h3 {
-  @include topic-ornament;
+// articles
+.page-node-type-article .article,
+.from-the-editor .page-section {
+  padding-bottom: 4rem;
 }
 
-.slick__slide .slide__content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-// article page section
 .page-node-type-article {
   .interview,
   .page-section,
@@ -173,9 +86,6 @@
     padding-top: 1rem;
   }
 
-  .interview .field-body p {
-  }
-
   .interview .field-body span {
     @include type($univers, 1rem, uppercase);
 
@@ -190,22 +100,16 @@
   .interview .field-body p > span:first-child {
     width: 4rem;
   }
+}
 
-  .interview .field-body p {
-    // https://stackoverflow.com/questions/7258606/how-to-select-elements-which-do-not-have-a-specific-child-element-with-jquery
+.page-node-type-issue .from-the-editor {
+  blockquote {
+    padding: 0 3rem;
+    font-family: $univers-italic;
+    em {
+      font-family: $univers;
+    }
   }
-
-  // .interview .field-body p:nth-child(even) > span {
-  //   color: red !important;
-
-  // }
-
-  //   .interview .field-body p:first-child span {
-  //   padding-right: 4rem;
-  // }
-  //   .interview .field-body p:nth-child(2) span {
-  //   padding-right: 0rem;
-  // }
 }
 
 // basic pages
@@ -256,6 +160,7 @@
     }
   }
 }
+
 @include mq($from: tablet) {
   .page-node-type-page {
     .region__content-wrapper {

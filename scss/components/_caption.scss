@@ -1,8 +1,7 @@
 .field-media-image-caption {
-  margin: 0 auto;
-  padding: 1rem 0;
+  padding: 0.5rem 0rem 0rem 0rem;
+  font-size: $font-nav-sm;
 
-  max-width: $mobile;
   text-align: justify;
   em {
     font-family: $univers-italic;

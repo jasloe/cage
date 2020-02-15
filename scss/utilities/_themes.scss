@@ -19,20 +19,105 @@
     // links
     header a,
     .breadcrumbs a,
-    .endnotes a {
+    .endnotes a,
+    h2.title a {
       color: $primary;
     }
-
     // images
     .media--image {
       background: $primary;
       line-height: 0;
     }
-
+    // images
     .media--image img {
       filter: grayscale(100%) contrast(1) blur(0);
       max-width: 100%;
       mix-blend-mode: screen;
+    }
+
+    .media__wrapper {
+      border-top: 1px solid lighten($primary, 35%);
+      border-bottom: 1px solid lighten($primary, 35%);
+    }
+    // progress
+    progress::-webkit-progress-value {
+      background-color: $primary;
+    }
+
+    progress::-moz-progress-bar {
+      background-color: $primary;
+    }
+
+    .hamburger-inner {
+      &,
+      &::before,
+      &::after {
+        background-color: $primary;
+      }
+    }
+    header .search {
+      background-color: transparent;
+      &::after {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+@mixin issue($name, $primary, $secondary) {
+  .#{$name} {
+    header.headroom {
+      border-bottom: 1px solid lighten($secondary, 60%);
+    }
+    header,
+    .breadcrumbs,
+    main {
+      background-color: $primary;
+      a {
+        color: $secondary;
+      }
+      a:hover {
+        color: $yellow;
+        box-shadow: 0 0.5px 0 $yellow;
+      }
+    }
+    .from-the-editor {
+      h1.title,
+      h2.author,
+      .rubric,
+      p {
+        color: $secondary;
+      }
+    }
+
+    .hamburger-inner {
+      &,
+      &::before,
+      &::after {
+        background-color: $secondary;
+      }
+    }
+
+    // table of contents
+    .toc {
+      .rubric,
+      h2.title a,
+      h3.author,
+      .summary p,
+      time {
+        color: $secondary;
+      }
+      // images
+      .media--image {
+        background: $primary;
+        line-height: 0;
+      }
+
+      .media--image img {
+        filter: grayscale(100%) contrast(1) blur(0);
+        max-width: 100%;
+        mix-blend-mode: screen;
+      }
     }
   }
 }
@@ -48,109 +133,15 @@
 @include article(propaganda-article, $propaganda);
 @include article(cherry-article, $cherry);
 @include article(listeners-article, $listeners);
+@include issue(treatise, $treatise, $light-gray);
+
+@include issue(cherry, $cherry, $light-gray);
+@include article(cherry-article, $cherry);
+
+// SA11: The Ritual Issue
+@include issue(treatise, $treatise, $light-gray);
 @include article(treatise-article, $treatise);
+
+// SA11: The Ritual Issue
+@include issue(ritual, $ritual, $light-gray);
 @include article(ritual-article, $ritual);
-
-// article theme mixins, from the editor
-@mixin in-this-issue($name, $primary, $secondary) {
-  .#{$name} {
-    background: $primary;
-
-    // color
-    h3,
-    .slide__description,
-    .slide__description a {
-      color: $secondary;
-    }
-    // borders
-    h3 {
-      border-bottom-color: $secondary;
-    }
-
-    // images
-    .media--image {
-      background: $primary;
-      line-height: 0;
-    }
-
-    .media--image img {
-      filter: grayscale(100%) contrast(1) blur(0);
-      max-width: 100%;
-      mix-blend-mode: luminosity;
-    }
-  }
-}
-
-@include in-this-issue(in-this-issue, $hyla, $white);
-
-@mixin topics($name, $primary, $secondary) {
-  .#{$name} {
-    // images
-    .c-item {
-      border: 1px solid darken($primary, 10%);
-    }
-
-    .c-item {
-      background: $primary;
-    }
-
-    .c-item__issue-title a,
-    .c-item__title a,
-    .c-item__author {
-      color: $secondary;
-    }
-
-    .media--image {
-      background: $primary;
-      line-height: 0;
-    }
-
-    .media--image img {
-      filter: grayscale(10%) contrast(1) blur(1);
-      max-width: 100%;
-      mix-blend-mode: screen;
-    }
-  }
-}
-
-// @include topics(topic-first, $wolff, $white);
-
-// @mixin toc($name, $primary, $secondary) {
-//   .#{$name} {
-//     background: $primary;
-//     h3,
-//     .editor .page-section,
-//     .c-item__tag,
-//     .c-title__author {
-//       color: $secondary;
-//     }
-
-//     a {
-//       color: $secondary;
-//     }
-
-//     // images
-//     .c-item {
-//       background: lighten($primary, 7%);
-//     }
-
-//     .c-item__issue-title a,
-//     .c-item__title a,
-//     .c-item__author {
-//       color: $secondary;
-//     }
-
-//     .media--image {
-//       background: $primary;
-//       line-height: 0;
-//     }
-
-//     .media--image img {
-//       filter: grayscale(10%) contrast(1) blur(1);
-//       max-width: 100%;
-//       mix-blend-mode: screen;
-//     }
-//   }
-// }
-
-// @include toc(path-issues, $hyla, $white);

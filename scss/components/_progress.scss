@@ -14,11 +14,3 @@ progress {
 progress::-webkit-progress-bar {
   background-color: transparent;
 }
-
-progress::-webkit-progress-value {
-  background-color: $hyla;
-}
-
-progress::-moz-progress-bar {
-  background-color: $hyla;
-}

@@ -30,24 +30,29 @@
  */
 #}
 
-{% set has_pre_title = fields.field_article_pre_title.content|render|striptags|trim is not empty %}
+{# {% set has_pre_title = fields.field_article_pre_title.content|render|striptags|trim is not empty %}
 
 {% set article_type = fields.field_article_type.content %}
+{{ fields.field_article_pre_title.content }}
 
 {# prints pre_title if populated #}
-{% if has_pre_title is defined and has_pre_title is not empty %}
+{# {% if has_pre_title is defined and has_pre_title is not empty %}
 	<div class="rubric">
 		{{ fields.field_article_pre_title.content }}
-		{# prints pre_title if populated #
-											</div>
-										{% endif %}
-
-										{# {% if ("Article" in article_type) or (has_pre_title is empty) %}
-											{{ empty }}
-										{% endif %} #}
 	</div>
 {% endif %}
 
+{% if ("Article" in article_type) or (has_pre_title is empty) %}
+	{{ empty }}
+{% endif %} #}
+
+{# <div class="rubric">
+	{{ fields.field_article_pre_title.content }}
+</div> #}
+
+<div class="rubric">
+	{{ fields.field_article_type.content }}
+</div>
 
 <h1 class="title">
 	{{ fields.title.content }}</h1>
