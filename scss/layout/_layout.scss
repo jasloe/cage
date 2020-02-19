@@ -19,45 +19,73 @@ main {
     padding: 0 3rem;
   }
 }
+.page-node-type-issue .toc .article {
+  position: relative;
+  transition: all .22s;
+
+ &:hover {
+    cursor: hand;
+    cursor: pointer;
+    opacity: 0.9;
+    color: $dark-gray;
+    transition: all 0.22s;
+  }
+  .link {
+    opacity:0;
+    font-size: 0;
+  }
+
+  .link a span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+}
 
 .page-node-type-issue .toc {
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
+
+  > h2 {
+    text-align: center;
+    width: 100%;
+    padding: 3rem 0;
+  }
 
   .flex {
     display: flex;
     flex-wrap: wrap;
     .article {
-      .title {
-        padding: 0 1rem;
-      }
+
       text-align: center;
-      margin: 3rem 0rem;
-      .media {
+      padding: 1rem 0rem;
+      .field-article-type {
+        padding: 1rem 1rem .33rem 1rem;
+      }
+      h2.title {
+        padding: 0rem 1rem 1rem 1rem;
+      }
+      .field-article-primary-author,
+      .field-article-precis p  {
+        padding: 1rem;
+      }
+
+      .field-article-marquee {
         padding-bottom: 1rem;
       }
-      .author {
-        padding: 0.5rem;
-      }
-      .date {
-        display: none;
-      }
 
-      .summary p {
+      .field-article-precis p {
         font-family: $life;
         font-size: 1.4rem;
-        padding: 1rem 0 2rem 0;
-
         em {
           font-family: $life-italic;
         }
       }
     }
   }
-}
-
-time {
-  margin-top: 1rem !important;
 }
 
 @include mq($until: tablet) {
@@ -81,7 +109,7 @@ time {
     flex-direction: row;
     .article {
       flex-basis: calc(33% - 2rem);
-      margin: 3rem 1rem;
+      margin: 1rem 1rem;
     }
   }
 }
@@ -103,13 +131,6 @@ time {
     margin: 0 auto;
     padding: 0 3rem;
   }
-}
-
-// issue front page, basic layout
-.page-node-type-issue .from-the-editor {
-  max-width: $tablet;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
 
 // search

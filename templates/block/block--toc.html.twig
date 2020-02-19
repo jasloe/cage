@@ -25,19 +25,11 @@
  * @see template_preprocess_block()
  */
 #}
-
-{% set attributes = attributes.addClass([
-  'block',
-  'block__' ~ configuration.provider|clean_class
-]) %}
-
 <div{{attributes}}>
 	{% if label %}
-		<h3{{title_attributes}}>{{ label }}</h3>
+		<h2{{title_attributes}}>{{ label }}</h2>
 	{% endif %}
 	{% block content %}
-		<div class="flex">
-			{{ content }}
-		</div>
+		{{ content }}
 	{% endblock %}
 </div>

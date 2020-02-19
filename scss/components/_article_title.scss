@@ -3,6 +3,6 @@
   @include article-title-display;
 }
 
-.page-node-type-issue .toc {
+.page-node-type-issue .toc .article {
   @include article-title-display-small;
 }

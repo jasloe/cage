@@ -99,12 +99,16 @@
     }
 
     // table of contents
-    .toc {
-      .rubric,
-      h2.title a,
-      h3.author,
-      .summary p,
-      time {
+    .toc h2 {
+      color: $secondary;
+    }
+
+    .article {
+
+      h2.title,
+      .field-article-type,
+      .field-article-precis,
+      .field-article-primary-author {
         color: $secondary;
       }
       // images
@@ -135,13 +139,37 @@
 @include article(listeners-article, $listeners);
 @include issue(treatise, $treatise, $light-gray);
 
-@include issue(cherry, $cherry, $light-gray);
-@include article(cherry-article, $cherry);
 
-// SA11: The Ritual Issue
+
+
+// Ritual
+@include issue(ritual, $ritual, $light-gray);
+@include article(ritual-article, $ritual);
+
+// Treatise
 @include issue(treatise, $treatise, $light-gray);
 @include article(treatise-article, $treatise);
 
-// SA11: The Ritual Issue
-@include issue(ritual, $ritual, $light-gray);
-@include article(ritual-article, $ritual);
+// Cherry
+@include issue(cherry, $cherry, $light-gray);
+@include article(cherry-article, $cherry);
+
+// Place
+@include issue(place, $place, $light-gray);
+@include article(place-article, $place);
+
+// Just Intonation
+@include issue(just-intonation, $just-intonation, $light-gray);
+@include article(just-intonation-article, $just-intonation);
+
+// Change
+@include issue(change, $change, $light-gray);
+@include article(change-article, $change);
+
+// Hyla
+@include issue(hyla, $hyla, $light-gray);
+@include article(hyla-article, $hyla);
+
+// Alien
+@include issue(alien, $alien, $light-gray);
+@include article(alien-article, $alien);

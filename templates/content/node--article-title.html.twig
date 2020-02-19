@@ -70,19 +70,10 @@
  *   in different view modes.
  */
 #}
-<div class="article">
-	{{ content.field_article_marquee }}
-	{{ content.field_article_type }}
+<div class="article-title">
 
-	<h2 class="title">
-		{{ label }}
-	</h2>
-	{{ content.field_article_precis
-   }}
-	{{ content.field_article_primary_author }}
-	<div class="link">
-		<a href="{{ url }}">
-			<span></span>
-		</a>
+	<div{{content_attributes}}>
+		{{ content }}
 	</div>
+
 </div>

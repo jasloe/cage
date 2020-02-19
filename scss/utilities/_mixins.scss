@@ -51,12 +51,13 @@ $border-dark: 2px solid $dark-gray;
       font-family: $life-italic;
     }
   }
-  .rubric {
+  .field-article-type,
+  .field-article-pre-title {
     @include article-type;
     padding-bottom: 3rem;
   }
 
-  h2.author {
+  .field-article-primary-author {
     @include article-author;
     padding: 0rem 1rem 4rem 1rem;
     text-align: center;
@@ -64,21 +65,22 @@ $border-dark: 2px solid $dark-gray;
 }
 
 @mixin article-title-display-small {
-  h2 {
+  h2.title {
     @include article-title;
     @include font-size($font-md);
     em {
       font-family: $life-italic;
     }
   }
-  .rubric {
+  .field-article-type {
     @include font-size($font-sm);
     font-family: $univers;
     padding-bottom: 1rem;
   }
 
-  h2.author {
+  .field-article-primary-author {
     @include article-author;
+    font-size: 1.5rem !important;
   }
 }
 
