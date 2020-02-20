@@ -16,7 +16,7 @@
  */
 #}
 
-{% for row in rows %}
+{# {% for row in rows %}
 	<div class="front issue-container">
 		{{- row.content -}}
 		<a href="/issues/{{row.content['#row']._entity.field_issue_short_title[0].value}}">
@@ -27,9 +27,11 @@
 				<h1 class="title">{{row.content['#row']._entity.title[0].value}}</h1>
 				<div class="summary">{{row.content['#row']._entity.field_issue_precis[0].value|raw}}</div>
 				<div class="link">
-					Read this issue
+					<p>
+						Read now
+					</p>
 				</div>
 			</div>
 		</a>
 	</div>
-{% endfor %}
+{% endfor %} #}

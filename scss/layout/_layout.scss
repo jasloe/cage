@@ -1,4 +1,5 @@
 // distance between top of page & top of article
+
 main {
   padding-top: 9rem;
 }
@@ -21,9 +22,9 @@ main {
 }
 .page-node-type-issue .toc .article {
   position: relative;
-  transition: all .22s;
+  transition: all 0.22s;
 
- &:hover {
+  &:hover {
     cursor: hand;
     cursor: pointer;
     opacity: 0.9;
@@ -31,7 +32,7 @@ main {
     transition: all 0.22s;
   }
   .link {
-    opacity:0;
+    opacity: 0;
     font-size: 0;
   }
 
@@ -59,17 +60,16 @@ main {
     display: flex;
     flex-wrap: wrap;
     .article {
-
       text-align: center;
       padding: 1rem 0rem;
       .field-article-type {
-        padding: 1rem 1rem .33rem 1rem;
+        padding: 1rem 1rem 0.33rem 1rem;
       }
       h2.title {
         padding: 0rem 1rem 1rem 1rem;
       }
       .field-article-primary-author,
-      .field-article-precis p  {
+      .field-article-precis p {
         padding: 1rem;
       }
 
@@ -251,6 +251,16 @@ main {
     text-decoration: none;
     transition: all 0.22s ease;
   }
+  .social a {
+    border-bottom: none;
+
+    .social li a {
+      &,
+      &::after {
+        background-color: $white;
+      }
+    }
+  }
 }
 
 .copyright .field p:nth-child(2) {
@@ -262,7 +272,7 @@ main {
 }
 
 @include mq($from: tablet) {
-  .region__legal {
+  .footer {
     padding: 3rem;
     display: flex;
     justify-content: space-between;

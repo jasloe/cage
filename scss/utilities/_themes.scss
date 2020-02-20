@@ -104,7 +104,6 @@
     }
 
     .article {
-
       h2.title,
       .field-article-type,
       .field-article-precis,
@@ -138,9 +137,6 @@
 @include article(cherry-article, $cherry);
 @include article(listeners-article, $listeners);
 @include issue(treatise, $treatise, $light-gray);
-
-
-
 
 // Ritual
 @include issue(ritual, $ritual, $light-gray);

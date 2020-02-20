@@ -1,60 +1,65 @@
-// center text wrapper
-.home .region__content {
-  text-align: center;
-}
-
-// set min-height of front "slide"
-.home front.issue-container {
-  height: 100vh;
-}
-
-.home .front.issue-container {
-  position: relative;
-  .media--background {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    align-items: center;
-    background-size: cover;
-    background-position: 50%;
-    background-repeat: no-repeat;
+.path-frontpage {
+  main {
+    padding-top: 0rem;
+  }
+  header {
+    background: none;
+    a {
+      color: $white;
+    }
+  }
+  .hamburger-inner {
+    &,
+    &::before,
+    &::after {
+      background-color: $white;
+    }
   }
 }
 
-// typography
-.home .front .issue-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  right: 5%;
-  transform: translate(0%, -50%);
-  opacity: 0.8;
+.path-frontpage .issue-wrapper {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-  .title,
-  .volume-number {
-    position: relative;
-    text-align: center;
-    @include title-front;
+.path-frontpage {
+  .latest-issues .issue-wrapper {
+    display: none;
   }
-  .volume-number {
-    text-transform: initial;
-    border-bottom: 1px solid;
-    padding-bottom: 0.1rem;
+}
+
+.path-frontpage {
+  .flex {
   }
-  .title {
-    padding-top: 0.5rem;
+
+  .block {
+    padding-bottom: 1rem;
   }
-  .summary {
-    padding: 3rem 0;
-    @include title-sm;
+
+  h2 {
+    @include font-size(2rem);
+    font-family: $life;
+    padding: 1rem 1rem 0 1rem;
+
+    border-bottom: 1px solid $black;
   }
+
+  .summary,
   .link {
-    position: relative;
-    @include title-sc;
-    margin-top: 2rem;
-    padding: 1.2rem 1rem 1rem 1rem;
-    width: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 1rem;
+  }
+}
+
+.path-frontpage {
+  .issue-wrapper h1,
+  .volume-number-wrapper {
+    @include article-title;
+    @include font-size(4rem);
+  }
+  .volume-number-wrapper {
+    text-transform: initial;
   }
 }

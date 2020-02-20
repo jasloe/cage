@@ -25,30 +25,39 @@
   height: 1.2rem;
 }
 
-.bandcamp {
-  background-image: url(../images/bandcamp.svg);
-  padding-right: 0;
-}
+.legal {
+  .bandcamp {
+    background-image: url(../images/bandcamp.svg);
+    padding-right: 0;
+  }
 
-.facebook {
-  background-image: url(../images/facebook.svg);
-}
+  .facebook {
+    background-image: url(../images/facebook.svg);
+  }
 
-.instagram {
-  background-image: url(../images/instagram.svg);
-}
+  .instagram {
+    background-image: url(../images/instagram.svg);
+  }
 
-.soundcloud {
-  background-image: url(../images/soundcloud.svg);
-  padding-right: 1.6rem;
-}
+  .soundcloud {
+    background-image: url(../images/soundcloud.svg);
+    padding-right: 1.6rem;
+  }
 
-.twitter {
-  background-image: url(../images/twitter.svg);
-}
+  .twitter {
+    background-image: url(../images/twitter.svg);
+  }
 
-.email {
-  background-image: url(../images/email.svg);
+  .email {
+    background-image: url(../images/email.svg);
+  }
+
+  header .search {
+    background-color: transparent;
+    &::after {
+      background-color: $white;
+    }
+  }
 }
 
 // override social-media-sharing default

@@ -2053,8 +2053,8 @@ main {
 
 .page-node-type-issue .toc .article {
   position: relative;
-  -webkit-transition: all .22s;
-  transition: all .22s;
+  -webkit-transition: all 0.22s;
+  transition: all 0.22s;
 }
 
 .page-node-type-issue .toc .article:hover {
@@ -2105,7 +2105,7 @@ main {
 }
 
 .page-node-type-issue .toc .flex .article .field-article-type {
-  padding: 1rem 1rem .33rem 1rem;
+  padding: 1rem 1rem 0.33rem 1rem;
 }
 
 .page-node-type-issue .toc .flex .article h2.title {
@@ -2344,6 +2344,14 @@ main {
   transition: all 0.22s ease;
 }
 
+.region__legal .social a {
+  border-bottom: none;
+}
+
+.region__legal .social a .social li a, .region__legal .social a .social li a::after {
+  background-color: white;
+}
+
 .copyright .field p:nth-child(2) {
   padding-top: 1rem;
 }
@@ -2353,7 +2361,7 @@ main {
 }
 
 @media (min-width: 46.25em) {
-  .region__legal {
+  .footer {
     padding: 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3422,30 +3430,38 @@ progress::-webkit-progress-bar {
   height: 1.2rem;
 }
 
-.bandcamp {
+.legal .bandcamp {
   background-image: url(../images/bandcamp.svg);
   padding-right: 0;
 }
 
-.facebook {
+.legal .facebook {
   background-image: url(../images/facebook.svg);
 }
 
-.instagram {
+.legal .instagram {
   background-image: url(../images/instagram.svg);
 }
 
-.soundcloud {
+.legal .soundcloud {
   background-image: url(../images/soundcloud.svg);
   padding-right: 1.6rem;
 }
 
-.twitter {
+.legal .twitter {
   background-image: url(../images/twitter.svg);
 }
 
-.email {
+.legal .email {
   background-image: url(../images/email.svg);
+}
+
+.legal header .search {
+  background-color: transparent;
+}
+
+.legal header .search::after {
+  background-color: white;
 }
 
 .social-media-sharing li {
@@ -3456,107 +3472,95 @@ progress::-webkit-progress-bar {
   background-image: url(../images/search.svg);
 }
 
-.home .region__content {
-  text-align: center;
+.path-frontpage main {
+  padding-top: 0rem;
 }
 
-.home front.issue-container {
-  height: 100vh;
+.path-frontpage header {
+  background: none;
 }
 
-.home .front.issue-container {
-  position: relative;
+.path-frontpage header a {
+  color: white;
 }
 
-.home .front.issue-container .media--background {
-  position: relative;
-  width: 100%;
-  height: 100vh;
+.path-frontpage .hamburger-inner, .path-frontpage .hamburger-inner::before, .path-frontpage .hamburger-inner::after {
+  background-color: white;
+}
+
+.path-frontpage .issue-wrapper {
+  height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
 }
 
-.home .front .issue-wrapper {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  right: 5%;
-  -webkit-transform: translate(0%, -50%);
-          transform: translate(0%, -50%);
-  opacity: 0.8;
+.path-frontpage .latest-issues .issue-wrapper {
+  display: none;
 }
 
-.home .front .issue-wrapper .title,
-.home .front .issue-wrapper .volume-number {
-  position: relative;
-  text-align: center;
+.path-frontpage .block {
+  padding-bottom: 1rem;
+}
+
+.path-frontpage h2 {
+  font-size: calc(1.325rem + 0.9vw);
   font-family: "Life LT Std Roman";
-  font-size: calc(1.465rem + 2.58vw);
-  text-transform: static;
-  line-height: 1;
-  text-transform: uppercase;
+  padding: 1rem 1rem 0 1rem;
+  border-bottom: 1px solid #000;
 }
 
 @media (min-width: 1200px) {
-  .home .front .issue-wrapper .title,
-  .home .front .issue-wrapper .volume-number {
-    font-size: 3.4rem;
+  .path-frontpage h2 {
+    font-size: 2rem;
   }
 }
 
-.home .front .issue-wrapper .title em,
-.home .front .issue-wrapper .volume-number em {
+.path-frontpage .summary,
+.path-frontpage .link {
+  padding: 1rem;
+}
+
+.path-frontpage .issue-wrapper h1,
+.path-frontpage .volume-number-wrapper {
+  font-family: "Life LT Std Roman";
+  font-size: calc(1.445rem + 2.34vw);
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: calc(1.525rem + 3.3vw);
+}
+
+@media (min-width: 1200px) {
+  .path-frontpage .issue-wrapper h1,
+  .path-frontpage .volume-number-wrapper {
+    font-size: 3.2rem;
+  }
+}
+
+.path-frontpage .issue-wrapper h1 em,
+.path-frontpage .volume-number-wrapper em {
   font-family: "Life LT Std Italic";
 }
 
-.home .front .issue-wrapper .volume-number {
-  text-transform: initial;
-  border-bottom: 1px solid;
-  padding-bottom: 0.1rem;
-}
-
-.home .front .issue-wrapper .title {
-  padding-top: 0.5rem;
-}
-
-.home .front .issue-wrapper .summary {
-  padding: 3rem 0;
-  font-family: "Univers LT Std";
-  font-size: calc(1.315rem + 0.78vw);
-  text-transform: normal;
-  line-height: 1;
-}
-
 @media (min-width: 1200px) {
-  .home .front .issue-wrapper .summary {
-    font-size: 1.9rem;
+  .path-frontpage .issue-wrapper h1,
+  .path-frontpage .volume-number-wrapper {
+    font-size: 4rem;
   }
 }
 
-.home .front .issue-wrapper .summary em {
-  font-family: "Univers LT Std Oblique";
-}
-
-.home .front .issue-wrapper .link {
-  position: relative;
-  font-family: "Univers LT Std";
-  font-size: 1rem;
-  text-transform: uppercase;
-  line-height: 1;
-  margin-top: 2rem;
-  padding: 1.2rem 1rem 1rem 1rem;
-  width: 30%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.home .front .issue-wrapper .link em {
-  font-family: "Univers LT Std Oblique";
+.path-frontpage .volume-number-wrapper {
+  text-transform: initial;
 }
 
 .region__header-pre {

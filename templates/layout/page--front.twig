@@ -53,10 +53,7 @@
 		<main role="main">
 
 			<div class="region__content-wrapper">
-				{{ page.content_first }}
-				{{ page.page_title }}
 				{{ page.content }}
-				{{ page.content_second }}
 			</div>
 
 			{% set has_content_post = page.content_post|render|striptags|trim is not empty %}
@@ -71,7 +68,7 @@
 			{{ page.footer_second }}
 		</footer>
 		{#
-				<div id="overlay" class="overlay">this is the overlay</div> #}
+						<div id="overlay" class="overlay">this is the overlay</div> #}
 
 	</div>
 </div>
