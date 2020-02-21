@@ -10,9 +10,6 @@
     h1.title {
       border-top-color: $primary;
     }
-    header.headroom {
-      border-bottom: 1px solid lighten($primary, 60%);
-    }
     .page-section .field-section-title p:after {
       border-bottom-color: $primary;
     }
@@ -28,16 +25,19 @@
       background: $primary;
       line-height: 0;
     }
-    // images
     .media--image img {
       filter: grayscale(100%) contrast(1) blur(0);
       max-width: 100%;
       mix-blend-mode: screen;
     }
-
     .media__wrapper {
-      border-top: 1px solid lighten($primary, 35%);
-      border-bottom: 1px solid lighten($primary, 35%);
+      border-top: 1px solid $primary;
+      border-bottom: 1px solid $primary;
+    }
+    // remote video
+    .field-media-image-caption,
+    .field-media-remote-video-caption {
+      color: $primary;
     }
     // progress
     progress::-webkit-progress-value {
@@ -66,9 +66,6 @@
 
 @mixin issue($name, $primary, $secondary) {
   .#{$name} {
-    header.headroom {
-      border-bottom: 1px solid lighten($secondary, 60%);
-    }
     header,
     .breadcrumbs,
     main {
@@ -81,10 +78,13 @@
         box-shadow: 0 0.5px 0 $yellow;
       }
     }
+    .breadcrumb li {
+      color: $secondary;
+    }
     .from-the-editor {
       h1.title,
-      h2.author,
-      .rubric,
+      .field-article-primary-author,
+      .field-article-type,
       p {
         color: $secondary;
       }
@@ -149,6 +149,10 @@
 // Cherry
 @include issue(cherry, $cherry, $light-gray);
 @include article(cherry-article, $cherry);
+
+// Big Band
+@include issue(big-band, $big-band, $light-gray);
+@include article(big-band-article, $big-band);
 
 // Place
 @include issue(place, $place, $light-gray);

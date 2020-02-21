@@ -159,8 +159,7 @@ for (i = 0; i < listP.length; i +=2) {
 let promoBlock = document.querySelector(".subscribe-promo .field p")
 
 let closeBtn = document.createElement("button");
-let closeBtnText = document.createTextNode("close");
-closeBtn.appendChild("closeBtnText")
+
 
 promoBlock.appendChild(closeBtn)
 

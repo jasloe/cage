@@ -16,6 +16,16 @@
 }
 
 // articles
+iframe {
+  min-height: 319px;
+  border-width: 0px;
+  border-color: transparent;
+  background-color: transparent;
+  position: relative;
+  margin-right: -10000px;
+  width: 62.79%;
+}
+
 .page-node-type-article .article,
 .from-the-editor .page-section {
   padding-bottom: 4rem;
@@ -23,8 +33,7 @@
 
 .page-node-type-article {
   .interview,
-  .page-section,
-  .endnotes {
+  .page-section {
     @include justify;
   }
 
@@ -80,6 +89,9 @@
       text-indent: 0;
     }
   }
+  .page-section .field-body blockquote p {
+    text-indent: initial;
+  }
 
   .interview .field-body {
     border-top: 1px solid $black;
@@ -109,6 +121,15 @@
     em {
       font-family: $univers;
     }
+  }
+}
+
+.endnotes {
+  padding-top: 2rem;
+  border-top: 1px solid black;
+  h2 {
+    padding-top: 2rem;
+    font-family: $life;
   }
 }
 
