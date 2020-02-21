@@ -70,23 +70,14 @@
  *   in different view modes.
  */
 #}
-<article{{attributes.addClass("item")}}>
+<article{{attributes.addClass("release-wrapper")}}>
 
-	<a href="{{ url }}" target="_blank">
-		<div class="release-cover">
-			{{ content.field_release_album_cover }}
-		</div>
-		<div class="release">
-
-			<div class="release-metadata">{{ content.field_release_catalog_number }}
-				{{ content.field_release_label }}</div>
-
-			{{ label }}
-			{{ content.field_release_artists }}
-			{{ content.field_release_release_summary }}
-			{{ content.field_release_release_date }}
-		</div>
-
-	</a>
-
+	<div class="image-wrapper">
+		{{ content.field_release_image }}
+	</div>
+	<div class="metadata-wrapper">
+		<h2 class="title">{{ label }}</h2>
+		{{ content.field_release_release_summary }}
+		{{ url }}
+	</div>
 </article>

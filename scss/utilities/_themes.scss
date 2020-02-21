@@ -125,6 +125,58 @@
   }
 }
 
+@mixin upcoming($name, $primary) {
+  .#{$name} {
+    .flex .metadata-wrapper {
+      span,
+      .field {
+        color: $primary;
+      }
+      h2 {
+        border-bottom: 1px solid $primary;
+      }
+    }
+
+    .media--image {
+      background: $primary;
+      line-height: 0;
+    }
+
+    .media--image img {
+      filter: grayscale(100%) contrast(1) blur(0);
+      max-width: 100%;
+      mix-blend-mode: screen;
+    }
+  }
+}
+
+@mixin featured($name, $primary) {
+  .#{$name} {
+    .flex .metadata-wrapper {
+      span,
+      .field {
+        color: $primary;
+      }
+      h2 {
+        border-bottom: 1px solid $primary;
+      }
+    }
+
+    .media--image {
+      background: $primary;
+      line-height: 0;
+    }
+
+    .media--image img {
+      filter: grayscale(100%) contrast(1) blur(0);
+      max-width: 100%;
+      mix-blend-mode: screen;
+    }
+  }
+}
+
+@include upcoming(featured, $big-band);
+@include upcoming(upcoming, $sun-ra);
 @include article(alien-article, $alien);
 @include article(hyla-article, $hyla);
 @include article(change-article, $change);

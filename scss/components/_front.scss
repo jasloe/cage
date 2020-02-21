@@ -31,35 +31,83 @@
   }
 }
 
+// Featured blocks
 .path-frontpage {
-  .flex {
-  }
-
-  .block {
-    padding-bottom: 1rem;
-  }
-
-  h2 {
-    @include font-size(2rem);
-    font-family: $life;
-    padding: 1rem 1rem 0 1rem;
-
-    border-bottom: 1px solid $black;
-  }
-
-  .summary,
-  .link {
+  .block > h2 {
+    @include font-size(1.2rem);
+    font-family: $univers;
+    text-transform: uppercase;
     padding: 1rem;
+  }
+  .flex .release-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .upcoming,
+  .featured {
+    .flex .metadata-wrapper {
+      h2 {
+        @include font-size(1.5rem);
+        font-family: $univers;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        text-transform: uppercase;
+      }
+      .field-release-release-summary {
+        padding: 0rem 1rem 1rem;
+        p {
+          font-family: $life;
+          @include font-size(1.4rem);
+        }
+      }
+    }
   }
 }
 
-.path-frontpage {
-  .issue-wrapper h1,
-  .volume-number-wrapper {
-    @include article-title;
-    @include font-size(4rem);
+@include mq($from: tablet) {
+  .path-frontpage .upcoming,
+  .path-frontpage .featured {
+    margin: 0 auto;
+    max-width: $tablet;
+    .flex .release-wrapper {
+      display: flex;
+    }
+    .metadata-wrapper,
+    .image-wrapper {
+      flex-basis: 50%;
+    }
   }
-  .volume-number-wrapper {
-    text-transform: initial;
+}
+
+.path-frontpage .featured .flex .release-wrapper {
+  display: flex;
+  flex-direction: row;
+  .metadata-wrapper h2.title {
+    padding: 0rem 1rem 0rem 0rem;
+  }
+  .metadata-wrapper {
+    padding-left: 1rem;
+  }
+  .metadata-wrapper {
+    .field-release-release-summary {
+      padding: 0rem 0rem 1rem 0rem;
+    }
+  }
+}
+
+.path-frontpage .upcoming .flex .release-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  .metadata-wrapper h2.title {
+    padding: 0rem 1rem 0rem 0rem;
+  }
+  .metadata-wrapper {
+    padding: 0rem;
+  }
+  .metadata-wrapper {
+    .field-release-release-summary {
+      padding: 0rem 0rem 1rem 0rem;
+    }
   }
 }

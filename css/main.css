@@ -321,6 +321,48 @@ body:before {
   font-style: normal;
 }
 
+.featured .flex .metadata-wrapper span,
+.featured .flex .metadata-wrapper .field {
+  color: #d88b3d;
+}
+
+.featured .flex .metadata-wrapper h2 {
+  border-bottom: 1px solid #d88b3d;
+}
+
+.featured .media--image {
+  background: #d88b3d;
+  line-height: 0;
+}
+
+.featured .media--image img {
+  -webkit-filter: grayscale(100%) contrast(1) blur(0);
+          filter: grayscale(100%) contrast(1) blur(0);
+  max-width: 100%;
+  mix-blend-mode: screen;
+}
+
+.upcoming .flex .metadata-wrapper span,
+.upcoming .flex .metadata-wrapper .field {
+  color: #bc371f;
+}
+
+.upcoming .flex .metadata-wrapper h2 {
+  border-bottom: 1px solid #bc371f;
+}
+
+.upcoming .media--image {
+  background: #bc371f;
+  line-height: 0;
+}
+
+.upcoming .media--image img {
+  -webkit-filter: grayscale(100%) contrast(1) blur(0);
+          filter: grayscale(100%) contrast(1) blur(0);
+  max-width: 100%;
+  mix-blend-mode: screen;
+}
+
 .alien-article .breadcrumbs,
 .alien-article main,
 .alien-article progress {
@@ -3672,58 +3714,120 @@ progress::-webkit-progress-bar {
   display: none;
 }
 
-.path-frontpage .block {
-  padding-bottom: 1rem;
-}
-
-.path-frontpage h2 {
-  font-size: calc(1.325rem + 0.9vw);
-  font-family: "Life LT Std Roman";
-  padding: 1rem 1rem 0 1rem;
-  border-bottom: 1px solid #000;
-}
-
-@media (min-width: 1200px) {
-  .path-frontpage h2 {
-    font-size: 2rem;
-  }
-}
-
-.path-frontpage .summary,
-.path-frontpage .link {
+.path-frontpage .block > h2 {
+  font-size: 1.2rem;
+  font-family: "Univers LT Std";
+  text-transform: uppercase;
   padding: 1rem;
 }
 
-.path-frontpage .issue-wrapper h1,
-.path-frontpage .volume-number-wrapper {
-  font-family: "Life LT Std Roman";
-  font-size: calc(1.445rem + 2.34vw);
+.path-frontpage .flex .release-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.path-frontpage .upcoming .flex .metadata-wrapper h2,
+.path-frontpage .featured .flex .metadata-wrapper h2 {
+  font-size: calc(1.275rem + 0.3vw);
+  font-family: "Univers LT Std";
+  margin-bottom: 1rem;
+  padding: 1rem;
   text-transform: uppercase;
-  line-height: 1;
-  font-size: calc(1.525rem + 3.3vw);
 }
 
 @media (min-width: 1200px) {
-  .path-frontpage .issue-wrapper h1,
-  .path-frontpage .volume-number-wrapper {
-    font-size: 3.2rem;
+  .path-frontpage .upcoming .flex .metadata-wrapper h2,
+  .path-frontpage .featured .flex .metadata-wrapper h2 {
+    font-size: 1.5rem;
   }
 }
 
-.path-frontpage .issue-wrapper h1 em,
-.path-frontpage .volume-number-wrapper em {
-  font-family: "Life LT Std Italic";
+.path-frontpage .upcoming .flex .metadata-wrapper .field-release-release-summary,
+.path-frontpage .featured .flex .metadata-wrapper .field-release-release-summary {
+  padding: 0rem 1rem 1rem;
+}
+
+.path-frontpage .upcoming .flex .metadata-wrapper .field-release-release-summary p,
+.path-frontpage .featured .flex .metadata-wrapper .field-release-release-summary p {
+  font-family: "Life LT Std Roman";
+  font-size: calc(1.265rem + 0.18vw);
 }
 
 @media (min-width: 1200px) {
-  .path-frontpage .issue-wrapper h1,
-  .path-frontpage .volume-number-wrapper {
-    font-size: 4rem;
+  .path-frontpage .upcoming .flex .metadata-wrapper .field-release-release-summary p,
+  .path-frontpage .featured .flex .metadata-wrapper .field-release-release-summary p {
+    font-size: 1.4rem;
   }
 }
 
-.path-frontpage .volume-number-wrapper {
-  text-transform: initial;
+@media (min-width: 46.25em) {
+  .path-frontpage .upcoming,
+  .path-frontpage .featured {
+    margin: 0 auto;
+    max-width: 740px;
+  }
+  .path-frontpage .upcoming .flex .release-wrapper,
+  .path-frontpage .featured .flex .release-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .path-frontpage .upcoming .metadata-wrapper,
+  .path-frontpage .upcoming .image-wrapper,
+  .path-frontpage .featured .metadata-wrapper,
+  .path-frontpage .featured .image-wrapper {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+.path-frontpage .featured .flex .release-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.path-frontpage .featured .flex .release-wrapper .metadata-wrapper h2.title {
+  padding: 0rem 1rem 0rem 0rem;
+}
+
+.path-frontpage .featured .flex .release-wrapper .metadata-wrapper {
+  padding-left: 1rem;
+}
+
+.path-frontpage .featured .flex .release-wrapper .metadata-wrapper .field-release-release-summary {
+  padding: 0rem 0rem 1rem 0rem;
+}
+
+.path-frontpage .upcoming .flex .release-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.path-frontpage .upcoming .flex .release-wrapper .metadata-wrapper h2.title {
+  padding: 0rem 1rem 0rem 0rem;
+}
+
+.path-frontpage .upcoming .flex .release-wrapper .metadata-wrapper {
+  padding: 0rem;
+}
+
+.path-frontpage .upcoming .flex .release-wrapper .metadata-wrapper .field-release-release-summary {
+  padding: 0rem 0rem 1rem 0rem;
 }
 
 .region__header-pre {
