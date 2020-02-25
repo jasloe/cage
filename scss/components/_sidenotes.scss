@@ -1,8 +1,4 @@
 .page-section .field__items {
-  sup {
-    vertical-align: super;
-    @include font-size(0.8rem);
-  }
   span {
     float: right;
     clear: right;
@@ -21,3 +17,9 @@
     }
   }
 }
+
+  sup {
+    vertical-align: super;
+    @include font-size(0.8rem);
+    font-style: normal !important;
+  }

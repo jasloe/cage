@@ -32,82 +32,71 @@
 }
 
 // Featured blocks
-.path-frontpage {
-  .block > h2 {
-    @include font-size(1.2rem);
-    font-family: $univers;
-    text-transform: uppercase;
-    padding: 1rem;
-  }
-  .flex .release-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
 
-  .upcoming,
-  .featured {
-    .flex .metadata-wrapper {
-      h2 {
-        @include font-size(1.5rem);
-        font-family: $univers;
-        margin-bottom: 1rem;
-        padding: 1rem;
-        text-transform: uppercase;
-      }
-      .field-release-release-summary {
-        padding: 0rem 1rem 1rem;
-        p {
-          font-family: $life;
-          @include font-size(1.4rem);
-        }
+
+.path-frontpage
+  .upcoming, .featured {
+    margin: 0 auto;
+    max-width: $desktop;
+    padding: 0 1rem;
+    h2 {
+      font-family: $life;
+      @include font-size(1.9rem);
+      text-transform: uppercase;
+      border-bottom: 1px solid $black;
+      margin-bottom: 1rem;
+    }
+    h2.title {
+      font-family: $univers;
+      @include font-size(1.2rem);
+      border-bottom: none;
+
+    }
+    .text-long p {
+      font-family: $life;
+      @include font-size(1.2rem);
+      padding-top: 1rem;
+      padding-right: 1rem;
+      em {
+        font-family: $life-italic;
       }
     }
-  }
 }
 
 @include mq($from: tablet) {
-  .path-frontpage .upcoming,
-  .path-frontpage .featured {
-    margin: 0 auto;
-    max-width: $tablet;
-    .flex .release-wrapper {
+  .path-frontpage {
+    .upcoming, .featured {
+      h2 {
+        margin-bottom: 2rem;
+      }
+      h2.title {
+        margin-bottom: 0rem;
+      }
+    }
+
+    .release-wrapper,
+    .upcoming-wrapper {
       display: flex;
+      flex-direction: row;
+      .image-wrapper,
+      .metadata-wrapper {
+        flex-basis: 50%;
+      }
     }
-    .metadata-wrapper,
+  }
+  .upcoming  .release-wrapper {
+    flex-direction: row-reverse !important;
+    .metadata-wrapper {
+      h2 {
+      margin-right: 2rem;
+      }
+      .text-long {
+        margin-right: 2rem;
+      }
+    }
     .image-wrapper {
-      flex-basis: 50%;
+
     }
   }
 }
 
-.path-frontpage .featured .flex .release-wrapper {
-  display: flex;
-  flex-direction: row;
-  .metadata-wrapper h2.title {
-    padding: 0rem 1rem 0rem 0rem;
-  }
-  .metadata-wrapper {
-    padding-left: 1rem;
-  }
-  .metadata-wrapper {
-    .field-release-release-summary {
-      padding: 0rem 0rem 1rem 0rem;
-    }
-  }
-}
-
-.path-frontpage .upcoming .flex .release-wrapper {
-  display: flex;
-  flex-direction: row-reverse;
-  .metadata-wrapper h2.title {
-    padding: 0rem 1rem 0rem 0rem;
-  }
-  .metadata-wrapper {
-    padding: 0rem;
-  }
-  .metadata-wrapper {
-    .field-release-release-summary {
-      padding: 0rem 0rem 1rem 0rem;
-    }
-  }
-}

@@ -16,16 +16,6 @@
 }
 
 // articles
-iframe {
-  min-height: 319px;
-  border-width: 0px;
-  border-color: transparent;
-  background-color: transparent;
-  position: relative;
-  margin-right: -10000px;
-  width: 62.79%;
-}
-
 .page-node-type-article .article,
 .from-the-editor .page-section {
   padding-bottom: 4rem;
@@ -36,6 +26,8 @@ iframe {
   .page-section {
     @include justify;
   }
+
+
 
   blockquote {
     padding: 0 3rem;
@@ -60,25 +52,26 @@ iframe {
     }
   }
 
+  .interview .field-section-title,
   .page-section .field-section-title {
     max-width: $tablet;
     margin: 0 auto;
     @include section-title;
-    margin-bottom: 2rem;
+    margin-bottom: 1.4rem;
     line-height: 1.4;
 
     p {
       position: relative;
       display: inline;
-      padding-bottom: 1rem;
+      padding-bottom: 1.4rem;
 
       &:after {
         position: absolute;
         left: 0;
         bottom: 0;
         width: 100%;
-        border-bottom: 1px solid;
         content: "";
+
       }
     }
   }
@@ -94,7 +87,6 @@ iframe {
   }
 
   .interview .field-body {
-    border-top: 1px solid $black;
     padding-top: 1rem;
   }
 
@@ -104,9 +96,14 @@ iframe {
     display: inline-block;
   }
 
+.interview .field-body p.oddP {
+
+}
+
   .interview .field-body p > span:first-child.odd {
+      padding-left: 4rem;
     width: 4rem;
-    padding-left: 4rem;
+
   }
 
   .interview .field-body p > span:first-child {
@@ -126,10 +123,14 @@ iframe {
 
 .endnotes {
   padding-top: 2rem;
+  margin-top: 2rem;
   border-top: 1px solid black;
   h2 {
     padding-top: 2rem;
     font-family: $life;
+  }
+  em {
+    font-family: $life-italic;
   }
 }
 
@@ -151,12 +152,12 @@ iframe {
       a {
         color: $default-link;
         text-decoration: none;
-        border-bottom: 1px solid $default-link;
+        border-bottom: 1px solid #0020d6;
         transition: color 0.22s ease;
       }
       a:hover {
-        color: $default-hover;
-        border-bottom: 1px solid $default-hover;
+        color: #0020d6;
+        border-bottom: 1px solid #0020d6;
       }
     }
   }

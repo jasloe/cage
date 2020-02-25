@@ -20,10 +20,18 @@
   display: none !important;
 }
 
-// article media, remote media wrapper
-.page-node-type-article article {
-  .media__wrapper {
-    padding: 1rem 0rem 1rem 0rem;
-    margin-bottom: 1.5rem;
-  }
+iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.field-media-oembed-video {
+  position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+  height: 0;
+
 }

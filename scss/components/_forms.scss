@@ -14,33 +14,25 @@ input:focus {
   padding: 14px 40px;
 }
 
-// search
-input {
-}
-
 // mc input
 .mailchimp-signup-subscribe-form {
   input.form-email {
     width: calc(100% - 0.8rem);
     height: 2rem;
-    text-transform: none;
     font-stretch: normal;
     border-width: initial;
     border-style: none;
     border-color: initial;
     border-image: initial;
     border-radius: 0px;
-    padding: 0.3rem 0.3rem 0.3rem 0.5rem;
-    background: darken($white, 10%);
-    color: darken($black, 95%);
-    margin-top: 0.7rem;
+    padding: .5rem;
+    background: $white;
   }
 }
 
-// mc submit button
+// // mc submit button
 .mailchimp-signup-subscribe-form {
   .button {
-    background: darken($white, 10%);
     line-height: 1;
     margin-top: 0.7rem;
     padding: 0.7rem 2rem;

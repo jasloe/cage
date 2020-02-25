@@ -27,22 +27,22 @@ header {
     transition: all 0.2s ease;
   }
   a:hover {
-    color: $dark-gray;
-    box-shadow: 0 1px 0 $dark-gray;
+    color: #0020d6;
+    box-shadow: 0 1px 0 #0020d6;
     transition: all 0.2s ease;
   }
   .site-name a:hover {
     box-shadow: none;
   }
   a.is-active {
-    color: $dark-gray;
-    box-shadow: 0 1px 0 $dark-gray;
+    color: #0020d6;
+    box-shadow: 0 1px 0 #0020d6;
     transition: all 0.2s ease;
   }
   a.is-active:hover {
-    color: $black;
+    color: #0020d6;
     transition: all 0.2s ease;
-    box-shadow: 0 1px 0 $black;
+    box-shadow: 0 1px 0 #0020d6;
   }
 }
 
@@ -94,7 +94,6 @@ a.issue__link:hover {
 
 // footer region links
 footer {
-  @include font-size(0.9rem);
   a {
     transition: all 0.2s ease;
   }
@@ -102,6 +101,7 @@ footer {
     transition: all 0.2s ease;
   }
   a.is-active {
+        transition: all 0.2s ease;
   }
 }
 
@@ -114,11 +114,11 @@ footer {
 // static page links
 .page-node-type-page .node__content {
   a {
-    box-shadow: 0 1px 0 $black;
+    box-shadow: 0 1px 0 #0020d6;
     transition: all 0.2s ease;
   }
   a:hover {
-    color: $dark-gray;
+    color: #0020d6;
     box-shadow: none;
     transition: all 0.2s ease;
   }

@@ -25,7 +25,10 @@
   height: 1.2rem;
 }
 
-.legal {
+.share {
+  ul {
+  display: flex;
+  }
   .bandcamp {
     background-image: url(../images/bandcamp.svg);
     padding-right: 0;
