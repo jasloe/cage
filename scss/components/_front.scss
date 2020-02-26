@@ -3,16 +3,16 @@
     padding-top: 0rem;
   }
   header {
-    background: none;
+    background: $white;
     a {
-      color: $white;
+      color: $black;
     }
   }
   .hamburger-inner {
     &,
     &::before,
     &::after {
-      background-color: $white;
+      background-color: $black;
     }
   }
 }
@@ -32,40 +32,38 @@
 }
 
 // Featured blocks
-
-
-.path-frontpage
-  .upcoming, .featured {
-    margin: 0 auto;
-    max-width: $desktop;
-    padding: 0 1rem;
-    h2 {
-      font-family: $life;
-      @include font-size(1.9rem);
-      text-transform: uppercase;
-      border-bottom: 1px solid $black;
-      margin-bottom: 1rem;
+.path-frontpage .upcoming,
+.featured {
+  margin: 0 auto;
+  max-width: $desktop;
+  padding: 0 1rem;
+  h2 {
+    font-family: $life;
+    @include font-size(1.9rem);
+    text-transform: uppercase;
+    border-bottom: 1px solid $black;
+    margin-bottom: 1rem;
+  }
+  h2.title {
+    font-family: $univers;
+    @include font-size(1.2rem);
+    border-bottom: none;
+  }
+  .text-long p {
+    font-family: $life;
+    @include font-size(1.2rem);
+    padding-top: 1rem;
+    padding-right: 1rem;
+    em {
+      font-family: $life-italic;
     }
-    h2.title {
-      font-family: $univers;
-      @include font-size(1.2rem);
-      border-bottom: none;
-
-    }
-    .text-long p {
-      font-family: $life;
-      @include font-size(1.2rem);
-      padding-top: 1rem;
-      padding-right: 1rem;
-      em {
-        font-family: $life-italic;
-      }
-    }
+  }
 }
 
 @include mq($from: tablet) {
   .path-frontpage {
-    .upcoming, .featured {
+    .upcoming,
+    .featured {
       h2 {
         margin-bottom: 2rem;
       }
@@ -84,19 +82,17 @@
       }
     }
   }
-  .upcoming  .release-wrapper {
+  .upcoming .release-wrapper {
     flex-direction: row-reverse !important;
     .metadata-wrapper {
       h2 {
-      margin-right: 2rem;
+        margin-right: 2rem;
       }
       .text-long {
         margin-right: 2rem;
       }
     }
     .image-wrapper {
-
     }
   }
 }
-

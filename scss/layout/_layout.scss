@@ -225,7 +225,26 @@ main {
 }
 
 // legal
-.region__legal {
+// legal
+.region__footer-second .wrapper {
+  display: flex;
+  flex-direction: column;
+  .impressum {
+    margin-bottom: 1rem;
+  }
+}
+
+@include mq($from: tablet) {
+  .region__footer-second .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    .impressum {
+      margin-bottom: 0rem;
+    }
+  }
+}
+
+.region__footer-second {
   padding: 3rem;
   background: $black;
   color: $dark-white !important;
