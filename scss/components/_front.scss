@@ -32,9 +32,14 @@
 }
 
 // Featured blocks
+
+.path-frontpage .upcoming {
+  padding: 1rem 0rem 3rem 0rem !important ;
+}
+
 .path-frontpage .upcoming,
 .featured {
-  margin: 0 auto;
+  margin: 3rem auto;
   max-width: $desktop;
   padding: 0 1rem;
   h2 {
