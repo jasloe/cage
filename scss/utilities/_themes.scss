@@ -7,7 +7,6 @@
       color: $primary;
     }
 
-
     // borders
     h1.title {
       border-top-color: $primary;
@@ -140,7 +139,6 @@
       .field {
         color: $primary;
       }
-
     }
 
     .media--image {
@@ -152,6 +150,16 @@
       filter: grayscale(100%) contrast(1) blur(0);
       max-width: 100%;
       mix-blend-mode: screen;
+    }
+    .field-release-release-summary a {
+      color: $primary;
+      box-shadow: 0 1px 0 $primary;
+      transition: all 0.2s ease;
+    }
+    .field-release-release-summary a:hover {
+      color: $dark-gray;
+      box-shadow: none;
+      transition: all 0.2s ease;
     }
   }
 }
@@ -163,9 +171,7 @@
       .field {
         color: $primary;
       }
-
     }
-
     .media--image {
       background: $primary;
       line-height: 0;
@@ -175,6 +181,11 @@
       filter: grayscale(100%) contrast(1) blur(0);
       max-width: 100%;
       mix-blend-mode: screen;
+    }
+
+    a:hover {
+      color: $yellow;
+      box-shadow: 0 0.5px 0 $yellow;
     }
   }
 }

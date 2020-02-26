@@ -338,6 +338,22 @@ body:before {
   mix-blend-mode: screen;
 }
 
+.featured .field-release-release-summary a {
+  color: #d88b3d;
+  -webkit-box-shadow: 0 1px 0 #d88b3d;
+          box-shadow: 0 1px 0 #d88b3d;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.featured .field-release-release-summary a:hover {
+  color: #666666;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
 .upcoming .flex .metadata-wrapper span,
 .upcoming .flex .metadata-wrapper .field {
   color: #bc371f;
@@ -353,6 +369,22 @@ body:before {
           filter: grayscale(100%) contrast(1) blur(0);
   max-width: 100%;
   mix-blend-mode: screen;
+}
+
+.upcoming .field-release-release-summary a {
+  color: #bc371f;
+  -webkit-box-shadow: 0 1px 0 #bc371f;
+          box-shadow: 0 1px 0 #bc371f;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.upcoming .field-release-release-summary a:hover {
+  color: #666666;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .alien-article .breadcrumbs,
@@ -2659,7 +2691,7 @@ header a {
 }
 
 header a:hover {
-  color: #0020d6;
+  color: #0020d6 !important;
   -webkit-box-shadow: 0 1px 0 #0020d6;
           box-shadow: 0 1px 0 #0020d6;
   -webkit-transition: all 0.2s ease;
@@ -2672,19 +2704,19 @@ header .site-name a:hover {
 }
 
 header a.is-active {
-  color: #0020d6;
-  -webkit-box-shadow: 0 1px 0 #0020d6;
-          box-shadow: 0 1px 0 #0020d6;
+  color: #0020d6 !important;
+  -webkit-box-shadow: 0 1px 0 #0020d6 !important;
+          box-shadow: 0 1px 0 #0020d6 !important;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
 header a.is-active:hover {
-  color: #0020d6;
+  color: #0020d6 !important;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-box-shadow: 0 1px 0 #0020d6;
-          box-shadow: 0 1px 0 #0020d6;
+  -webkit-box-shadow: 0 1px 0 #0020d6 !important;
+          box-shadow: 0 1px 0 #0020d6 !important;
 }
 
 .page-section a,
