@@ -147,21 +147,26 @@
 
 // MicroModal.init();
 
-let listSpan = document.querySelectorAll(".page-node-type-article .interview p")
+let listP = document.querySelectorAll(".page-node-type-article .interview .field__item > p")
 
-let listP = document.querySelectorAll(".page-node-type-article .interview p span")
+console.log(listP);
 
-for (i = 0; i < listP.length; i +=2) {
-  // listP[i].style.textIndent = "4rem";
-  listP[i].className = "odd";
+for (j = 0; j < listP.length; j += 2) {
+  listP[j].className = "oddP";
 }
 
-let promoBlock = document.querySelector(".subscribe-promo .field p")
+let listSpan = document.querySelectorAll(".page-node-type-article .interview p span")
 
-let closeBtn = document.createElement("button");
+for (i = 0; i < listSpan.length; i +=2) {
+  listSpan[i].className = "odd";
+}
+
+// let promoBlock = document.querySelector(".subscribe-promo .field p")
+
+// let closeBtn = document.createElement("button");
 
 
-promoBlock.appendChild(closeBtn)
+// promoBlock.appendChild(closeBtn);
 
 
 

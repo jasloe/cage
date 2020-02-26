@@ -18,12 +18,21 @@
     'region__' ~ region|clean_class
   ]
 %}
+
 {% if content %}
 
 	{% block content %}
 		<div{{attributes.addClass(classes)}}>
-			{{ content }}
+
+			<div class="wrapper">
+				<div class="impressum">
+					{{ drupal_entity('block_content', '17') }}
+					{{ drupal_entity('block_content', '27') }}
+				</div>
+				<div class="legal">
+					{{ drupal_menu('legal') }}
+				</div>
+			</div>
 		</div>
 	{% endblock %}
-
 {% endif %}

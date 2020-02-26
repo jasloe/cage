@@ -62,8 +62,9 @@ main {
     .article {
       text-align: center;
       padding: 1rem 0rem;
+
       .field-article-type {
-        padding: 1rem 1rem 0.33rem 1rem;
+        padding: 0rem 1rem 1rem 1rem;
       }
       h2.title {
         padding: 0rem 1rem 1rem 1rem;
@@ -74,7 +75,7 @@ main {
       }
 
       .field-article-marquee {
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
       }
 
       .field-article-precis p {
@@ -146,34 +147,71 @@ main {
 }
 
 .footer-about,
-.footer-menu ul,
-.footer-social-subscribe .wrapper {
+.footer-menu ul {
+  @include font-size(1.2rem);
   padding: 3rem;
 }
 
+// subscribe
 .footer-social-subscribe .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.footer-subscribe {
+.footer-social-subscribe {
+.share,
+.subscribe {
+  h2 {
+    font-family: $univers;
+    @include font-size(1.2rem);
+    }
+  }
+}
+
+.footer-social-subscribe {
+.share,
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+}
+
+.footer-social-subscribe .subscribe form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social-subscribe .wrapper {
+  padding: 3rem 3rem;
+}
+
+.footer-social-subscribe .wrapper .share {
   padding-top: 3rem;
 }
+
+.footer-social-subscribe .wrapper .subscribe form {
+  padding-top: 1rem;
+}
+
+
+
+
+// share
+.footer-social-subscribe .share h2 {
+
+}
+
+
+
 
 @include mq($from: $tablet) {
   .footer-about,
   .footer-menu ul,
   .footer-social-subscribe .wrapper {
     margin: 0 auto;
-
     max-width: $tablet;
-  }
-  .footer-social-subscribe .wrapper {
-    flex-direction: row;
-  }
-  .footer-subscribe {
-    padding-top: 0rem;
   }
 }
 
@@ -225,7 +263,25 @@ main {
 }
 
 // legal
-.region__legal {
+.region__footer-second .wrapper {
+  display: flex;
+  flex-direction: column;
+  .impressum {
+    margin-bottom: 1rem;
+  }
+}
+
+@include mq($from: tablet) {
+  .region__footer-second .wrapper {
+  flex-direction: row;
+  justify-content: space-between;
+  .impressum {
+    margin-bottom: 0rem;
+  }
+}
+}
+
+.region__footer-second {
   padding: 3rem;
   background: $black;
   color: $dark-white !important;
