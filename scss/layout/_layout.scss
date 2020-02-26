@@ -160,21 +160,21 @@ main {
 }
 
 .footer-social-subscribe {
-.share,
-.subscribe {
-  h2 {
-    font-family: $univers;
-    @include font-size(1.2rem);
+  .share,
+  .subscribe {
+    h2 {
+      font-family: $univers;
+      @include font-size(1.2rem);
     }
   }
 }
 
 .footer-social-subscribe {
-.share,
-.subscribe {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .share,
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -195,16 +195,9 @@ main {
   padding-top: 1rem;
 }
 
-
-
-
 // share
 .footer-social-subscribe .share h2 {
-
 }
-
-
-
 
 @include mq($from: $tablet) {
   .footer-about,
@@ -263,10 +256,6 @@ main {
 }
 
 // legal
-<<<<<<< HEAD
-// legal
-=======
->>>>>>> f2c415d648d2038c59d53a9e84754998a7f76795
 .region__footer-second .wrapper {
   display: flex;
   flex-direction: column;
@@ -277,7 +266,6 @@ main {
 
 @include mq($from: tablet) {
   .region__footer-second .wrapper {
-<<<<<<< HEAD
     flex-direction: row;
     justify-content: space-between;
     .impressum {
@@ -285,15 +273,6 @@ main {
     }
   }
 }
-=======
-  flex-direction: row;
-  justify-content: space-between;
-  .impressum {
-    margin-bottom: 0rem;
-  }
-}
-}
->>>>>>> f2c415d648d2038c59d53a9e84754998a7f76795
 
 .region__footer-second {
   padding: 3rem;

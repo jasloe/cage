@@ -3796,25 +3796,15 @@ progress::-webkit-progress-bar {
   display: none;
 }
 
-<<<<<<< HEAD
 .path-frontpage .upcoming,
 .featured {
-=======
-.path-frontpage
-.upcoming, .featured {
->>>>>>> f2c415d648d2038c59d53a9e84754998a7f76795
   margin: 0 auto;
   max-width: 980px;
   padding: 0 1rem;
 }
 
-<<<<<<< HEAD
 .path-frontpage .upcoming h2,
 .featured h2 {
-=======
-.path-frontpage
-.upcoming h2, .featured h2 {
->>>>>>> f2c415d648d2038c59d53a9e84754998a7f76795
   font-family: "Life LT Std Roman";
   font-size: calc(1.315rem + 0.78vw);
   text-transform: uppercase;
@@ -3823,66 +3813,39 @@ progress::-webkit-progress-bar {
 }
 
 @media (min-width: 1200px) {
-<<<<<<< HEAD
   .path-frontpage .upcoming h2,
   .featured h2 {
-=======
-  .path-frontpage
-.upcoming h2, .featured h2 {
->>>>>>> f2c415d648d2038c59d53a9e84754998a7f76795
     font-size: 1.9rem;
   }
 }
 
-<<<<<<< HEAD
 .path-frontpage .upcoming h2.title,
 .featured h2.title {
-=======
-.path-frontpage
-.upcoming h2.title, .featured h2.title {
->>>>>>> f2c415d648d2038c59d53a9e84754998a7f76795
   font-family: "Univers LT Std";
   font-size: 1.2rem;
   border-bottom: none;
 }
 
-<<<<<<< HEAD
 .path-frontpage .upcoming .text-long p,
 .featured .text-long p {
-=======
-.path-frontpage
-.upcoming .text-long p, .featured .text-long p {
->>>>>>> f2c415d648d2038c59d53a9e84754998a7f76795
   font-family: "Life LT Std Roman";
   font-size: 1.2rem;
   padding-top: 1rem;
   padding-right: 1rem;
 }
 
-<<<<<<< HEAD
 .path-frontpage .upcoming .text-long p em,
 .featured .text-long p em {
-=======
-.path-frontpage
-.upcoming .text-long p em, .featured .text-long p em {
->>>>>>> f2c415d648d2038c59d53a9e84754998a7f76795
   font-family: "Life LT Std Italic";
 }
 
 @media (min-width: 46.25em) {
-<<<<<<< HEAD
   .path-frontpage .upcoming h2,
   .path-frontpage .featured h2 {
     margin-bottom: 2rem;
   }
   .path-frontpage .upcoming h2.title,
   .path-frontpage .featured h2.title {
-=======
-  .path-frontpage .upcoming h2, .path-frontpage .featured h2 {
-    margin-bottom: 2rem;
-  }
-  .path-frontpage .upcoming h2.title, .path-frontpage .featured h2.title {
->>>>>>> f2c415d648d2038c59d53a9e84754998a7f76795
     margin-bottom: 0rem;
   }
   .path-frontpage .release-wrapper,
