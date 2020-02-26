@@ -38,9 +38,14 @@
 				<div class="wrapper">
 
 
-					<div class="footer-subscribe">
+					<div class="subscribe">
 						<h2>Subscribe to the Sound American Newsletter</h2>
-						{{ drupal_block('mailchimp_signup_subscribe_block:newsletter') }}
+						{{ drupal_block('mailchimp_signup_subscribe_block:newsletter', wrapper=false) }}
+					</div>
+
+					<div class="share">
+						<h2>Follow Sound American</h2>
+						{{ drupal_menu('social') }}
 					</div>
 
 				</div>

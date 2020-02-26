@@ -6,12 +6,20 @@
     progress {
       color: $primary;
     }
+
+
     // borders
     h1.title {
       border-top-color: $primary;
     }
-    .page-section .field-section-title p:after {
-      border-bottom-color: $primary;
+
+    .interview .field-section-title,
+    .page-section .field-section-title {
+      p {
+        &:after {
+          border-bottom: 1px solid $primary !important;
+        }
+      }
     }
     // links
     header a,
@@ -30,9 +38,9 @@
       max-width: 100%;
       mix-blend-mode: screen;
     }
-    .media__wrapper {
-      border-top: 1px solid $primary;
-      border-bottom: 1px solid $primary;
+    .field-media {
+      border-top: 1px dotted $primary;
+      border-bottom: 1px dotted $primary;
     }
     // remote video
     .field-media-image-caption,
@@ -132,9 +140,7 @@
       .field {
         color: $primary;
       }
-      h2 {
-        border-bottom: 1px solid $primary;
-      }
+
     }
 
     .media--image {
@@ -157,9 +163,7 @@
       .field {
         color: $primary;
       }
-      h2 {
-        border-bottom: 1px solid $primary;
-      }
+
     }
 
     .media--image {
