@@ -6,10 +6,9 @@
     line-height: 1.2;
   }
   .page-section .field-body p {
-    text-indent: $indent;
+    @include indent-default;
     padding: 0.5rem 0;
     &:first-child {
-      text-indent: 0;
       padding: 0rem;
     }
   }
@@ -27,10 +26,11 @@
     @include justify;
   }
 
-
-
-  blockquote {
-    padding: 0 3rem;
+   blockquote {
+    padding: 0 1.5rem !important;
+    @include mq($from: tablet) {
+      padding: 0 3rem;
+    }
     font-family: $life-italic;
     em {
       font-family: $life;
@@ -77,9 +77,9 @@
   }
 
   .page-section .field-body p {
-    text-indent: $indent;
+    @include indent-default;
     &:first-child {
-      text-indent: 0;
+      // text-indent: 0;
     }
   }
   .page-section .field-body blockquote p {
@@ -113,7 +113,10 @@
 
 .page-node-type-issue .from-the-editor {
   blockquote {
-    padding: 0 3rem;
+    padding: 0 1.5rem;
+    @include mq($from: tablet) {
+      padding: 0 3rem;
+    }
     font-family: $univers-italic;
     em {
       font-family: $univers;
@@ -191,4 +194,9 @@
       }
     }
   }
+}
+
+.toc > h2 {
+  @include font-size(1.9rem);
+
 }

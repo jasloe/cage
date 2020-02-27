@@ -1,6 +1,7 @@
 .path-frontpage {
   main {
     padding-top: 0rem;
+
   }
   header {
     background: $white;
@@ -17,87 +18,86 @@
   }
 }
 
-.path-frontpage .issue-wrapper {
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.path-frontpage {
-  .latest-issues .issue-wrapper {
-    display: none;
-  }
-}
-
 // Featured blocks
 
-.path-frontpage .upcoming {
-  padding: 1rem 0rem 3rem 0rem !important ;
-}
 
-.path-frontpage .upcoming,
-.featured {
-  margin: 3rem auto;
+.path-frontpage .region__content {
+  margin: 0 auto;
   max-width: $desktop;
-  padding: 0 1rem;
-  h2 {
-    font-family: $life;
-    @include font-size(1.9rem);
-    text-transform: uppercase;
+  padding: 5rem 1rem;
+  > .block {
+    margin-bottom: 2rem;
+  }
+
+  > .block:last-child {
+    margin-bottom: 0rem;
+  }
+
+  > .block > h2 {
     border-bottom: 1px solid $black;
+    font-family: $univers;
+    @include font-size(1.9rem);
     margin-bottom: 1rem;
   }
+
   h2.title {
-    font-family: $univers;
-    @include font-size(1.2rem);
-    border-bottom: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    @include font-size(1.4rem);
   }
   .text-long p {
-    font-family: $life;
+    font-family: $univers;
     @include font-size(1.2rem);
-    padding-top: 1rem;
+    padding-bottom: 1rem;
     padding-right: 1rem;
     em {
-      font-family: $life-italic;
+      font-family: $univers-italic;
     }
-  }
+}
 }
 
 @include mq($from: tablet) {
-  .path-frontpage {
-    .upcoming,
-    .featured {
-      h2 {
-        margin-bottom: 2rem;
-      }
-      h2.title {
-        margin-bottom: 0rem;
-      }
-    }
 
-    .release-wrapper,
-    .upcoming-wrapper {
-      display: flex;
-      flex-direction: row;
-      .image-wrapper,
-      .metadata-wrapper {
-        flex-basis: 50%;
-      }
-    }
-  }
-  .upcoming .release-wrapper {
-    flex-direction: row-reverse !important;
-    .metadata-wrapper {
-      h2 {
-        margin-right: 2rem;
-      }
-      .text-long {
-        margin-right: 2rem;
-      }
-    }
-    .image-wrapper {
-    }
+.now, .upcoming {
+  .release-wrapper {
+    display: flex;
+    flex-direction: row;
   }
 }
+
+.featured {
+  .release-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+ .path-frontpage .region__content h2.title {
+    padding-top: 0rem;
+  }
+
+.release-wrapper {
+  .image-wrapper,
+    .metadata-wrapper {
+       flex-basis: 50%;
+      }
+}
+
+.now, .upcoming {
+  .metadata-wrapper {
+    margin-left: 1rem;
+  }
+}
+
+.featured {
+  .metadata-wrapper {
+    margin-right: 1rem;
+  }
+}
+
+
+}
+
+
+
+

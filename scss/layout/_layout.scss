@@ -17,7 +17,7 @@ main {
   .page-node-type-issue .from-the-editor {
     max-width: $tablet;
     margin: 0 auto;
-    padding: 0 3rem;
+    // padding: 0 3rem;
   }
 }
 .page-node-type-issue .toc .article {
@@ -53,7 +53,7 @@ main {
   > h2 {
     text-align: center;
     width: 100%;
-    padding: 3rem 0;
+    padding: 1rem 0;
   }
 
   .flex {
@@ -259,9 +259,16 @@ main {
 .region__footer-second .wrapper {
   display: flex;
   flex-direction: column;
-  .impressum {
-    margin-bottom: 1rem;
+    .impressum {
+    margin-bottom: 0rem;
   }
+  .impressum > div {
+    padding-bottom: 1rem;
+  }
+  .impressum > div:last-child {
+     padding-bottom: 1rem;
+  }
+
 }
 
 @include mq($from: tablet) {

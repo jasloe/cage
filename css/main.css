@@ -321,6 +321,37 @@ body:before {
   font-style: normal;
 }
 
+.now .flex .metadata-wrapper span,
+.now .flex .metadata-wrapper .field {
+  color: #676060;
+}
+
+.now .media--image {
+  background: #676060;
+  line-height: 0;
+}
+
+.now .media--image img {
+  -webkit-filter: grayscale(100%) contrast(1) blur(0);
+          filter: grayscale(100%) contrast(1) blur(0);
+  max-width: 100%;
+  mix-blend-mode: screen;
+}
+
+.now a {
+  color: red;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.now a:hover {
+  color: #666666;
+  -webkit-box-shadow: 0 0.5px 0 #666666;
+          box-shadow: 0 0.5px 0 #666666;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
 .featured .flex .metadata-wrapper span,
 .featured .flex .metadata-wrapper .field {
   color: #d88b3d;
@@ -338,7 +369,7 @@ body:before {
   mix-blend-mode: screen;
 }
 
-.featured .field-release-release-summary a {
+.featured a {
   color: #d88b3d;
   -webkit-box-shadow: 0 1px 0 #d88b3d;
           box-shadow: 0 1px 0 #d88b3d;
@@ -346,7 +377,7 @@ body:before {
   transition: all 0.2s ease;
 }
 
-.featured .field-release-release-summary a:hover {
+.featured a:hover {
   color: #666666;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -371,7 +402,7 @@ body:before {
   mix-blend-mode: screen;
 }
 
-.upcoming .field-release-release-summary a {
+.upcoming a {
   color: #bc371f;
   -webkit-box-shadow: 0 1px 0 #bc371f;
           box-shadow: 0 1px 0 #bc371f;
@@ -379,7 +410,7 @@ body:before {
   transition: all 0.2s ease;
 }
 
-.upcoming .field-release-release-summary a:hover {
+.upcoming a:hover {
   color: #666666;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -2273,7 +2304,6 @@ main {
   .page-node-type-issue .from-the-editor {
     max-width: 740px;
     margin: 0 auto;
-    padding: 0 3rem;
   }
 }
 
@@ -2314,7 +2344,7 @@ main {
 .page-node-type-issue .toc > h2 {
   text-align: center;
   width: 100%;
-  padding: 3rem 0;
+  padding: 1rem 0;
 }
 
 .page-node-type-issue .toc .flex {
@@ -2576,7 +2606,15 @@ main {
 }
 
 .region__footer-second .wrapper .impressum {
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
+}
+
+.region__footer-second .wrapper .impressum > div {
+  padding-bottom: 1rem;
+}
+
+.region__footer-second .wrapper .impressum > div:last-child {
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 46.25em) {
@@ -3284,12 +3322,17 @@ header.headroom--unpinned {
 }
 
 .from-the-editor .page-section .field-body p {
-  text-indent: 3rem;
+  text-indent: 1.5rem;
   padding: 0.5rem 0;
 }
 
+@media (min-width: 46.25em) {
+  .from-the-editor .page-section .field-body p {
+    text-indent: 3rem;
+  }
+}
+
 .from-the-editor .page-section .field-body p:first-child {
-  text-indent: 0;
   padding: 0rem;
 }
 
@@ -3320,8 +3363,14 @@ header.headroom--unpinned {
 }
 
 .page-node-type-article blockquote {
-  padding: 0 3rem;
+  padding: 0 1.5rem !important;
   font-family: "Life LT Std Italic";
+}
+
+@media (min-width: 46.25em) {
+  .page-node-type-article blockquote {
+    padding: 0 3rem;
+  }
 }
 
 .page-node-type-article blockquote em {
@@ -3386,11 +3435,13 @@ header.headroom--unpinned {
 }
 
 .page-node-type-article .page-section .field-body p {
-  text-indent: 3rem;
+  text-indent: 1.5rem;
 }
 
-.page-node-type-article .page-section .field-body p:first-child {
-  text-indent: 0;
+@media (min-width: 46.25em) {
+  .page-node-type-article .page-section .field-body p {
+    text-indent: 3rem;
+  }
 }
 
 .page-node-type-article .page-section .field-body blockquote p {
@@ -3419,8 +3470,14 @@ header.headroom--unpinned {
 }
 
 .page-node-type-issue .from-the-editor blockquote {
-  padding: 0 3rem;
+  padding: 0 1.5rem;
   font-family: "Univers LT Std Oblique";
+}
+
+@media (min-width: 46.25em) {
+  .page-node-type-issue .from-the-editor blockquote {
+    padding: 0 3rem;
+  }
 }
 
 .page-node-type-issue .from-the-editor blockquote em {
@@ -3520,6 +3577,16 @@ header.headroom--unpinned {
   .page-node-type-page .region__content-wrapper .body p {
     text-align: left;
     text-justify: none;
+  }
+}
+
+.toc > h2 {
+  font-size: calc(1.315rem + 0.78vw);
+}
+
+@media (min-width: 1200px) {
+  .toc > h2 {
+    font-size: 1.9rem;
   }
 }
 
@@ -3807,85 +3874,58 @@ progress::-webkit-progress-bar {
   background-color: #000;
 }
 
-.path-frontpage .issue-wrapper {
-  height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.path-frontpage .latest-issues .issue-wrapper {
-  display: none;
-}
-
-.path-frontpage .upcoming {
-  padding: 1rem 0rem 3rem 0rem !important;
-}
-
-.path-frontpage .upcoming,
-.featured {
-  margin: 3rem auto;
+.path-frontpage .region__content {
+  margin: 0 auto;
   max-width: 980px;
-  padding: 0 1rem;
+  padding: 5rem 1rem;
 }
 
-.path-frontpage .upcoming h2,
-.featured h2 {
-  font-family: "Life LT Std Roman";
-  font-size: calc(1.315rem + 0.78vw);
-  text-transform: uppercase;
+.path-frontpage .region__content > .block {
+  margin-bottom: 2rem;
+}
+
+.path-frontpage .region__content > .block:last-child {
+  margin-bottom: 0rem;
+}
+
+.path-frontpage .region__content > .block > h2 {
   border-bottom: 1px solid #000;
+  font-family: "Univers LT Std";
+  font-size: calc(1.315rem + 0.78vw);
   margin-bottom: 1rem;
 }
 
 @media (min-width: 1200px) {
-  .path-frontpage .upcoming h2,
-  .featured h2 {
+  .path-frontpage .region__content > .block > h2 {
     font-size: 1.9rem;
   }
 }
 
-.path-frontpage .upcoming h2.title,
-.featured h2.title {
-  font-family: "Univers LT Std";
-  font-size: 1.2rem;
-  border-bottom: none;
+.path-frontpage .region__content h2.title {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: calc(1.265rem + 0.18vw);
 }
 
-.path-frontpage .upcoming .text-long p,
-.featured .text-long p {
-  font-family: "Life LT Std Roman";
+@media (min-width: 1200px) {
+  .path-frontpage .region__content h2.title {
+    font-size: 1.4rem;
+  }
+}
+
+.path-frontpage .region__content .text-long p {
+  font-family: "Univers LT Std";
   font-size: 1.2rem;
-  padding-top: 1rem;
+  padding-bottom: 1rem;
   padding-right: 1rem;
 }
 
-.path-frontpage .upcoming .text-long p em,
-.featured .text-long p em {
-  font-family: "Life LT Std Italic";
+.path-frontpage .region__content .text-long p em {
+  font-family: "Univers LT Std Oblique";
 }
 
 @media (min-width: 46.25em) {
-  .path-frontpage .upcoming h2,
-  .path-frontpage .featured h2 {
-    margin-bottom: 2rem;
-  }
-  .path-frontpage .upcoming h2.title,
-  .path-frontpage .featured h2.title {
-    margin-bottom: 0rem;
-  }
-  .path-frontpage .release-wrapper,
-  .path-frontpage .upcoming-wrapper {
+  .now .release-wrapper, .upcoming .release-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3894,24 +3934,28 @@ progress::-webkit-progress-bar {
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .path-frontpage .release-wrapper .image-wrapper,
-  .path-frontpage .release-wrapper .metadata-wrapper,
-  .path-frontpage .upcoming-wrapper .image-wrapper,
-  .path-frontpage .upcoming-wrapper .metadata-wrapper {
+  .featured .release-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .path-frontpage .region__content h2.title {
+    padding-top: 0rem;
+  }
+  .release-wrapper .image-wrapper,
+  .release-wrapper .metadata-wrapper {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
-  .upcoming .release-wrapper {
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: reverse !important;
-        -ms-flex-direction: row-reverse !important;
-            flex-direction: row-reverse !important;
+  .now .metadata-wrapper, .upcoming .metadata-wrapper {
+    margin-left: 1rem;
   }
-  .upcoming .release-wrapper .metadata-wrapper h2 {
-    margin-right: 2rem;
-  }
-  .upcoming .release-wrapper .metadata-wrapper .text-long {
-    margin-right: 2rem;
+  .featured .metadata-wrapper {
+    margin-right: 1rem;
   }
 }
 

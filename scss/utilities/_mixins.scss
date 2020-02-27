@@ -256,6 +256,14 @@ $border-dark: 2px solid $dark-gray;
 
 $indent: 3rem;
 
+@mixin indent-default {
+  text-indent: 1.5rem;
+  @include mq($from: tablet) {
+    text-indent: 3rem;
+  }
+}
+
+
 @mixin life-sc {
   font-family: $default-font;
   font-weight: 700;

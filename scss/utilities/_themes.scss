@@ -151,12 +151,12 @@
       max-width: 100%;
       mix-blend-mode: screen;
     }
-    .field-release-release-summary a {
+    a {
       color: $primary;
       box-shadow: 0 1px 0 $primary;
       transition: all 0.2s ease;
     }
-    .field-release-release-summary a:hover {
+    a:hover {
       color: $dark-gray;
       box-shadow: none;
       transition: all 0.2s ease;
@@ -183,13 +183,55 @@
       mix-blend-mode: screen;
     }
 
+   a {
+      color: $dark-gray;
+      box-shadow: 0 0.5px 0 $dark-gray;
+      transition: all 0.2s ease;
+    }
+
     a:hover {
-      color: $yellow;
-      box-shadow: 0 0.5px 0 $yellow;
+      color: $dark-gray;
+
+      transition: all 0.2s ease;
     }
   }
 }
 
+@mixin now($name, $primary) {
+  .#{$name} {
+    .flex .metadata-wrapper {
+      span,
+      .field {
+        color: $primary;
+      }
+    }
+    .media--image {
+      background: $primary;
+      line-height: 0;
+    }
+
+    .media--image img {
+      filter: grayscale(100%) contrast(1) blur(0);
+      max-width: 100%;
+      mix-blend-mode: screen;
+    }
+
+  a {
+      color: red;
+         transition: all 0.2s ease;
+
+    }
+
+    a:hover {
+      color: $dark-gray;
+      box-shadow: 0 0.5px 0 $dark-gray;
+      transition: all 0.2s ease;
+    }
+  }
+}
+
+
+@include now(now, $alien);
 @include upcoming(featured, $big-band);
 @include upcoming(upcoming, $sun-ra);
 @include article(alien-article, $alien);
