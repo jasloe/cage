@@ -1,0 +1,11 @@
+.media__wrapper .field-media-file {
+  text-align: center;
+  margin: 3rem;
+  .file {
+    padding: 1rem;
+    border: 1px solid;
+    a {
+      @include font-size(1.2rem);
+    }
+  }
+}

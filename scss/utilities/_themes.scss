@@ -41,6 +41,26 @@
       border-top: 1px dotted $primary;
       border-bottom: 1px dotted $primary;
     }
+    .media__wrapper .field-media-file {
+      .file {
+        background-color: $white;
+        border-color: $primary;
+        transition: background-color 0.22s ease;
+        a {
+          color: $primary;
+          transition: color 0.22s ease;
+        }
+      }
+      .file:hover {
+        background-color: $primary;
+        transition: background-color 0.22s ease;
+        a {
+          color: $white;
+          transition: color 0.22s ease;
+        }
+      }
+    }
+
     // remote video
     .field-media-image-caption,
     .field-media-remote-video-caption {
@@ -183,7 +203,7 @@
       mix-blend-mode: screen;
     }
 
-   a {
+    a {
       color: lightslategrey;
 
       transition: all 0.2s ease;
@@ -216,10 +236,9 @@
       mix-blend-mode: screen;
     }
 
-  a {
+    a {
       color: lightcoral;
-         transition: all 0.2s ease;
-
+      transition: all 0.2s ease;
     }
 
     a:hover {
@@ -229,7 +248,6 @@
     }
   }
 }
-
 
 @include now(now, $alien);
 @include featured(featured, $big-band);

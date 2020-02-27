@@ -455,6 +455,31 @@ body:before {
   border-bottom: 1px dotted #676060;
 }
 
+.alien-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #676060;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.alien-article .media__wrapper .field-media-file .file a {
+  color: #676060;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.alien-article .media__wrapper .field-media-file .file:hover {
+  background-color: #676060;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.alien-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
 .alien-article .field-media-image-caption,
 .alien-article .field-media-remote-video-caption {
   color: #676060;
@@ -517,6 +542,31 @@ body:before {
 .hyla-article .field-media {
   border-top: 1px dotted #664d94;
   border-bottom: 1px dotted #664d94;
+}
+
+.hyla-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #664d94;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.hyla-article .media__wrapper .field-media-file .file a {
+  color: #664d94;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.hyla-article .media__wrapper .field-media-file .file:hover {
+  background-color: #664d94;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.hyla-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
 }
 
 .hyla-article .field-media-image-caption,
@@ -583,6 +633,31 @@ body:before {
   border-bottom: 1px dotted #002e6f;
 }
 
+.change-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #002e6f;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.change-article .media__wrapper .field-media-file .file a {
+  color: #002e6f;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.change-article .media__wrapper .field-media-file .file:hover {
+  background-color: #002e6f;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.change-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
 .change-article .field-media-image-caption,
 .change-article .field-media-remote-video-caption {
   color: #002e6f;
@@ -645,6 +720,31 @@ body:before {
 .just-intonation-article .field-media {
   border-top: 1px dotted #8e3161;
   border-bottom: 1px dotted #8e3161;
+}
+
+.just-intonation-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #8e3161;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.just-intonation-article .media__wrapper .field-media-file .file a {
+  color: #8e3161;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.just-intonation-article .media__wrapper .field-media-file .file:hover {
+  background-color: #8e3161;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.just-intonation-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
 }
 
 .just-intonation-article .field-media-image-caption,
@@ -711,6 +811,31 @@ body:before {
   border-bottom: 1px dotted #013220;
 }
 
+.place-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #013220;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.place-article .media__wrapper .field-media-file .file a {
+  color: #013220;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.place-article .media__wrapper .field-media-file .file:hover {
+  background-color: #013220;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.place-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
 .place-article .field-media-image-caption,
 .place-article .field-media-remote-video-caption {
   color: #013220;
@@ -773,6 +898,31 @@ body:before {
 .big-band-article .field-media {
   border-top: 1px dotted #d88b3d;
   border-bottom: 1px dotted #d88b3d;
+}
+
+.big-band-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #d88b3d;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.big-band-article .media__wrapper .field-media-file .file a {
+  color: #d88b3d;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.big-band-article .media__wrapper .field-media-file .file:hover {
+  background-color: #d88b3d;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.big-band-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
 }
 
 .big-band-article .field-media-image-caption,
@@ -839,6 +989,31 @@ body:before {
   border-bottom: 1px dotted red;
 }
 
+.mumei-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: red;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.mumei-article .media__wrapper .field-media-file .file a {
+  color: red;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.mumei-article .media__wrapper .field-media-file .file:hover {
+  background-color: red;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.mumei-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
 .mumei-article .field-media-image-caption,
 .mumei-article .field-media-remote-video-caption {
   color: red;
@@ -901,6 +1076,31 @@ body:before {
 .braxton-article .field-media {
   border-top: 1px dotted blue;
   border-bottom: 1px dotted blue;
+}
+
+.braxton-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: blue;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.braxton-article .media__wrapper .field-media-file .file a {
+  color: blue;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.braxton-article .media__wrapper .field-media-file .file:hover {
+  background-color: blue;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.braxton-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
 }
 
 .braxton-article .field-media-image-caption,
@@ -967,6 +1167,31 @@ body:before {
   border-bottom: 1px dotted #f8333c;
 }
 
+.propaganda-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #f8333c;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.propaganda-article .media__wrapper .field-media-file .file a {
+  color: #f8333c;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.propaganda-article .media__wrapper .field-media-file .file:hover {
+  background-color: #f8333c;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.propaganda-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
 .propaganda-article .field-media-image-caption,
 .propaganda-article .field-media-remote-video-caption {
   color: #f8333c;
@@ -1031,6 +1256,31 @@ body:before {
   border-bottom: 1px dotted #9a2a1d;
 }
 
+.cherry-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #9a2a1d;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.cherry-article .media__wrapper .field-media-file .file a {
+  color: #9a2a1d;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.cherry-article .media__wrapper .field-media-file .file:hover {
+  background-color: #9a2a1d;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.cherry-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
 .cherry-article .field-media-image-caption,
 .cherry-article .field-media-remote-video-caption {
   color: #9a2a1d;
@@ -1093,6 +1343,31 @@ body:before {
 .listeners-article .field-media {
   border-top: 1px dotted gray;
   border-bottom: 1px dotted gray;
+}
+
+.listeners-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: gray;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.listeners-article .media__wrapper .field-media-file .file a {
+  color: gray;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.listeners-article .media__wrapper .field-media-file .file:hover {
+  background-color: gray;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.listeners-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
 }
 
 .listeners-article .field-media-image-caption,
@@ -1275,6 +1550,31 @@ body:before {
   border-bottom: 1px dotted #f8333c;
 }
 
+.ritual-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #f8333c;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.ritual-article .media__wrapper .field-media-file .file a {
+  color: #f8333c;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.ritual-article .media__wrapper .field-media-file .file:hover {
+  background-color: #f8333c;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.ritual-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
 .ritual-article .field-media-image-caption,
 .ritual-article .field-media-remote-video-caption {
   color: #f8333c;
@@ -1395,6 +1695,31 @@ body:before {
 .treatise-article .field-media {
   border-top: 1px dotted #25283d;
   border-bottom: 1px dotted #25283d;
+}
+
+.treatise-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #25283d;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.treatise-article .media__wrapper .field-media-file .file a {
+  color: #25283d;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.treatise-article .media__wrapper .field-media-file .file:hover {
+  background-color: #25283d;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.treatise-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
 }
 
 .treatise-article .field-media-image-caption,
@@ -1519,6 +1844,31 @@ body:before {
   border-bottom: 1px dotted #9a2a1d;
 }
 
+.cherry-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #9a2a1d;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.cherry-article .media__wrapper .field-media-file .file a {
+  color: #9a2a1d;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.cherry-article .media__wrapper .field-media-file .file:hover {
+  background-color: #9a2a1d;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.cherry-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
 .cherry-article .field-media-image-caption,
 .cherry-article .field-media-remote-video-caption {
   color: #9a2a1d;
@@ -1639,6 +1989,31 @@ body:before {
 .big-band-article .field-media {
   border-top: 1px dotted #d88b3d;
   border-bottom: 1px dotted #d88b3d;
+}
+
+.big-band-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #d88b3d;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.big-band-article .media__wrapper .field-media-file .file a {
+  color: #d88b3d;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.big-band-article .media__wrapper .field-media-file .file:hover {
+  background-color: #d88b3d;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.big-band-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
 }
 
 .big-band-article .field-media-image-caption,
@@ -1763,6 +2138,31 @@ body:before {
   border-bottom: 1px dotted #013220;
 }
 
+.place-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #013220;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.place-article .media__wrapper .field-media-file .file a {
+  color: #013220;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.place-article .media__wrapper .field-media-file .file:hover {
+  background-color: #013220;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.place-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
 .place-article .field-media-image-caption,
 .place-article .field-media-remote-video-caption {
   color: #013220;
@@ -1883,6 +2283,31 @@ body:before {
 .just-intonation-article .field-media {
   border-top: 1px dotted #8e3161;
   border-bottom: 1px dotted #8e3161;
+}
+
+.just-intonation-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #8e3161;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.just-intonation-article .media__wrapper .field-media-file .file a {
+  color: #8e3161;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.just-intonation-article .media__wrapper .field-media-file .file:hover {
+  background-color: #8e3161;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.just-intonation-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
 }
 
 .just-intonation-article .field-media-image-caption,
@@ -2007,6 +2432,31 @@ body:before {
   border-bottom: 1px dotted #002e6f;
 }
 
+.change-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #002e6f;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.change-article .media__wrapper .field-media-file .file a {
+  color: #002e6f;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.change-article .media__wrapper .field-media-file .file:hover {
+  background-color: #002e6f;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.change-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
 .change-article .field-media-image-caption,
 .change-article .field-media-remote-video-caption {
   color: #002e6f;
@@ -2129,6 +2579,31 @@ body:before {
   border-bottom: 1px dotted #664d94;
 }
 
+.hyla-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #664d94;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.hyla-article .media__wrapper .field-media-file .file a {
+  color: #664d94;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.hyla-article .media__wrapper .field-media-file .file:hover {
+  background-color: #664d94;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.hyla-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
 .hyla-article .field-media-image-caption,
 .hyla-article .field-media-remote-video-caption {
   color: #664d94;
@@ -2249,6 +2724,31 @@ body:before {
 .alien-article .field-media {
   border-top: 1px dotted #676060;
   border-bottom: 1px dotted #676060;
+}
+
+.alien-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #676060;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.alien-article .media__wrapper .field-media-file .file a {
+  color: #676060;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.alien-article .media__wrapper .field-media-file .file:hover {
+  background-color: #676060;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.alien-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
 }
 
 .alien-article .field-media-image-caption,
@@ -3299,6 +3799,20 @@ header.headroom--unpinned {
 
 .region__content .field-media {
   margin: 1rem 0;
+}
+
+.media__wrapper .field-media-file {
+  text-align: center;
+  margin: 3rem;
+}
+
+.media__wrapper .field-media-file .file {
+  padding: 1rem;
+  border: 1px solid;
+}
+
+.media__wrapper .field-media-file .file a {
+  font-size: 1.2rem;
 }
 
 .from-the-editor .page-section {
