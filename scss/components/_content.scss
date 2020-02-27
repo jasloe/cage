@@ -27,9 +27,9 @@
   }
 
    blockquote {
-    padding: 0 1.5rem !important;
+    padding: 0 1.5rem;
     @include mq($from: tablet) {
-      padding: 0 3rem;
+      padding: 0rem 3rem;
     }
     font-family: $life-italic;
     em {
@@ -123,6 +123,8 @@
     }
   }
 }
+
+
 
 .endnotes {
   padding-top: 2rem;

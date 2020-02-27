@@ -3363,13 +3363,13 @@ header.headroom--unpinned {
 }
 
 .page-node-type-article blockquote {
-  padding: 0 1.5rem !important;
+  padding: 0 1.5rem;
   font-family: "Life LT Std Italic";
 }
 
 @media (min-width: 46.25em) {
   .page-node-type-article blockquote {
-    padding: 0 3rem;
+    padding: 0rem 3rem;
   }
 }
 
