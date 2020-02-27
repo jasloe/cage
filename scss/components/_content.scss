@@ -26,7 +26,7 @@
     @include justify;
   }
 
-   blockquote {
+  blockquote {
     padding: 0 1.5rem;
     @include mq($from: tablet) {
       padding: 0rem 3rem;
@@ -72,7 +72,6 @@
         bottom: 0;
         width: 100%;
         content: "";
-
       }
     }
   }
@@ -97,14 +96,12 @@
     display: inline-block;
   }
 
-.interview .field-body p.oddP {
-
-}
+  .interview .field-body p.oddP {
+  }
 
   .interview .field-body p > span:first-child.odd {
-      padding-left: 4rem;
+    padding-left: 4rem;
     width: 4rem;
-
   }
 
   .interview .field-body p > span:first-child {
@@ -124,8 +121,6 @@
     }
   }
 }
-
-
 
 .endnotes {
   padding-top: 2rem;
@@ -201,5 +196,17 @@
 
 .toc > h2 {
   @include font-size(1.9rem);
+}
 
+.page-node-type-page {
+  .region__content {
+    margin-bottom: 3rem;
+  }
+}
+
+.status-messages {
+  ul {
+    font-family: $life;
+    font-size: $body;
+  }
 }

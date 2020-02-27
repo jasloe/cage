@@ -4114,6 +4114,15 @@ header.headroom--unpinned {
   }
 }
 
+.page-node-type-page .region__content {
+  margin-bottom: 3rem;
+}
+
+.status-messages ul {
+  font-family: "Life LT Std Roman";
+  font-size: 1.2rem;
+}
+
 .page-node-type-article h1,
 .page-node-type-issue h1 {
   font-family: "Life LT Std Roman";
