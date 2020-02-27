@@ -91,6 +91,7 @@ main {
 
 @include mq($until: tablet) {
   .page-node-type-issue .toc .flex {
+display: flex;
     flex-direction: column;
   }
 }
@@ -337,4 +338,8 @@ main {
   .copyright .field p:nth-child(3) {
     padding-bottom: 0rem;
   }
+}
+
+.search {
+  display: none !important;
 }

@@ -56,6 +56,7 @@
   .page-section .field-section-title {
     max-width: $tablet;
     margin: 0 auto;
+    padding-bottom: 1rem;
     @include section-title;
     margin-bottom: 1.4rem;
     line-height: 1.4;

@@ -184,14 +184,14 @@
     }
 
    a {
-      color: $dark-gray;
-      box-shadow: 0 0.5px 0 $dark-gray;
+      color: lightslategrey;
+
       transition: all 0.2s ease;
     }
 
     a:hover {
       color: $dark-gray;
-
+      box-shadow: 0 0.5px 0 $dark-gray;
       transition: all 0.2s ease;
     }
   }
@@ -217,7 +217,7 @@
     }
 
   a {
-      color: red;
+      color: lightcoral;
          transition: all 0.2s ease;
 
     }
@@ -232,7 +232,7 @@
 
 
 @include now(now, $alien);
-@include upcoming(featured, $big-band);
+@include featured(featured, $big-band);
 @include upcoming(upcoming, $sun-ra);
 @include article(alien-article, $alien);
 @include article(hyla-article, $hyla);
