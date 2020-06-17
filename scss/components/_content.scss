@@ -53,7 +53,8 @@
   }
 
   .interview .field-section-title,
-  .page-section .field-section-title {
+  .page-section .field-section-title,
+  .from-the-editor .field-section-title {
     max-width: $tablet;
     margin: 0 auto;
     padding-bottom: 1rem;
@@ -120,6 +121,10 @@
       font-family: $univers;
     }
   }
+
+
+
+
 }
 
 .endnotes {
