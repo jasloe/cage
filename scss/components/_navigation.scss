@@ -45,27 +45,34 @@ header {
     padding-left: 0rem;
     padding-right: 1rem;
   }
+
   .header__first,
   .header__third {
     flex-shrink: 1;
   }
+
   .header__second {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
   }
+
   .header__second .main {
     display: flex;
+
     ul {
       display: flex;
     }
+
     ul li {
       padding-right: 1rem;
+
       &:last-child {
         padding-right: 0rem;
       }
     }
   }
+
   d .header__third .subscribe {
     display: initial;
     margin-right: 0.5rem;

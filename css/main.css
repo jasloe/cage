@@ -3023,7 +3023,7 @@ img {
 }
 
 main {
-  padding-top: 9rem;
+  padding-top: 7rem;
 }
 
 .page-node-type-article .region__content-wrapper,
@@ -4631,38 +4631,38 @@ progress::-webkit-progress-bar {
   background-image: url(../images/search.svg);
 }
 
-.path-frontpage main {
+.path-frontpage main a {
+  color: #666666 !important;
+  border-bottom: 1px solid #999999 !important;
+}
+
+.path-frontpage .path-frontpage main {
   padding-top: 0rem;
 }
 
-.path-frontpage header {
+.path-frontpage .path-frontpage header {
   background: white;
 }
 
-.path-frontpage header a {
+.path-frontpage .path-frontpage header a {
   color: #000;
 }
 
-.path-frontpage .hamburger-inner, .path-frontpage .hamburger-inner::before, .path-frontpage .hamburger-inner::after {
+.path-frontpage .path-frontpage .hamburger-inner, .path-frontpage .path-frontpage .hamburger-inner::before, .path-frontpage .path-frontpage .hamburger-inner::after {
   background-color: #000;
 }
 
 .path-frontpage .region__content {
   margin: 0 auto;
   max-width: 980px;
-  padding: 5rem 1rem;
+  padding: 0rem 1rem;
 }
 
 .path-frontpage .region__content > .block {
-  margin-bottom: 2rem;
-}
-
-.path-frontpage .region__content > .block:last-child {
-  margin-bottom: 0rem;
+  margin-bottom: 5rem;
 }
 
 .path-frontpage .region__content > .block > h2 {
-  border-bottom: 1px solid #000;
   font-family: "Univers LT Std";
   font-size: calc(1.315rem + 0.78vw);
   margin-bottom: 1rem;
@@ -4675,8 +4675,6 @@ progress::-webkit-progress-bar {
 }
 
 .path-frontpage .region__content h2.title {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   font-size: calc(1.265rem + 0.18vw);
 }
 
@@ -4698,7 +4696,8 @@ progress::-webkit-progress-bar {
 }
 
 @media (min-width: 46.25em) {
-  .now .release-wrapper, .upcoming .release-wrapper {
+  .now .release-wrapper,
+  .upcoming .release-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4724,12 +4723,170 @@ progress::-webkit-progress-bar {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
-  .now .metadata-wrapper, .upcoming .metadata-wrapper {
+  .now .metadata-wrapper,
+  .upcoming .metadata-wrapper {
     margin-left: 1rem;
   }
   .featured .metadata-wrapper {
     margin-right: 1rem;
   }
+  .now > h2 {
+    color: #676060;
+    border-bottom: 1px solid #676060;
+  }
+  .now p {
+    font-family: "Univers LT Std";
+    font-size: 1.2rem;
+  }
+}
+
+.sun-ra.block .metadata-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 46.25em) {
+  .sun-ra.block .metadata-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 1rem;
+  }
+}
+
+.sun-ra.block .metadata-wrapper .title,
+.sun-ra.block .metadata-wrapper .field {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-right: 1rem;
+}
+
+.sun-ra.block .metadata-wrapper .field p {
+  font-family: "Univers LT Std";
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  color: #006572;
+}
+
+.sun-ra.block > h2 {
+  border-bottom: 1px solid #006572;
+  color: #006572;
+}
+
+.sun-ra.block h2.title {
+  padding: 1rem 0;
+  color: #006572;
+}
+
+@media (min-width: 46.25em) {
+  .sun-ra.block h2.title {
+    padding: 0;
+  }
+}
+
+.subscriptions.block {
+  background: lightyellow;
+  padding: 2rem;
+}
+
+@media (min-width: 46.25em) {
+  .subscriptions.block {
+    padding: 3rem;
+  }
+}
+
+.subscriptions.block article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 46.25em) {
+  .subscriptions.block article {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.subscriptions.block article h2,
+.subscriptions.block article div {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.subscriptions.block article h2 {
+  font-family: "Univers LT Std";
+  font-size: 1.2rem;
+  padding-bottom: 2rem;
+  line-height: 1.5 !important;
+}
+
+@media (min-width: 46.25em) {
+  .subscriptions.block article h2 {
+    padding-bottom: 1rem;
+  }
+}
+
+.subscriptions.block article p {
+  font-family: "Univers LT Std" !important;
+  font-size: 1.2rem !important;
+  line-height: 1.5 !important;
+  padding-bottom: 0 !important;
+}
+
+.upcoming.block h2 {
+  border-bottom: 1px solid #000;
+}
+
+.upcoming.block .release-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.upcoming.block .release-wrapper .metadata-wrapper {
+  margin-left: 0;
+}
+
+.upcoming.block .release-wrapper > h2 {
+  border-bottom: 1px solid #000;
+}
+
+.upcoming.block .release-wrapper p {
+  font-family: "Univers LT Std";
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  color: #000;
+}
+
+.path-frontpage p {
+  line-height: 1.5;
+}
+
+.now h2.title {
+  display: none;
+}
+
+.now p {
+  padding-bottom: 1rem;
+}
+
+.now p:last-child {
+  padding-bottom: 0rem;
 }
 
 .region__header-pre {

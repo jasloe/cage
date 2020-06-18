@@ -1,15 +1,25 @@
-.path-frontpage {
+.path-frontpage main a {
+  color: $dark-gray !important;
+  border-bottom: 1px solid $medium-gray !important;
+}
+
+
+.path-frontpage .path-frontpage {
   main {
     padding-top: 0rem;
 
   }
+
   header {
     background: $white;
+
     a {
       color: $black;
     }
   }
+
   .hamburger-inner {
+
     &,
     &::before,
     &::after {
@@ -22,80 +32,208 @@
 .path-frontpage .region__content {
   margin: 0 auto;
   max-width: $desktop;
-  padding: 5rem 1rem;
-  > .block {
-    margin-bottom: 2rem;
+  padding: 0rem 1rem;
+
+  >.block {
+    margin-bottom: 5rem;
   }
 
-  > .block:last-child {
-    margin-bottom: 0rem;
-  }
+  >.block:last-child {}
 
-  > .block > h2 {
-    border-bottom: 1px solid $black;
+  >.block>h2 {
+
     font-family: $univers;
     @include font-size(1.9rem);
     margin-bottom: 1rem;
   }
 
   h2.title {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
     @include font-size(1.4rem);
   }
+
   .text-long p {
     font-family: $univers;
     @include font-size(1.2rem);
     padding-bottom: 1rem;
     padding-right: 1rem;
+
     em {
       font-family: $univers-italic;
     }
-}
+  }
 }
 
 @include mq($from: tablet) {
 
-.now, .upcoming {
-  .release-wrapper {
-    display: flex;
-    flex-direction: row;
+  .now,
+  .upcoming {
+    .release-wrapper {
+      display: flex;
+      flex-direction: row;
+    }
   }
-}
 
-.featured {
-  .release-wrapper {
-    display: flex;
-    flex-direction: row-reverse;
+  .featured {
+    .release-wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+    }
   }
-}
 
- .path-frontpage .region__content h2.title {
+  .path-frontpage .region__content h2.title {
     padding-top: 0rem;
   }
 
-.release-wrapper {
-  .image-wrapper,
+  .release-wrapper {
+
+    .image-wrapper,
     .metadata-wrapper {
-       flex-basis: 50%;
-      }
-}
+      flex-basis: 50%;
+    }
+  }
 
-.now, .upcoming {
-  .metadata-wrapper {
-    margin-left: 1rem;
+  .now,
+  .upcoming {
+    .metadata-wrapper {
+      margin-left: 1rem;
+    }
+  }
+
+  .featured {
+    .metadata-wrapper {
+      margin-right: 1rem;
+    }
+  }
+
+  .now>h2 {
+    color: $alien;
+    border-bottom: 1px solid $alien;
+  }
+
+  .now p {
+    font-family: $univers;
+    @include font-size(1.2rem);
   }
 }
 
-.featured {
-  .metadata-wrapper {
-    margin-right: 1rem;
+.sun-ra.block .metadata-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include mq($from: tablet) {
+    flex-direction: row;
+    margin-top: 1rem;
+  }
+
+  .title,
+  .field {
+    flex-basis: 50%;
+    padding-right: 1rem;
+  }
+
+  .field p {
+    font-family: $univers;
+    @include font-size(1.2rem);
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+    color: $sun-ra;
   }
 }
 
 
+.sun-ra.block {
+
+  >h2 {
+    border-bottom: 1px solid $sun-ra;
+    color: $sun-ra;
+  }
+
+  h2.title {
+    padding: 1rem 0;
+    color: $sun-ra;
+
+    @include mq($from: tablet) {
+      padding: 0;
+    }
+  }
 }
 
+.subscriptions.block {
+  background: lightyellow;
+  padding: 2rem;
 
+  @include mq($from: tablet) {
+    padding: 3rem;
+  }
+}
 
+.subscriptions.block article {
+  display: flex;
+  flex-direction: column;
 
+  @include mq($from: tablet) {
+    flex-direction: row;
+  }
+
+  h2,
+  div {
+    flex-basis: 50%;
+  }
+
+  h2 {
+    font-family: $univers;
+    @include font-size(1.2rem);
+    padding-bottom: 2rem;
+    line-height: 1.5 !important;
+
+    @include mq($from: tablet) {
+      padding-bottom: 1rem;
+    }
+  }
+
+  p {
+    font-family: $univers !important;
+    font-size: 1.2rem !important;
+    line-height: 1.5 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+.upcoming.block h2 {
+  border-bottom: 1px solid $black;
+}
+
+.upcoming.block .release-wrapper {
+  flex-direction: column;
+
+  .metadata-wrapper {
+    margin-left: 0;
+  }
+
+  >h2 {
+    border-bottom: 1px solid $black;
+  }
+
+  p {
+    font-family: $univers;
+    @include font-size(1.2rem);
+    padding-bottom: 1rem;
+    color: $black;
+  }
+}
+
+.path-frontpage p {
+  line-height: 1.5;
+}
+
+.now h2.title {
+  display: none;
+}
+
+.now p {
+  padding-bottom: 1rem;
+
+  &:last-child {
+    padding-bottom: 0rem;
+  }
+}
