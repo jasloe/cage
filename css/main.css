@@ -1600,6 +1600,7 @@ body:before {
 
 .treatise .article h2.title,
 .treatise .article .field-article-type,
+.treatise .article .field-article-pre-title,
 .treatise .article .field-article-precis,
 .treatise .article .field-article-primary-author {
   color: #e6e6e6;
@@ -1685,6 +1686,7 @@ body:before {
 
 .ritual .article h2.title,
 .ritual .article .field-article-type,
+.ritual .article .field-article-pre-title,
 .ritual .article .field-article-precis,
 .ritual .article .field-article-primary-author {
   color: #e6e6e6;
@@ -1863,6 +1865,7 @@ body:before {
 
 .treatise .article h2.title,
 .treatise .article .field-article-type,
+.treatise .article .field-article-pre-title,
 .treatise .article .field-article-precis,
 .treatise .article .field-article-primary-author {
   color: #e6e6e6;
@@ -2041,6 +2044,7 @@ body:before {
 
 .cherry .article h2.title,
 .cherry .article .field-article-type,
+.cherry .article .field-article-pre-title,
 .cherry .article .field-article-precis,
 .cherry .article .field-article-primary-author {
   color: #e6e6e6;
@@ -2219,6 +2223,7 @@ body:before {
 
 .big-band .article h2.title,
 .big-band .article .field-article-type,
+.big-band .article .field-article-pre-title,
 .big-band .article .field-article-precis,
 .big-band .article .field-article-primary-author {
   color: #e6e6e6;
@@ -2397,6 +2402,7 @@ body:before {
 
 .place .article h2.title,
 .place .article .field-article-type,
+.place .article .field-article-pre-title,
 .place .article .field-article-precis,
 .place .article .field-article-primary-author {
   color: #e6e6e6;
@@ -2575,6 +2581,7 @@ body:before {
 
 .just-intonation .article h2.title,
 .just-intonation .article .field-article-type,
+.just-intonation .article .field-article-pre-title,
 .just-intonation .article .field-article-precis,
 .just-intonation .article .field-article-primary-author {
   color: #e6e6e6;
@@ -2753,6 +2760,7 @@ body:before {
 
 .change .article h2.title,
 .change .article .field-article-type,
+.change .article .field-article-pre-title,
 .change .article .field-article-precis,
 .change .article .field-article-primary-author {
   color: #e6e6e6;
@@ -2931,6 +2939,7 @@ body:before {
 
 .hyla .article h2.title,
 .hyla .article .field-article-type,
+.hyla .article .field-article-pre-title,
 .hyla .article .field-article-precis,
 .hyla .article .field-article-primary-author {
   color: #e6e6e6;
@@ -3109,6 +3118,7 @@ body:before {
 
 .alien .article h2.title,
 .alien .article .field-article-type,
+.alien .article .field-article-pre-title,
 .alien .article .field-article-precis,
 .alien .article .field-article-primary-author {
   color: #e6e6e6;
@@ -3287,6 +3297,7 @@ body:before {
 
 .sun-ra .article h2.title,
 .sun-ra .article .field-article-type,
+.sun-ra .article .field-article-pre-title,
 .sun-ra .article .field-article-precis,
 .sun-ra .article .field-article-primary-author {
   color: #e6e6e6;
@@ -4750,6 +4761,11 @@ header.headroom--unpinned {
 
 .node--806 .field__item:nth-child(2) strong {
   font-family: "Life LT Std Bold";
+}
+
+.toc .field-article-pre-title {
+  font-family: "Univers LT Std" !important;
+  font-size: 1rem !important;
 }
 
 .page-node-type-article h1,
