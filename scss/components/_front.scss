@@ -3,11 +3,9 @@
   border-bottom: 1px solid $medium-gray;
 }
 
-
 .path-frontpage .path-frontpage {
   main {
     padding-top: 0rem;
-
   }
 
   header {
@@ -19,7 +17,6 @@
   }
 
   .hamburger-inner {
-
     &,
     &::before,
     &::after {
@@ -34,14 +31,14 @@
   max-width: $desktop;
   padding: 0rem 1rem;
 
-  >.block {
+  > .block {
     margin-bottom: 5rem;
   }
 
-  >.block:last-child {}
+  > .block:last-child {
+  }
 
-  >.block>h2 {
-
+  > .block > h2 {
     font-family: $univers;
     @include font-size(1.9rem);
     margin-bottom: 1rem;
@@ -64,7 +61,6 @@
 }
 
 @include mq($from: tablet) {
-
   .now,
   .upcoming {
     .release-wrapper {
@@ -85,7 +81,6 @@
   }
 
   .release-wrapper {
-
     .image-wrapper,
     .metadata-wrapper {
       flex-basis: 50%;
@@ -105,7 +100,7 @@
     }
   }
 
-  .now>h2 {
+  .now > h2 {
     color: $alien;
     border-bottom: 1px solid $alien;
   }
@@ -133,8 +128,6 @@
     margin-bottom: 2rem;
   }
 
-
-
   .title,
   .field {
     padding-right: 1rem;
@@ -149,8 +142,14 @@
   }
 }
 
-
 .sun-ra.block .metadata-wrapper {
+  .field-release-links .field__item {
+    margin-bottom: 3rem;
+  }
+  .field-release-links .field__item:last-child {
+    margin-bottom: 0;
+  }
+
   .field-release-links a {
     border: 0;
   }
@@ -163,8 +162,7 @@
 }
 
 .sun-ra.block {
-
-  >h2 {
+  > h2 {
     border-bottom: 1px solid $sun-ra;
     color: $sun-ra;
   }
@@ -231,7 +229,7 @@
     margin-left: 0;
   }
 
-  >h2 {
+  > h2 {
     border-bottom: 1px solid $black;
   }
 
@@ -259,10 +257,7 @@
   }
 }
 
-
 .subscriptions .field-page-links {
-
-
   a {
     border: 1px solid $black;
     display: inline;

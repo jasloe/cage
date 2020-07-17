@@ -70,7 +70,15 @@
  *   in different view modes.
  */
 #}
-<article{{attributes.addClass("article")}}>
+
+{%
+  set classes = [
+    'article',
+    'node--' ~ node.id
+  ]
+%}
+
+<article{{attributes.addClass(classes)}}>
 
 	<div{{content_attributes}}>
 		{{ content }}

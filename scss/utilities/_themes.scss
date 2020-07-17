@@ -20,6 +20,14 @@
         }
       }
     }
+
+    .page-node-type-issue .field-section-title {
+      p {
+        &:after {
+          border-bottom: 1px solid $primary !important;
+        }
+      }
+    }
     // links
     header a,
     .breadcrumbs a,
@@ -114,6 +122,30 @@
       .field-article-type,
       p {
         color: $secondary;
+      }
+      .field-section-title {
+        max-width: 740px;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+        font-family: "Univers LT Std";
+        font-size: 1rem;
+        text-transform: uppercase;
+        line-height: 1;
+        margin-bottom: 1.4rem;
+        line-height: 1.4;
+        p {
+          position: relative;
+          display: inline;
+          padding-bottom: 1.4rem;
+        }
+        p:after {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          content: "";
+          border-bottom: 1px solid $secondary !important;
+        }
       }
     }
 

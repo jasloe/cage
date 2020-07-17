@@ -121,10 +121,6 @@
       font-family: $univers;
     }
   }
-
-
-
-
 }
 
 .endnotes {
@@ -213,5 +209,20 @@
   ul {
     font-family: $life;
     font-size: $body;
+  }
+}
+
+.node--799 {
+  .page-section .field-body p {
+    text-indent: 0;
+  }
+}
+
+.node--806 .field__item:nth-child(2) {
+  .page-section .field-body p {
+    text-indent: 0;
+  }
+  strong {
+    font-family: $life-bold;
   }
 }
