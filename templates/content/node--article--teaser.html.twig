@@ -72,7 +72,13 @@
 #}
 <div class="article">
 	{{ content.field_article_marquee }}
-	{{ content.field_article_type }}
+	{% if content.field_article_pre_title|render is not empty %}
+		{{ content.field_article_pre_title }}
+
+	{% else %}
+		{{ content.field_article_type }}
+	{% endif %}
+
 	{{ content.field_article_pre_title }}
 
 	<h2 class="title">
