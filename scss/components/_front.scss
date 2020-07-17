@@ -1,6 +1,6 @@
 .path-frontpage main a {
   color: $dark-gray !important;
-  border-bottom: 1px solid $medium-gray !important;
+  border-bottom: 1px solid $medium-gray;
 }
 
 
@@ -125,9 +125,18 @@
     margin-top: 1rem;
   }
 
+  .column {
+    flex-basis: 50%;
+  }
+
+  .body {
+    margin-bottom: 2rem;
+  }
+
+
+
   .title,
   .field {
-    flex-basis: 50%;
     padding-right: 1rem;
   }
 
@@ -140,6 +149,18 @@
   }
 }
 
+
+.sun-ra.block .metadata-wrapper {
+  .field-release-links a {
+    border: 0;
+  }
+
+  .field-release-links a {
+    border: 1px solid $black;
+    display: inline;
+    padding: 1rem 2rem;
+  }
+}
 
 .sun-ra.block {
 
@@ -236,4 +257,27 @@
   &:last-child {
     padding-bottom: 0rem;
   }
+}
+
+
+.subscriptions .field-page-links {
+
+
+  a {
+    border: 1px solid $black;
+    display: inline;
+    padding: 1rem 2rem;
+  }
+}
+
+.subscriptions .field-page-links {
+  margin-top: 2rem;
+}
+
+.path-frontpage .field-page-summary p {
+  margin-bottom: 1rem;
+}
+
+.path-frontpage em {
+  font-family: $univers-italic;
 }

@@ -3465,16 +3465,12 @@ header .subscribe-search {
 header a {
   -webkit-box-shadow: none;
           box-shadow: none;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
 
 header a:hover {
-  color: #0020d6 !important;
-  -webkit-box-shadow: 0 1px 0 #0020d6;
-          box-shadow: 0 1px 0 #0020d6;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  color: #000;
+  -webkit-box-shadow: 0 1px 0 #000;
+          box-shadow: 0 1px 0 #000;
 }
 
 header .site-name a:hover {
@@ -3483,19 +3479,15 @@ header .site-name a:hover {
 }
 
 header a.is-active {
-  color: #0020d6 !important;
-  -webkit-box-shadow: 0 1px 0 #0020d6 !important;
-          box-shadow: 0 1px 0 #0020d6 !important;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  color: #000;
+  -webkit-box-shadow: 0 2px 0 #000;
+          box-shadow: 0 2px 0 #000;
 }
 
 header a.is-active:hover {
-  color: #0020d6 !important;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  -webkit-box-shadow: 0 1px 0 #0020d6 !important;
-          box-shadow: 0 1px 0 #0020d6 !important;
+  color: #000;
+  -webkit-box-shadow: 0 2px 0 #000;
+          box-shadow: 0 2px 0 #000;
 }
 
 .page-section a,
@@ -4633,7 +4625,7 @@ progress::-webkit-progress-bar {
 
 .path-frontpage main a {
   color: #666666 !important;
-  border-bottom: 1px solid #999999 !important;
+  border-bottom: 1px solid #999999;
 }
 
 .path-frontpage .path-frontpage main {
@@ -4760,10 +4752,17 @@ progress::-webkit-progress-bar {
   }
 }
 
-.sun-ra.block .metadata-wrapper .title,
-.sun-ra.block .metadata-wrapper .field {
+.sun-ra.block .metadata-wrapper .column {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
+}
+
+.sun-ra.block .metadata-wrapper .body {
+  margin-bottom: 2rem;
+}
+
+.sun-ra.block .metadata-wrapper .title,
+.sun-ra.block .metadata-wrapper .field {
   padding-right: 1rem;
 }
 
@@ -4773,6 +4772,16 @@ progress::-webkit-progress-bar {
   padding-bottom: 1rem;
   padding-right: 1rem;
   color: #006572;
+}
+
+.sun-ra.block .metadata-wrapper .field-release-links a {
+  border: 0;
+}
+
+.sun-ra.block .metadata-wrapper .field-release-links a {
+  border: 1px solid #000;
+  display: inline;
+  padding: 1rem 2rem;
 }
 
 .sun-ra.block > h2 {
@@ -4887,6 +4896,24 @@ progress::-webkit-progress-bar {
 
 .now p:last-child {
   padding-bottom: 0rem;
+}
+
+.subscriptions .field-page-links a {
+  border: 1px solid #000;
+  display: inline;
+  padding: 1rem 2rem;
+}
+
+.subscriptions .field-page-links {
+  margin-top: 2rem;
+}
+
+.path-frontpage .field-page-summary p {
+  margin-bottom: 1rem;
+}
+
+.path-frontpage em {
+  font-family: "Univers LT Std Oblique";
 }
 
 .region__header-pre {

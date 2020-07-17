@@ -76,7 +76,12 @@
 		{{ content.field_release_image }}
 	</div>
 	<div class="metadata-wrapper">
-		<h2 class="title">{{ label }}</h2>
-		{{ content.body }}
+		<div class="column column-first">
+			<h2 class="title">{{ label }}</h2>
+		</div>
+		<div class="column column-second">
+			{{ content.body }}
+			{{ content.field_release_links}}
+		</div>
 	</div>
 </article>
