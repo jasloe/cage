@@ -73,7 +73,18 @@
 <div class="article-title">
 
 	<div{{content_attributes}}>
-		{{ content }}
+
+		{% if content.field_article_pre_title|render is not empty %}
+			{{ content.field_article_pre_title }}
+
+		{% else %}
+			{{ content.field_article_type }}
+		{% endif %}
+
+		{{ 	content.field_display_title }}
+		{{ content.field_article_primary_author }}
+
+
 	</div>
 
 </div>
