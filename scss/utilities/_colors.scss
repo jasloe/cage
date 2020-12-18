@@ -24,6 +24,7 @@ $footer-nav-link: $dark-gray;
 $footer-nav-hover: $blue;
 
 // issue theme keys
+$folk: #a66239;
 $sun-ra: #006572;
 $alien: #676060;
 $hyla: #664d94;
@@ -41,6 +42,7 @@ $treatise: #25283d;
 $ritual: #f8333c;
 
 $themes: (
+  folk: $folk,
   hyla: $hyla,
   change: $change,
   just-intonation: $just-intonation,
@@ -51,5 +53,5 @@ $themes: (
   propaganda: $propaganda,
   cherry: $cherry,
   listeners: $listeners,
-  treatise: $treatise
+  treatise: $treatise,
 );

@@ -416,6 +416,103 @@ body:before {
   transition: all 0.2s ease;
 }
 
+.folk-article .breadcrumbs,
+.folk-article main,
+.folk-article progress {
+  color: #a66239;
+}
+
+.folk-article h1.title {
+  border-top-color: #a66239;
+}
+
+.folk-article .interview .field-section-title p:after,
+.folk-article .page-section .field-section-title p:after {
+  border-bottom: 1px solid #a66239 !important;
+}
+
+.folk-article .page-node-type-issue .field-section-title p:after {
+  border-bottom: 1px solid #a66239 !important;
+}
+
+.folk-article header a,
+.folk-article .breadcrumbs a,
+.folk-article .endnotes a,
+.folk-article h2.title a {
+  color: #a66239;
+}
+
+.folk-article .media--image {
+  background: #a66239;
+  line-height: 0;
+}
+
+.folk-article .media--image img {
+  -webkit-filter: grayscale(100%) contrast(1) blur(0);
+          filter: grayscale(100%) contrast(1) blur(0);
+  max-width: 100%;
+  mix-blend-mode: screen;
+}
+
+.folk-article .field-media {
+  border-top: 1px dotted #a66239;
+  border-bottom: 1px dotted #a66239;
+}
+
+.folk-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #a66239;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.folk-article .media__wrapper .field-media-file .file a {
+  color: #a66239;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.folk-article .media__wrapper .field-media-file .file:hover {
+  background-color: #a66239;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.folk-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.folk-article .endnotes {
+  border-top: 1px solid #a66239;
+}
+
+.folk-article .field-media-image-caption,
+.folk-article .field-media-remote-video-caption {
+  color: #a66239;
+}
+
+.folk-article progress::-webkit-progress-value {
+  background-color: #a66239;
+}
+
+.folk-article progress::-moz-progress-bar {
+  background-color: #a66239;
+}
+
+.folk-article .hamburger-inner, .folk-article .hamburger-inner::before, .folk-article .hamburger-inner::after {
+  background-color: #a66239;
+}
+
+.folk-article header .search {
+  background-color: transparent;
+}
+
+.folk-article header .search::after {
+  background-color: #a66239;
+}
+
 .sun-ra-article .breadcrumbs,
 .sun-ra-article main,
 .sun-ra-article progress {
@@ -482,6 +579,10 @@ body:before {
   color: white;
   -webkit-transition: color 0.22s ease;
   transition: color 0.22s ease;
+}
+
+.sun-ra-article .endnotes {
+  border-top: 1px solid #006572;
 }
 
 .sun-ra-article .field-media-image-caption,
@@ -577,6 +678,10 @@ body:before {
   transition: color 0.22s ease;
 }
 
+.alien-article .endnotes {
+  border-top: 1px solid #676060;
+}
+
 .alien-article .field-media-image-caption,
 .alien-article .field-media-remote-video-caption {
   color: #676060;
@@ -668,6 +773,10 @@ body:before {
   color: white;
   -webkit-transition: color 0.22s ease;
   transition: color 0.22s ease;
+}
+
+.hyla-article .endnotes {
+  border-top: 1px solid #664d94;
 }
 
 .hyla-article .field-media-image-caption,
@@ -763,6 +872,10 @@ body:before {
   transition: color 0.22s ease;
 }
 
+.change-article .endnotes {
+  border-top: 1px solid #002e6f;
+}
+
 .change-article .field-media-image-caption,
 .change-article .field-media-remote-video-caption {
   color: #002e6f;
@@ -854,6 +967,10 @@ body:before {
   color: white;
   -webkit-transition: color 0.22s ease;
   transition: color 0.22s ease;
+}
+
+.just-intonation-article .endnotes {
+  border-top: 1px solid #8e3161;
 }
 
 .just-intonation-article .field-media-image-caption,
@@ -949,6 +1066,10 @@ body:before {
   transition: color 0.22s ease;
 }
 
+.place-article .endnotes {
+  border-top: 1px solid #013220;
+}
+
 .place-article .field-media-image-caption,
 .place-article .field-media-remote-video-caption {
   color: #013220;
@@ -1040,6 +1161,10 @@ body:before {
   color: white;
   -webkit-transition: color 0.22s ease;
   transition: color 0.22s ease;
+}
+
+.big-band-article .endnotes {
+  border-top: 1px solid #d88b3d;
 }
 
 .big-band-article .field-media-image-caption,
@@ -1135,6 +1260,10 @@ body:before {
   transition: color 0.22s ease;
 }
 
+.mumei-article .endnotes {
+  border-top: 1px solid red;
+}
+
 .mumei-article .field-media-image-caption,
 .mumei-article .field-media-remote-video-caption {
   color: red;
@@ -1226,6 +1355,10 @@ body:before {
   color: white;
   -webkit-transition: color 0.22s ease;
   transition: color 0.22s ease;
+}
+
+.braxton-article .endnotes {
+  border-top: 1px solid blue;
 }
 
 .braxton-article .field-media-image-caption,
@@ -1321,6 +1454,10 @@ body:before {
   transition: color 0.22s ease;
 }
 
+.propaganda-article .endnotes {
+  border-top: 1px solid #f8333c;
+}
+
 .propaganda-article .field-media-image-caption,
 .propaganda-article .field-media-remote-video-caption {
   color: #f8333c;
@@ -1414,6 +1551,10 @@ body:before {
   transition: color 0.22s ease;
 }
 
+.cherry-article .endnotes {
+  border-top: 1px solid #9a2a1d;
+}
+
 .cherry-article .field-media-image-caption,
 .cherry-article .field-media-remote-video-caption {
   color: #9a2a1d;
@@ -1505,6 +1646,10 @@ body:before {
   color: white;
   -webkit-transition: color 0.22s ease;
   transition: color 0.22s ease;
+}
+
+.listeners-article .endnotes {
+  border-top: 1px solid gray;
 }
 
 .listeners-article .field-media-image-caption,
@@ -1772,6 +1917,10 @@ body:before {
   transition: color 0.22s ease;
 }
 
+.ritual-article .endnotes {
+  border-top: 1px solid #f8333c;
+}
+
 .ritual-article .field-media-image-caption,
 .ritual-article .field-media-remote-video-caption {
   color: #f8333c;
@@ -1949,6 +2098,10 @@ body:before {
   color: white;
   -webkit-transition: color 0.22s ease;
   transition: color 0.22s ease;
+}
+
+.treatise-article .endnotes {
+  border-top: 1px solid #25283d;
 }
 
 .treatise-article .field-media-image-caption,
@@ -2130,6 +2283,10 @@ body:before {
   transition: color 0.22s ease;
 }
 
+.cherry-article .endnotes {
+  border-top: 1px solid #9a2a1d;
+}
+
 .cherry-article .field-media-image-caption,
 .cherry-article .field-media-remote-video-caption {
   color: #9a2a1d;
@@ -2307,6 +2464,10 @@ body:before {
   color: white;
   -webkit-transition: color 0.22s ease;
   transition: color 0.22s ease;
+}
+
+.big-band-article .endnotes {
+  border-top: 1px solid #d88b3d;
 }
 
 .big-band-article .field-media-image-caption,
@@ -2488,6 +2649,10 @@ body:before {
   transition: color 0.22s ease;
 }
 
+.place-article .endnotes {
+  border-top: 1px solid #013220;
+}
+
 .place-article .field-media-image-caption,
 .place-article .field-media-remote-video-caption {
   color: #013220;
@@ -2665,6 +2830,10 @@ body:before {
   color: white;
   -webkit-transition: color 0.22s ease;
   transition: color 0.22s ease;
+}
+
+.just-intonation-article .endnotes {
+  border-top: 1px solid #8e3161;
 }
 
 .just-intonation-article .field-media-image-caption,
@@ -2846,6 +3015,10 @@ body:before {
   transition: color 0.22s ease;
 }
 
+.change-article .endnotes {
+  border-top: 1px solid #002e6f;
+}
+
 .change-article .field-media-image-caption,
 .change-article .field-media-remote-video-caption {
   color: #002e6f;
@@ -3023,6 +3196,10 @@ body:before {
   color: white;
   -webkit-transition: color 0.22s ease;
   transition: color 0.22s ease;
+}
+
+.hyla-article .endnotes {
+  border-top: 1px solid #664d94;
 }
 
 .hyla-article .field-media-image-caption,
@@ -3204,6 +3381,10 @@ body:before {
   transition: color 0.22s ease;
 }
 
+.alien-article .endnotes {
+  border-top: 1px solid #676060;
+}
+
 .alien-article .field-media-image-caption,
 .alien-article .field-media-remote-video-caption {
   color: #676060;
@@ -3383,6 +3564,10 @@ body:before {
   transition: color 0.22s ease;
 }
 
+.sun-ra-article .endnotes {
+  border-top: 1px solid #006572;
+}
+
 .sun-ra-article .field-media-image-caption,
 .sun-ra-article .field-media-remote-video-caption {
   color: #006572;
@@ -3406,6 +3591,189 @@ body:before {
 
 .sun-ra-article header .search::after {
   background-color: #006572;
+}
+
+.folk header,
+.folk .breadcrumbs,
+.folk main {
+  background-color: #a66239;
+}
+
+.folk header a,
+.folk .breadcrumbs a,
+.folk main a {
+  color: #e6e6e6;
+}
+
+.folk header a:hover,
+.folk .breadcrumbs a:hover,
+.folk main a:hover {
+  color: #fffbbd;
+  -webkit-box-shadow: 0 0.5px 0 #fffbbd;
+          box-shadow: 0 0.5px 0 #fffbbd;
+}
+
+.folk .breadcrumb li {
+  color: #e6e6e6;
+}
+
+.folk .from-the-editor h1.title,
+.folk .from-the-editor .field-article-primary-author,
+.folk .from-the-editor .field-article-type,
+.folk .from-the-editor p {
+  color: #e6e6e6;
+}
+
+.folk .from-the-editor .field-section-title {
+  max-width: 740px;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  font-family: "Univers LT Std";
+  font-size: 1rem;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 1.4rem;
+  line-height: 1.4;
+}
+
+.folk .from-the-editor .field-section-title p {
+  position: relative;
+  display: inline;
+  padding-bottom: 1.4rem;
+}
+
+.folk .from-the-editor .field-section-title p:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  content: "";
+  border-bottom: 1px solid #e6e6e6 !important;
+}
+
+.folk .hamburger-inner, .folk .hamburger-inner::before, .folk .hamburger-inner::after {
+  background-color: #e6e6e6;
+}
+
+.folk .toc h2 {
+  color: #e6e6e6;
+}
+
+.folk .article h2.title,
+.folk .article .field-article-type,
+.folk .article .field-article-pre-title,
+.folk .article .field-article-precis,
+.folk .article .field-article-primary-author {
+  color: #e6e6e6;
+}
+
+.folk .article .media--image {
+  background: #a66239;
+  line-height: 0;
+}
+
+.folk .article .media--image img {
+  -webkit-filter: grayscale(100%) contrast(1) blur(0);
+          filter: grayscale(100%) contrast(1) blur(0);
+  max-width: 100%;
+  mix-blend-mode: screen;
+}
+
+.folk-article .breadcrumbs,
+.folk-article main,
+.folk-article progress {
+  color: #a66239;
+}
+
+.folk-article h1.title {
+  border-top-color: #a66239;
+}
+
+.folk-article .interview .field-section-title p:after,
+.folk-article .page-section .field-section-title p:after {
+  border-bottom: 1px solid #a66239 !important;
+}
+
+.folk-article .page-node-type-issue .field-section-title p:after {
+  border-bottom: 1px solid #a66239 !important;
+}
+
+.folk-article header a,
+.folk-article .breadcrumbs a,
+.folk-article .endnotes a,
+.folk-article h2.title a {
+  color: #a66239;
+}
+
+.folk-article .media--image {
+  background: #a66239;
+  line-height: 0;
+}
+
+.folk-article .media--image img {
+  -webkit-filter: grayscale(100%) contrast(1) blur(0);
+          filter: grayscale(100%) contrast(1) blur(0);
+  max-width: 100%;
+  mix-blend-mode: screen;
+}
+
+.folk-article .field-media {
+  border-top: 1px dotted #a66239;
+  border-bottom: 1px dotted #a66239;
+}
+
+.folk-article .media__wrapper .field-media-file .file {
+  background-color: white;
+  border-color: #a66239;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.folk-article .media__wrapper .field-media-file .file a {
+  color: #a66239;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.folk-article .media__wrapper .field-media-file .file:hover {
+  background-color: #a66239;
+  -webkit-transition: background-color 0.22s ease;
+  transition: background-color 0.22s ease;
+}
+
+.folk-article .media__wrapper .field-media-file .file:hover a {
+  color: white;
+  -webkit-transition: color 0.22s ease;
+  transition: color 0.22s ease;
+}
+
+.folk-article .endnotes {
+  border-top: 1px solid #a66239;
+}
+
+.folk-article .field-media-image-caption,
+.folk-article .field-media-remote-video-caption {
+  color: #a66239;
+}
+
+.folk-article progress::-webkit-progress-value {
+  background-color: #a66239;
+}
+
+.folk-article progress::-moz-progress-bar {
+  background-color: #a66239;
+}
+
+.folk-article .hamburger-inner, .folk-article .hamburger-inner::before, .folk-article .hamburger-inner::after {
+  background-color: #a66239;
+}
+
+.folk-article header .search {
+  background-color: transparent;
+}
+
+.folk-article header .search::after {
+  background-color: #a66239;
 }
 
 body {
@@ -4639,7 +5007,6 @@ header.headroom--unpinned {
 .endnotes {
   padding-top: 2rem;
   margin-top: 2rem;
-  border-top: 1px solid black;
 }
 
 .endnotes h2 {

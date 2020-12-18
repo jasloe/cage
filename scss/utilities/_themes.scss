@@ -68,6 +68,10 @@
         }
       }
     }
+    // borders
+    .endnotes {
+      border-top: 1px solid $primary;
+    }
 
     // remote video
     .field-media-image-caption,
@@ -285,6 +289,7 @@
 @include now(now, $alien);
 @include featured(featured, $big-band);
 @include upcoming(upcoming, $sun-ra);
+@include article(folk-article, $folk);
 @include article(sun-ra-article, $sun-ra);
 @include article(alien-article, $alien);
 @include article(hyla-article, $hyla);
@@ -338,3 +343,7 @@
 // Sun Ra
 @include issue(sun-ra, $sun-ra, $light-gray);
 @include article(sun-ra-article, $sun-ra);
+
+// Sun Ra
+@include issue(folk, $folk, $light-gray);
+@include article(folk-article, $folk);
