@@ -5512,7 +5512,7 @@ progress::-webkit-progress-bar {
   }
 }
 
-.sun-ra.block .metadata-wrapper {
+.folk.block .metadata-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5523,7 +5523,7 @@ progress::-webkit-progress-bar {
 }
 
 @media (min-width: 46.25em) {
-  .sun-ra.block .metadata-wrapper {
+  .folk.block .metadata-wrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -5532,58 +5532,58 @@ progress::-webkit-progress-bar {
   }
 }
 
-.sun-ra.block .metadata-wrapper .column {
+.folk.block .metadata-wrapper .column {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
 
-.sun-ra.block .metadata-wrapper .body {
+.folk.block .metadata-wrapper .body {
   margin-bottom: 2rem;
 }
 
-.sun-ra.block .metadata-wrapper .title,
-.sun-ra.block .metadata-wrapper .field {
+.folk.block .metadata-wrapper .title,
+.folk.block .metadata-wrapper .field {
   padding-right: 1rem;
 }
 
-.sun-ra.block .metadata-wrapper .field p {
+.folk.block .metadata-wrapper .field p {
   font-family: "Univers LT Std";
   font-size: 1.2rem;
   padding-bottom: 1rem;
   padding-right: 1rem;
-  color: #006572;
+  color: #a66239;
 }
 
-.sun-ra.block .metadata-wrapper .field-release-links .field__item {
+.folk.block .metadata-wrapper .field-release-links .field__item {
   margin-bottom: 3rem;
 }
 
-.sun-ra.block .metadata-wrapper .field-release-links .field__item:last-child {
+.folk.block .metadata-wrapper .field-release-links .field__item:last-child {
   margin-bottom: 0;
 }
 
-.sun-ra.block .metadata-wrapper .field-release-links a {
+.folk.block .metadata-wrapper .field-release-links a {
   border: 0;
 }
 
-.sun-ra.block .metadata-wrapper .field-release-links a {
+.folk.block .metadata-wrapper .field-release-links a {
   border: 1px solid #000;
   display: inline;
   padding: 1rem 2rem;
 }
 
-.sun-ra.block > h2 {
-  border-bottom: 1px solid #006572;
-  color: #006572;
+.folk.block > h2 {
+  border-bottom: 1px solid #a66239;
+  color: #a66239;
 }
 
-.sun-ra.block h2.title {
+.folk.block h2.title {
   padding: 1rem 0;
-  color: #006572;
+  color: #a66239;
 }
 
 @media (min-width: 46.25em) {
-  .sun-ra.block h2.title {
+  .folk.block h2.title {
     padding: 0;
   }
 }

@@ -111,7 +111,7 @@
   }
 }
 
-.sun-ra.block .metadata-wrapper {
+.folk.block .metadata-wrapper {
   display: flex;
   flex-direction: column;
 
@@ -138,11 +138,11 @@
     @include font-size(1.2rem);
     padding-bottom: 1rem;
     padding-right: 1rem;
-    color: $sun-ra;
+    color: $folk;
   }
 }
 
-.sun-ra.block .metadata-wrapper {
+.folk.block .metadata-wrapper {
   .field-release-links .field__item {
     margin-bottom: 3rem;
   }
@@ -161,15 +161,15 @@
   }
 }
 
-.sun-ra.block {
+.folk.block {
   > h2 {
-    border-bottom: 1px solid $sun-ra;
-    color: $sun-ra;
+    border-bottom: 1px solid $folk;
+    color: $folk;
   }
 
   h2.title {
     padding: 1rem 0;
-    color: $sun-ra;
+    color: $folk;
 
     @include mq($from: tablet) {
       padding: 0;
