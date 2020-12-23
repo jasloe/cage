@@ -161,12 +161,5 @@ for (i = 0; i < listSpan.length; i +=2) {
   listSpan[i].className = "odd";
 }
 
-// let promoBlock = document.querySelector(".subscribe-promo .field p")
-
-// let closeBtn = document.createElement("button");
-
-
-// promoBlock.appendChild(closeBtn);
-
 
 

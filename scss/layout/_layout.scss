@@ -13,7 +13,6 @@ main {
 }
 
 @include mq($from: tablet) {
-
   .page-node-type-article .region__content-wrapper,
   .page-node-type-issue .from-the-editor {
     max-width: $tablet;
@@ -53,7 +52,7 @@ main {
   margin: 0 auto;
   padding: 2rem 1rem;
 
-  >h2 {
+  > h2 {
     text-align: center;
     width: 100%;
     padding: 1rem 0;
@@ -75,6 +74,7 @@ main {
         padding: 0rem 1rem 1rem 1rem;
       }
 
+      .field-article-author-override,
       .field-article-primary-author,
       .field-article-precis p {
         padding: 1rem;
@@ -171,7 +171,6 @@ main {
 }
 
 .footer-social-subscribe {
-
   .share,
   .subscribe {
     h2 {
@@ -182,7 +181,6 @@ main {
 }
 
 .footer-social-subscribe {
-
   .share,
   .subscribe {
     display: flex;
@@ -209,10 +207,10 @@ main {
 }
 
 // share
-.footer-social-subscribe .share h2 {}
+.footer-social-subscribe .share h2 {
+}
 
 @include mq($from: $tablet) {
-
   .footer-about,
   .footer-menu ul,
   .footer-social-subscribe .wrapper {
@@ -281,14 +279,13 @@ main {
     margin-bottom: 0rem;
   }
 
-  .impressum>div {
+  .impressum > div {
     padding-bottom: 1rem;
   }
 
-  .impressum>div:last-child {
+  .impressum > div:last-child {
     padding-bottom: 1rem;
   }
-
 }
 
 @include mq($from: tablet) {
@@ -337,7 +334,6 @@ main {
     border-bottom: none;
 
     .social li a {
-
       &,
       &::after {
         background-color: $white;

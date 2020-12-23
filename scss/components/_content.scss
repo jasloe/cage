@@ -231,3 +231,55 @@
   font-family: $univers !important;
   font-size: 1rem !important;
 }
+
+// override indentation of first paragraph in any article
+.article
+  .field-article-page-section
+  > .field__item:first-child
+  p:first-of-type {
+  text-indent: 0 !important;
+}
+
+// Indentation overrides for "Getting Through" article.
+.node--834 {
+  .interview .field-body {
+    padding-top: 0rem !important;
+  }
+  .interview .field-body p {
+    @include type($univers, $body, normal);
+    line-height: 1.1;
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+    @include mq($until: tablet) {
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+    }
+  }
+
+  .interview .field-body em {
+    font-family: $univers-italic;
+  }
+
+  .oddP {
+    @include type($univers, $body, normal);
+    line-height: 1.1;
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+    @include mq($until: tablet) {
+      padding-left: 2rem !important;
+      padding-right: 2rem !important;
+    }
+  }
+  .field-body p > span:first-child {
+    padding-left: 0 !important;
+    width: 0 !important;
+    font-size: 0.9rem !important;
+    text-transform: initial !important;
+  }
+  .text-long {
+    padding-left: 0rem;
+  }
+  .field-body p {
+    text-indent: 0 !important;
+  }
+}

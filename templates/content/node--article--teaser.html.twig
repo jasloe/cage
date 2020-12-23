@@ -82,9 +82,13 @@
 	<h2 class="title">
 		{{ label }}
 	</h2>
-	{{ content.field_article_precis
-   }}
-	{{ content.field_article_primary_author }}
+
+	{% if content.field_article_author_override|render is not empty %}
+		{{ content.field_article_author_override }}
+	{% else %}
+		{{ content.field_article_primary_author }}
+	{% endif %}
+
 	<div class="link">
 		<a href="{{ url }}">
 			<span></span>

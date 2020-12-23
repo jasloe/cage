@@ -57,6 +57,7 @@ $border-dark: 2px solid $dark-gray;
     padding-bottom: 3rem;
   }
 
+  .field-article-author-override,
   .field-article-primary-author {
     @include article-author;
     padding: 0rem 1rem 4rem 1rem;
@@ -78,7 +79,8 @@ $border-dark: 2px solid $dark-gray;
     padding-bottom: 1rem;
   }
 
-  .field-article-primary-author {
+  .field-article-primary-author,
+  .field-article-author-override {
     @include article-author;
     font-size: 1.5rem !important;
   }
@@ -262,7 +264,6 @@ $indent: 3rem;
     text-indent: 3rem;
   }
 }
-
 
 @mixin life-sc {
   font-family: $default-font;

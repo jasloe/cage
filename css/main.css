@@ -1702,6 +1702,7 @@ body:before {
 }
 
 .treatise .from-the-editor h1.title,
+.treatise .from-the-editor .field-article-author-override,
 .treatise .from-the-editor .field-article-primary-author,
 .treatise .from-the-editor .field-article-type,
 .treatise .from-the-editor p {
@@ -1747,7 +1748,8 @@ body:before {
 .treatise .article .field-article-type,
 .treatise .article .field-article-pre-title,
 .treatise .article .field-article-precis,
-.treatise .article .field-article-primary-author {
+.treatise .article .field-article-primary-author,
+.treatise .article .field-article-author-override {
   color: #e6e6e6;
 }
 
@@ -1788,6 +1790,7 @@ body:before {
 }
 
 .ritual .from-the-editor h1.title,
+.ritual .from-the-editor .field-article-author-override,
 .ritual .from-the-editor .field-article-primary-author,
 .ritual .from-the-editor .field-article-type,
 .ritual .from-the-editor p {
@@ -1833,7 +1836,8 @@ body:before {
 .ritual .article .field-article-type,
 .ritual .article .field-article-pre-title,
 .ritual .article .field-article-precis,
-.ritual .article .field-article-primary-author {
+.ritual .article .field-article-primary-author,
+.ritual .article .field-article-author-override {
   color: #e6e6e6;
 }
 
@@ -1971,6 +1975,7 @@ body:before {
 }
 
 .treatise .from-the-editor h1.title,
+.treatise .from-the-editor .field-article-author-override,
 .treatise .from-the-editor .field-article-primary-author,
 .treatise .from-the-editor .field-article-type,
 .treatise .from-the-editor p {
@@ -2016,7 +2021,8 @@ body:before {
 .treatise .article .field-article-type,
 .treatise .article .field-article-pre-title,
 .treatise .article .field-article-precis,
-.treatise .article .field-article-primary-author {
+.treatise .article .field-article-primary-author,
+.treatise .article .field-article-author-override {
   color: #e6e6e6;
 }
 
@@ -2154,6 +2160,7 @@ body:before {
 }
 
 .cherry .from-the-editor h1.title,
+.cherry .from-the-editor .field-article-author-override,
 .cherry .from-the-editor .field-article-primary-author,
 .cherry .from-the-editor .field-article-type,
 .cherry .from-the-editor p {
@@ -2199,7 +2206,8 @@ body:before {
 .cherry .article .field-article-type,
 .cherry .article .field-article-pre-title,
 .cherry .article .field-article-precis,
-.cherry .article .field-article-primary-author {
+.cherry .article .field-article-primary-author,
+.cherry .article .field-article-author-override {
   color: #e6e6e6;
 }
 
@@ -2337,6 +2345,7 @@ body:before {
 }
 
 .big-band .from-the-editor h1.title,
+.big-band .from-the-editor .field-article-author-override,
 .big-band .from-the-editor .field-article-primary-author,
 .big-band .from-the-editor .field-article-type,
 .big-band .from-the-editor p {
@@ -2382,7 +2391,8 @@ body:before {
 .big-band .article .field-article-type,
 .big-band .article .field-article-pre-title,
 .big-band .article .field-article-precis,
-.big-band .article .field-article-primary-author {
+.big-band .article .field-article-primary-author,
+.big-band .article .field-article-author-override {
   color: #e6e6e6;
 }
 
@@ -2520,6 +2530,7 @@ body:before {
 }
 
 .place .from-the-editor h1.title,
+.place .from-the-editor .field-article-author-override,
 .place .from-the-editor .field-article-primary-author,
 .place .from-the-editor .field-article-type,
 .place .from-the-editor p {
@@ -2565,7 +2576,8 @@ body:before {
 .place .article .field-article-type,
 .place .article .field-article-pre-title,
 .place .article .field-article-precis,
-.place .article .field-article-primary-author {
+.place .article .field-article-primary-author,
+.place .article .field-article-author-override {
   color: #e6e6e6;
 }
 
@@ -2703,6 +2715,7 @@ body:before {
 }
 
 .just-intonation .from-the-editor h1.title,
+.just-intonation .from-the-editor .field-article-author-override,
 .just-intonation .from-the-editor .field-article-primary-author,
 .just-intonation .from-the-editor .field-article-type,
 .just-intonation .from-the-editor p {
@@ -2748,7 +2761,8 @@ body:before {
 .just-intonation .article .field-article-type,
 .just-intonation .article .field-article-pre-title,
 .just-intonation .article .field-article-precis,
-.just-intonation .article .field-article-primary-author {
+.just-intonation .article .field-article-primary-author,
+.just-intonation .article .field-article-author-override {
   color: #e6e6e6;
 }
 
@@ -2886,6 +2900,7 @@ body:before {
 }
 
 .change .from-the-editor h1.title,
+.change .from-the-editor .field-article-author-override,
 .change .from-the-editor .field-article-primary-author,
 .change .from-the-editor .field-article-type,
 .change .from-the-editor p {
@@ -2931,7 +2946,8 @@ body:before {
 .change .article .field-article-type,
 .change .article .field-article-pre-title,
 .change .article .field-article-precis,
-.change .article .field-article-primary-author {
+.change .article .field-article-primary-author,
+.change .article .field-article-author-override {
   color: #e6e6e6;
 }
 
@@ -3069,6 +3085,7 @@ body:before {
 }
 
 .hyla .from-the-editor h1.title,
+.hyla .from-the-editor .field-article-author-override,
 .hyla .from-the-editor .field-article-primary-author,
 .hyla .from-the-editor .field-article-type,
 .hyla .from-the-editor p {
@@ -3114,7 +3131,8 @@ body:before {
 .hyla .article .field-article-type,
 .hyla .article .field-article-pre-title,
 .hyla .article .field-article-precis,
-.hyla .article .field-article-primary-author {
+.hyla .article .field-article-primary-author,
+.hyla .article .field-article-author-override {
   color: #e6e6e6;
 }
 
@@ -3252,6 +3270,7 @@ body:before {
 }
 
 .alien .from-the-editor h1.title,
+.alien .from-the-editor .field-article-author-override,
 .alien .from-the-editor .field-article-primary-author,
 .alien .from-the-editor .field-article-type,
 .alien .from-the-editor p {
@@ -3297,7 +3316,8 @@ body:before {
 .alien .article .field-article-type,
 .alien .article .field-article-pre-title,
 .alien .article .field-article-precis,
-.alien .article .field-article-primary-author {
+.alien .article .field-article-primary-author,
+.alien .article .field-article-author-override {
   color: #e6e6e6;
 }
 
@@ -3435,6 +3455,7 @@ body:before {
 }
 
 .sun-ra .from-the-editor h1.title,
+.sun-ra .from-the-editor .field-article-author-override,
 .sun-ra .from-the-editor .field-article-primary-author,
 .sun-ra .from-the-editor .field-article-type,
 .sun-ra .from-the-editor p {
@@ -3480,7 +3501,8 @@ body:before {
 .sun-ra .article .field-article-type,
 .sun-ra .article .field-article-pre-title,
 .sun-ra .article .field-article-precis,
-.sun-ra .article .field-article-primary-author {
+.sun-ra .article .field-article-primary-author,
+.sun-ra .article .field-article-author-override {
   color: #e6e6e6;
 }
 
@@ -3618,6 +3640,7 @@ body:before {
 }
 
 .folk .from-the-editor h1.title,
+.folk .from-the-editor .field-article-author-override,
 .folk .from-the-editor .field-article-primary-author,
 .folk .from-the-editor .field-article-type,
 .folk .from-the-editor p {
@@ -3663,7 +3686,8 @@ body:before {
 .folk .article .field-article-type,
 .folk .article .field-article-pre-title,
 .folk .article .field-article-precis,
-.folk .article .field-article-primary-author {
+.folk .article .field-article-primary-author,
+.folk .article .field-article-author-override {
   color: #e6e6e6;
 }
 
@@ -3866,6 +3890,7 @@ main {
   padding: 0rem 1rem 1rem 1rem;
 }
 
+.page-node-type-issue .toc .flex .article .field-article-author-override,
 .page-node-type-issue .toc .flex .article .field-article-primary-author,
 .page-node-type-issue .toc .flex .article .field-article-precis p {
   padding: 1rem;
@@ -5135,6 +5160,70 @@ header.headroom--unpinned {
   font-size: 1rem !important;
 }
 
+.article
+.field-article-page-section
+> .field__item:first-child
+p:first-of-type {
+  text-indent: 0 !important;
+}
+
+.node--834 .interview .field-body {
+  padding-top: 0rem !important;
+}
+
+.node--834 .interview .field-body p {
+  font-family: "Univers LT Std";
+  font-size: 1.2rem;
+  text-transform: normal;
+  line-height: 1;
+  line-height: 1.1;
+  padding-left: 6rem !important;
+  padding-right: 6rem !important;
+}
+
+@media (max-width: 46.24em) {
+  .node--834 .interview .field-body p {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+.node--834 .interview .field-body em {
+  font-family: "Univers LT Std Oblique";
+}
+
+.node--834 .oddP {
+  font-family: "Univers LT Std";
+  font-size: 1.2rem;
+  text-transform: normal;
+  line-height: 1;
+  line-height: 1.1;
+  padding-left: 6rem !important;
+  padding-right: 6rem !important;
+}
+
+@media (max-width: 46.24em) {
+  .node--834 .oddP {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+
+.node--834 .field-body p > span:first-child {
+  padding-left: 0 !important;
+  width: 0 !important;
+  font-size: 0.9rem !important;
+  text-transform: initial !important;
+}
+
+.node--834 .text-long {
+  padding-left: 0rem;
+}
+
+.node--834 .field-body p {
+  text-indent: 0 !important;
+}
+
 .page-node-type-article h1,
 .page-node-type-issue h1 {
   font-family: "Life LT Std Roman";
@@ -5184,7 +5273,9 @@ header.headroom--unpinned {
   }
 }
 
+.page-node-type-article .field-article-author-override,
 .page-node-type-article .field-article-primary-author,
+.page-node-type-issue .field-article-author-override,
 .page-node-type-issue .field-article-primary-author {
   font-family: "Univers LT Std";
   font-size: calc(1.315rem + 0.78vw);
@@ -5195,7 +5286,9 @@ header.headroom--unpinned {
 }
 
 @media (min-width: 1200px) {
+  .page-node-type-article .field-article-author-override,
   .page-node-type-article .field-article-primary-author,
+  .page-node-type-issue .field-article-author-override,
   .page-node-type-issue .field-article-primary-author {
     font-size: 1.9rem;
   }
@@ -5235,7 +5328,8 @@ header.headroom--unpinned {
   padding-bottom: 1rem;
 }
 
-.page-node-type-issue .toc .article .field-article-primary-author {
+.page-node-type-issue .toc .article .field-article-primary-author,
+.page-node-type-issue .toc .article .field-article-author-override {
   font-family: "Univers LT Std";
   font-size: calc(1.315rem + 0.78vw);
   text-transform: initial;
@@ -5244,7 +5338,8 @@ header.headroom--unpinned {
 }
 
 @media (min-width: 1200px) {
-  .page-node-type-issue .toc .article .field-article-primary-author {
+  .page-node-type-issue .toc .article .field-article-primary-author,
+  .page-node-type-issue .toc .article .field-article-author-override {
     font-size: 1.9rem;
   }
 }
