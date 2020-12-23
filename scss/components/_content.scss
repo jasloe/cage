@@ -283,3 +283,39 @@
     text-indent: 0 !important;
   }
 }
+
+// Indentation overrides for "EC 2020 Part Two" article.
+.node--839
+  .field-article-page-section
+  .field__item:nth-child(3)
+  .field-body
+  .field__item {
+  p {
+    text-indent: 0;
+  }
+  p:nth-child(14) {
+    padding-top: 3rem;
+  }
+}
+
+.node--839 .field-article-page-section .media {
+  margin-top: 3rem;
+}
+
+.node--839 .field-article-page-section .page-section p span {
+  float: none !important;
+  clear: none !important;
+  margin-right: 0rem !important;
+  padding-right: 3rem !important;
+  width: initial !important;
+  margin-top: initial !important;
+  margin-bottom: initial !important;
+  font-size: $body !important;
+  line-height: initial !important;
+  vertical-align: initial !important;
+  position: initial !important;
+}
+
+.node--839 .field-article-page-section .page-section p:last-child span {
+  padding-right: 2.45rem !important;
+}
