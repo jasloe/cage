@@ -108,3 +108,17 @@ ol.breadcrumb {
     content: "";
   }
 }
+
+@include mq($until: desktop) {
+  ol.breadcrumb {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  ol.breadcrumb li:first-child {
+    display: none;
+  }
+  ol.breadcrumb li:first-child:after {
+    content: none;
+  }
+}

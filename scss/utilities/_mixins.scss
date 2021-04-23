@@ -63,6 +63,10 @@ $border-dark: 2px solid $dark-gray;
     padding: 0rem 1rem 4rem 1rem;
     text-align: center;
   }
+  .field-article-additional-title {
+    @include article-author;
+    // font-size: 1.5rem !important;
+  }
 }
 
 @mixin article-title-display-small {
@@ -80,7 +84,8 @@ $border-dark: 2px solid $dark-gray;
   }
 
   .field-article-primary-author,
-  .field-article-author-override {
+  .field-article-author-override,
+  .field-article-additional-title {
     @include article-author;
     font-size: 1.5rem !important;
   }

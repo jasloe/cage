@@ -124,6 +124,7 @@
       h1.title,
       .field-article-author-override,
       .field-article-primary-author,
+      .field-article-additional-title,
       .field-article-type,
       p {
         color: $secondary;
@@ -173,6 +174,7 @@
       .field-article-pre-title,
       .field-article-precis,
       .field-article-primary-author,
+      .field-article-additional-title,
       .field-article-author-override {
         color: $secondary;
       }
@@ -288,9 +290,10 @@
   }
 }
 
-@include now(now, $alien);
-@include featured(featured, $big-band);
-@include upcoming(upcoming, $sun-ra);
+// @include now(now, $alien);
+// @include featured(featured, $big-band);
+// @include upcoming(upcoming, $sun-ra);
+@include article(occam-article, $occam);
 @include article(folk-article, $folk);
 @include article(sun-ra-article, $sun-ra);
 @include article(alien-article, $alien);
@@ -346,6 +349,10 @@
 @include issue(sun-ra, $sun-ra, $light-gray);
 @include article(sun-ra-article, $sun-ra);
 
-// Sun Ra
+// Folk
 @include issue(folk, $folk, $light-gray);
 @include article(folk-article, $folk);
+
+// Occam
+@include issue(occam, $occam, $light-gray);
+@include article(occam-article, $occam);

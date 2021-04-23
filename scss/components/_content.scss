@@ -5,9 +5,11 @@
     @include type($univers, $font-sans-text, normal);
     line-height: 1.2;
   }
+
   .page-section .field-body p {
     @include indent-default;
     padding: 0.5rem 0;
+
     &:first-child {
       padding: 0rem;
     }
@@ -21,6 +23,7 @@
 }
 
 .page-node-type-article {
+
   .interview,
   .page-section {
     @include justify;
@@ -28,10 +31,13 @@
 
   blockquote {
     padding: 0 1.5rem;
+
     @include mq($from: tablet) {
       padding: 0rem 3rem;
     }
+
     font-family: $life-italic;
+
     em {
       font-family: $life;
     }
@@ -47,6 +53,7 @@
     @include body;
     line-height: 1.1;
     margin-bottom: 1rem;
+
     em {
       font-family: $life-italic;
     }
@@ -79,10 +86,12 @@
 
   .page-section .field-body p {
     @include indent-default;
+
     &:first-child {
       // text-indent: 0;
     }
   }
+
   .page-section .field-body blockquote p {
     text-indent: initial;
   }
@@ -97,15 +106,14 @@
     display: inline-block;
   }
 
-  .interview .field-body p.oddP {
-  }
+  .interview .field-body p.oddP {}
 
-  .interview .field-body p > span:first-child.odd {
+  .interview .field-body p>span:first-child.odd {
     padding-left: 4rem;
     width: 4rem;
   }
 
-  .interview .field-body p > span:first-child {
+  .interview .field-body p>span:first-child {
     width: 4rem;
   }
 }
@@ -113,10 +121,13 @@
 .page-node-type-issue .from-the-editor {
   blockquote {
     padding: 0 1.5rem;
+
     @include mq($from: tablet) {
       padding: 0 3rem;
     }
+
     font-family: $univers-italic;
+
     em {
       font-family: $univers;
     }
@@ -126,11 +137,13 @@
 .endnotes {
   padding-top: 2rem;
   margin-top: 2rem;
+
   // border-top: 1px solid red;
   h2 {
     padding-top: 2rem;
     font-family: $life;
   }
+
   em {
     font-family: $life-italic;
   }
@@ -143,13 +156,16 @@
       @include basic-page-title;
       padding-bottom: 3rem;
     }
+
     .body {
       @include body;
       line-height: 1.2;
     }
+
     .body p {
       padding-bottom: 1rem;
     }
+
     .body {
       a {
         color: $default-link;
@@ -157,6 +173,7 @@
         border-bottom: 1px solid #0020d6;
         transition: color 0.22s ease;
       }
+
       a:hover {
         color: #0020d6;
         border-bottom: 1px solid #0020d6;
@@ -179,6 +196,7 @@
       @include section-title;
       padding: 2rem 0 0.3rem;
     }
+
     .body p {
       padding-bottom: 0rem;
     }
@@ -195,7 +213,7 @@
   }
 }
 
-.toc > h2 {
+.toc>h2 {
   @include font-size(1.9rem);
 }
 
@@ -222,6 +240,7 @@
   .page-section .field-body p {
     text-indent: 0;
   }
+
   strong {
     font-family: $life-bold;
   }
@@ -233,10 +252,7 @@
 }
 
 // override indentation of first paragraph in any article
-.article
-  .field-article-page-section
-  > .field__item:first-child
-  p:first-of-type {
+.article .field-article-page-section>.field__item:first-child p:first-of-type {
   text-indent: 0 !important;
 }
 
@@ -245,11 +261,13 @@
   .interview .field-body {
     padding-top: 0rem !important;
   }
+
   .interview .field-body p {
     @include type($univers, $body, normal);
     line-height: 1.1;
     padding-left: 6rem !important;
     padding-right: 6rem !important;
+
     @include mq($until: tablet) {
       padding-left: 2rem !important;
       padding-right: 2rem !important;
@@ -265,34 +283,35 @@
     line-height: 1.1;
     padding-left: 6rem !important;
     padding-right: 6rem !important;
+
     @include mq($until: tablet) {
       padding-left: 2rem !important;
       padding-right: 2rem !important;
     }
   }
-  .field-body p > span:first-child {
+
+  .field-body p>span:first-child {
     padding-left: 0 !important;
     width: 0 !important;
     font-size: 0.9rem !important;
     text-transform: initial !important;
   }
+
   .text-long {
     padding-left: 0rem;
   }
+
   .field-body p {
     text-indent: 0 !important;
   }
 }
 
 // Indentation overrides for "EC 2020 Part Two" article.
-.node--839
-  .field-article-page-section
-  .field__item:nth-child(3)
-  .field-body
-  .field__item {
+.node--839 .field-article-page-section .field__item:nth-child(3) .field-body .field__item {
   p {
     text-indent: 0;
   }
+
   p:nth-child(14) {
     padding-top: 3rem;
   }
@@ -319,3 +338,30 @@
 .node--839 .field-article-page-section .page-section p:last-child span {
   padding-right: 2.45rem !important;
 }
+
+// OCCAM overrides.
+.from-the-editor.occam {
+  .field-article-primary-author {
+    padding-bottom: .35rem !important;
+  }
+
+  .field-article-additional-title {
+    line-height: 1.2 !important;
+  }
+}
+
+.occam-article {
+  .article-title {
+    padding-bottom: 3rem;
+  }
+  .field-article-primary-author {
+    padding-bottom: 0 !important;
+  }
+
+  .field-article-additional-title {
+    text-align: center;
+    line-height: 1.2 !important;
+  }
+}
+
+
