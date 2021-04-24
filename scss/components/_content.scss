@@ -364,4 +364,26 @@
   }
 }
 
+.region__pre-title {
+  color: #e6e6e6;
+
+  p {
+    padding-bottom: 1rem;
+    text-indent: 3rem;
+    text-align: justify;
+    text-justify: inter-word;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Univers LT Std";
+    text-transform: normal;
+    line-height: 1.2;
+  }
+  p:nth-child(2),
+  p:last-child {
+    text-indent: 0;
+  }
+  p:last-child span {
+    padding-right: 2.8rem;
+  }
+}
 

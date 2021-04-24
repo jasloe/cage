@@ -12,6 +12,13 @@ main {
   padding: 0 1rem;
 }
 
+// pre-title
+.region__pre-title {
+    max-width: $tablet;
+    margin: 0 auto;
+    padding: 0rem 1rem 3rem 1rem;
+}
+
 @include mq($from: tablet) {
   .page-node-type-article .region__content-wrapper,
   .page-node-type-issue .from-the-editor {

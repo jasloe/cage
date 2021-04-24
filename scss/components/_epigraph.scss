@@ -1,0 +1,32 @@
+.field-article-epigraph {
+    @include body;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    -webkit-font-smoothing: antialiased;
+
+    p {
+      padding-left: 3rem;
+    }
+
+    em {
+      font-family: $life-italic;
+    }
+    p:last-child {
+      padding-left: 0rem;
+      span {
+        padding-right: 2.4rem;
+      }
+    }
+    @include mq($until: tablet) {
+          p {
+            padding-left: 1.5rem;
+          }
+          p:last-child {
+
+            span {
+              padding-right: 1rem;
+            }
+          }
+    }
+}
+

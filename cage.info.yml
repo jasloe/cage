@@ -12,6 +12,7 @@ regions:
   header_pre: Pre-header
   header: Header
   breadcrumb: Breadcrumb
+  pre_title: Pre-title
   page_title: Page title
   content_pre: Pre-content
   search: Search

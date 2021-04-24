@@ -159,56 +159,6 @@ button,
 }
 
 /* Sass tools, helper files, variables, functions, mixins and other config files. These files don’t output any CSS when compiled. */
-body:before {
-  background-color: #fcf8e3;
-  border-bottom: 1px solid #fbeed5;
-  border-left: 1px solid #fbeed5;
-  color: #c09853;
-  font: small-caption;
-  padding: 3px 6px;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 100;
-}
-
-@media (min-width: 30em) {
-  body:before {
-    content: "mobile ≥ 480px (30em)";
-  }
-}
-
-@media (min-width: 40em) {
-  body:before {
-    content: "mobile-plus ≥ 640px (40em)";
-  }
-}
-
-@media (min-width: 30em) {
-  body:before {
-    content: "mobileLandscape ≥ 480px (30em)";
-  }
-}
-
-@media (min-width: 46.25em) {
-  body:before {
-    content: "tablet ≥ 740px (46.25em)";
-  }
-}
-
-@media (min-width: 61.25em) {
-  body:before {
-    content: "desktop ≥ 980px (61.25em)";
-  }
-}
-
-@media (min-width: 81.25em) {
-  body:before {
-    content: "wide ≥ 1300px (81.25em)";
-  }
-}
-
 @font-face {
   font-family: "Life LT Std Italic";
   src: url("../fonts/life/hinted-LifeLTStd-Italic.eot");
@@ -4034,6 +3984,12 @@ main {
   padding: 0 1rem;
 }
 
+.region__pre-title {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0rem 1rem 3rem 1rem;
+}
+
 @media (min-width: 46.25em) {
   .page-node-type-article .region__content-wrapper,
   .page-node-type-issue .from-the-editor {
@@ -5503,6 +5459,31 @@ header.headroom--unpinned {
   line-height: 1.2 !important;
 }
 
+.region__pre-title {
+  color: #e6e6e6;
+}
+
+.region__pre-title p {
+  padding-bottom: 1rem;
+  text-indent: 3rem;
+  text-align: justify;
+  text-justify: inter-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Univers LT Std";
+  text-transform: normal;
+  line-height: 1.2;
+}
+
+.region__pre-title p:nth-child(2),
+.region__pre-title p:last-child {
+  text-indent: 0;
+}
+
+.region__pre-title p:last-child span {
+  padding-right: 2.8rem;
+}
+
 .page-node-type-article h1,
 .page-node-type-issue h1 {
   font-family: "Life LT Std Roman";
@@ -6024,6 +6005,44 @@ progress::-webkit-progress-bar {
   margin: auto;
   width: 100%;
   text-align: center;
+}
+
+.field-article-epigraph {
+  font-family: "Life LT Std Roman";
+  font-size: 1.2rem;
+  line-height: 1;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+.field-article-epigraph em {
+  font-family: "Life LT Std Italic";
+}
+
+.field-article-epigraph p {
+  padding-left: 3rem;
+}
+
+.field-article-epigraph em {
+  font-family: "Life LT Std Italic";
+}
+
+.field-article-epigraph p:last-child {
+  padding-left: 0rem;
+}
+
+.field-article-epigraph p:last-child span {
+  padding-right: 2.4rem;
+}
+
+@media (max-width: 46.24em) {
+  .field-article-epigraph p {
+    padding-left: 1.5rem;
+  }
+  .field-article-epigraph p:last-child span {
+    padding-right: 1rem;
+  }
 }
 
 .region__content-first,
