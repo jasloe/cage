@@ -21,23 +21,23 @@
 
 <header{{attributes.addClass(classes)}}>
 
-	<div class="header__first">
-		<button class='hamburger hamburger--minus' type='button' role=" button">
-			<span class='hamburger-box'>
-				<span class='hamburger-inner'></span>
-			</span>
-		</button>
-	</div>
+	{# <div class="header__first">
+					<button class='hamburger hamburger--minus' type='button' role=" button">
+						<span class='hamburger-box'>
+							<span class='hamburger-inner'></span>
+						</span>
+					</button>
+				</div> #}
 	<div class="header__second">
 		{{ drupal_block('system_branding_block') }}
-		<div class="main">{{ drupal_menu('main') }}</div>
+		{# <div class="main">{{ drupal_menu('main') }}</div> #}
 	</div>
-	<div class="header__third">
-		<div class="subscribe-search">
-			<div class="subscribe">{{ drupal_menu('subscribe') }}</div>
+	{# <div class="header__third">
+			<div class="subscribe-search">
+				<div class="subscribe">{{ drupal_menu('subscribe') }}</div>
 
-			<div class="search">Search</div>
-		</div>
-	</div>
+				<div class="search">Search</div>
+			</div>
+		</div> #}
 </header>
 <progress max="0" value="0"></progress>

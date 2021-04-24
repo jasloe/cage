@@ -18,17 +18,19 @@ header {
   justify-content: space-between;
 }
 
-.header__second .main,
-.header__third .subscribe {
-  display: none;
-}
+// .header__second .main,
+// .header__third .subscribe {
+//   display: none;
+// }
 
-.header__first {
-  display: block;
-}
+// .header__first {
+//   display: block;
+// }
 
 .header__second {
   padding: 0 1rem;
+  width: 100%;
+  text-align: center;
 }
 
 .subscribe-search {
@@ -42,8 +44,7 @@ header {
   }
 
   .header__second {
-    padding-left: 0rem;
-    padding-right: 1rem;
+
   }
 
   .header__first,
@@ -52,9 +53,11 @@ header {
   }
 
   .header__second {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
+    // display: flex;
+    // justify-content: space-between;
+    // flex-grow: 1;
+      width: 100%;
+      text-align: center;
   }
 
   .header__second .main {

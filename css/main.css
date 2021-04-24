@@ -4662,17 +4662,10 @@ header {
           justify-content: space-between;
 }
 
-.header__second .main,
-.header__third .subscribe {
-  display: none;
-}
-
-.header__first {
-  display: block;
-}
-
 .header__second {
   padding: 0 1rem;
+  width: 100%;
+  text-align: center;
 }
 
 .subscribe-search {
@@ -4688,25 +4681,14 @@ header {
   .header__first {
     display: none;
   }
-  .header__second {
-    padding-left: 0rem;
-    padding-right: 1rem;
-  }
   .header__first,
   .header__third {
     -ms-flex-negative: 1;
         flex-shrink: 1;
   }
   .header__second {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    width: 100%;
+    text-align: center;
   }
   .header__second .main {
     display: -webkit-box;
