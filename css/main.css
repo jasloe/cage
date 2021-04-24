@@ -5484,6 +5484,10 @@ header.headroom--unpinned {
   padding-right: 2.8rem;
 }
 
+.region__pre-title p em {
+  font-family: "Univers LT Std Oblique";
+}
+
 .page-node-type-article h1,
 .page-node-type-issue h1 {
   font-family: "Life LT Std Roman";
